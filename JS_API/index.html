@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>ZOO-Project</h1>
+<p><a href="https://github.com/ZOO-Project/ZOO-Project/actions/workflows/docker-image.yml"><img src="https://github.com/ZOO-Project/ZOO-Project/actions/workflows/docker-image.yml/badge.svg" alt="Docker Image CI"></a></p>
+<p><a href="http://www.zoo-project.org">ZOO-Project</a> ♥️ <a href="https://www.ogc.org/">Open Geospatial Consortium (OGC)</a> Standards</p>
+<h2>Summary</h2>
+<p>The <strong>ZOO-Project</strong> is an open source processing platform, released under MIT/X11 Licence.
+It provides the polyglot <strong>ZOO-Kernel</strong>, a server implementation of the <strong>Web Processing Service (WPS)</strong> (1.0.0 and 2.0.0) and the <strong>OGC API - Processes</strong> standards published by the OGC.
+It contains <strong>ZOO-Services</strong>, a minimal set of ready-to-use services that can be used as a base to create more usefull services.
+It provides the <strong>ZOO-API</strong>, initially only available from the JavaScript service implementation, which exposes ZOO-Kernel variables and functions to the language used to implement the service.
+It contains the <strong>ZOO-Client</strong>, a JavaScript API which can be used from a client application to interract with a WPS server.</p>
+<h3>ZOO-Kernel</h3>
+<p>The ZOO-Kernel is a powerfull processing engine able to handle execution of service that can be implemented in various programming languages:</p>
+<ul>
+<li>C/C++,</li>
+<li>C#,</li>
+<li>Java,</li>
+<li>JavaScript,</li>
+<li>Python,</li>
+<li>PHP,</li>
+<li>Perl,</li>
+<li>Ruby,</li>
+<li>Fortran,</li>
+<li>R</li>
+</ul>
+<p>In addition, the ZOO-Kernel can also support handling existing applications from Geographic Information System (GIS) processing engine such as:</p>
+<ul>
+<li><a href="https://www.orfeo-toolbox.org/">Orfeo ToolBox</a></li>
+<li><a href="http://saga-gis.org">SAGA-GIS</a></li>
+</ul>
+<p>Also, the ZOO-Kernel can automatically publish data, resulting of a service execution, to <a href="http://mapserver.org">MapServer</a>, making the data available through Open Standards: <em><strong>Web Map Service (WMS)</strong></em>, <em><strong>Web Feature Service (WFS)</strong></em> and, <em><strong>Web Coverage Service (WCS)</strong></em>.</p>
+<h3>ZOO-Services</h3>
+<p>The ZOO-Services are composed of two distinct things. First, the metadata informations which can be stored in an adhoc ZCFG format, YAML or in a dedicated database.
+Then, the ServiceProvider is the executable version of your service.
+The metadata informations will define every input and output that the service will handle, their type, number and so on.
+The Service Provider will obviously vary in kind from one language to another. It may be, for instance, a shared library for C language or a simple JavaScript file.</p>
+<p>To illustrate the ease of integration of existing code as a service, the first services provided was the commonly used <em><strong>Geospatial Data Abstraction Library (GDAL)</strong></em> tools like: ogr2ogr, gdal_wrap... Also, some trivial services were implemented using the <em><strong>Computational Geometry Algorithms Library (CGAL)</strong></em>.</p>
+<h3>ZOO-API</h3>
+<p>The ZOO-API is mainly used from the JavaScript language, it gives the capability from a service to invoke other services execution implemented in other lnaguage or running from an existing GIS processing engine.
+The basic ZOO-API is available for every supported programming language.</p>
+<h3>ZOO-Client</h3>
+<p>The ZOO-Client is a JavaScript API that can be used on client side to interract with a WPS Server.</p>
+<h2>License</h2>
+<p>See <a href="./zoo-project/LICENSE">License</a></p>
+<h2>Installation</h2>
+<p>Open a terminal and run the following commands:</p>
+<pre class="prettyprint source"><code>git clone https://github.com/ZOO-Project/ZOO-Project.git
+cd ZOO-Project
+docker-compose up 
+</code></pre>
+<p>Then, from your favoritue browser, just load the following URL: http://localhost/ and get immediate access to the 700+ ZOO-Services through WPS and OGC API - Processes depending on your preferences 🎉.</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-wpsPayload.html">wpsPayload</a></li></ul><h3>Classes</h3><ul><li><a href="ZooProcess.html">ZooProcess</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Oct 28 2021 18:03:26 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

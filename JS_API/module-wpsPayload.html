@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Module: wpsPayload</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Module: wpsPayload</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">The wpsPayload module is using the 
+<a href="http://twitter.github.io/hogan.js/">Hogan.js</a> templating engine to
+generate XML requests to be sent to a WPS Server.
+In the ZOO-Client API, the Hogan.js templates have to be compiled before
+you can use them from you application. Please refer to the ZOO-Client 
+installation documentation for more information.</div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="wps-payload.js.html">wps-payload.js</a>, <a href="wps-payload.js.html#line29">line 29</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+        <h3 class="subsection-title">Requires</h3>
+
+        <ul>
+            <li>module:payloads</li>
+        
+            <li>module:jquery</li>
+        
+            <li>module:utils</li>
+        </ul>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".getPayload"><span class="type-signature">(static) </span>getPayload<span class="signature">(params)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The getPayload function uses the mustache 
+templates and the parameters provided to generate a valid WPS XML 
+request.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object representing the request.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="wps-payload.js.html">wps-payload.js</a>, <a href="wps-payload.js.html#line80">line 80</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - The corresponding XML request
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>// GetCapabilities
+var request_params = {
+    request: 'GetCapabilities',
+    language: 'en-US'
+};
+console.wpsPayload.getPayload(request_params));</code></pre>
+
+    <pre class="prettyprint"><code>// DescribeProcess with Identifier value set to "all".
+var request_params = {
+    request: 'DescribeProcess',
+    identifier: ["all"]
+};
+console.log(wpsPayload.getPayload(request_params));</code></pre>
+
+    <pre class="prettyprint"><code>//
+var request_params = {
+    request: 'Execute',
+    Identifier: "Buffer",
+    DataInputs: [{"identifier":"InputPolygon","href":"http://features.org/toto.xml","mimeType":"text/xml"}],
+    DataOutputs: [{"identifier":"Result","mimeType":"application/json"}], 
+    language: 'en-US'
+};
+console.log(wpsPayload.getPayload(request_params));</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".getPayload_DescribeProcess"><span class="type-signature">(static) </span>getPayload_DescribeProcess<span class="signature">(params)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The getPayload_DescribeProcess function is used to generate a valid 
+WPS XML DescribeProcess  request using the 
+<a href="http://zoo-project.org/trac/browser/trunk/zoo-project/zoo-client/lib/tpl/payload_DescribeProcess.mustache">payload_DescribeProcess.mustache</a> 
+template.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object representing the request.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="wps-payload.js.html">wps-payload.js</a>, <a href="wps-payload.js.html#line134">line 134</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - The corresponding XML request
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// log the XML request in console
+var request_params = {
+    Identifier: ["Buffer","Centroid"],
+    language: 'en-US'
+};
+console.log(wpsPayload.getPayload_DescribeProcess(request_params));</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".getPayload_Dismiss"><span class="type-signature">(static) </span>getPayload_Dismiss<span class="signature">(params)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The getPayload_Dismiss function is used to generate a valid 
+WPS XML Dimiss request using the 
+<a href="http://zoo-project.org/trac/browser/trunk/zoo-project/zoo-client/lib/tpl/payload_Dismiss.mustache">payload_Dismiss.mustache</a> 
+template.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object representing the request.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="wps-payload.js.html">wps-payload.js</a>, <a href="wps-payload.js.html#line165">line 165</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - The corresponding XML request
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// log the XML request in console
+var request_params = {
+    jobId: ["XXXX","XXX"]
+};
+console.log(wpsPayload.getPayload_DescribeProcess(request_params));</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".getPayload_Execute"><span class="type-signature">(static) </span>getPayload_Execute<span class="signature">(params)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The getPayload_Execute function is used to generate a valid WPS XML 
+Excute request using the 
+<a href="http://zoo-project.org/trac/browser/trunk/zoo-project/zoo-client/lib/tpl/payload_Execute.mustache">payload_Execute.mustache</a>
+template.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object representing the request.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="wps-payload.js.html">wps-payload.js</a>, <a href="wps-payload.js.html#line199">line 199</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - The corresponding XML request
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// log the XML request in console
+var request_params = {
+    Identifier: "Buffer",
+    DataInputs: [{"identifier":"InputPolygon","href":"http://features.org/toto.xml","mimeType":"text/xml"}],
+    DataOutputs: [{"identifier":"Result","mimeType":"application/json"}], 
+    language: 'en-US'
+};
+console.log(wpsPayload.getPayload_Execute(request_params));</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".getPayload_GetCapabilities"><span class="type-signature">(static) </span>getPayload_GetCapabilities<span class="signature">(params)</span><span class="type-signature"> &rarr; {string}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    The getPayload_GetCapabilities function is used to generate a valid 
+WPS XML GetCapabilities request using the 
+<a href="http://zoo-project.org/trac/browser/trunk/zoo-project/zoo-client/lib/tpl/payload_GetCapabilities.mustache">payload_GetCapabilities.mustache</a> 
+template.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>params</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The object representing the request.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="wps-payload.js.html">wps-payload.js</a>, <a href="wps-payload.js.html#line110">line 110</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    - The corresponding XML request
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// log the XML request in console
+var request_params = {
+    language: 'en-US'
+};
+console.log(wpsPayload.getPayload_GetCapabilities(request_params));</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-wpsPayload.html">wpsPayload</a></li></ul><h3>Classes</h3><ul><li><a href="ZooProcess.html">ZooProcess</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Oct 28 2021 18:03:26 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

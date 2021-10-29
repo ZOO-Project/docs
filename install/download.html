@@ -181,13 +181,13 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The ZOO-Project svn is the place where developement
-happens. Checking out svn is the best way to be always up-to-date.</p>
+happens. Checking out git is the best way to be always up-to-date.</p>
 </div>
 <section id="zoo-project-releases-archives">
 <h2>ZOO-Project releases archives<a class="headerlink" href="#zoo-project-releases-archives" title="Permalink to this headline">¶</a></h2>
 <p>Each new <a class="reference external" href="http://zoo-project.org">ZOO-Project</a> major release are
 available on the project official website as .zip and .tar.bz2
-archives. Head to the <a class="reference external" href="http://zoo-project.org/site/Downloads">Downloads</a> section to get the latest or
+archives. Head to the <a class="reference external" href="http://zoo-project.org/new/Code/Download">Downloads</a> section to get the latest or
 older ZOO-Project releases.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -196,27 +196,16 @@ features and avoid older code issues. Prefer svn or github
 instead.</p>
 </div>
 </section>
-<section id="zoo-project-svn">
-<h2>ZOO-Project SVN<a class="headerlink" href="#zoo-project-svn" title="Permalink to this headline">¶</a></h2>
-<p>Download the <a class="reference external" href="http://zoo-project.org/trac/browser/trunk">latest</a> <a class="reference external" href="http://zoo-project.org">ZOO-Project</a>  source code using the following <em>svn</em> command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">svn</span> <span class="n">checkout</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">svn</span><span class="o">.</span><span class="n">zoo</span><span class="o">-</span><span class="n">project</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">svn</span><span class="o">/</span><span class="n">trunk</span> <span class="n">zoo</span><span class="o">-</span><span class="n">src</span>
+<section id="zoo-project-github">
+<h2>ZOO-Project GitHub<a class="headerlink" href="#zoo-project-github" title="Permalink to this headline">¶</a></h2>
+<p>Download the <a class="reference external" href="http://github.com/ZOO-Project/ZOO-Project">latest</a> <a class="reference external" href="http://zoo-project.org">ZOO-Project</a>  source code using the following <em>git</em> command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ZOO</span><span class="o">-</span><span class="n">Project</span><span class="o">/</span><span class="n">ZOO</span><span class="o">-</span><span class="n">Project</span><span class="o">.</span><span class="n">git</span> <span class="n">zoo</span><span class="o">-</span><span class="n">src</span>
 </pre></div>
 </div>
 <p>Registered ZOO-Project developers would prefer the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="s2">&quot;s:\[tunnels\]:\[tunnels\]</span><span class="se">\n</span><span class="s2">zoosvn = /usr/bin/ssh -p 1046:g&quot;</span> <span class="o">-</span><span class="n">i</span> <span class="o">~/.</span><span class="n">subversion</span><span class="o">/</span><span class="n">config</span>
-<span class="n">svn</span> <span class="n">co</span> <span class="n">svn</span><span class="o">+</span><span class="n">zoosvn</span><span class="p">:</span><span class="o">//</span><span class="n">svn</span><span class="o">.</span><span class="n">zoo</span><span class="o">-</span><span class="n">project</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">svn</span><span class="o">/</span><span class="n">repos</span><span class="o">/</span><span class="n">trunk</span> <span class="n">zoo</span><span class="o">-</span><span class="n">src</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ZOO</span><span class="o">-</span><span class="n">Project</span><span class="o">/</span><span class="n">ZOO</span><span class="o">-</span><span class="n">Project</span><span class="o">.</span><span class="n">git</span> <span class="n">zoo</span><span class="o">-</span><span class="n">src</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The ZOO-Project svn server listens on the 1046 (1024+22) port
-(instead of 22 by default), so please use a specific tunnel to
-access the svn server, as shown in the command above.</p>
-</div>
-</section>
-<section id="zoo-project-github">
-<h2>ZOO-Project Github<a class="headerlink" href="#zoo-project-github" title="Permalink to this headline">¶</a></h2>
-<p>The ZOO-Project svn is mirrored in this Github <a class="reference external" href="https://github.com/kalxas/zoo-project/">repository</a> in case you would like to fork it.</p>
 </section>
 </section>
 

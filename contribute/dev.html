@@ -178,10 +178,16 @@
   <section id="committer-guidelines">
 <span id="contribute-dev"></span><h1>Committer guidelines<a class="headerlink" href="#committer-guidelines" title="Permalink to this headline">¶</a></h1>
 <p>This section gathers information to the registered ZOO-Project developers.</p>
-<section id="election-to-svn-commit-access">
-<h2>Election to SVN Commit Access<a class="headerlink" href="#election-to-svn-commit-access" title="Permalink to this headline">¶</a></h2>
-<p>Permission for SVN commit access shall be provided to new developers only if accepted by the <a class="reference internal" href="contributors.html#zoo-psc"><span class="std std-ref">ZOO-Project Project Steering Commitee</span></a>. A proposal should be written to the PSC for new committers and voted.</p>
-<p>Removal of SVN commit access should be handled by the same process.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since March 2021, ZOO-Project’s source code is under GitHub control
+(<a class="reference external" href="https://github.com/ZOO-Project">https://github.com/ZOO-Project</a>).  In the past, ZOO-Project has also used
+Subversion for version control.</p>
+</div>
+<section id="election-to-git-commit-access">
+<h2>Election to Git Commit Access<a class="headerlink" href="#election-to-git-commit-access" title="Permalink to this headline">¶</a></h2>
+<p>Permission for git commit access shall be provided to new developers only if accepted by the <a class="reference internal" href="contributors.html#zoo-psc"><span class="std std-ref">ZOO-Project Project Steering Commitee</span></a>. A proposal should be written to the PSC for new committers and voted.</p>
+<p>Removal of git commit access should be handled by the same process.</p>
 <p>The new committer should have demonstrated commitment to ZOO-Project and knowledge of the ZOO-Project source code and processes to the committee’s satisfaction, usually by reporting bugs, submitting patches, and/or actively participating in the ZOO-Project mailing list(s).</p>
 <p>The new committer should also be prepared to support any new feature or changes that he/she commits to the ZOO-Project source tree in future releases, or to find someone to which to delegate responsibility for them if he/she stops being available to support the portions of code that he/she is responsible for.</p>
 <p>All committers should also be a member of the zoo-discuss mailing list so they can stay informed on policies, technical developments and release preparation.</p>
@@ -189,34 +195,34 @@
 </section>
 <section id="committer-tracking">
 <h2>Committer Tracking<a class="headerlink" href="#committer-tracking" title="Permalink to this headline">¶</a></h2>
-<p>A list of all project committers will be kept in the main zoo-project directory (called <a class="reference external" href="http://zoo-project.org/trac/browser/trunk/zoo-project/COMMITTERS">COMMITTERS</a>) listing for each SVN committer:</p>
+<p>A list of all project committers will be kept in the main zoo-project directory (called <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/blob/main/zoo-project/COMMITTERS">COMMITTERS</a>) listing for each committer:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Userid: the id that will appear in the SVN logs for this person.</p></li>
+<li><p>Userid: the id that will appear in the git logs for this person.</p></li>
 <li><p>Full name: the users actual name.</p></li>
 <li><p>Email address: A current email address at which the committer can be reached. It may be altered in normal ways to make it harder to auto-harvest.</p></li>
 </ul>
 </div></blockquote>
 </section>
-<section id="svn-administrator">
-<h2>SVN Administrator<a class="headerlink" href="#svn-administrator" title="Permalink to this headline">¶</a></h2>
-<p>One member of the Project Steering Committee will be designed the SVN Administrator. That person will be responsible for giving SVN commit access to folks, updating the COMMITTERS file, and other SVN related management. That person will need login access on the SVN server of course.</p>
+<section id="git-administrators">
+<h2>Git Administrators<a class="headerlink" href="#git-administrators" title="Permalink to this headline">¶</a></h2>
+<p>One member of the Project Steering Committee will be designed the Git Administrator. That person will be responsible for giving git commit access to folks, updating the COMMITTERS file, and other git related management. That person will need a user account to access GitHub of course.</p>
 </section>
-<section id="svn-commit-practices">
-<h2>SVN Commit Practices<a class="headerlink" href="#svn-commit-practices" title="Permalink to this headline">¶</a></h2>
-<p>The following are considered good SVN commit practices for the ZOO-Project project.</p>
+<section id="git-commit-practices">
+<h2>Git Commit Practices<a class="headerlink" href="#git-commit-practices" title="Permalink to this headline">¶</a></h2>
+<p>The following are considered good git commit practices for the ZOO-Project project.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Use meaningful descriptions for SVN commit log entries.</p></li>
-<li><p>Add a bug reference like “(#1234)” at the end of SVN commit log entries when committing changes related to a ticket in Trac. The ‘#’ character enables Trac to create a hyperlink from the changeset to the mentionned ticket.</p></li>
-<li><p>After commiting changes related to a ticket in Trac, write the tree and revision in which it was fixed in the ticket description. Such as “Fixed in trunk (r12345) and in branches/1.7 (r12346)”. The ‘r’ character enables Trac to create a hyperlink from the ticket to the changeset.</p></li>
+<li><p>Add an issue reference like “(#1234)” at the end of git commit log entries when committing changes related to an issue. The ‘#’ character enables GitHub to create a hyperlink from the changeset to the mentionned ticket.</p></li>
+<li><p>After commiting changes related to an issue, write the tree and revision in which it was fixed in the issue description. Such as “Fixed in master (<a class="reference external" href="mailto:ZOO-Project&#37;&#52;&#48;o0o00o0o">ZOO-Project<span>&#64;</span>o0o00o0o</a>) and in branches/1.7 (<a class="reference external" href="mailto:ZOO-Project&#37;&#52;&#48;o0o00o0o">ZOO-Project<span>&#64;</span>o0o00o0o</a>)”. The ‘ZOO-Project&#64;’ prefix enables GitHub to create a hyperlink from the issue to the corresponding commit (using the 8 first letters of the commit sha hash, ‘o0o00o0o’ in the example).</p></li>
 <li><p>Changes should not be committed in stable branches without a corresponding bug id. Any change worth pushing into the stable version is worth a bug entry.</p></li>
 <li><p>Never commit new features to a stable branch without permission of the PSC or release manager. Normally only fixes should go into stable branches.</p></li>
-<li><p>New features go in the main development trunk.</p></li>
+<li><p>New features go in the main development main branch.</p></li>
 <li><p>Only bug fixes should be committed to the code during pre-release code freeze, without permission from the PSC or release manager.</p></li>
-<li><p>Significant changes to the main development version should be discussed on the zoo-discuss list before you make them, and larger changes will require a to be discussed and approved on zoo-psc list by the PSC.</p></li>
+<li><p>Significant changes to the main development version should be discussed on the zoo-discuss list before you make them, and larger changes will require to be discussed and approved on zoo-psc list by the PSC.</p></li>
 <li><p>Do not create new branches without the approval of the PSC. Release managers are assumed to have permission to create a branch.</p></li>
-<li><p>All source code in SVN should be in Unix text format as opposed to DOS text mode.</p></li>
+<li><p>All source code in git should be in Unix text format as opposed to DOS text mode.</p></li>
 <li><p>When committing new features or significant changes to existing source code, the committer should take reasonable measures to insure that the source code continues to build and work on the most commonly supported platforms (currently Linux and Windows), either by testing on those platforms directly, running Buildbot tests, or by getting help from other developers working on those platforms. If new files or library dependencies are added, then the configure.in, Makefile.in, Makefile.vc and related documentations should be kept up to date.</p></li>
 </ul>
 </div></blockquote>

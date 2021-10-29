@@ -178,51 +178,50 @@
   <section id="contribute-code">
 <span id="id1"></span><h1>Contribute code<a class="headerlink" href="#contribute-code" title="Permalink to this headline">¶</a></h1>
 <p>Anybody can take part to the <a class="reference external" href="http://zoo-project.org">ZOO-Project</a> developement and is welcome to:</p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li><p>Share new source code or correction</p></li>
 <li><p>Create tickets to report bugs</p></li>
 <li><p>Write a new feature request.</p></li>
 </ul>
-</div></blockquote>
 <section id="submit-new-code">
 <h2>Submit new code<a class="headerlink" href="#submit-new-code" title="Permalink to this headline">¶</a></h2>
 <section id="for-new-comers">
 <h3>For new comers<a class="headerlink" href="#for-new-comers" title="Permalink to this headline">¶</a></h3>
 <p>New source code or existing source code corrections (patches) should
-be submitted using the ZOO-Project bug tracking system (<a class="reference external" href="http://zoo-project.org/trac">ZOO-Trac</a> ).</p>
-<p>Create a <a class="reference external" href="http://zoo-project.org/trac/newticket">new ticket</a> in
-order to describe your code or patch and attach it to the ticket
-(attach all the files required to use your code or patch). It will
-then be checked and discussed with the developers, and can potentially
-be integrated and merged with the trunk.</p>
+be submitted as pull request (PR) using the <a class="reference external" href="http://github.com/ZOO-Project/ZOO-Project">ZOO-Project repository</a> .</p>
+<p>In the PR, describe your code or patch. It will then be checked and
+discussed with the developers, and can potentially be integrated and
+merged with the main branch.</p>
 </section>
 <section id="for-registered-developers">
 <h3>For registered developers<a class="headerlink" href="#for-registered-developers" title="Permalink to this headline">¶</a></h3>
-<p>ZOO-Project registered developers have direct svn access and can:</p>
+<p>ZOO-Project registered developers have direct repository access and can:</p>
 <ul class="simple">
-<li><p>Commit fixes, enhancement and new source directly to trunk</p></li>
-<li><p>Create and commit to a new branch of the svn</p></li>
+<li><p>Commit fixes, enhancement and new source directly to the main branch</p></li>
+<li><p>Create and commit to a new branch of the <a class="reference external" href="http://github.com/ZOO-Project/ZOO-Project">ZOO-Project repository</a></p></li>
 </ul>
-<p>ZOO-Project registered developers must accept and respect the <a class="reference internal" href="dev.html#contribute-dev"><span class="std std-ref">Committer guidelines</span></a> when contributing code.</p>
+<p><a class="reference external" href="https://github.com/orgs/ZOO-Project/teams/developer/members">ZOO-Project registered developers</a> must
+accept and respect the <a class="reference internal" href="dev.html#contribute-dev"><span class="std std-ref">Committer guidelines</span></a> when contributing code.</p>
 </section>
 </section>
 <section id="bug-tracking">
 <h2>Bug tracking<a class="headerlink" href="#bug-tracking" title="Permalink to this headline">¶</a></h2>
 <section id="general-information">
 <h3>General information<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h3>
-<p>Bug reports and wishes can be submitted using the <a class="reference external" href="http://zoo-project.org/trac">ZOO-Trac</a> . This requires you to setup a user account (userid) using this section.</p>
-<p>The following trackers are available:</p>
+<p>Bug reports and wishes can be submitted using the <a class="reference external" href="http://github.com/ZOO-Project/ZOO-Project/issues">ZOO-Project issue
+system</a> .</p>
+<p>You can label your issue with one of <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/issues/labels">the available ones</a>.</p>
+<p>The following general labels are available:</p>
 <ul class="simple">
-<li><p><em>defects</em> to report bugs and ‘bad’ features</p></li>
+<li><p><em>bug</em> to report bugs and ‘bad’ features</p></li>
 <li><p><em>enhancement</em> to describe feature wishes</p></li>
-<li><p><em>task</em> to describe any different but relevant topic.</p></li>
+<li><p><em>help wanted</em> to describe any issue your may be facing</p></li>
+<li><p><em>question</em> to describe any different but relevant topic.</p></li>
 </ul>
-<p>The following components are available:</p>
+<p>The following components specific labels are available:</p>
 <ul class="simple">
-<li><p><em>Developemnt platform</em> to report bugs and ‘bad’ features</p></li>
-<li><p><em>ZOO-Kernel</em> to report a bug or problem with the ZOO-Project WPS server</p></li>
-<li><p><em>ZOO-Services</em> to report a bug or problem with the ZOO-Project WPS services</p></li>
+<li><p><em>ZOO-Kernel</em> to report a bug or problem with the ZOO-Project server</p></li>
+<li><p><em>ZOO-Services</em> to report a bug or problem with the ZOO-Project services</p></li>
 <li><p><em>ZOO-API</em> to report a bug or problem with the ZOO-Project API</p></li>
 <li><p><em>ZOO-Client</em> to report a bug or problem with the ZOO-Project Client</p></li>
 <li><p><em>Documentation</em> to report a problem or suggest an enhancement to the documentation</p></li>
@@ -232,12 +231,12 @@ be integrated and merged with the trunk.</p>
 <h3>Best practices<a class="headerlink" href="#best-practices" title="Permalink to this headline">¶</a></h3>
 <p>Please consider the following when submitting bugs or feature requests:</p>
 <ul class="simple">
-<li><p>Check if the bug is still persistent in svn trunk before reporting. If you use an older version, please consider upgrading.</p></li>
+<li><p>Check if the bug is still persistent in main branch before reporting. If you use an older version, please consider upgrading.</p></li>
 <li><p>Before reporting a bug, please search if it is yet unknown in the bug tracking system.</p></li>
-<li><p>Give an appropriate, starightforward and understandable title to your ticket using the <em>Summary</em> field</p></li>
-<li><p>Make sure the developers get all the needed information to recreate the bug using the <em>Description</em> field (e.g. tell about your configuration and explain every step to reproduce the bug).</p></li>
-<li><p>Select at least a <em>Type</em> of tracker and a <em>Component</em> for your new ticket.</p></li>
-<li><p>Report only one single bug by ticket.</p></li>
+<li><p>Give an appropriate, straightforward and understandable title to your issue</p></li>
+<li><p>Make sure the developers get all the needed information to recreate the bug (e.g. tell about your configuration and explain every step to reproduce the bug).</p></li>
+<li><p>Select at least one label for your issue.</p></li>
+<li><p>Report only one single bug by issue.</p></li>
 </ul>
 </section>
 </section>

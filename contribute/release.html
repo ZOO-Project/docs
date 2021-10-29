@@ -204,7 +204,7 @@ deploy in production since you are asserting that it is stable and
 candidate. If no major bugs, then announce that the release
 candidate has officially been promoted to the official release (if
 you want, you can do this with a motion and support of the PSC).</p></li>
-<li><p>Ensure that release exactly matches something in SVN. Tag and branch
+<li><p>Ensure that release exactly matches something in git history. Tag and branch
 appropriately.</p></li>
 <li><p>Update documentation as needed.</p></li>
 <li><p>Announce on various email list and other locations
@@ -218,31 +218,37 @@ appropriately.</p></li>
 <li><p>Double check that the latest build file matches the current revisions number.</p></li>
 <li><p>If this is a new major release create a branch and a tag.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">zoo</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">svn</span><span class="o">/</span>
-<span class="n">svn</span> <span class="n">cp</span> <span class="n">trunk</span> <span class="n">branches</span><span class="o">/</span><span class="n">branch</span><span class="o">-</span><span class="mf">1.6</span>
-<span class="n">svn</span> <span class="n">cp</span> <span class="n">trunk</span> <span class="n">tags</span><span class="o">/</span><span class="n">rel</span><span class="o">-</span><span class="mf">1.6.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">master</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">branch</span><span class="o">-</span><span class="mf">1.9</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">branch</span><span class="o">-</span><span class="mf">1.9</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">branch</span><span class="o">-</span><span class="mf">1.9</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">branch</span><span class="o">-</span><span class="mf">1.9</span>
+<span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Create tag rel-1.9.0-rc1 &quot;</span> <span class="n">rel</span><span class="o">-</span><span class="mf">1.9.0</span><span class="o">-</span><span class="n">rc1</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>If this is a major or minor relase, create a tag.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">svn</span> <span class="n">cp</span> <span class="n">branches</span><span class="o">/</span><span class="n">branch</span><span class="o">-</span><span class="mf">1.6</span> <span class="n">tags</span><span class="o">/</span><span class="n">rel</span><span class="o">-</span><span class="mf">1.6.1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">branch</span><span class="o">-</span><span class="mf">1.9</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">branch</span><span class="o">-</span><span class="mf">1.9</span>
+<span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Create tag rel-1.9.1&quot;</span> <span class="n">rel</span><span class="o">-</span><span class="mf">1.9.1</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Commit the tags or branches with the version numbers.</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">svn</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;Created branch/tags for the X.Y.Z release&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">rel</span><span class="o">-</span><span class="mf">1.9.1</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Create version archives</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export VERSION=2.6.0
-cd zoo-propject-svn
-cp -r trunk zoo-project-$VERSION
+git clone -b branch-1.6 --single-branch git@github.com:ZOO-Project/ZOO-Project.git zoo-src
+cp -r zoo-src zoo-project-$VERSION
 cd zoo-project-$VERSION
-rm -rf $(find ./ -name &quot;.svn&quot;)
+rm -rf $(find ./ -name &quot;.git&quot;)
 cd zoo-project/zoo-kernel
 autoconf
 # In case you did not build ZOO-Kernel
@@ -254,7 +260,7 @@ cd ../../..
 # In case you built one or more ZOO-Services, then remove the generated file from the archive
 rm $(find ./zoo-project-$VERSION/zoo-project/zoo-services -name &quot;*zo&quot;)
 # Remove documentation from the archive
-rm -rf ./zoo-project-$VERSION/{docs,workshop}
+rm -rf ./zoo-project-$VERSION/docs
 tar -cvjf ./zoo-project-$VERSION.tar.bz2 ./zoo-project-$VERSION
 zip -r ./zoo-project-$VERSION.zip ./zoo-project-$VERSION
 scp -P 1046 ./zoo-project-$VERSION.{zip,tar.bz2} zoo-project.org:/var/www/localhost/htdocs/dl/

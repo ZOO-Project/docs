@@ -143,6 +143,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a6bcac7ebd384e66d67e994f5ab334501"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#a6bcac7ebd384e66d67e994f5ab334501">produceApi</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, json_object *)</td></tr>
 <tr class="memdesc:a6bcac7ebd384e66d67e994f5ab334501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce the JSON object for /api.  <a href="service__json_8h.html#a6bcac7ebd384e66d67e994f5ab334501">More...</a><br /></td></tr>
 <tr class="separator:a6bcac7ebd384e66d67e994f5ab334501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e812a992501bca5e613ef2be0677ec8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#a4e812a992501bca5e613ef2be0677ec8">outputSingleJsonComplexRes</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *, json_object *, json_object *, char *, long)</td></tr>
+<tr class="memdesc:a4e812a992501bca5e613ef2be0677ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append required field to Json objects for a complex output.  <a href="service__json_8h.html#a4e812a992501bca5e613ef2be0677ec8">More...</a><br /></td></tr>
+<tr class="separator:a4e812a992501bca5e613ef2be0677ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -485,6 +488,71 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a json_object pointer to the created json_object </dd></dl>
+
+</div>
+</div>
+<a id="a4e812a992501bca5e613ef2be0677ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e812a992501bca5e613ef2be0677ec8">&#9670;&nbsp;</a></span>outputSingleJsonComplexRes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outputSingleJsonComplexRes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>conf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>resu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>res1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>res3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>apcValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append required field to Json objects for a complex output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conf</td><td>maps pointer to the main configuration maps </td></tr>
+    <tr><td class="paramname">resu</td><td>maps pointer to the output </td></tr>
+    <tr><td class="paramname">res1</td><td>json_object pointer to which the value field should be added </td></tr>
+    <tr><td class="paramname">res3</td><td>json_object pointer to the format object associated with res1 </td></tr>
+    <tr><td class="paramname">pacValue</td><td>char pointer to the value to be allocated </td></tr>
+    <tr><td class="paramname">len</td><td>length of pacValue </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1191,7 +1259,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 19 2021 10:46:25 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 19 2021 14:46:35 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

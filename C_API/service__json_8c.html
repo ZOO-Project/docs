@@ -170,6 +170,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5a1da29ffaf6b062c2a51ed09a746e25"><td class="memItemLeft" align="right" valign="top">json_object *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a5a1da29ffaf6b062c2a51ed09a746e25">printJResult</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structservice">service</a> *s, <a class="el" href="service_8h.html#structmaps">maps</a> *result, int res)</td></tr>
 <tr class="memdesc:a5a1da29ffaf6b062c2a51ed09a746e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the result of an execution.  <a href="service__json_8c.html#a5a1da29ffaf6b062c2a51ed09a746e25">More...</a><br /></td></tr>
 <tr class="separator:a5a1da29ffaf6b062c2a51ed09a746e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a093f4b143682e017dd95fab19517a3a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a093f4b143682e017dd95fab19517a3a5">outputSingleJsonComplexRes</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *resu, json_object *res1, json_object *res3, char *apcValue, long len)</td></tr>
+<tr class="memdesc:a093f4b143682e017dd95fab19517a3a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append required field to Json objects for a complex output.  <a href="service__json_8c.html#a093f4b143682e017dd95fab19517a3a5">More...</a><br /></td></tr>
+<tr class="separator:a093f4b143682e017dd95fab19517a3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab57714775412ac7628be2087201344c6"><td class="memItemLeft" align="right" valign="top">json_object *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ab57714775412ac7628be2087201344c6">createALink</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, const char *rel, const char *type, const char *href)</td></tr>
 <tr class="memdesc:ab57714775412ac7628be2087201344c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a link object with ref, type and href.  <a href="service__json_8c.html#ab57714775412ac7628be2087201344c6">More...</a><br /></td></tr>
 <tr class="separator:ab57714775412ac7628be2087201344c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -997,6 +1000,71 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a json_object pointer to the created json_object </dd></dl>
+
+</div>
+</div>
+<a id="a093f4b143682e017dd95fab19517a3a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a093f4b143682e017dd95fab19517a3a5">&#9670;&nbsp;</a></span>outputSingleJsonComplexRes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outputSingleJsonComplexRes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>conf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>resu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>res1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>res3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>apcValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append required field to Json objects for a complex output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conf</td><td>maps pointer to the main configuration maps </td></tr>
+    <tr><td class="paramname">resu</td><td>maps pointer to the output </td></tr>
+    <tr><td class="paramname">res1</td><td>json_object pointer to which the value field should be added </td></tr>
+    <tr><td class="paramname">res3</td><td>json_object pointer to the format object associated with res1 </td></tr>
+    <tr><td class="paramname">pacValue</td><td>char pointer to the value to be allocated </td></tr>
+    <tr><td class="paramname">len</td><td>length of pacValue </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2284,7 +2352,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 19 2021 10:46:25 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 19 2021 14:46:35 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

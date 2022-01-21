@@ -211,11 +211,11 @@ The optional Orfeo Toolbox support is available since <a class="reference extern
 </pre></div>
 </div>
 <p>Then compile ZOO-Kernel using the needed configuration options as shown bellow:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">zoo</span><span class="o">-</span><span class="n">kernel</span>
-<span class="n">autoconf</span>
-<span class="o">./</span><span class="n">configure</span>  <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">otb</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">itk</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span> <span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">itk</span><span class="o">-</span><span class="n">version</span><span class="o">=</span><span class="mf">4.7</span>
-<span class="n">make</span>
-<span class="n">cp</span> <span class="n">zoo_loader</span><span class="o">.</span><span class="n">cgi</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span><span class="w"> </span><span class="n">zoo</span><span class="o">-</span><span class="n">kernel</span><span class="w"></span>
+<span class="n">autoconf</span><span class="w"></span>
+<span class="o">./</span><span class="n">configure</span><span class="w">  </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">otb</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="w"> </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">itk</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="w"> </span><span class="o">--</span><span class="n">with</span><span class="o">-</span><span class="n">itk</span><span class="o">-</span><span class="n">version</span><span class="o">=</span><span class="mf">4.7</span><span class="w"></span>
+<span class="n">make</span><span class="w"></span>
+<span class="n">cp</span><span class="w"> </span><span class="n">zoo_loader</span><span class="o">.</span><span class="n">cgi</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -239,12 +239,12 @@ make
 </pre></div>
 </div>
 <p>Run the following command to generate all the needed zcfg files for the available OTB Application:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">zcfgs</span>
-<span class="n">cd</span> <span class="n">zcfgs</span>
-<span class="k">export</span> <span class="n">ITK_AUTOLOAD_PATH</span><span class="o">=/</span><span class="n">your</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">otb</span><span class="o">/</span><span class="n">applications</span>
-<span class="o">../</span><span class="n">build</span><span class="o">/</span><span class="n">otb2zcfg</span>
-<span class="n">mkdir</span> <span class="o">/</span><span class="n">location</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="o">/</span><span class="n">OTB</span>
-<span class="n">cp</span> <span class="o">*</span><span class="n">zcfg</span> <span class="o">/</span><span class="n">location</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="o">/</span><span class="n">OTB</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span><span class="w"> </span><span class="n">zcfgs</span><span class="w"></span>
+<span class="n">cd</span><span class="w"> </span><span class="n">zcfgs</span><span class="w"></span>
+<span class="k">export</span><span class="w"> </span><span class="n">ITK_AUTOLOAD_PATH</span><span class="o">=/</span><span class="n">your</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">otb</span><span class="o">/</span><span class="n">applications</span><span class="w"></span>
+<span class="o">../</span><span class="n">build</span><span class="o">/</span><span class="n">otb2zcfg</span><span class="w"></span>
+<span class="n">mkdir</span><span class="w"> </span><span class="o">/</span><span class="n">location</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="o">/</span><span class="n">OTB</span><span class="w"></span>
+<span class="n">cp</span><span class="w"> </span><span class="o">*</span><span class="n">zcfg</span><span class="w"> </span><span class="o">/</span><span class="n">location</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="o">/</span><span class="n">OTB</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

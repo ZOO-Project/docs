@@ -271,8 +271,8 @@ sudo make install
 <section id="main-configuration-file">
 <span id="kernel-mapserver-main-cfg"></span><h3>Main configuration file<a class="headerlink" href="#main-configuration-file" title="Permalink to this headline">¶</a></h3>
 <p>Open and edit the <code class="docutils literal notranslate"><span class="pre">/usr/lib/cgi-bin/main.cfg</span></code> file, by adding the following content in the <code class="docutils literal notranslate"><span class="pre">[main]</span></code> section:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">dataPath</span> <span class="o">=</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
-<span class="n">mapserverAddress</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="o">/</span><span class="n">mapserv</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">dataPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="w"></span>
+<span class="n">mapserverAddress</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="o">/</span><span class="n">mapserv</span><span class="w"></span>
 </pre></div>
 </div>
 <p>You can also add the following lines to the <code class="docutils literal notranslate"><span class="pre">[main]</span></code> section, in case
@@ -284,8 +284,8 @@ layer.</p>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">dataPath</span></code> directory is mandatory and must belong to the Apache user.</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
-<span class="n">chown</span> <span class="o">-</span><span class="n">r</span> <span class="n">apache</span><span class="p">:</span><span class="n">apache</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="w"></span>
+<span class="n">chown</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="n">apache</span><span class="p">:</span><span class="n">apache</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="w"></span>
 </pre></div>
 </div>
 <p>A <code class="docutils literal notranslate"><span class="pre">symbols.sym</span></code> file is required in this directory. Create it and add the following content in it:</p>
@@ -356,8 +356,8 @@ the
 <code class="docutils literal notranslate"><span class="pre">msInclude</span></code> and <code class="docutils literal notranslate"><span class="pre">msLayer</span></code> options in the output <code class="docutils literal notranslate"><span class="pre">ComplexData</span></code>
 <code class="docutils literal notranslate"><span class="pre">&lt;Default&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;Supported&gt;</span></code> nodes of its zcfg file. You can see below an
 example of use of this two options with the associated mapfile.</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">msInclude</span> <span class="o">=</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">template</span><span class="o">.</span><span class="n">map</span>
-<span class="n">msLayer</span> <span class="o">=</span> <span class="n">heatmap</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">msInclude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">template</span><span class="o">.</span><span class="n">map</span><span class="w"></span>
+<span class="n">msLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heatmap</span><span class="w"></span>
 </pre></div>
 </div>
 <p>You can find below a sample <code class="docutils literal notranslate"><span class="pre">/var/data/template.map</span></code>:</p>

@@ -227,11 +227,11 @@ programming language used to develop your service.</p>
 <p>In case you should simulate POST requests, you can use the following
 command to tell the ZOO-Kernel to use the file <code class="docutils literal notranslate"><span class="pre">/tmp/req.xml</span></code> as the
 input XML request:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define required environment settings</span>
-<span class="k">export</span> <span class="n">REQUEST_METHOD</span><span class="o">=</span><span class="n">POST</span>
-<span class="k">export</span> <span class="n">CONTENT_TYPE</span><span class="o">=</span><span class="n">text</span><span class="o">/</span><span class="n">xml</span>
-<span class="c1"># Run the request stored in a file</span>
-<span class="o">./</span><span class="n">zoo_loader</span><span class="o">.</span><span class="n">cgi</span> <span class="o">&lt;</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">req</span><span class="o">.</span><span class="n">xml</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define required environment settings</span><span class="w"></span>
+<span class="k">export</span><span class="w"> </span><span class="n">REQUEST_METHOD</span><span class="o">=</span><span class="n">POST</span><span class="w"></span>
+<span class="k">export</span><span class="w"> </span><span class="n">CONTENT_TYPE</span><span class="o">=</span><span class="n">text</span><span class="o">/</span><span class="n">xml</span><span class="w"></span>
+<span class="c1"># Run the request stored in a file</span><span class="w"></span>
+<span class="o">./</span><span class="n">zoo_loader</span><span class="o">.</span><span class="n">cgi</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">req</span><span class="o">.</span><span class="n">xml</span><span class="w"></span>
 </pre></div>
 </div>
 <section id="gdb">

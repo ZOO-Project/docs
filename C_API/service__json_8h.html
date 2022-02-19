@@ -69,8 +69,7 @@ $(function() {
 <div class="title">service_json.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="service__internal__ms_8h_source.html">service_internal_ms.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="response__print_8h_source.html">response_print.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="response__print_8h_source.html">response_print.h</a>&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="service_8h_source.html">service.h</a>&gt;</code><br />
@@ -86,6 +85,12 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ae6fbfbbcbbbc59364e3be9b8c5c6ccf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#ae6fbfbbcbbbc59364e3be9b8c5c6ccf0">jsonToMaps</a> (json_object *)</td></tr>
+<tr class="memdesc:ae6fbfbbcbbbc59364e3be9b8c5c6ccf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a json object to maps.  <a href="service__json_8h.html#ae6fbfbbcbbbc59364e3be9b8c5c6ccf0">More...</a><br /></td></tr>
+<tr class="separator:ae6fbfbbcbbbc59364e3be9b8c5c6ccf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc385b6fefcb4f07dc53bf973ed8cd63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#abc385b6fefcb4f07dc53bf973ed8cd63">jsonToMap</a> (json_object *)</td></tr>
+<tr class="memdesc:abc385b6fefcb4f07dc53bf973ed8cd63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a json object to map.  <a href="service__json_8h.html#abc385b6fefcb4f07dc53bf973ed8cd63">More...</a><br /></td></tr>
+<tr class="separator:abc385b6fefcb4f07dc53bf973ed8cd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9212ee4c067249681be646527e6482a"><td class="memItemLeft" align="right" valign="top">json_object *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#ab9212ee4c067249681be646527e6482a">mapToJson</a> (<a class="el" href="service_8h.html#structmap">map</a> *)</td></tr>
 <tr class="memdesc:ab9212ee4c067249681be646527e6482a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a map to a json object.  <a href="service__json_8h.html#ab9212ee4c067249681be646527e6482a">More...</a><br /></td></tr>
 <tr class="separator:ab9212ee4c067249681be646527e6482a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -434,6 +439,60 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the created json_object </dd></dl>
+
+</div>
+</div>
+<a id="abc385b6fefcb4f07dc53bf973ed8cd63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc385b6fefcb4f07dc53bf973ed8cd63">&#9670;&nbsp;</a></span>jsonToMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="service_8h.html#structmap">map</a>* jsonToMap </td>
+          <td>(</td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>jopObj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a json object to map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jopObj</td><td>the json object to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the allocated map </dd></dl>
+
+</div>
+</div>
+<a id="ae6fbfbbcbbbc59364e3be9b8c5c6ccf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6fbfbbcbbbc59364e3be9b8c5c6ccf0">&#9670;&nbsp;</a></span>jsonToMaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="service_8h.html#structmaps">maps</a>* jsonToMaps </td>
+          <td>(</td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>jopObj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a json object to maps. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jopObj</td><td>the json object to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the allocated maps </dd></dl>
 
 </div>
 </div>
@@ -1259,7 +1318,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 1 2022 15:37:30 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 19 2022 15:09:35 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

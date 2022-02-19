@@ -107,6 +107,9 @@ $(function() {
 : <a class="el" href="service__internal__php7_8c.html#a431c4ab18506c82c43c5a0523fe7ec37">service_internal_php7.c</a>
 , <a class="el" href="service__internal__php_8c.html#a431c4ab18506c82c43c5a0523fe7ec37">service_internal_php.c</a>
 </li>
+<li>_socket
+: <a class="el" href="service__internal__amqp_8c.html#af4a3dce70f9ac094561192583a043afd">service_internal_amqp.c</a>
+</li>
 <li>_state
 : <a class="el" href="service__internal__python_8c.html#adb5f4e26ed08b1f5e57d51f452404533">service_internal_python.c</a>
 </li>
@@ -120,12 +123,39 @@ $(function() {
 <li>additional_parameters
 : <a class="el" href="service__conf_8y.html#af95550b37d1f549c22f8372e23c7dc0a">service_conf.y</a>
 </li>
+<li>amqp_exchange
+: <a class="el" href="service__internal__amqp_8c.html#ad227b542c24b1004ffbd5c55cfb95140">service_internal_amqp.c</a>
+</li>
+<li>amqp_hostname
+: <a class="el" href="service__internal__amqp_8c.html#a7c8c2431638da22bcd72696eec175be2">service_internal_amqp.c</a>
+</li>
+<li>amqp_passwd
+: <a class="el" href="service__internal__amqp_8c.html#a63136518f7f5fd7418649a034d02c0f1">service_internal_amqp.c</a>
+</li>
+<li>amqp_port
+: <a class="el" href="service__internal__amqp_8c.html#ae705e4564c1d1162affdc25fb12da82a">service_internal_amqp.c</a>
+</li>
+<li>amqp_queue
+: <a class="el" href="service__internal__amqp_8c.html#a7ebc7ca00f0e132a939eaa9b40e221e2">service_internal_amqp.c</a>
+</li>
+<li>amqp_queuename
+: <a class="el" href="service__internal__amqp_8c.html#aa825074311d239a72fca2f9e5d4d063b">service_internal_amqp.c</a>
+</li>
+<li>amqp_routingkey
+: <a class="el" href="service__internal__amqp_8c.html#a179133d7fd8783e68dc72884c6b23cbc">service_internal_amqp.c</a>
+</li>
+<li>amqp_user
+: <a class="el" href="service__internal__amqp_8c.html#a3855262ebcbffff975c7821ed67dcea7">service_internal_amqp.c</a>
+</li>
 </ul>
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>capabilities
 : <a class="el" href="response__print_8h.html#a87550d6532379b204e5949e59acad019">response_print.h</a>
+</li>
+<li>conn
+: <a class="el" href="service__internal__amqp_8c.html#a4bc13e1595fdc04fa3b2ed3651c3ef87">service_internal_amqp.c</a>
 </li>
 <li>content
 : <a class="el" href="main__conf__read_8y.html#a0adbaa568d951cc05630f0e44dddaa7f">main_conf_read.y</a>
@@ -151,15 +181,15 @@ $(function() {
 </li>
 <li>current_content
 : <a class="el" href="main__conf__read_8y.html#a19f391c4c0f95b2934541fe18e4cf03c">main_conf_read.y</a>
-, <a class="el" href="service__conf_8y.html#a19f391c4c0f95b2934541fe18e4cf03c">service_conf.y</a>
 , <a class="el" href="service__yaml_8c.html#a0b1830a1ef4317d232742f444a9cb771">service_yaml.c</a>
+, <a class="el" href="service__conf_8y.html#a19f391c4c0f95b2934541fe18e4cf03c">service_conf.y</a>
 </li>
 <li>current_data
 : <a class="el" href="service__conf_8y.html#ad4d225b43811ab56b5275656eadd9bdb">service_conf.y</a>
 </li>
 <li>current_element
-: <a class="el" href="service__conf_8y.html#a0098a3cac2e46b0167281149b0287a9d">service_conf.y</a>
-, <a class="el" href="service__yaml_8c.html#a0098a3cac2e46b0167281149b0287a9d">service_yaml.c</a>
+: <a class="el" href="service__yaml_8c.html#a0098a3cac2e46b0167281149b0287a9d">service_yaml.c</a>
+, <a class="el" href="service__conf_8y.html#a0098a3cac2e46b0167281149b0287a9d">service_conf.y</a>
 </li>
 <li>current_maps
 : <a class="el" href="main__conf__read_8y.html#ad5d8730e7f00d9c147b1ed9daeb4d4d3">main_conf_read.y</a>
@@ -483,7 +513,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 1 2022 15:37:30 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 19 2022 15:09:36 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

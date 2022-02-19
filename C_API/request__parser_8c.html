@@ -121,6 +121,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a56adb590a23afcaba2da139c46ced4a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="request__parser_8c.html#a56adb590a23afcaba2da139c46ced4a4">parseCookie</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **conf, const char *cookie)</td></tr>
 <tr class="memdesc:a56adb590a23afcaba2da139c46ced4a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse cookie contained in request headers.  <a href="request__parser_8c.html#a56adb590a23afcaba2da139c46ced4a4">More...</a><br /></td></tr>
 <tr class="separator:a56adb590a23afcaba2da139c46ced4a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab81ec1b6eb80836c73169aed68bc4a61"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="request__parser_8c.html#ab81ec1b6eb80836c73169aed68bc4a61">parseInputHttpRequests</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *inputs, <a class="el" href="ulinet_8h.html#structHINTERNET">HINTERNET</a> *hInternet)</td></tr>
+<tr class="memdesc:ab81ec1b6eb80836c73169aed68bc4a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse all the http requests possibily attached to inputs and, add them to the request queue.  <a href="request__parser_8c.html#ab81ec1b6eb80836c73169aed68bc4a61">More...</a><br /></td></tr>
+<tr class="separator:ab81ec1b6eb80836c73169aed68bc4a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a10eb6b98ba7bfe6454aa52f0fdc90ca9"></a>
@@ -476,6 +479,51 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab81ec1b6eb80836c73169aed68bc4a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab81ec1b6eb80836c73169aed68bc4a61">&#9670;&nbsp;</a></span>parseInputHttpRequests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parseInputHttpRequests </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>conf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>inputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ulinet_8h.html#structHINTERNET">HINTERNET</a> *&#160;</td>
+          <td class="paramname"><em>hInternet</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parse all the http requests possibily attached to inputs and, add them to the request queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conf</td><td>maps containing the main configuration file </td></tr>
+    <tr><td class="paramname">inputs</td><td>maps containing all the inputs </td></tr>
+    <tr><td class="paramname">hInternet</td><td>an HTINTERNET connection </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success </dd></dl>
 
 </div>
 </div>
@@ -935,7 +983,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 1 2022 15:37:30 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 19 2022 15:09:35 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

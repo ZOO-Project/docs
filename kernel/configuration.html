@@ -537,6 +537,44 @@ with two different zcfg files.</p>
 included services if the <code class="docutils literal notranslate"><span class="pre">libPath</span></code> parameter is not set.</p>
 </div>
 </section>
+<section id="rabbitmq-section">
+<h3>RabbitMQ section<a class="headerlink" href="#rabbitmq-section" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">[rabbitmq]</span></code> section may be used to configure how to access the
+RabbitMQ server used for communication between the ZOO-Kernel and the
+ZOO-Kernel Fast Process Manager.</p>
+<p>This optional section is used only in case you have build your
+ZOO-Kernel with the following configure option:
+<code class="docutils literal notranslate"><span class="pre">--with-rabbitmq=yes</span></code>.</p>
+<p>The available parameters are the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code>: the hostname or IP adddess of the server</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code>: the port used to connect</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user</span></code>: the user name</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">passwd</span></code>: the password</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exchange</span></code>: the exchange</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">routingkey</span></code>: the routing key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queue</span></code>: the ‘queue &lt;<a class="reference external" href="https://www.rabbitmq.com/queues.html">https://www.rabbitmq.com/queues.html</a>&gt;’__ name</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="server-section">
+<h3>Server section<a class="headerlink" href="#server-section" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">[server]</span></code> section is used by the ZOO-Kernel Fast Process
+Manager which handle execution of services should know how much
+instances you are willing to create to execute services.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">async_worker</span></code>: the number of instances</p></li>
+</ul>
+</div></blockquote>
+<p>To start the ZOO-Kernel Fast Process Manager you can use the following
+commands.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">cd</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="w"></span>
+<span class="linenos">2</span><span class="o">./</span><span class="n">zoo_loader_fpm</span><span class="w"> </span><span class="n">main</span><span class="o">.</span><span class="n">cfg</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="openapi-specification-configuration-file">
 <h2>OpenAPI Specification configuration file<a class="headerlink" href="#openapi-specification-configuration-file" title="Permalink to this headline">¶</a></h2>

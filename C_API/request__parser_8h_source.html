@@ -118,12 +118,13 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="request__parser_8h.html#ad6549fa126d1f61a7daab8071110c738">checkValidValue</a>(<a class="code" href="service_8h.html#structmap">map</a>*,<a class="code" href="service_8h.html#structmap">map</a>**,<span class="keyword">const</span> <span class="keywordtype">char</span>*,<span class="keyword">const</span> <span class="keywordtype">char</span>**,<span class="keywordtype">int</span>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="request__parser_8h.html#a578e8cb68000938a4182d2d44159fb04">validateRequest</a>(<a class="code" href="service_8h.html#structmaps">maps</a>**,<a class="code" href="service_8h.html#structservice">service</a>*,<a class="code" href="service_8h.html#structmap">map</a>*,<a class="code" href="service_8h.html#structmaps">maps</a>**,<a class="code" href="service_8h.html#structmaps">maps</a>**,<a class="code" href="ulinet_8h.html#structHINTERNET">HINTERNET</a>*);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="request__parser_8h.html#a10ed43abd382a972181c48c01b166e65">parseCookie</a>(<a class="code" href="service_8h.html#structmaps">maps</a>**,<span class="keyword">const</span> <span class="keywordtype">char</span>*);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="request__parser_8h.html#a4d8df541b745fd8722db0b23082f319b">parseInputHttpRequests</a>(<a class="code" href="service_8h.html#structmaps">maps</a>*,<a class="code" href="service_8h.html#structmaps">maps</a>*, <a class="code" href="ulinet_8h.html#structHINTERNET">HINTERNET</a>*);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="arequest__parser_8h_html_a578e8cb68000938a4182d2d44159fb04"><div class="ttname"><a href="request__parser_8h.html#a578e8cb68000938a4182d2d44159fb04">validateRequest</a></div><div class="ttdeci">int validateRequest(maps **, service *, map *, maps **, maps **, HINTERNET *)</div><div class="ttdoc">Ensure that each requested arguments are present in the request DataInputs and ResponseDocument / Raw...</div><div class="ttdef"><b>Definition:</b> request_parser.c:1688</div></div>
 <div class="ttc" id="aservice_8h_html"><div class="ttname"><a href="service_8h.html">service.h</a></div></div>
@@ -131,6 +132,7 @@ $(function() {
 <div class="ttc" id="aservice_8h_html_structelements"><div class="ttname"><a href="service_8h.html#structelements">elements</a></div><div class="ttdoc">Metadata information about input or output.</div><div class="ttdef"><b>Definition:</b> service.h:287</div></div>
 <div class="ttc" id="arequest__parser_8h_html_a63ebee544b25aa03683b33c90ebeaa85"><div class="ttname"><a href="request__parser_8h.html#a63ebee544b25aa03683b33c90ebeaa85">extractFromDoc</a></div><div class="ttdeci">xmlXPathObjectPtr extractFromDoc(xmlDocPtr, const char *)</div><div class="ttdoc">Apply XPath Expression on XML document.</div><div class="ttdef"><b>Definition:</b> request_parser.c:40</div></div>
 <div class="ttc" id="arequest__parser_8h_html_aa49cb40ba14645e1e08566a4d1631e95"><div class="ttname"><a href="request__parser_8h.html#aa49cb40ba14645e1e08566a4d1631e95">xmlParseBoundingBox</a></div><div class="ttdeci">int xmlParseBoundingBox(maps **, map **, xmlDocPtr)</div><div class="ttdoc">Parse a BoundingBoxData node.</div><div class="ttdef"><b>Definition:</b> request_parser.c:1224</div></div>
+<div class="ttc" id="arequest__parser_8h_html_a4d8df541b745fd8722db0b23082f319b"><div class="ttname"><a href="request__parser_8h.html#a4d8df541b745fd8722db0b23082f319b">parseInputHttpRequests</a></div><div class="ttdeci">int parseInputHttpRequests(maps *, maps *, HINTERNET *)</div><div class="ttdoc">Parse all the http requests possibily attached to inputs and, add them to the request queue.</div><div class="ttdef"><b>Definition:</b> request_parser.c:2050</div></div>
 <div class="ttc" id="arequest__parser_8h_html_a072a6ae9a8e1acdb162e1940e8f0e94b"><div class="ttname"><a href="request__parser_8h.html#a072a6ae9a8e1acdb162e1940e8f0e94b">appendMapsToMaps</a></div><div class="ttdeci">int appendMapsToMaps(maps *, maps *, maps *, elements *)</div><div class="ttdoc">Create (or append to) an array valued maps value = &quot;[&quot;&quot;,&quot;&quot;]&quot;.</div><div class="ttdef"><b>Definition:</b> request_parser.c:59</div></div>
 <div class="ttc" id="arequest__parser_8h_html_ad9fcd41cdb053ad1ac03f697369053d2"><div class="ttname"><a href="request__parser_8h.html#ad9fcd41cdb053ad1ac03f697369053d2">xmlParseRequest</a></div><div class="ttdeci">int xmlParseRequest(maps **, const char *, map **, service *, maps **, maps **, HINTERNET *)</div><div class="ttdoc">Parse XML request and store information in maps.</div><div class="ttdef"><b>Definition:</b> request_parser.c:1541</div></div>
 <div class="ttc" id="aservice_8h_html_structmaps"><div class="ttname"><a href="service_8h.html#structmaps">maps</a></div><div class="ttdoc">linked list of map pointer</div><div class="ttdef"><b>Definition:</b> service.h:265</div></div>
@@ -147,7 +149,7 @@ $(function() {
 <div class="ttc" id="aulinet_8h_html_structHINTERNET"><div class="ttname"><a href="ulinet_8h.html#structHINTERNET">HINTERNET</a></div><div class="ttdoc">Multiple CURL handlers.</div><div class="ttdef"><b>Definition:</b> ulinet.h:95</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 1 2022 15:37:30 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 19 2022 15:09:35 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

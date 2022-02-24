@@ -151,6 +151,12 @@ Functions</h2></td></tr>
 <tr class="separator:a84b1195f9c0bcd44901b69749edb5572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2adf64278877032a09d2312d0387d4c1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal_8c.html#a2adf64278877032a09d2312d0387d4c1">_getStatusField</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, char *a, const char *b)</td></tr>
 <tr class="separator:a2adf64278877032a09d2312d0387d4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f7271807efeb5bb51d09fa2e67c0be3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal_8c.html#a5f7271807efeb5bb51d09fa2e67c0be3">isAsyncCall</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf)</td></tr>
+<tr class="memdesc:a5f7271807efeb5bb51d09fa2e67c0be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if an Execute request has been invoked asynchronously.  <a href="service__internal_8c.html#a5f7271807efeb5bb51d09fa2e67c0be3">More...</a><br /></td></tr>
+<tr class="separator:a5f7271807efeb5bb51d09fa2e67c0be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a541df8f0aececd1e4d0f2321e9228f33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal_8c.html#a541df8f0aececd1e4d0f2321e9228f33">hasDbs</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf)</td></tr>
+<tr class="memdesc:a541df8f0aececd1e4d0f2321e9228f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if the server rely on database backend.  <a href="service__internal_8c.html#a541df8f0aececd1e4d0f2321e9228f33">More...</a><br /></td></tr>
+<tr class="separator:a541df8f0aececd1e4d0f2321e9228f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/><h2 class="groupheader">Data Structure Documentation</h2>
 <a name="unionsemun" id="unionsemun"></a>
@@ -616,6 +622,60 @@ value for SETVAL </td></tr>
 
 </div>
 </div>
+<a id="a541df8f0aececd1e4d0f2321e9228f33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a541df8f0aececd1e4d0f2321e9228f33">&#9670;&nbsp;</a></span>hasDbs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hasDbs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verify if the server rely on database backend. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps pointing to the main configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the server rely no database, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a5f7271807efeb5bb51d09fa2e67c0be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f7271807efeb5bb51d09fa2e67c0be3">&#9670;&nbsp;</a></span>isAsyncCall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isAsyncCall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verify if an Execute request has been invoked asynchronously. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps pointing to the main configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the service should be invoked asynchronously, false otherwise </dd></dl>
+
+</div>
+</div>
 <a id="aa8c1042e9d6be22aac67d60565887494"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8c1042e9d6be22aac67d60565887494">&#9670;&nbsp;</a></span>lockFile()</h2>
 
@@ -956,7 +1016,7 @@ value for SETVAL </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 21 2022 16:59:34 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 24 2022 17:51:07 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

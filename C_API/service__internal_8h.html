@@ -185,6 +185,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a2ff6fdb820ae9e390d07b01918651626"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal_8h.html#a2ff6fdb820ae9e390d07b01918651626">file_exists</a> (const char *dir, const char *name)</td></tr>
 <tr class="memdesc:a2ff6fdb820ae9e390d07b01918651626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if file exists in specified folder.  <a href="service__internal_8h.html#a2ff6fdb820ae9e390d07b01918651626">More...</a><br /></td></tr>
 <tr class="separator:a2ff6fdb820ae9e390d07b01918651626"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1f01daaa4bf577aba742184698cf7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal_8h.html#a5d1f01daaa4bf577aba742184698cf7c">isAsyncCall</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *)</td></tr>
+<tr class="memdesc:a5d1f01daaa4bf577aba742184698cf7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if an Execute request has been invoked asynchronously.  <a href="service__internal_8h.html#a5d1f01daaa4bf577aba742184698cf7c">More...</a><br /></td></tr>
+<tr class="separator:a5d1f01daaa4bf577aba742184698cf7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb3c611c442367dec9974388029310d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal_8h.html#affb3c611c442367dec9974388029310d">hasDbs</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *)</td></tr>
+<tr class="memdesc:affb3c611c442367dec9974388029310d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if the server rely on database backend.  <a href="service__internal_8h.html#affb3c611c442367dec9974388029310d">More...</a><br /></td></tr>
+<tr class="separator:affb3c611c442367dec9974388029310d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -755,6 +761,60 @@ The pointer to the lock file. </td></tr>
 
 </div>
 </div>
+<a id="affb3c611c442367dec9974388029310d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb3c611c442367dec9974388029310d">&#9670;&nbsp;</a></span>hasDbs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> bool hasDbs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verify if the server rely on database backend. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps pointing to the main configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the server rely no database, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a5d1f01daaa4bf577aba742184698cf7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d1f01daaa4bf577aba742184698cf7c">&#9670;&nbsp;</a></span>isAsyncCall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> bool isAsyncCall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verify if an Execute request has been invoked asynchronously. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps pointing to the main configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the service should be invoked asynchronously, false otherwise </dd></dl>
+
+</div>
+</div>
 <a id="a1e34c17a2c86cd1c52008a447cb199cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e34c17a2c86cd1c52008a447cb199cf">&#9670;&nbsp;</a></span>lockFile()</h2>
 
@@ -1122,7 +1182,7 @@ The pointer to the lock file. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 21 2022 16:59:34 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 24 2022 17:51:07 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

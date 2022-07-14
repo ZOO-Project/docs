@@ -176,10 +176,10 @@
           <div role="main" class="document">
             
   <section id="debugging-zoo-services">
-<span id="services-debug"></span><h1>Debugging ZOO Services<a class="headerlink" href="#debugging-zoo-services" title="Permalink to this headline">¶</a></h1>
+<span id="services-debug"></span><h1>Debugging ZOO Services<a class="headerlink" href="#debugging-zoo-services" title="Permalink to this heading">¶</a></h1>
 <p>Several methods can be used in order to debug <a class="reference internal" href="index.html#services-index"><span class="std std-ref">ZOO-Services</span></a>. The most common solutions are web or command line.</p>
 <section id="web">
-<h2>Web<a class="headerlink" href="#web" title="Permalink to this headline">¶</a></h2>
+<h2>Web<a class="headerlink" href="#web" title="Permalink to this heading">¶</a></h2>
 <p>Any problem can be checked in the Apache server log file when using http WPS requests.</p>
 <p>On Unix, the log files is usually located in <code class="docutils literal notranslate"><span class="pre">/var/log/apache2</span></code> and
 the relevant one is named <em>error_log</em>. A simple way to read this file is to use the <code class="docutils literal notranslate"><span class="pre">tail</span></code> command,
@@ -190,7 +190,7 @@ as it allows to see the file updates for each request</p>
 <p>If the log is not clear enough, you still have the possibility to add
 more debug information to your source code, writing to standard errors.</p>
 <section id="python">
-<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this heading">¶</a></h3>
 <p>Using Python, you can for example do this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
@@ -200,12 +200,12 @@ more debug information to your source code, writing to standard errors.</p>
 </div>
 </section>
 <section id="javascript">
-<span id="web-javascript"></span><h3>Javascript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h3>
+<span id="web-javascript"></span><h3>Javascript<a class="headerlink" href="#javascript" title="Permalink to this heading">¶</a></h3>
 <p>Using JavaScript, you can use <code class="docutils literal notranslate"><span class="pre">alert</span></code> to print a string to standard error, for example:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// add this line when you want to see own message</span>
-<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;My message&#39;</span><span class="p">)</span>
-<span class="c1">// you can debug value of inputs, outputs or conf</span>
-<span class="nx">alert</span><span class="p">(</span><span class="nx">inputs</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// add this line when you want to see own message</span><span class="w"></span>
+<span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;My message&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="c1">// you can debug value of inputs, outputs or conf</span><span class="w"></span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">inputs</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">])</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -215,7 +215,7 @@ more debug information to your source code, writing to standard errors.</p>
 </section>
 </section>
 <section id="command-line">
-<h2>Command line<a class="headerlink" href="#command-line" title="Permalink to this headline">¶</a></h2>
+<h2>Command line<a class="headerlink" href="#command-line" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="../kernel/index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a> (<em>zoo_loader.cgi</em>) can also be used from command line. This is really useful for debugging services in a deeper way, for example:.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># in order to use it you have to copy test_service.py and HelloPy.zcfg from</span>
 <span class="c1"># the example services</span>
@@ -235,7 +235,7 @@ input XML request:</p>
 </pre></div>
 </div>
 <section id="gdb">
-<h3>GDB<a class="headerlink" href="#gdb" title="Permalink to this headline">¶</a></h3>
+<h3>GDB<a class="headerlink" href="#gdb" title="Permalink to this heading">¶</a></h3>
 <p>From command line you can use also the command line tool <a class="reference external" href="http://www.gnu.org/software/gdb/">GDB</a>
 to debug <code class="docutils literal notranslate"><span class="pre">zoo_loader.cgi</span></code>, you have to run:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># launch zoo_loader.cgi from gdb</span>
@@ -253,7 +253,7 @@ requests when running from gdb.</p>
 copying the result of the command.</p>
 </section>
 <section id="id2">
-<h3>Python<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>Python<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 <p>For Python, you can use <code class="docutils literal notranslate"><span class="pre">pdb</span></code>, more info at <a class="reference external" href="http://docs.python.org/2/library/pdb.html">http://docs.python.org/2/library/pdb.html</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pdb</span>
 
@@ -263,7 +263,7 @@ copying the result of the command.</p>
 </div>
 </section>
 <section id="id3">
-<h3>Javascript<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>Javascript<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 <p>You can use <code class="docutils literal notranslate"><span class="pre">alert</span></code> also to print in the console, more info in the <a class="reference internal" href="#web-javascript"><span class="std std-ref">Javascript</span></a> web section</p>
 </section>
 </section>
@@ -317,6 +317,7 @@ copying the result of the command.</p>
       <script type="text/javascript" src="../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
 
   

@@ -176,7 +176,7 @@
           <div role="main" class="document">
             
   <section id="optional-hpc-support">
-<span id="kernel-hpc"></span><h1>Optional HPC support<a class="headerlink" href="#optional-hpc-support" title="Permalink to this headline">¶</a></h1>
+<span id="kernel-hpc"></span><h1>Optional HPC support<a class="headerlink" href="#optional-hpc-support" title="Permalink to this heading">¶</a></h1>
 <p>The optional ZOO-Kernel HPC support gives you the opportunity to use
 OGC WPS for invoking remote execution of OTB applications. The current
 implementation rely on <a class="reference external" href="https://www.openssh.com/">OpenSSH</a> and the
@@ -206,10 +206,10 @@ whole process in case of failure of the callback service for instance.</p>
 <p>By now, the callback service is not a WPS service but an independent server.</p>
 <p><a class="reference internal" href="../_images/hpc_schema.svg"><img alt="HPC Support schema" height="1103" src="../_images/hpc_schema.svg" width="528" /></a></p>
 <section id="installation-and-configuration">
-<h2>Installation and configuration<a class="headerlink" href="#installation-and-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Installation and configuration<a class="headerlink" href="#installation-and-configuration" title="Permalink to this heading">¶</a></h2>
 <p>Follow the step described below in order to activate the ZOO-Project optional HPC support.</p>
 <section id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>latest <a class="reference external" href="http://zoo-project.org/trac/browser/trunk/zoo-project/zoo-kernel">ZOO-Kernel</a>
@@ -222,9 +222,9 @@ and <a class="reference external" href="https://www.orfeo-toolbox.org">OrfeoTool
 </div></blockquote>
 </section>
 <section id="installation-steps">
-<h3>Installation steps<a class="headerlink" href="#installation-steps" title="Permalink to this headline">¶</a></h3>
+<h3>Installation steps<a class="headerlink" href="#installation-steps" title="Permalink to this heading">¶</a></h3>
 <section id="id3">
-<h4>ZOO-Kernel<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<h4>ZOO-Kernel<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h4>
 <p>Compile ZOO-Kernel using the configuration options as shown below:</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cd zoo-kernel
 autoconf
@@ -244,7 +244,7 @@ for exemple, please use the corresponding option(s).</p>
 </div>
 </section>
 <section id="finalizehpc-wps-service">
-<h4>FinalizeHPC WPS Service<a class="headerlink" href="#finalizehpc-wps-service" title="Permalink to this headline">¶</a></h4>
+<h4>FinalizeHPC WPS Service<a class="headerlink" href="#finalizehpc-wps-service" title="Permalink to this heading">¶</a></h4>
 <p>For being informed that the remote OTB application ends on the
 cluster, one should invoke the FinalizeHPC service. It is responsible
 to connect using SSH to the HPC server to run an <code class="docutils literal notranslate"><span class="pre">sacct</span></code> command for
@@ -275,9 +275,9 @@ use the following commands to do so.</p>
 </section>
 </section>
 <section id="configuration-steps">
-<h3>Configuration steps<a class="headerlink" href="#configuration-steps" title="Permalink to this headline">¶</a></h3>
+<h3>Configuration steps<a class="headerlink" href="#configuration-steps" title="Permalink to this heading">¶</a></h3>
 <section id="main-configuration-file">
-<h4>Main configuration file<a class="headerlink" href="#main-configuration-file" title="Permalink to this headline">¶</a></h4>
+<h4>Main configuration file<a class="headerlink" href="#main-configuration-file" title="Permalink to this heading">¶</a></h4>
 <p>When HPC support is activated, you can use different HPC configuration
 by adding <code class="docutils literal notranslate"><span class="pre">confId</span></code> to your usual <code class="docutils literal notranslate"><span class="pre">serviceType=HPC</span></code> in your zcfg
 file. For being able to find which configuration a service should
@@ -403,7 +403,7 @@ to the callback service.</p>
 </div>
 </section>
 <section id="ogc-wps-services-metadata">
-<h4>OGC WPS Services metadata<a class="headerlink" href="#ogc-wps-services-metadata" title="Permalink to this headline">¶</a></h4>
+<h4>OGC WPS Services metadata<a class="headerlink" href="#ogc-wps-services-metadata" title="Permalink to this heading">¶</a></h4>
 <p>To produce the zcfg files corresponding to the metadata definition of
 the WPS services, you can use the otb2zcfg tool to produce them. You
 will need to replace <code class="docutils literal notranslate"><span class="pre">serviceType=OTB</span></code> by <code class="docutils literal notranslate"><span class="pre">serviceType=HPC</span></code> and,
@@ -512,6 +512,7 @@ definition of one output named out and typed as geographic imagery.</p>
       <script type="text/javascript" src="../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
 
   

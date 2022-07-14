@@ -176,7 +176,7 @@
           <div role="main" class="document">
             
   <section id="process-profiles-registry">
-<span id="process-profiles"></span><h1>Process profiles registry<a class="headerlink" href="#process-profiles-registry" title="Permalink to this headline">¶</a></h1>
+<span id="process-profiles"></span><h1>Process profiles registry<a class="headerlink" href="#process-profiles-registry" title="Permalink to this heading">¶</a></h1>
 <p>WPS Services belonging to the same Services provider often share the
 same inputs and outputs. In such a case, every <a class="reference internal" href="zcfg-reference.html#services-zcfg"><span class="std std-ref">ZCFG</span></a> file would contain the same metadata information and
 this may be a waste of time to write them all.</p>
@@ -218,7 +218,7 @@ parameters required.</p>
 can be also used in the same way for WPS 1.0.0 Services.</p>
 </div>
 <section id="generic-process-profile">
-<h2>Generic Process Profile<a class="headerlink" href="#generic-process-profile" title="Permalink to this headline">¶</a></h2>
+<h2>Generic Process Profile<a class="headerlink" href="#generic-process-profile" title="Permalink to this heading">¶</a></h2>
 <p>A Generic Process Profile is a ZCFG file located in the <code class="docutils literal notranslate"><span class="pre">generic</span></code>
 sub-directory, it defines <a class="reference external" href="zcfg-reference.html#main-metadata-information">main metadata information</a>, inputs and outputs
 name, basic metadata and multiplicity. It can make reference to a
@@ -256,7 +256,7 @@ separate their names with a comma (ie. concept = GO,GB),</p>
 </div>
 </section>
 <section id="process-implementation-profile">
-<h2>Process Implementation Profile<a class="headerlink" href="#process-implementation-profile" title="Permalink to this headline">¶</a></h2>
+<h2>Process Implementation Profile<a class="headerlink" href="#process-implementation-profile" title="Permalink to this heading">¶</a></h2>
 <p>A Process Implementation Profile is similar to a <a class="reference external" href="zcfg-reference.html">ZCFG file</a> located in the <cite>implementation</cite>
 sub-directory, it defines (or inherit from its parent) all the
 properties of a <a class="reference external" href="#generic-process-profile">Generic Process Profile</a>
@@ -308,7 +308,7 @@ from the <a class="reference external" href="#generic-process-profile">GP generi
 </div>
 </section>
 <section id="zcfg-inheritance">
-<h2>ZCFG inheritance<a class="headerlink" href="#zcfg-inheritance" title="Permalink to this headline">¶</a></h2>
+<h2>ZCFG inheritance<a class="headerlink" href="#zcfg-inheritance" title="Permalink to this heading">¶</a></h2>
 <p>For the ZCFG files at the service level, you can inherit the metadata
 from a Process Implementation Profile available in the registry. As
 before, you simply need to add a <code class="docutils literal notranslate"><span class="pre">extend</span></code> key refering the ZCFG you
@@ -345,7 +345,7 @@ format, then you may write the following:</p>
 </div>
 </section>
 <section id="setup-registry-browser">
-<span id="install-gfr"></span><h2>Setup registry browser<a class="headerlink" href="#setup-registry-browser" title="Permalink to this headline">¶</a></h2>
+<span id="install-gfr"></span><h2>Setup registry browser<a class="headerlink" href="#setup-registry-browser" title="Permalink to this heading">¶</a></h2>
 <p>In the <code class="docutils literal notranslate"><span class="pre">zoo-project/zoo-services/utils/registry</span></code>  you can find the
 source code and the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> required to build the Registry Browser
 Services Provider. To build and install this service, use the
@@ -443,6 +443,7 @@ done
       <script type="text/javascript" src="../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
 
   

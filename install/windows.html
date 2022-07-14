@@ -176,9 +176,9 @@
           <div role="main" class="document">
             
   <section id="installation-on-windows-trade">
-<span id="install-onwindows"></span><h1>Installation on Windows ™<a class="headerlink" href="#installation-on-windows-trade" title="Permalink to this headline">¶</a></h1>
+<span id="install-onwindows"></span><h1>Installation on Windows ™<a class="headerlink" href="#installation-on-windows-trade" title="Permalink to this heading">¶</a></h1>
 <section id="install-zoo-project-binaries">
-<h2>Install ZOO-Project binaries<a class="headerlink" href="#install-zoo-project-binaries" title="Permalink to this headline">¶</a></h2>
+<h2>Install ZOO-Project binaries<a class="headerlink" href="#install-zoo-project-binaries" title="Permalink to this heading">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The content of the ZOO-Project Windows-Binaries is based on
@@ -198,7 +198,7 @@ simply rename the <cite>zoo_loader_jave.cgi</cite> file located in
 <cite>jvm.dll</cite> can be found.</p>
 </div>
 <section id="using-the-installer">
-<h3>Using the installer<a class="headerlink" href="#using-the-installer" title="Permalink to this headline">¶</a></h3>
+<h3>Using the installer<a class="headerlink" href="#using-the-installer" title="Permalink to this heading">¶</a></h3>
 <p>Prior to run the ZOO-Project-Installer, please make sure you have IIS
 and <a class="reference external" href="https://www.python.org/downloads/windows/">Python</a> setup on
 your machine. Then download the <a class="reference external" href="https://bintray.com/gfenoy/ZOO-Project/Windows-Binaries/view">ZOO-Project-Installer</a>
@@ -208,7 +208,7 @@ installer has been run, simply access the following link:
 <a class="reference external" href="http://localhost/zoo-demo/">http://localhost/zoo-demo/</a> to access your local demo application.</p>
 </section>
 <section id="install-by-hand">
-<h3>Install by hand<a class="headerlink" href="#install-by-hand" title="Permalink to this headline">¶</a></h3>
+<h3>Install by hand<a class="headerlink" href="#install-by-hand" title="Permalink to this heading">¶</a></h3>
 <p>Prior to run the ZOO-Project-Installer, please make sure you have IIS
 and <a class="reference external" href="https://www.python.org/downloads/windows/">Python</a> setup on
 your machine. Then download the <a class="reference external" href="https://bintray.com/gfenoy/ZOO-Project/Windows-Binaries/view">ZOO-Project</a>
@@ -229,7 +229,7 @@ command as administrator to allow the <cite>zoo_loader.cgi</cite> to run from
 </section>
 </section>
 <section id="compile-zoo-project-from-source">
-<h2>Compile ZOO-Project from source<a class="headerlink" href="#compile-zoo-project-from-source" title="Permalink to this headline">¶</a></h2>
+<h2>Compile ZOO-Project from source<a class="headerlink" href="#compile-zoo-project-from-source" title="Permalink to this heading">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Ensure to first perform the <a class="reference internal" href="prerequisites.html#install-prereq"><span class="std std-ref">prerequisite steps</span></a> before compiling the ZOO Kernel.</p>
@@ -331,12 +331,12 @@ your WPS service.  An example of such a file running on Windows is:</p>
 </li>
 </ol>
 <section id="build-options">
-<span id="win-configure-options"></span><h3>Build options<a class="headerlink" href="#build-options" title="Permalink to this headline">¶</a></h3>
+<span id="win-configure-options"></span><h3>Build options<a class="headerlink" href="#build-options" title="Permalink to this heading">¶</a></h3>
 <p>Various build options can be set in the <code class="docutils literal notranslate"><span class="pre">nmake.opt</span></code> file to define
 the location of the built libraries you want to use to build your
 ZOO-Kernel. Some are optional and some are required, they are listed
 below exhaustively:</p>
-<div class="contents local topic" id="contents">
+<nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#gettext-required" id="id1">gettext (Required)</a></p></li>
 <li><p><a class="reference internal" href="#libcurl-required" id="id2">libCURL (Required)</a></p></li>
@@ -350,9 +350,9 @@ below exhaustively:</p>
 <li><p><a class="reference internal" href="#php-optional" id="id10">PHP (Optional)</a></p></li>
 <li><p><a class="reference internal" href="#database-backend-optional" id="id11">Database backend (Optional)</a></p></li>
 </ul>
-</div>
+</nav>
 <section id="gettext-required">
-<h4><a class="toc-backref" href="#contents">gettext (Required)</a><a class="headerlink" href="#gettext-required" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">gettext (Required)</a><a class="headerlink" href="#gettext-required" title="Permalink to this heading">¶</a></h4>
 <p>The location of the libintl (built when building gettext) should be
 specified by defining the <code class="docutils literal notranslate"><span class="pre">INTL_DIR</span></code> environment variable. It
 supposes that the header and the <code class="docutils literal notranslate"><span class="pre">intl.lib</span></code> file are available.</p>
@@ -364,7 +364,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 </div>
 </section>
 <section id="libcurl-required">
-<h4><a class="toc-backref" href="#contents">libCURL (Required)</a><a class="headerlink" href="#libcurl-required" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">libCURL (Required)</a><a class="headerlink" href="#libcurl-required" title="Permalink to this heading">¶</a></h4>
 <p>The location of the libCURL should be specified by defining
 the <code class="docutils literal notranslate"><span class="pre">CURL_DIR</span></code> environment variable. It supposes that there are 2
 sub-directory <code class="docutils literal notranslate"><span class="pre">include</span></code> containing the libCURL header and <code class="docutils literal notranslate"><span class="pre">lib</span></code>
@@ -377,7 +377,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 </div>
 </section>
 <section id="libfcgi-required">
-<h4><a class="toc-backref" href="#contents">libFCGI (Required)</a><a class="headerlink" href="#libfcgi-required" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">libFCGI (Required)</a><a class="headerlink" href="#libfcgi-required" title="Permalink to this heading">¶</a></h4>
 <p>The location of the libFCGI should be specified by defining the
 <code class="docutils literal notranslate"><span class="pre">FCGI_DIR</span></code> environment variable. It supposes that there are 2
 sub-directory <code class="docutils literal notranslate"><span class="pre">include</span></code> containing the FastCGI header and
@@ -390,7 +390,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 </div>
 </section>
 <section id="libxml2-required">
-<h4><a class="toc-backref" href="#contents">libXML2 (Required)</a><a class="headerlink" href="#libxml2-required" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">libXML2 (Required)</a><a class="headerlink" href="#libxml2-required" title="Permalink to this heading">¶</a></h4>
 <p>The location of the libXML2 should be specified by defining the
 <code class="docutils literal notranslate"><span class="pre">XML2_DIR</span></code> environment variable. It supposes that there are 2
 sub-directory <code class="docutils literal notranslate"><span class="pre">include</span></code> containing the libXML2 header and
@@ -403,7 +403,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 </div>
 </section>
 <section id="openssl-required">
-<h4><a class="toc-backref" href="#contents">OpenSSL (Required)</a><a class="headerlink" href="#openssl-required" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">OpenSSL (Required)</a><a class="headerlink" href="#openssl-required" title="Permalink to this heading">¶</a></h4>
 <p>The location of the OpenSSL library should be specified by defining
 the <code class="docutils literal notranslate"><span class="pre">SSL_DIR</span></code> environment variable. It supposes that there are 2
 sub-directory <code class="docutils literal notranslate"><span class="pre">inc32</span></code> containing the header files and
@@ -416,7 +416,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 </div>
 </section>
 <section id="gdal-required">
-<h4><a class="toc-backref" href="#contents">GDAL (Required)</a><a class="headerlink" href="#gdal-required" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">GDAL (Required)</a><a class="headerlink" href="#gdal-required" title="Permalink to this heading">¶</a></h4>
 <p>The location of the GDAL library should be specified by defining
 the <code class="docutils literal notranslate"><span class="pre">GDAL_DIR</span></code> environment variable. It corresponds to the path
 where you uncompress and built GDAL, it supposes that you have the
@@ -429,7 +429,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 </div>
 </section>
 <section id="mapserver-optional">
-<h4><a class="toc-backref" href="#contents">MapServer (Optional)</a><a class="headerlink" href="#mapserver-optional" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">MapServer (Optional)</a><a class="headerlink" href="#mapserver-optional" title="Permalink to this heading">¶</a></h4>
 <p>The location of the MapServer library path should be specified by
 defining the <code class="docutils literal notranslate"><span class="pre">MS_DIR</span></code> environment variable. It corresponds to the
 path where you build MapServer on your system, this directory should
@@ -442,7 +442,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 </div>
 </section>
 <section id="python-optional">
-<h4><a class="toc-backref" href="#contents">Python (Optional)</a><a class="headerlink" href="#python-optional" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">Python (Optional)</a><a class="headerlink" href="#python-optional" title="Permalink to this heading">¶</a></h4>
 <p>The location of the Python binaries path should be specified by
 defining the <code class="docutils literal notranslate"><span class="pre">PY_DIR</span></code> environment variable. It corresponds to the
 path where you build Python on your system. The location of the
@@ -457,7 +457,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 </div>
 </section>
 <section id="javascript-optional">
-<h4><a class="toc-backref" href="#contents">JavaScript (Optional)</a><a class="headerlink" href="#javascript-optional" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">JavaScript (Optional)</a><a class="headerlink" href="#javascript-optional" title="Permalink to this heading">¶</a></h4>
 <p>The location of libmozjs should be specified by defining the
 <code class="docutils literal notranslate"><span class="pre">JS_DIR</span></code> environment variable. It corresponds to the path where you
 build libmozjs on your system, it supposes that the header and
@@ -470,7 +470,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 </div>
 </section>
 <section id="php-optional">
-<h4><a class="toc-backref" href="#contents">PHP (Optional)</a><a class="headerlink" href="#php-optional" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">PHP (Optional)</a><a class="headerlink" href="#php-optional" title="Permalink to this heading">¶</a></h4>
 <p>The location of PHP should be specified by defining the <code class="docutils literal notranslate"><span class="pre">PHP_DIR</span></code>
 environment variable. It corresponds to the path where you build PHP
 on your system. The location of the <code class="docutils literal notranslate"><span class="pre">php5embed.lib</span></code> files should be
@@ -484,7 +484,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 </div>
 </section>
 <section id="database-backend-optional">
-<h4><a class="toc-backref" href="#contents">Database backend (Optional)</a><a class="headerlink" href="#database-backend-optional" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#contents" role="doc-backlink">Database backend (Optional)</a><a class="headerlink" href="#database-backend-optional" title="Permalink to this heading">¶</a></h4>
 <p>ZOO-Kernel can use a database backend to store ongoing status
 informations of running services, for activating this operation mode,
 you should define the evironment variable <code class="docutils literal notranslate"><span class="pre">DB</span></code> and set it to any
@@ -501,7 +501,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 </section>
 </section>
 <section id="optionally-compile-individual-services">
-<h3>Optionally Compile Individual Services<a class="headerlink" href="#optionally-compile-individual-services" title="Permalink to this headline">¶</a></h3>
+<h3>Optionally Compile Individual Services<a class="headerlink" href="#optionally-compile-individual-services" title="Permalink to this heading">¶</a></h3>
 <p>An example could be the <em>OGR base-vect-ops</em> provider located in the <code class="docutils literal notranslate"><span class="pre">zoo-project\zoo-services\ogr\base-vect-ops</span></code> directory.</p>
 <ol class="arabic">
 <li><p>First edit the <em>makefile.vc</em> located in that directory, and execute:</p>
@@ -572,6 +572,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
       <script type="text/javascript" src="../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
 
   

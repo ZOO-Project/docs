@@ -176,14 +176,14 @@
           <div role="main" class="document">
             
   <section id="optional-mapserver-support">
-<span id="kernel-mapserver"></span><h1>Optional MapServer support<a class="headerlink" href="#optional-mapserver-support" title="Permalink to this headline">¶</a></h1>
+<span id="kernel-mapserver"></span><h1>Optional MapServer support<a class="headerlink" href="#optional-mapserver-support" title="Permalink to this heading">¶</a></h1>
 <p>Processing geospatial data using WPS Services is usefull. Publishing their results directly as WMS, WFS or WCS ressources is even more convenient. This is possible since <a class="reference external" href="http://zoo-project.org">ZOO-Project 1.3</a> using the <strong>optional MapServer support</strong>. The latter thus allows for automatic publication of WPS Service output as WMS/WFS or WCS using a <a class="reference internal" href="index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a> specific internal mechanism which is detailed in this section.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference internal" href="../_images/mapserver.png"><img alt="MapServer logo" src="../_images/mapserver.png" style="width: 37.0px; height: 37.0px;" /></a> <a class="reference external" href="http://mapserver.org">MapServer</a> is an open source WMS/WFS/WCS server. Learn more by reading its <a class="reference external" href="http://mapserver.org/documentation.html">documentation</a>.</p>
 </div>
 <section id="how-does-it-work">
-<h2>How does it work ?<a class="headerlink" href="#how-does-it-work" title="Permalink to this headline">¶</a></h2>
+<h2>How does it work ?<a class="headerlink" href="#how-does-it-work" title="Permalink to this heading">¶</a></h2>
 <p>If a request with <code class="docutils literal notranslate"><span class="pre">mimeType=image/png</span></code> is sent to <a class="reference internal" href="index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a>, the latter will detect that the <em>useMapServer</em> option is set to true an it will automatically:</p>
 <blockquote>
 <div><ul class="simple">
@@ -234,10 +234,10 @@
 </div>
 </section>
 <section id="installation-and-configuration">
-<h2>Installation and configuration<a class="headerlink" href="#installation-and-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Installation and configuration<a class="headerlink" href="#installation-and-configuration" title="Permalink to this heading">¶</a></h2>
 <p>Follow the step described bellow in order to activate the ZOO-Project optional MapServer support.</p>
 <section id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>latest <a class="reference external" href="http://zoo-project.org/trac/browser/trunk/zoo-project/zoo-kernel">ZOO-Kernel</a> trunk version</p></li>
@@ -269,7 +269,7 @@ sudo make install
 </div>
 </section>
 <section id="main-configuration-file">
-<span id="kernel-mapserver-main-cfg"></span><h3>Main configuration file<a class="headerlink" href="#main-configuration-file" title="Permalink to this headline">¶</a></h3>
+<span id="kernel-mapserver-main-cfg"></span><h3>Main configuration file<a class="headerlink" href="#main-configuration-file" title="Permalink to this heading">¶</a></h3>
 <p>Open and edit the <code class="docutils literal notranslate"><span class="pre">/usr/lib/cgi-bin/main.cfg</span></code> file, by adding the following content in the <code class="docutils literal notranslate"><span class="pre">[main]</span></code> section:</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">dataPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="w"></span>
 <span class="n">mapserverAddress</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="o">/</span><span class="n">mapserv</span><span class="w"></span>
@@ -312,9 +312,9 @@ layer.</p>
 </div>
 </section>
 <section id="service-configuration-file">
-<h3>Service configuration file<a class="headerlink" href="#service-configuration-file" title="Permalink to this headline">¶</a></h3>
+<h3>Service configuration file<a class="headerlink" href="#service-configuration-file" title="Permalink to this heading">¶</a></h3>
 <section id="usemapserver">
-<h4>useMapserver<a class="headerlink" href="#usemapserver" title="Permalink to this headline">¶</a></h4>
+<h4>useMapserver<a class="headerlink" href="#usemapserver" title="Permalink to this heading">¶</a></h4>
 <p>In order to activate the MapServer WMS/WFS/WCS output for a specific service, the <code class="docutils literal notranslate"><span class="pre">useMapserver</span></code> parameter must be added to the <code class="docutils literal notranslate"><span class="pre">&lt;Default&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;Supported&gt;</span></code> blocks of the Service <cite>services-zcfg</cite>. If <code class="docutils literal notranslate"><span class="pre">useMapserver=true</span></code>, this means that the output result of the Service is a GDAL compatible datasource and that you want it to be automatically published by MapServer as WMS,WFS or WCS.</p>
 <p>When the useMapserver option is used in a <code class="docutils literal notranslate"><span class="pre">&lt;Default&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;Supported&gt;</span></code> block, then you have to know what are the corresponding mimeType:</p>
 <blockquote>
@@ -327,18 +327,18 @@ layer.</p>
 <p>You get the same optional parameter <code class="docutils literal notranslate"><span class="pre">msOgcVersion</span></code> as for the <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code>. This will specify that this is the specific protocol version the service want to use (so you may set also locally to service rather than globally).</p>
 </section>
 <section id="styling">
-<h4>Styling<a class="headerlink" href="#styling" title="Permalink to this headline">¶</a></h4>
+<h4>Styling<a class="headerlink" href="#styling" title="Permalink to this heading">¶</a></h4>
 <p>You have different options to define the style of the layer created
 using the data returned by your service.</p>
 <section id="msstyle">
-<h5>msStyle<a class="headerlink" href="#msstyle" title="Permalink to this headline">¶</a></h5>
+<h5>msStyle<a class="headerlink" href="#msstyle" title="Permalink to this heading">¶</a></h5>
 <p>The optional <code class="docutils literal notranslate"><span class="pre">msStyle</span></code> parameter can also be used to define a custom MapServer style block (used for vector datasource only), as follow:</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">msStyle</span> <span class="o">=</span> <span class="n">STYLE</span> <span class="n">COLOR</span> <span class="mi">125</span> <span class="mi">0</span> <span class="mi">105</span> <span class="n">OUTLINECOLOR</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="n">WIDTH</span> <span class="mi">3</span> <span class="kr">END</span>
 </pre></div>
 </div>
 </section>
 <section id="msclassify">
-<h5>msClassify<a class="headerlink" href="#msclassify" title="Permalink to this headline">¶</a></h5>
+<h5>msClassify<a class="headerlink" href="#msclassify" title="Permalink to this heading">¶</a></h5>
 <p>If a WPS service outputs a one band raster file, then it is possible
 to add a <code class="docutils literal notranslate"><span class="pre">msClassify</span></code> parameter and set it to <code class="docutils literal notranslate"><span class="pre">true</span></code> in the output
 ComplexData <code class="docutils literal notranslate"><span class="pre">&lt;Default&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;Supported&gt;</span></code> nodes of its zcfg
@@ -349,7 +349,7 @@ in order to classify the raster using equivalent intervals.</p>
 </div>
 </section>
 <section id="msinclude">
-<h5>msInclude<a class="headerlink" href="#msinclude" title="Permalink to this headline">¶</a></h5>
+<h5>msInclude<a class="headerlink" href="#msinclude" title="Permalink to this heading">¶</a></h5>
 <p>In case you want to use another layer which use the result of your
 service, for instance to produce a <a class="reference external" href="https://mapserver.org/output/kerneldensity.html">heatmap</a>, then you can use
 the
@@ -413,7 +413,7 @@ example of use of this two options with the associated mapfile.</p>
 </section>
 </section>
 <section id="example">
-<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h4>
 <p>An example <a class="reference internal" href="../services/zcfg-reference.html#services-zcfg"><span class="std std-ref">ZOO-Service configuration file</span></a> file configured for the optional MapServer support is shown bellow:</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Default&gt;</span>
  mimeType = text/xml
@@ -446,7 +446,7 @@ example of use of this two options with the associated mapfile.</p>
 </section>
 </section>
 <section id="test-requests">
-<h2>Test requests<a class="headerlink" href="#test-requests" title="Permalink to this headline">¶</a></h2>
+<h2>Test requests<a class="headerlink" href="#test-requests" title="Permalink to this heading">¶</a></h2>
 <p>The optional MapServer support can be tested using any service. The
 simple <em>HelloPy</em> Service is used in the following example requests.</p>
 <div class="admonition note">
@@ -520,6 +520,7 @@ simple <em>HelloPy</em> Service is used in the following example requests.</p>
       <script type="text/javascript" src="../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
 
   

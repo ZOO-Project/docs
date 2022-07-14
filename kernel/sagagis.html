@@ -176,17 +176,17 @@
           <div role="main" class="document">
             
   <section id="optional-saga-gis-support">
-<span id="kernel-sagagis"></span><h1>Optional SAGA GIS support<a class="headerlink" href="#optional-saga-gis-support" title="Permalink to this headline">¶</a></h1>
+<span id="kernel-sagagis"></span><h1>Optional SAGA GIS support<a class="headerlink" href="#optional-saga-gis-support" title="Permalink to this heading">¶</a></h1>
 <p><a class="reference external" href="http://www.saga-gis.org/">SAGA GIS</a> provides a comprehensive set of geoscientific methods and spatial algorithms. The optional SAGA GIS support is available since <a class="reference external" href="http://zoo-project.org">ZOO-Project 1.5</a>. It allows to execute the <a class="reference external" href="http://www.saga-gis.org/saga_module_doc/2.1.4/index.html">SAGA Modules</a> directly as ZOO WPS Services thanks to a <a class="reference internal" href="index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a> specific internal mechanism which is detailed in this section.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference internal" href="../_images/sagagis.png"><img alt="SAGA GIS logo" src="../_images/sagagis.png" style="width: 45.0px; height: 45.0px;" /></a> <a class="reference external" href="http://www.saga-gis.org/">SAGA GIS</a> is the System for Automated Geoscientific Analyses. Learn more on official <a class="reference external" href="http://www.saga-gis.org/en/index.html">website</a>.</p>
 </div>
 <section id="installation-and-configuration">
-<h2>Installation and configuration<a class="headerlink" href="#installation-and-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>Installation and configuration<a class="headerlink" href="#installation-and-configuration" title="Permalink to this heading">¶</a></h2>
 <p>Follow the step described bellow in order to activate the ZOO-Project optional SAGA GIS support.</p>
 <section id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>latest <a class="reference external" href="http://zoo-project.org/trac/browser/trunk/zoo-project/zoo-kernel">ZOO-Kernel</a> trunk version</p></li>
@@ -195,7 +195,7 @@
 </div></blockquote>
 </section>
 <section id="installation-steps">
-<h3>Installation steps<a class="headerlink" href="#installation-steps" title="Permalink to this headline">¶</a></h3>
+<h3>Installation steps<a class="headerlink" href="#installation-steps" title="Permalink to this heading">¶</a></h3>
 <p>Compile ZOO-Kernel using the configuration options as shown bellow:</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cd zoo-kernel
 autoconf
@@ -214,9 +214,9 @@ version number of SAGA-GIS.</p>
 </div>
 </section>
 <section id="configuration-steps">
-<h3>Configuration steps<a class="headerlink" href="#configuration-steps" title="Permalink to this headline">¶</a></h3>
+<h3>Configuration steps<a class="headerlink" href="#configuration-steps" title="Permalink to this heading">¶</a></h3>
 <section id="services-configuration-file">
-<h4>Services configuration file<a class="headerlink" href="#services-configuration-file" title="Permalink to this headline">¶</a></h4>
+<h4>Services configuration file<a class="headerlink" href="#services-configuration-file" title="Permalink to this heading">¶</a></h4>
 <p>Building the
 <a class="reference external" href="http://zoo-project.org/trac/browser/trunk/thirds/saga2zcfg">saga2zcfg</a>
 utility is required to activate the available SAGA-GIS Modules as WPS
@@ -235,7 +235,7 @@ cp *zcfg /location/to/your/cgi-bin/SAGA
 </div>
 </section>
 <section id="test-requests">
-<h4>Test requests<a class="headerlink" href="#test-requests" title="Permalink to this headline">¶</a></h4>
+<h4>Test requests<a class="headerlink" href="#test-requests" title="Permalink to this heading">¶</a></h4>
 <p>The SAGA-GIS Modules should be listed as available WPS Services when
 runing a GetCapabilities request, as follow:</p>
 <p><a class="reference external" href="http://localhost/cgi-bin/zoo_loader.cgi?request=GetCapabilities&amp;service=WPS">http://localhost/cgi-bin/zoo_loader.cgi?request=GetCapabilities&amp;service=WPS</a></p>
@@ -300,6 +300,7 @@ runing a GetCapabilities request, as follow:</p>
       <script type="text/javascript" src="../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
 
   

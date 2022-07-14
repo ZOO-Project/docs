@@ -176,9 +176,9 @@
           <div role="main" class="document">
             
   <section id="zoo-kernel-configuration">
-<span id="kernel-config"></span><h1>ZOO-Kernel configuration<a class="headerlink" href="#zoo-kernel-configuration" title="Permalink to this headline">¶</a></h1>
+<span id="kernel-config"></span><h1>ZOO-Kernel configuration<a class="headerlink" href="#zoo-kernel-configuration" title="Permalink to this heading">¶</a></h1>
 <section id="main-configuration-file">
-<h2>Main configuration file<a class="headerlink" href="#main-configuration-file" title="Permalink to this headline">¶</a></h2>
+<h2>Main configuration file<a class="headerlink" href="#main-configuration-file" title="Permalink to this heading">¶</a></h2>
 <p>ZOO-Kernel general settings are defined in a configuration file called
 <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code>. This file is stored in the same directory as ZOO-Kernel
 (<code class="docutils literal notranslate"><span class="pre">/usr/lib/cgi-bin/</span></code> in most cases). It provides usefull metadata information on your ZOO-Kernel installation.</p>
@@ -193,7 +193,7 @@ same directory.</p>
 <p>Information contained by <code class="docutils literal notranslate"><span class="pre">/usr/lib/cgi-bin/main.cfg</span></code> is accessible from WPS Services at runtime, so when <em>Execute</em> requests are used.</p>
 </div>
 <section id="default-main-cfg">
-<h3>Default main.cfg<a class="headerlink" href="#default-main-cfg" title="Permalink to this headline">¶</a></h3>
+<h3>Default main.cfg<a class="headerlink" href="#default-main-cfg" title="Permalink to this heading">¶</a></h3>
 <p>An example <em>main.cfg</em> file is given here as reference.</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">[headers]</span><span class="w"></span>
 <span class="linenos"> 2</span><span class="na">X-Powered-By</span><span class="o">=</span><span class="s">ZOO@ZOO-Project</span><span class="w"></span>
@@ -238,7 +238,7 @@ same directory.</p>
 </div>
 </section>
 <section id="main-section">
-<h3>Main section<a class="headerlink" href="#main-section" title="Permalink to this headline">¶</a></h3>
+<h3>Main section<a class="headerlink" href="#main-section" title="Permalink to this heading">¶</a></h3>
 <p>The main.cfg <code class="docutils literal notranslate"><span class="pre">[main]</span></code> section parameters are explained bellow.</p>
 <blockquote>
 <div><ul class="simple">
@@ -247,10 +247,10 @@ same directory.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">dataPath</span></code>: Path to the directory where data files are stored (used to store mapfiles and data when MapServer support is activated).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tmpPath</span></code>: Path to the directory where temporary files are stored (such as <em>ExecuteResponse</em> when <em>storeExecuteResponse</em> is set to true).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tmpUrl</span></code>: URL to access the temporary files directory (cf. <code class="docutils literal notranslate"><span class="pre">tmpPath</span></code>).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cacheDir</span></code>: Path to  the directory where cached request files <a class="footnote-reference brackets" href="#f1" id="id1">1</a> are stored (optional).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cacheDir</span></code>: Path to  the directory where cached request files <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> are stored (optional).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">serverAddress</span></code>: URL to the ZOO-Kernel instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mapservAddress</span></code>: URL to the MapServer instance (optional).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">msOgcVersion</span></code>: Version of all supported OGC Web Services output <a class="footnote-reference brackets" href="#f2" id="id2">2</a>
+<li><p><code class="docutils literal notranslate"><span class="pre">msOgcVersion</span></code>: Version of all supported OGC Web Services output <a class="footnote-reference brackets" href="#f2" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>
 (optional).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">lang</span></code>: Supported natural languages separated by a coma (the first is the default one),</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cors</span></code>: Define if the ZOO-Kernel should support <a class="reference external" href="https://www.w3.org/TR/cors/">Cross-Origin
@@ -289,9 +289,9 @@ different fields (<code class="docutils literal notranslate"><span class="pre">v
 <a class="reference internal" href="mapserver.html#kernel-mapserver-main-cfg"><span class="std std-ref">this specific section</span></a>.</p>
 </section>
 <section id="identification-and-provider">
-<h3>Identification and Provider<a class="headerlink" href="#identification-and-provider" title="Permalink to this headline">¶</a></h3>
+<h3>Identification and Provider<a class="headerlink" href="#identification-and-provider" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">[identification]</span></code> and <code class="docutils literal notranslate"><span class="pre">[provider]</span></code> sections are not ZOO-Project
-specific. They provide OGC metadata <a class="footnote-reference brackets" href="#f3" id="id3">3</a> and should be set according
+specific. They provide OGC metadata <a class="footnote-reference brackets" href="#f3" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> and should be set according
 to the <a class="reference external" href="http://schemas.opengis.net/ows/1.1.0/ows19115subset.xsd">XML Schema Document</a> which
 encodes the parts of ISO 19115 used by the common
 <em>ServiceIdentification</em> and <em>ServiceProvider</em> sections of the
@@ -304,11 +304,11 @@ found in this <a class="reference external" href="http://schemas.opengis.net/ows
 </section>
 </section>
 <section id="additional-sections">
-<h2>Additional sections<a class="headerlink" href="#additional-sections" title="Permalink to this headline">¶</a></h2>
+<h2>Additional sections<a class="headerlink" href="#additional-sections" title="Permalink to this heading">¶</a></h2>
 <p>All the additional sections discribed in the following section are
 optional.</p>
 <section id="headers-section">
-<h3>Headers section<a class="headerlink" href="#headers-section" title="Permalink to this headline">¶</a></h3>
+<h3>Headers section<a class="headerlink" href="#headers-section" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">[headers]</span></code> section can be set in order to define a specific HTTP
 Response header, which will be used for every response. As an example,
 you can check <a class="reference external" href="http://zoo-project.org">http://zoo-project.org</a> using <em>curl</em> command line tool
@@ -323,7 +323,7 @@ parameters in this section:</p>
 </div>
 </section>
 <section id="curl-section">
-<h3>curl section<a class="headerlink" href="#curl-section" title="Permalink to this headline">¶</a></h3>
+<h3>curl section<a class="headerlink" href="#curl-section" title="Permalink to this heading">¶</a></h3>
 <p>The <cite>[curl]</cite> section is used on windows platform to specify, using the
 <cite>cainfo</cite> parameter, where is located the
 <a class="reference external" href="https://curl.haxx.se/docs/caextract.html">cacert.pem</a> file on your
@@ -334,7 +334,7 @@ machine. An example bellow is provided to illustrate sur a setting.</p>
 </div>
 </section>
 <section id="env-section">
-<h3>env section<a class="headerlink" href="#env-section" title="Permalink to this headline">¶</a></h3>
+<h3>env section<a class="headerlink" href="#env-section" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">[env]</span></code> section can be used to store specific environment
 variables to be set prior the loading of <em>Services Provider</em> and Service execution.</p>
 <p>A typical example is when a Service requires the access to a X server
@@ -348,7 +348,7 @@ variable, as follow:</p>
 specific section</span></a>.</p>
 </section>
 <section id="lenv-section">
-<h3>lenv section<a class="headerlink" href="#lenv-section" title="Permalink to this headline">¶</a></h3>
+<h3>lenv section<a class="headerlink" href="#lenv-section" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">lenv</span></code> section is used by the ZOO-Kernel to store runtime informations
 before the execution of a WPS service, it contains the following
 parameters:</p>
@@ -371,7 +371,7 @@ temporary store the final WPS response.</p></li>
 </div></blockquote>
 </section>
 <section id="renv-section">
-<h3>renv section<a class="headerlink" href="#renv-section" title="Permalink to this headline">¶</a></h3>
+<h3>renv section<a class="headerlink" href="#renv-section" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">renv</span></code> section is automatically created by the ZOO-Kernel before
 the execution of a WPS service, it contains all the environment
 variables available at runtime (so including the header fields in case
@@ -379,7 +379,7 @@ it is used through http, refer to [<a class="reference external" href="https://t
 rfc3875] for more details).</p>
 </section>
 <section id="senv-section">
-<h3>senv section<a class="headerlink" href="#senv-section" title="Permalink to this headline">¶</a></h3>
+<h3>senv section<a class="headerlink" href="#senv-section" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">senv</span></code> section can be used to store sessions information on the
 server side. Such information can then be accessed automatically from
 the Service if the server is requested using a valid cookie (as
@@ -404,7 +404,7 @@ request ZOO-Kernel using this cookie, it will automatically load the
 value stored before the Service execution.</p>
 </section>
 <section id="security-section">
-<h3>Security section<a class="headerlink" href="#security-section" title="Permalink to this headline">¶</a></h3>
+<h3>Security section<a class="headerlink" href="#security-section" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">[security]</span></code> section can be used to define what headers, the
 ZOO-Kernel has initially received in the request, should be passed
 to other servers for accessing resources (such as WMS, WFS, WCS
@@ -452,7 +452,7 @@ between users.</p>
 </div>
 </section>
 <section id="database-section">
-<span id="zoo-activate-db-backend"></span><h3>Database section<a class="headerlink" href="#database-section" title="Permalink to this headline">¶</a></h3>
+<span id="zoo-activate-db-backend"></span><h3>Database section<a class="headerlink" href="#database-section" title="Permalink to this heading">¶</a></h3>
 <p>The database section allows to configure the
 <a class="reference internal" href="../install/installation.html#zoo-install-db-backend"><span class="std std-ref">ZOO-Kernel optional database support</span></a>.</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="k">[database]</span><span class="w"></span>
@@ -477,7 +477,7 @@ database server:</p>
 to setup the database.</p>
 </section>
 <section id="metadb-section">
-<span id="zoo-activate-metadb"></span><h3>Metadb section<a class="headerlink" href="#metadb-section" title="Permalink to this headline">¶</a></h3>
+<span id="zoo-activate-metadb"></span><h3>Metadb section<a class="headerlink" href="#metadb-section" title="Permalink to this heading">¶</a></h3>
 <p>The metadb section allows to configure the ZOO-Kernel to access <a class="reference internal" href="../install/installation.html#zoo-create-metadb"><span class="std std-ref">the
 metadata information about WPS Services</span></a> by using
 a PostgreSQL database in addition to the zcfg files.</p>
@@ -502,7 +502,7 @@ database server:</p>
 to setup the database.</p>
 </section>
 <section id="include-section">
-<h3>Include section<a class="headerlink" href="#include-section" title="Permalink to this headline">¶</a></h3>
+<h3>Include section<a class="headerlink" href="#include-section" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">[include]</span></code> section (optional) lists explicitely a set of service configuration files
 the the ZOO-Kernel should parse, e.g.,</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">[include]</span><span class="w"></span>
@@ -538,7 +538,7 @@ included services if the <code class="docutils literal notranslate"><span class=
 </div>
 </section>
 <section id="rabbitmq-section">
-<h3>RabbitMQ section<a class="headerlink" href="#rabbitmq-section" title="Permalink to this headline">¶</a></h3>
+<h3>RabbitMQ section<a class="headerlink" href="#rabbitmq-section" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">[rabbitmq]</span></code> section may be used to configure how to access the
 RabbitMQ server used for communication between the ZOO-Kernel and the
 ZOO-Kernel Fast Process Manager.</p>
@@ -559,7 +559,7 @@ ZOO-Kernel with the following configure option:
 </div></blockquote>
 </section>
 <section id="server-section">
-<h3>Server section<a class="headerlink" href="#server-section" title="Permalink to this headline">¶</a></h3>
+<h3>Server section<a class="headerlink" href="#server-section" title="Permalink to this heading">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">[server]</span></code> section is used by the ZOO-Kernel Fast Process
 Manager which handle execution of services should know how much
 instances you are willing to create to execute services.</p>
@@ -577,7 +577,7 @@ commands.</p>
 </section>
 </section>
 <section id="openapi-specification-configuration-file">
-<h2>OpenAPI Specification configuration file<a class="headerlink" href="#openapi-specification-configuration-file" title="Permalink to this headline">¶</a></h2>
+<h2>OpenAPI Specification configuration file<a class="headerlink" href="#openapi-specification-configuration-file" title="Permalink to this heading">¶</a></h2>
 <p>Since revision 949 of the ZOO-Kernel, you can now activate the OGC
 API - Processing support. In such a case you will need to have an
 <code class="docutils literal notranslate"><span class="pre">oas.cfg</span></code> file located in tne same directory where the <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> is.</p>
@@ -673,17 +673,18 @@ to this <a class="reference external" href="https://github.com/opengeospatial/wp
 the <a class="reference external" href="https://swagger.io/tools/swagger-ui/">Swagger UI</a>. A live
 instance is available <a class="reference external" href="https://demo.mapmint.com/swagger-ui/dist/">here</a>.</p>
 <p class="rubric">Footnotes</p>
-<dl class="footnote brackets">
-<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>If GET requests are passed through <code class="docutils literal notranslate"><span class="pre">xlink:href</span></code> to the ZOO-Kernel , the latter will execute the request the first time and store the result  on disk. The next time the same request is executed, the cached file will be used and this will make your process run much faster. If <code class="docutils literal notranslate"><span class="pre">cachedir</span></code> was not specified in the <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> then the <code class="docutils literal notranslate"><span class="pre">tmpPath</span></code> value will be used.</p>
-</dd>
-<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Usefull when the <a class="reference internal" href="mapserver.html#kernel-mapserver"><span class="std std-ref">Optional MapServer support</span></a> is activated (available since ZOO-Project version 1.3.0).</p>
-</dd>
-<dt class="label" id="f3"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
-<dd><p>ZOO-Kernel and MapServer are sharing the same metadata for OGC Web Services if the <a class="reference internal" href="mapserver.html#kernel-mapserver"><span class="std std-ref">Optional MapServer support</span></a> is activated.</p>
-</dd>
-</dl>
+<aside class="footnote brackets" id="f1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>If GET requests are passed through <code class="docutils literal notranslate"><span class="pre">xlink:href</span></code> to the ZOO-Kernel , the latter will execute the request the first time and store the result  on disk. The next time the same request is executed, the cached file will be used and this will make your process run much faster. If <code class="docutils literal notranslate"><span class="pre">cachedir</span></code> was not specified in the <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> then the <code class="docutils literal notranslate"><span class="pre">tmpPath</span></code> value will be used.</p>
+</aside>
+<aside class="footnote brackets" id="f2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>Usefull when the <a class="reference internal" href="mapserver.html#kernel-mapserver"><span class="std std-ref">Optional MapServer support</span></a> is activated (available since ZOO-Project version 1.3.0).</p>
+</aside>
+<aside class="footnote brackets" id="f3" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>ZOO-Kernel and MapServer are sharing the same metadata for OGC Web Services if the <a class="reference internal" href="mapserver.html#kernel-mapserver"><span class="std std-ref">Optional MapServer support</span></a> is activated.</p>
+</aside>
 </section>
 </section>
 
@@ -735,6 +736,7 @@ instance is available <a class="reference external" href="https://demo.mapmint.c
       <script type="text/javascript" src="../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
 
   

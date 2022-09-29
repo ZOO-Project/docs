@@ -289,6 +289,12 @@ Functions</h2></td></tr>
 <tr class="separator:a9a622ff25a1e87eca5a42e8a63afe931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a199fa5d492f5e107551b58d0074ea88f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a199fa5d492f5e107551b58d0074ea88f">getValueFromMaps</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *inputs, const char *name)</td></tr>
 <tr class="separator:a199fa5d492f5e107551b58d0074ea88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee52cac98f0dca12484204a9a755913a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#aee52cac98f0dca12484204a9a755913a">_translateChar</a> (char *str, char toReplace, char toReplaceBy)</td></tr>
+<tr class="memdesc:aee52cac98f0dca12484204a9a755913a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace a char by another one in a string.  <a href="service_8c.html#aee52cac98f0dca12484204a9a755913a">More...</a><br /></td></tr>
+<tr class="separator:aee52cac98f0dca12484204a9a755913a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dddff595f065f29ccf53922743bbb6e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a0dddff595f065f29ccf53922743bbb6e">translateCharMap</a> (const char *str, <a class="el" href="service_8h.html#structmap">map</a> *rep)</td></tr>
+<tr class="memdesc:a0dddff595f065f29ccf53922743bbb6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace all "val" occurence with the corresponding "rep" value in a string.  <a href="service_8c.html#a0dddff595f065f29ccf53922743bbb6e">More...</a><br /></td></tr>
+<tr class="separator:a0dddff595f065f29ccf53922743bbb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a35a3793d01aef657e2582ff6108429b0"></a>
@@ -355,6 +361,50 @@ Functions</h2></td></tr>
     <tr><td class="paramname">pmsMaps</td><td>the map to dump </td></tr>
     <tr><td class="paramname">psFile</td><td>the the file pointer to store the map </td></tr>
     <tr><td class="paramname">iLimit</td><td>the number of maps to print (0 for no limit) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aee52cac98f0dca12484204a9a755913a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee52cac98f0dca12484204a9a755913a">&#9670;&nbsp;</a></span>_translateChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _translateChar </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>toReplace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>toReplaceBy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replace a char by another one in a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the string to update </td></tr>
+    <tr><td class="paramname">toReplace</td><td>the char to replace </td></tr>
+    <tr><td class="paramname">toReplaceBy</td><td>the char that will be used </td></tr>
   </table>
   </dd>
 </dl>
@@ -2883,10 +2933,48 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0dddff595f065f29ccf53922743bbb6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dddff595f065f29ccf53922743bbb6e">&#9670;&nbsp;</a></span>translateCharMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* translateCharMap </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td>
+          <td class="paramname"><em>rep</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replace all "val" occurence with the corresponding "rep" value in a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the string to update </td></tr>
+    <tr><td class="paramname">toReplace</td><td>the char to replace </td></tr>
+    <tr><td class="paramname">toReplaceBy</td><td>the char that will be used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 2 2022 10:14:38 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 29 2022 08:50:58 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

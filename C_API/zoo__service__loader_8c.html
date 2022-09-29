@@ -154,6 +154,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5054c36923934387c6f7605dd1a2f3c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a5054c36923934387c6f7605dd1a2f3c9">sig_handler</a> (int sig)</td></tr>
 <tr class="memdesc:a5054c36923934387c6f7605dd1a2f3c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal handling function which create an ExceptionReport node containing the information message corresponding to the signal number.  <a href="zoo__service__loader_8c.html#a5054c36923934387c6f7605dd1a2f3c9">More...</a><br /></td></tr>
 <tr class="separator:a5054c36923934387c6f7605dd1a2f3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112b3ecfd6e44d645eb0980b67b034f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a112b3ecfd6e44d645eb0980b67b034f8">register_signals</a> (void(func)(int))</td></tr>
+<tr class="memdesc:a112b3ecfd6e44d645eb0980b67b034f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register signals.  <a href="zoo__service__loader_8c.html#a112b3ecfd6e44d645eb0980b67b034f8">More...</a><br /></td></tr>
+<tr class="separator:a112b3ecfd6e44d645eb0980b67b034f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa3c509e98e6fb10893857e702ba3bad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#aaa3c509e98e6fb10893857e702ba3bad">loadServiceAndRun</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **myMap, <a class="el" href="service_8h.html#structservice">service</a> *s1, <a class="el" href="service_8h.html#structmap">map</a> *request_inputs, <a class="el" href="service_8h.html#structmaps">maps</a> **inputs, <a class="el" href="service_8h.html#structmaps">maps</a> **ioutputs, int *eres)</td></tr>
 <tr class="memdesc:aaa3c509e98e6fb10893857e702ba3bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a service provider and run the service function.  <a href="zoo__service__loader_8c.html#aaa3c509e98e6fb10893857e702ba3bad">More...</a><br /></td></tr>
 <tr class="separator:aaa3c509e98e6fb10893857e702ba3bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -867,6 +870,33 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a112b3ecfd6e44d645eb0980b67b034f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a112b3ecfd6e44d645eb0980b67b034f8">&#9670;&nbsp;</a></span>register_signals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void register_signals </td>
+          <td>(</td>
+          <td class="paramtype">void(func)(int)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register signals. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>function for handling signals </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="zoo__service__loader_8c.html#a6297d634c9d573142a705690440391aa" title="Signal handling function which simply call exit(0).">donothing</a> </dd></dl>
+
+</div>
+</div>
 <a id="ac28aefcb8e972ec345696f9bf8d8001a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac28aefcb8e972ec345696f9bf8d8001a">&#9670;&nbsp;</a></span>runRequest()</h2>
 
@@ -1072,7 +1102,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 2 2022 10:14:38 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Sep 29 2022 08:50:58 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -984,6 +984,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Run GetStatus requests. </p>
+<p>Specifically for the OGC API - Processes - Part 1 - Core support, in case something wrong happens, the conf maps will get in the lenv section the following fields:</p><ul>
+<li>error: "true", indicating that something went wrong</li>
+<li>code: the OGC error code (such as NoSuchJob)</li>
+<li>message: the error message o be reported</li>
+</ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conf</td><td>the maps containing the setting of the main.cfg file </td></tr>
@@ -1054,7 +1059,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 4 2022 12:03:15 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Oct 7 2022 16:45:52 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

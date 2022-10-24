@@ -123,12 +123,6 @@ Functions</h2></td></tr>
 <tr class="memitem:adfb4bb29437c182e5b38ee207b642d09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#adfb4bb29437c182e5b38ee207b642d09">dumpBackFinalFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, char *fbkp, char *fbkp1)</td></tr>
 <tr class="memdesc:adfb4bb29437c182e5b38ee207b642d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump back the final file fbkp1 to fbkp.  <a href="zoo__service__loader_8c.html#adfb4bb29437c182e5b38ee207b642d09">More...</a><br /></td></tr>
 <tr class="separator:adfb4bb29437c182e5b38ee207b642d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f2a118db78b84729475cec61de0da81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a0f2a118db78b84729475cec61de0da81">updateCnt</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, const char *field, const char *type)</td></tr>
-<tr class="memdesc:a0f2a118db78b84729475cec61de0da81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the counter value (in conf / lenv / serviceCnt.  <a href="zoo__service__loader_8c.html#a0f2a118db78b84729475cec61de0da81">More...</a><br /></td></tr>
-<tr class="separator:a0f2a118db78b84729475cec61de0da81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0fc5078b8cb590dfe9a6c40668af7c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#ac0fc5078b8cb590dfe9a6c40668af7c5">compareCnt</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, const char *field, const char *type)</td></tr>
-<tr class="memdesc:ac0fc5078b8cb590dfe9a6c40668af7c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare a value with conf / lenv / serviceCnt.  <a href="zoo__service__loader_8c.html#ac0fc5078b8cb590dfe9a6c40668af7c5">More...</a><br /></td></tr>
-<tr class="separator:ac0fc5078b8cb590dfe9a6c40668af7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52d7eef0b098443a9a2041d9fa732e58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a52d7eef0b098443a9a2041d9fa732e58">getServicesNamespacePath</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, char *oldPath, char *newPath, int maxSize)</td></tr>
 <tr class="memdesc:a52d7eef0b098443a9a2041d9fa732e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the zooServicesNamespace map is present in the m map; if it is, the path to the directory where the ZOO-kernel should search for service providers will be updated.  <a href="zoo__service__loader_8c.html#a52d7eef0b098443a9a2041d9fa732e58">More...</a><br /></td></tr>
 <tr class="separator:a52d7eef0b098443a9a2041d9fa732e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,51 +250,6 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="sqlapi_8c.html#adf014ae68b172832b74512bd252263a7" title="Close any connection to the db backend.">close_sql</a>,<a class="el" href="sqlapi_8c.html#afbd59495094a70301979f581eb0551fd" title="Call OGRCleanupAll.">end_sql</a> </dd></dl>
-
-</div>
-</div>
-<a id="ac0fc5078b8cb590dfe9a6c40668af7c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0fc5078b8cb590dfe9a6c40668af7c5">&#9670;&nbsp;</a></span>compareCnt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool compareCnt </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>field</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compare a value with conf / lenv / serviceCnt. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">conf</td><td>the conf maps containing the main.cfg settings </td></tr>
-    <tr><td class="paramname">field</td><td>the value to compare with (serviceCntLimit or serviceCntSkip) </td></tr>
-    <tr><td class="paramname">type</td><td>comparison operator can be : elower, lower, eupper, upper, or equal </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>boolean resulting of the comparison between the values </dd></dl>
 
 </div>
 </div>
@@ -1053,50 +1002,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a0f2a118db78b84729475cec61de0da81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f2a118db78b84729475cec61de0da81">&#9670;&nbsp;</a></span>updateCnt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void updateCnt </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>field</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Update the counter value (in conf / lenv / serviceCnt. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">conf</td><td>the conf maps containing the main.cfg settings </td></tr>
-    <tr><td class="paramname">field</td><td>the value to update (serviceCnt or serviceCounter) </td></tr>
-    <tr><td class="paramname">type</td><td>char pointer can be "incr" for incrementing the value by 1, other will descrement the value by 1 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="aa40b27ae32d6d1ae7160bd6256e08eb8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa40b27ae32d6d1ae7160bd6256e08eb8">&#9670;&nbsp;</a></span>yylex()</h2>
 
@@ -1132,7 +1037,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 17 2022 13:01:07 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 24 2022 13:24:57 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

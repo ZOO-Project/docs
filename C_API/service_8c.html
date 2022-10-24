@@ -196,6 +196,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af89bb4639cdef462428f57f9d93cd2ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#af89bb4639cdef462428f57f9d93cd2ac">getMapArray</a> (<a class="el" href="service_8h.html#structmap">map</a> *pmMap, const char *pccKey, int iIndex)</td></tr>
 <tr class="memdesc:af89bb4639cdef462428f57f9d93cd2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access a specific map array element.  <a href="service_8c.html#af89bb4639cdef462428f57f9d93cd2ac">More...</a><br /></td></tr>
 <tr class="separator:af89bb4639cdef462428f57f9d93cd2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249336254694282391151a25d023c9c5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a249336254694282391151a25d023c9c5">getMapArrayKey</a> (<a class="el" href="service_8h.html#structmap">map</a> *pmMap, const char *pccKey, int iIndex)</td></tr>
+<tr class="memdesc:a249336254694282391151a25d023c9c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the key name for a specific map array element.  <a href="service_8c.html#a249336254694282391151a25d023c9c5">More...</a><br /></td></tr>
+<tr class="separator:a249336254694282391151a25d023c9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80fd70b3b82cef49be70c6e991d1b176"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a80fd70b3b82cef49be70c6e991d1b176">setMapArray</a> (<a class="el" href="service_8h.html#structmap">map</a> *pmMap, const char *pccKey, int iIndex, const char *pccValue)</td></tr>
 <tr class="memdesc:a80fd70b3b82cef49be70c6e991d1b176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a key value in a MapArray for a specific index.  <a href="service_8c.html#a80fd70b3b82cef49be70c6e991d1b176">More...</a><br /></td></tr>
 <tr class="separator:a80fd70b3b82cef49be70c6e991d1b176"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -295,6 +298,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a0dddff595f065f29ccf53922743bbb6e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a0dddff595f065f29ccf53922743bbb6e">translateCharMap</a> (const char *str, <a class="el" href="service_8h.html#structmap">map</a> *rep)</td></tr>
 <tr class="memdesc:a0dddff595f065f29ccf53922743bbb6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace all "val" occurence with the corresponding "rep" value in a string.  <a href="service_8c.html#a0dddff595f065f29ccf53922743bbb6e">More...</a><br /></td></tr>
 <tr class="separator:a0dddff595f065f29ccf53922743bbb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f2a118db78b84729475cec61de0da81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a0f2a118db78b84729475cec61de0da81">updateCnt</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, const char *field, const char *type)</td></tr>
+<tr class="memdesc:a0f2a118db78b84729475cec61de0da81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the counter value (in conf / lenv / serviceCnt.  <a href="service_8c.html#a0f2a118db78b84729475cec61de0da81">More...</a><br /></td></tr>
+<tr class="separator:a0f2a118db78b84729475cec61de0da81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0fc5078b8cb590dfe9a6c40668af7c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#ac0fc5078b8cb590dfe9a6c40668af7c5">compareCnt</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, const char *field, const char *type)</td></tr>
+<tr class="memdesc:ac0fc5078b8cb590dfe9a6c40668af7c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare a value with conf / lenv / serviceCnt.  <a href="service_8c.html#ac0fc5078b8cb590dfe9a6c40668af7c5">More...</a><br /></td></tr>
+<tr class="separator:ac0fc5078b8cb590dfe9a6c40668af7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a35a3793d01aef657e2582ff6108429b0"></a>
@@ -948,6 +957,51 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ac0fc5078b8cb590dfe9a6c40668af7c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0fc5078b8cb590dfe9a6c40668af7c5">&#9670;&nbsp;</a></span>compareCnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool compareCnt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>conf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare a value with conf / lenv / serviceCnt. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conf</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">field</td><td>the value to compare with (serviceCntLimit or serviceCntSkip) </td></tr>
+    <tr><td class="paramname">type</td><td>comparison operator can be : elower, lower, eupper, upper, or equal </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean resulting of the comparison between the values </dd></dl>
 
 </div>
 </div>
@@ -1979,6 +2033,52 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a249336254694282391151a25d023c9c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249336254694282391151a25d023c9c5">&#9670;&nbsp;</a></span>getMapArrayKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* getMapArrayKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td>
+          <td class="paramname"><em>pmMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the key name for a specific map array element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmMap</td><td>the map to search for the key </td></tr>
+    <tr><td class="paramname">pccKey</td><td>the key to search in the map </td></tr>
+    <tr><td class="paramname">iIndex</td><td>of the MapArray </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an allocated char pointer containing the key name </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>make sure to free resources returned by this function </dd></dl>
+
+</div>
+</div>
 <a id="a44ba7c4c406e5ad4093d755f9fbcb28c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a44ba7c4c406e5ad4093d755f9fbcb28c">&#9670;&nbsp;</a></span>getMapFromMaps()</h2>
 
@@ -2841,7 +2941,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a pointer on the map found or NULL if not found </dd></dl>
 
 </div>
 </div>
@@ -2971,10 +3070,54 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0f2a118db78b84729475cec61de0da81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f2a118db78b84729475cec61de0da81">&#9670;&nbsp;</a></span>updateCnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateCnt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>conf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>field</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the counter value (in conf / lenv / serviceCnt. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conf</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">field</td><td>the value to update (serviceCnt or serviceCounter) </td></tr>
+    <tr><td class="paramname">type</td><td>char pointer can be "incr" for incrementing the value by 1, other will descrement the value by 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 17 2022 13:01:07 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 24 2022 13:24:56 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

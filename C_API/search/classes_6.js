@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['registry_843',['registry',['../service_8h.html#structregistry',1,'']]]
+  ['registry_845',['registry',['../service_8h.html#structregistry',1,'']]]
 ];

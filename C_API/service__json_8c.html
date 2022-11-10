@@ -219,6 +219,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a3d86408fd29a2f232b4f9f75e5558b6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a3d86408fd29a2f232b4f9f75e5558b6e">produceApiParameters</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *res)</td></tr>
 <tr class="memdesc:a3d86408fd29a2f232b4f9f75e5558b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce the JSON object for api parameter.  <a href="service__json_8c.html#a3d86408fd29a2f232b4f9f75e5558b6e">More...</a><br /></td></tr>
 <tr class="separator:a3d86408fd29a2f232b4f9f75e5558b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0662761a63bf92554584032f5c2b93f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a0662761a63bf92554584032f5c2b93f4">addSecurityScheme</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, const char *fName, json_object *res)</td></tr>
+<tr class="memdesc:a0662761a63bf92554584032f5c2b93f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a securityScheme to the OpenAPI components/securitySchemes object.  <a href="service__json_8c.html#a0662761a63bf92554584032f5c2b93f4">More...</a><br /></td></tr>
+<tr class="separator:a0662761a63bf92554584032f5c2b93f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac080127b59355415e0d805b2a5ff506b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ac080127b59355415e0d805b2a5ff506b">produceApiSecuritySchemes</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *res)</td></tr>
+<tr class="memdesc:ac080127b59355415e0d805b2a5ff506b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce the JSON object for api securitySchemes.  <a href="service__json_8c.html#ac080127b59355415e0d805b2a5ff506b">More...</a><br /></td></tr>
+<tr class="separator:ac080127b59355415e0d805b2a5ff506b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6c71807b4fdfedaea9adf771831ad80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ac6c71807b4fdfedaea9adf771831ad80">produceApiComponents</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *res)</td></tr>
 <tr class="separator:ac6c71807b4fdfedaea9adf771831ad80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ebac22b5b5ce763a73cca082ced3cec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a8ebac22b5b5ce763a73cca082ced3cec">produceApi</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *res)</td></tr>
@@ -502,6 +508,50 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0662761a63bf92554584032f5c2b93f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0662761a63bf92554584032f5c2b93f4">&#9670;&nbsp;</a></span>addSecurityScheme()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addSecurityScheme </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a securityScheme to the OpenAPI components/securitySchemes object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">fName</td><td>the key to add to the res json object </td></tr>
+    <tr><td class="paramname">res</td><td>the json object to store the content </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2382,6 +2432,43 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac080127b59355415e0d805b2a5ff506b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac080127b59355415e0d805b2a5ff506b">&#9670;&nbsp;</a></span>produceApiSecuritySchemes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void produceApiSecuritySchemes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>conf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Produce the JSON object for api securitySchemes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">res</td><td>the JSON object to populate with the parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8fed1219809b2a1897cf6915b7582dc5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fed1219809b2a1897cf6915b7582dc5">&#9670;&nbsp;</a></span>serviceToJson()</h2>
 
@@ -2412,7 +2499,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 24 2022 13:24:56 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 10 2022 11:52:08 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -164,9 +164,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a73ffe43b4b220fc461757dd5cccc0088"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#a73ffe43b4b220fc461757dd5cccc0088">_printExceptionReportResponse</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, <a class="el" href="service_8h.html#structmap">map</a> *s)</td></tr>
 <tr class="memdesc:a73ffe43b4b220fc461757dd5cccc0088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print an OWS ExceptionReport Document and HTTP headers (when required) depending on the code.  <a href="response__print_8c.html#a73ffe43b4b220fc461757dd5cccc0088">More...</a><br /></td></tr>
 <tr class="separator:a73ffe43b4b220fc461757dd5cccc0088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc30fd536607c90f33f2c530d4ad91d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#afc30fd536607c90f33f2c530d4ad91d2">printExceptionReportResponse</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmap">map</a> *psService)</td></tr>
-<tr class="memdesc:afc30fd536607c90f33f2c530d4ad91d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print an OWS ExceptionReport or exception.yaml Document and HTTP headers (when required) depending on the code.  <a href="response__print_8c.html#afc30fd536607c90f33f2c530d4ad91d2">More...</a><br /></td></tr>
-<tr class="separator:afc30fd536607c90f33f2c530d4ad91d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410c7eb702a8f7e0dcc2d761b66f36fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#a410c7eb702a8f7e0dcc2d761b66f36fc">printExceptionReportResponse</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmap">map</a> *pmError)</td></tr>
+<tr class="memdesc:a410c7eb702a8f7e0dcc2d761b66f36fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print an OWS ExceptionReport or exception.yaml Document and HTTP headers (when required) depending on the code.  <a href="response__print_8c.html#a410c7eb702a8f7e0dcc2d761b66f36fc">More...</a><br /></td></tr>
+<tr class="separator:a410c7eb702a8f7e0dcc2d761b66f36fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dcdb636a242d4784efe6c78b6627870"><td class="memItemLeft" align="right" valign="top">xmlNodePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#a0dcdb636a242d4784efe6c78b6627870">createExceptionReportNode</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, <a class="el" href="service_8h.html#structmap">map</a> *s, int use_ns)</td></tr>
 <tr class="memdesc:a0dcdb636a242d4784efe6c78b6627870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an OWS ExceptionReport Node.  <a href="response__print_8c.html#a0dcdb636a242d4784efe6c78b6627870">More...</a><br /></td></tr>
 <tr class="separator:a0dcdb636a242d4784efe6c78b6627870"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1104,8 +1104,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afc30fd536607c90f33f2c530d4ad91d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc30fd536607c90f33f2c530d4ad91d2">&#9670;&nbsp;</a></span>printExceptionReportResponse()</h2>
+<a id="a410c7eb702a8f7e0dcc2d761b66f36fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a410c7eb702a8f7e0dcc2d761b66f36fc">&#9670;&nbsp;</a></span>printExceptionReportResponse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1120,7 +1120,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td>
-          <td class="paramname"><em>psService</em>&#160;</td>
+          <td class="paramname"><em>pmError</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1134,7 +1134,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
-    <tr><td class="paramname">psService</td><td>the service </td></tr>
+    <tr><td class="paramname">pmError</td><td>the map containing the text,code,locator keys (or a map array) </td></tr>
   </table>
   </dd>
 </dl>
@@ -2148,7 +2148,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 10 2022 11:52:08 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 22 2022 14:19:42 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

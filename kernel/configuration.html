@@ -580,7 +580,7 @@ commands.</p>
 <h2>OpenAPI Specification configuration file<a class="headerlink" href="#openapi-specification-configuration-file" title="Permalink to this heading">¶</a></h2>
 <p>Since revision 949 of the ZOO-Kernel, you can now activate the OGC
 API - Processing support. In such a case you will need to have an
-<code class="docutils literal notranslate"><span class="pre">oas.cfg</span></code> file located in tne same directory where the <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> is.</p>
+<code class="docutils literal notranslate"><span class="pre">oas.cfg</span></code> file located in the same directory where the <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> is.</p>
 <p>This <code class="docutils literal notranslate"><span class="pre">oas.cfg</span></code> file gets the same syntactic rules than the
 <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code>. The ZOO-Kernel uses this file to produce information
 about the open API specification it is referring to.</p>
@@ -672,6 +672,65 @@ script in the cgi-bin directory of your web server.</p>
 to this <a class="reference external" href="https://github.com/opengeospatial/wps-rest-binding#overview">page</a> or use
 the <a class="reference external" href="https://swagger.io/tools/swagger-ui/">Swagger UI</a>. A live
 instance is available <a class="reference external" href="https://demo.mapmint.com/swagger-ui/dist/">here</a>.</p>
+<section id="openapi-security">
+<h3>OpenAPI Security<a class="headerlink" href="#openapi-security" title="Permalink to this heading">¶</a></h3>
+<p>OpenAPI permits the definition of security restrictions to access a
+given path using a specific request method. For more details, please
+consult the <a class="reference external" href="https://swagger.io/docs/specification/authentication/">OpenAPI Authentication and Authorization</a> section.</p>
+<p>Since revision <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/commit/ae34767ab5f9127ae654980f00a2e79ec94aeb45">ae34767</a>,
+the ZOO-Kernel supports OGC API - Processes request filtering. It can
+invoke the execution of other services before and after handling a
+request. So, you can implement your service for security or other
+purposes.</p>
+<p>To support security from your OpenAPI, you can add an optional section
+<code class="docutils literal notranslate"><span class="pre">osecurity</span></code> to the <code class="docutils literal notranslate"><span class="pre">oas.cfg</span></code> file. It should contain the following keys:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: the name used in the components’ security schemes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">module_path</span></code>: the full path to the location of the service metadata files and processes (can be stored somewhere else to be hidden from the services list)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">module_name_in</span></code>: the process to use before handling the request</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">module_name_out</span></code>: the process to use after having handled the request</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: the <a class="reference external" href="https://swagger.io/docs/specification/authentication/">scheme type</a> (http, apiKey, …)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code>: the scheme name (Basic, Bearer) <a class="reference external" href="https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">list of possible values</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code>: bearer format (used only in case scheme is set to Bearer, can be JWT, optional)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">realm</span></code>: the realm to use when returning 401 WWW-Authenticate response header (optional)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">passwd</span></code>: the htpassword file used to authenticate users (only used for Basic scheme, optional)</p></li>
+</ul>
+</div></blockquote>
+<p>Then to secure a given path and request method couple, you should add
+the optional secured key and set it to the name used in the
+components’ security schemes.</p>
+<p>Below is an example of <code class="docutils literal notranslate"><span class="pre">oas.cfg</span></code> file for securing the execution of
+the HelloPy processes.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="k">[processes/HelloPy/execution]</span><span class="w"></span>
+<span class="w"> </span><span class="na">rel</span><span class="o">=</span><span class="s">http://www.opengis.net/def/rel/ogc/1.0/execute</span><span class="w"></span>
+<span class="w"> </span><span class="na">length</span><span class="o">=</span><span class="s">1</span><span class="w"></span>
+<span class="w"> </span><span class="na">method</span><span class="o">=</span><span class="s">post</span><span class="w"></span>
+<span class="w"> </span><span class="na">secured</span><span class="o">=</span><span class="s">BasicAuth</span><span class="w"></span>
+<span class="w"> </span><span class="na">title</span><span class="o">=</span><span class="s">execute a job</span><span class="w"></span>
+<span class="w"> </span><span class="na">abstract</span><span class="o">=</span><span class="s">An execute endpoint.</span><span class="w"></span>
+<span class="w"> </span><span class="na">tags</span><span class="o">=</span><span class="s">ExecuteEndpoint</span><span class="w"></span>
+<span class="w"> </span><span class="na">tags_description</span><span class="o">=</span><span class="w"></span>
+<span class="w"> </span><span class="na">schema</span><span class="o">=</span><span class="s">http://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/ExecuteSync.yaml</span><span class="w"></span>
+<span class="w"> </span><span class="na">parameters</span><span class="o">=</span><span class="s">/components/parameters/processID,/components/parameters/oas-header1</span><span class="w"></span>
+<span class="w"> </span><span class="na">ecode</span><span class="o">=</span><span class="s">400,404,500</span><span class="w"></span>
+<span class="w"> </span><span class="na">eschema</span><span class="o">=</span><span class="s">http://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/ExecuteAsync.yaml</span><span class="w"></span>
+
+<span class="w"> </span><span class="k">[osecurity]</span><span class="w"></span>
+<span class="w"> </span><span class="na">name</span><span class="o">=</span><span class="s">BasicAuth</span><span class="w"></span>
+<span class="w"> </span><span class="na">module_path</span><span class="o">=</span><span class="s">/opt/securityServices</span><span class="w"></span>
+<span class="w"> </span><span class="na">module_name_in</span><span class="o">=</span><span class="s">securityIn</span><span class="w"></span>
+<span class="w"> </span><span class="na">module_name_out</span><span class="o">=</span><span class="s">securityOut</span><span class="w"></span>
+<span class="w"> </span><span class="na">type</span><span class="o">=</span><span class="s">http</span><span class="w"></span>
+<span class="w"> </span><span class="na">scheme</span><span class="o">=</span><span class="s">basic</span><span class="w"></span>
+<span class="w"> </span><span class="na">realm</span><span class="o">=</span><span class="s">Secured section</span><span class="w"></span>
+<span class="w"> </span><span class="na">charset</span><span class="o">=</span><span class="s">utf-8</span><span class="w"></span>
+<span class="w"> </span><span class="na">passwd</span><span class="o">=</span><span class="s">/tmp/htpasswords</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In the example, we used the demonstration <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/blob/main/zoo-project/zoo-services/utils/security/basicAuth/service.c">securityIn and securityOut
+services</a>
+for handling HTTP Basic Authentication.</p>
 <p class="rubric">Footnotes</p>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="f1" role="note">
@@ -687,6 +746,7 @@ instance is available <a class="reference external" href="https://demo.mapmint.c
 <p>ZOO-Kernel and MapServer are sharing the same metadata for OGC Web Services if the <a class="reference internal" href="mapserver.html#kernel-mapserver"><span class="std std-ref">Optional MapServer support</span></a> is activated.</p>
 </aside>
 </aside>
+</section>
 </section>
 </section>
 

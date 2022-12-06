@@ -702,7 +702,10 @@ sections, <code class="docutils literal notranslate"><span class="pre">filter_in
 filters to be applied before handling the request and after, respectively.
 You can use an array of filters if you need to execute more than a
 single service before or after the request treatment. The ZOO-Kernel
-will invoke the services in the same order as they are in the array.</p>
+will invoke the services in the same order as they are in the array.
+In both <code class="docutils literal notranslate"><span class="pre">filter_in</span></code> and <code class="docutils literal notranslate"><span class="pre">filter_out</span></code> section, you should add the
+<code class="docutils literal notranslate"><span class="pre">path</span></code> and <code class="docutils literal notranslate"><span class="pre">service</span></code> keys used to define the location of the
+service to run.</p>
 <p>Then to secure an operation (meaning a path and request method couple), you should add
 the optional <code class="docutils literal notranslate"><span class="pre">secured</span></code> key and set it to the name used in the
 components’ security schemes.</p>

@@ -697,8 +697,14 @@ purposes.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">passwd</span></code>: the htpassword file used to authenticate users (only used for Basic scheme, optional)</p></li>
 </ul>
 </div></blockquote>
-<p>Then to secure a given path and request method couple, you should add
-the optional secured key and set it to the name used in the
+<p>Associated with this <code class="docutils literal notranslate"><span class="pre">osecurity</span></code> section, you can add two optional
+sections, <code class="docutils literal notranslate"><span class="pre">filter_in</span></code> and <code class="docutils literal notranslate"><span class="pre">filter_out</span></code>, to define one or more
+filters to be applied before handling the request and after, respectively.
+You can use an array of filters if you need to execute more than a
+single service before or after the request treatment. The ZOO-Kernel
+will invoke the services in the same order as they are in the array.</p>
+<p>Then to secure an operation (meaning a path and request method couple), you should add
+the optional <code class="docutils literal notranslate"><span class="pre">secured</span></code> key and set it to the name used in the
 components’ security schemes.</p>
 <p>Below is an example of <code class="docutils literal notranslate"><span class="pre">oas.cfg</span></code> file for securing the execution of
 the HelloPy processes.</p>
@@ -717,15 +723,19 @@ the HelloPy processes.</p>
 <span class="w"> </span><span class="na">eschema</span><span class="o">=</span><span class="s">http://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/responses/ExecuteAsync.yaml</span><span class="w"></span>
 
 <span class="w"> </span><span class="k">[osecurity]</span><span class="w"></span>
-<span class="w"> </span><span class="na">name</span><span class="o">=</span><span class="s">BasicAuth</span><span class="w"></span>
-<span class="w"> </span><span class="na">module_path</span><span class="o">=</span><span class="s">/opt/securityServices</span><span class="w"></span>
-<span class="w"> </span><span class="na">module_name_in</span><span class="o">=</span><span class="s">securityIn</span><span class="w"></span>
-<span class="w"> </span><span class="na">module_name_out</span><span class="o">=</span><span class="s">securityOut</span><span class="w"></span>
 <span class="w"> </span><span class="na">type</span><span class="o">=</span><span class="s">http</span><span class="w"></span>
 <span class="w"> </span><span class="na">scheme</span><span class="o">=</span><span class="s">basic</span><span class="w"></span>
 <span class="w"> </span><span class="na">realm</span><span class="o">=</span><span class="s">Secured section</span><span class="w"></span>
 <span class="w"> </span><span class="na">charset</span><span class="o">=</span><span class="s">utf-8</span><span class="w"></span>
 <span class="w"> </span><span class="na">passwd</span><span class="o">=</span><span class="s">/tmp/htpasswords</span><span class="w"></span>
+
+<span class="w"> </span><span class="k">[filter_in]</span><span class="w"></span>
+<span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">/opt/securityServices</span><span class="w"></span>
+<span class="w"> </span><span class="na">service</span><span class="o">=</span><span class="s">securityIn</span><span class="w"></span>
+
+<span class="w"> </span><span class="k">[filter_out]</span><span class="w"></span>
+<span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">/opt/securityServices</span><span class="w"></span>
+<span class="w"> </span><span class="na">service</span><span class="o">=</span><span class="s">securityOut</span><span class="w"></span>
 </pre></div>
 </div>
 <p>In the example, we used the demonstration <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/blob/main/zoo-project/zoo-services/utils/security/basicAuth/service.c">securityIn and securityOut

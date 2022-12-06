@@ -160,11 +160,11 @@ Functions</h2></td></tr>
 <tr class="memitem:ac601b335a8cec163e1e6b881d6ef89ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#ac601b335a8cec163e1e6b881d6ef89ba">setSecurityFlags</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *pcCgiQueryString)</td></tr>
 <tr class="memdesc:ac601b335a8cec163e1e6b881d6ef89ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the security flag for the current request.  <a href="zoo__service__loader_8c.html#ac601b335a8cec163e1e6b881d6ef89ba">More...</a><br /></td></tr>
 <tr class="separator:ac601b335a8cec163e1e6b881d6ef89ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb2a0fd1db39058cba22df34d86ebc8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#acb2a0fd1db39058cba22df34d86ebc8c">ensureSecured</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, const char *pcType)</td></tr>
-<tr class="memdesc:acb2a0fd1db39058cba22df34d86ebc8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the execution of the security module in case security is activated.  <a href="zoo__service__loader_8c.html#acb2a0fd1db39058cba22df34d86ebc8c">More...</a><br /></td></tr>
-<tr class="separator:acb2a0fd1db39058cba22df34d86ebc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9faaa5405862c1594cbe6a1f792441f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a9faaa5405862c1594cbe6a1f792441f2">ensureFiltered</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, const char *pcType)</td></tr>
+<tr class="memdesc:a9faaa5405862c1594cbe6a1f792441f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the execution of the security module in case security is activated.  <a href="zoo__service__loader_8c.html#a9faaa5405862c1594cbe6a1f792441f2">More...</a><br /></td></tr>
+<tr class="separator:a9faaa5405862c1594cbe6a1f792441f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa592234e86ec0060c52b4bb4bd272ea3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#aa592234e86ec0060c52b4bb4bd272ea3">localPrintExceptionJ</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmap">map</a> *pmError)</td></tr>
-<tr class="memdesc:aa592234e86ec0060c52b4bb4bd272ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the ensureSecured then printExceptionReportResponseJ functions.  <a href="zoo__service__loader_8c.html#aa592234e86ec0060c52b4bb4bd272ea3">More...</a><br /></td></tr>
+<tr class="memdesc:aa592234e86ec0060c52b4bb4bd272ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the ensureFiltered then printExceptionReportResponseJ functions.  <a href="zoo__service__loader_8c.html#aa592234e86ec0060c52b4bb4bd272ea3">More...</a><br /></td></tr>
 <tr class="separator:aa592234e86ec0060c52b4bb4bd272ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac28aefcb8e972ec345696f9bf8d8001a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#ac28aefcb8e972ec345696f9bf8d8001a">runRequest</a> (<a class="el" href="service_8h.html#structmap">map</a> **inputs)</td></tr>
 <tr class="memdesc:ac28aefcb8e972ec345696f9bf8d8001a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process the request.  <a href="zoo__service__loader_8c.html#ac28aefcb8e972ec345696f9bf8d8001a">More...</a><br /></td></tr>
@@ -349,14 +349,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="acb2a0fd1db39058cba22df34d86ebc8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb2a0fd1db39058cba22df34d86ebc8c">&#9670;&nbsp;</a></span>ensureSecured()</h2>
+<a id="a9faaa5405862c1594cbe6a1f792441f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9faaa5405862c1594cbe6a1f792441f2">&#9670;&nbsp;</a></span>ensureFiltered()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ensureSecured </td>
+          <td class="memname">int ensureFiltered </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
           <td class="paramname"><em>pmsConf</em>, </td>
@@ -835,7 +835,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Invoke the ensureSecured then printExceptionReportResponseJ functions. </p>
+<p>Invoke the ensureFiltered then printExceptionReportResponseJ functions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
@@ -843,7 +843,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__json_8h.html#a45f4e9428a89a80a5bb6e852ed03c3ad" title="Print an OWS ExceptionReport Document and HTTP headers (when required) depending on the code.">printExceptionReportResponseJ</a>,<a class="el" href="zoo__service__loader_8c.html#acb2a0fd1db39058cba22df34d86ebc8c" title="Invoke the execution of the security module in case security is activated.">ensureSecured</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__json_8h.html#a45f4e9428a89a80a5bb6e852ed03c3ad" title="Print an OWS ExceptionReport Document and HTTP headers (when required) depending on the code.">printExceptionReportResponseJ</a>,<a class="el" href="zoo__service__loader_8c.html#a9faaa5405862c1594cbe6a1f792441f2" title="Invoke the execution of the security module in case security is activated.">ensureFiltered</a> </dd></dl>
 
 </div>
 </div>
@@ -1160,7 +1160,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 29 2022 13:16:22 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 6 2022 09:15:43 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

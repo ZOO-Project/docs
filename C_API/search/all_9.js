@@ -45,12 +45,13 @@ var searchData=
   ['iotype_314',['iotype',['../service_8h.html#structiotype',1,'iotype'],['../service_8h.html#a789f0ff9b69b60739bf4c99cd6439f32',1,'iotype():&#160;service.h']]],
   ['iotype_5fsize_315',['IOTYPE_SIZE',['../service_8h.html#a58779200e3a41d306c700d9f097cb346',1,'service.h']]],
   ['isasynccall_316',['isAsyncCall',['../service__internal_8c.html#a5f7271807efeb5bb51d09fa2e67c0be3',1,'isAsyncCall(maps *pmsConf):&#160;service_internal.c'],['../service__internal_8h.html#a5d1f01daaa4bf577aba742184698cf7c',1,'isAsyncCall(maps *):&#160;service_internal.c']]],
-  ['isgeographic_317',['isGeographic',['../mimetypes_8h.html#a3f4c6fbf6147c4c5ed72217d6869ba7c',1,'mimetypes.h']]],
-  ['isincache_318',['isInCache',['../caching_8c.html#a5a75c69161fcac7669b9f061c9289d8e',1,'isInCache(maps *conf, char *request):&#160;caching.c'],['../caching_8h.html#a6701fc456b44527d2aaf589bf0ff18e1',1,'isInCache(maps *, char *):&#160;caching.c']]],
-  ['isongoing_319',['isOngoing',['../service__callback_8c.html#a0cc26cb87c1d360f0a566c0708b0a61e',1,'service_callback.c']]],
-  ['isprohibited_320',['isProhibited',['../service__callback_8c.html#ae6a8c14eb3dba565c68c0acefe5e4ede',1,'service_callback.c']]],
-  ['isprotectedhost_321',['isProtectedHost',['../ulinet_8c.html#aa3caec94919dfda93a4f7ce34a34419e',1,'isProtectedHost(const char *protectedHosts, const char *url):&#160;ulinet.c'],['../ulinet_8h.html#a34bc1c858e47f68db2be0dedb0edb526',1,'isProtectedHost(const char *, const char *):&#160;ulinet.c']]],
-  ['isrunning_322',['isRunning',['../server__internal_8c.html#acef4d9c538378098b3edbaaa57ada3c7',1,'isRunning(maps *conf, char *pid):&#160;server_internal.c'],['../server__internal_8h.html#ab4a980839cfbad94b1a143b922a2b994',1,'isRunning(maps *, char *):&#160;server_internal.c']]],
-  ['isvalidlang_323',['isValidLang',['../server__internal_8c.html#a2924b9aeb670f6de311d9e4d92db93eb',1,'isValidLang(maps *conf, const char *str):&#160;server_internal.c'],['../server__internal_8h.html#a82ada3a0a3e6c14f8c000c3650a49aed',1,'isValidLang(maps *, const char *):&#160;server_internal.c']]],
-  ['itknewmacro_324',['itkNewMacro',['../classMyCommand.html#a96179b2a2cf523e64e1447a13b0c583c',1,'MyCommand']]]
+  ['isfilteredpid_317',['isFilteredPid',['../service__json_8c.html#a18a9828f013a6a8f858252ae89a9bf2d',1,'service_json.c']]],
+  ['isgeographic_318',['isGeographic',['../mimetypes_8h.html#a3f4c6fbf6147c4c5ed72217d6869ba7c',1,'mimetypes.h']]],
+  ['isincache_319',['isInCache',['../caching_8c.html#a5a75c69161fcac7669b9f061c9289d8e',1,'isInCache(maps *conf, char *request):&#160;caching.c'],['../caching_8h.html#a6701fc456b44527d2aaf589bf0ff18e1',1,'isInCache(maps *, char *):&#160;caching.c']]],
+  ['isongoing_320',['isOngoing',['../service__callback_8c.html#a0cc26cb87c1d360f0a566c0708b0a61e',1,'service_callback.c']]],
+  ['isprohibited_321',['isProhibited',['../service__callback_8c.html#ae6a8c14eb3dba565c68c0acefe5e4ede',1,'service_callback.c']]],
+  ['isprotectedhost_322',['isProtectedHost',['../ulinet_8c.html#aa3caec94919dfda93a4f7ce34a34419e',1,'isProtectedHost(const char *protectedHosts, const char *url):&#160;ulinet.c'],['../ulinet_8h.html#a34bc1c858e47f68db2be0dedb0edb526',1,'isProtectedHost(const char *, const char *):&#160;ulinet.c']]],
+  ['isrunning_323',['isRunning',['../server__internal_8c.html#acef4d9c538378098b3edbaaa57ada3c7',1,'isRunning(maps *conf, char *pid):&#160;server_internal.c'],['../server__internal_8h.html#ab4a980839cfbad94b1a143b922a2b994',1,'isRunning(maps *, char *):&#160;server_internal.c']]],
+  ['isvalidlang_324',['isValidLang',['../server__internal_8c.html#a2924b9aeb670f6de311d9e4d92db93eb',1,'isValidLang(maps *conf, const char *str):&#160;server_internal.c'],['../server__internal_8h.html#a82ada3a0a3e6c14f8c000c3650a49aed',1,'isValidLang(maps *, const char *):&#160;server_internal.c']]],
+  ['itknewmacro_325',['itkNewMacro',['../classMyCommand.html#a96179b2a2cf523e64e1447a13b0c583c',1,'MyCommand']]]
 ];

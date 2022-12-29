@@ -170,6 +170,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac207be61d563d3b97a3c91bf94d4547f"><td class="memItemLeft" align="right" valign="top">json_object *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ac207be61d563d3b97a3c91bf94d4547f">printJobStatus</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *pcJobId)</td></tr>
 <tr class="memdesc:ac207be61d563d3b97a3c91bf94d4547f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the jobs status info cf.  <a href="service__json_8c.html#ac207be61d563d3b97a3c91bf94d4547f">More...</a><br /></td></tr>
 <tr class="separator:ac207be61d563d3b97a3c91bf94d4547f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a9828f013a6a8f858252ae89a9bf2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a18a9828f013a6a8f858252ae89a9bf2d">isFilteredPid</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, const char *pccPid)</td></tr>
+<tr class="memdesc:a18a9828f013a6a8f858252ae89a9bf2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Veirify if the process identified by pccPid is part of the processID filters, if any.  <a href="service__json_8c.html#a18a9828f013a6a8f858252ae89a9bf2d">More...</a><br /></td></tr>
+<tr class="separator:a18a9828f013a6a8f858252ae89a9bf2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dd81289e1d03b1df43dfdbf629ec1d6"><td class="memItemLeft" align="right" valign="top">json_object *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a7dd81289e1d03b1df43dfdbf629ec1d6">printJobList</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf)</td></tr>
 <tr class="memdesc:a7dd81289e1d03b1df43dfdbf629ec1d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the jobs list.  <a href="service__json_8c.html#a7dd81289e1d03b1df43dfdbf629ec1d6">More...</a><br /></td></tr>
 <tr class="separator:a7dd81289e1d03b1df43dfdbf629ec1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -911,6 +914,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the full path to the result file </dd></dl>
+
+</div>
+</div>
+<a id="a18a9828f013a6a8f858252ae89a9bf2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18a9828f013a6a8f858252ae89a9bf2d">&#9670;&nbsp;</a></span>isFilteredPid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isFilteredPid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccPid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Veirify if the process identified by pccPid is part of the processID filters, if any. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pccPid</td><td>the const char pointer to the processID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true in case the filter is empty or in case the processId pccPid is one of the filtered processID, false in other case. </dd></dl>
 
 </div>
 </div>
@@ -2124,11 +2165,12 @@ Functions</h2></td></tr>
 <p>Print the jobs status info cf. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pcJobId</td><td>the char pointer to the jobid </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the JSON object pointer to the jobs list </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the JSON object pointer to the statusInfo </dd></dl>
 
 </div>
 </div>
@@ -2499,7 +2541,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 16 2022 12:33:43 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 29 2022 11:10:52 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

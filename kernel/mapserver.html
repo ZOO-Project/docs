@@ -307,6 +307,10 @@ layer.</p>
 <p>Only one symbol definition is required (with any name) for the WMS service output.</p>
 </div>
 <p>The ZOO-Project optional MapServer support is activated at this step. Don’t forget to add the <code class="docutils literal notranslate"><span class="pre">mapserverAddress</span></code> and  <code class="docutils literal notranslate"><span class="pre">msOgcVersion</span></code> parameters to the <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> file in order to  to specify the path to MapServer and the OGC WebService version used by the Services.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>mapserverAddress=http://localhost/cgi-bin/mapserv.cgi
+msOgcVersion=1.0.0
+</pre></div>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>ZOO-kernel will segfault (checking <code class="docutils literal notranslate"><span class="pre">NULL</span></code> value should correct this behavior) if the <code class="docutils literal notranslate"><span class="pre">mapserverAddress</span></code> parameter is not found</p>
@@ -455,19 +459,19 @@ simple <em>HelloPy</em> Service is used in the following example requests.</p>
 <p>The following examples require a zip file containing a Shapefile (<a class="reference external" href="http://localhost/data/data.zip">http://localhost/data/data.zip</a>) and a tif file (<a class="reference external" href="http://localhost/data/demo.tif">http://localhost/data/demo.tif</a>)</p>
 </div>
 <p>Accessing a remote Zipped Shapefile as WFS GetFeatures Request:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=Execute&amp;service=WPS&amp;version=1.0.0&amp;Identifier=HelloPy&amp;DataInputs=a=Reference@xlink:href=http://localhost/data/data.zip&amp;ResponseDocument=Result@asReference=true@mimetype=text/xml
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=Execute&amp;service=WPS&amp;version=1.0.0&amp;Identifier=HelloPy&amp;DataInputs=a=Reference@xlink:href=http://localhost/data/data.zip&amp;ResponseDocument=Result@asReference=true@mimetype=text/xml
 </pre></div>
 </div>
 <p>Accessing a remote Zipped Shapefile as WMS GetMap Request:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=Execute&amp;service=WPS&amp;version=1.0.0&amp;Identifier=HelloPy&amp;DataInputs=a=Reference@xlink:href=http://localhost/data/data.zip&amp;ResponseDocument=Result@asReference=true@mimetype=image/png
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=Execute&amp;service=WPS&amp;version=1.0.0&amp;Identifier=HelloPy&amp;DataInputs=a=Reference@xlink:href=http://localhost/data/data.zip&amp;ResponseDocument=Result@asReference=true@mimetype=image/png
 </pre></div>
 </div>
 <p>Accessing a remote tiff as WMS GetMap Request:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=Execute&amp;service=WPS&amp;version=1.0.0&amp;Identifier=HelloPy&amp;DataInputs=a=Reference@xlink:href=http://localhost/data/data.tiff&amp;ResponseDocument=Result@asReference=true@mimetype=image/png
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=Execute&amp;service=WPS&amp;version=1.0.0&amp;Identifier=HelloPy&amp;DataInputs=a=Reference@xlink:href=http://localhost/data/data.tiff&amp;ResponseDocument=Result@asReference=true@mimetype=image/png
 </pre></div>
 </div>
 <p>Accessing a remote tiff as WCS GetMap Request:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=Execute&amp;service=WPS&amp;version=1.0.0&amp;Identifier=HelloPy&amp;DataInputs=a=Reference@xlink:href=http://localhost/data/data.tiff&amp;ResponseDocument=Result@asReference=true@mimetype=image/tiff
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=Execute&amp;service=WPS&amp;version=1.0.0&amp;Identifier=HelloPy&amp;DataInputs=a=Reference@xlink:href=http://localhost/data/data.tiff&amp;ResponseDocument=Result@asReference=true@mimetype=image/tiff
 </pre></div>
 </div>
 </section>
@@ -491,7 +495,7 @@ simple <em>HelloPy</em> Service is used in the following example requests.</p>
   <div class="pfoot">
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2009-2022, ZOO-Project team. This work is released under a Creative Commons Attribution-ShareAlike 4.0 International Public License.
+        &copy; Copyright 2009-2023, ZOO-Project team. This work is released under a Creative Commons Attribution-ShareAlike 4.0 International Public License.
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> inspired by <a href="https://readthedocs.org">Read the Docs</a>.

@@ -736,14 +736,14 @@ configuration dictionary.</p>
 </section>
 <section id="sample-zoo-r-services-provider">
 <h3><a class="toc-backref" href="#id37" role="doc-backlink">Sample ZOO R Services Provider</a><a class="headerlink" href="#sample-zoo-r-services-provider" title="Permalink to this heading">¶</a></h3>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span>source(&quot;minimal.r&quot;)
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="nf">source</span><span class="p">(</span><span class="s">&quot;minimal.r&quot;</span><span class="p">)</span>
 
-hellor &lt;- function(a,b,c) {
-    # Set the result
-    zoo[[&quot;outputs&quot;]][[&quot;Result&quot;]][[&quot;value&quot;]] &lt;&lt;- ZOOTranslate(paste(&quot;Hello&quot;,b[[&quot;S&quot;]][[&quot;value&quot;]],&quot;from the R World!&quot;,sep=&quot; &quot;))
-    # Return SERVICE_SUCCEEDEED
-    return(zoo[[&quot;SERVICE_SUCCEEDEED&quot;]])
-}
+<span class="n">hellor</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1"># Set the result</span>
+    <span class="n">zoo</span><span class="p">[[</span><span class="s">&quot;outputs&quot;</span><span class="p">]][[</span><span class="s">&quot;Result&quot;</span><span class="p">]][[</span><span class="s">&quot;value&quot;</span><span class="p">]]</span> <span class="o">&lt;&lt;-</span> <span class="nf">ZOOTranslate</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">[[</span><span class="s">&quot;S&quot;</span><span class="p">]][[</span><span class="s">&quot;value&quot;</span><span class="p">]],</span><span class="s">&quot;from the R World!&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot; &quot;</span><span class="p">))</span>
+    <span class="c1"># Return SERVICE_SUCCEEDEED</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">zoo</span><span class="p">[[</span><span class="s">&quot;SERVICE_SUCCEEDEED&quot;</span><span class="p">]])</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
@@ -768,7 +768,7 @@ hellor &lt;- function(a,b,c) {
   <div class="pfoot">
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2009-2022, ZOO-Project team. This work is released under a Creative Commons Attribution-ShareAlike 4.0 International Public License.
+        &copy; Copyright 2009-2023, ZOO-Project team. This work is released under a Creative Commons Attribution-ShareAlike 4.0 International Public License.
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> inspired by <a href="https://readthedocs.org">Read the Docs</a>.

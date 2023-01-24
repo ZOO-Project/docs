@@ -252,15 +252,15 @@ make
 <section id="test-requests">
 <h4>Test requests<a class="headerlink" href="#test-requests" title="Permalink to this heading">¶</a></h4>
 <p>Once done, OTB Applications should be listed as available WPS Services when runing a GetCapabilities request</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=GetCapabilities&amp;service=WPS
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=GetCapabilities&amp;service=WPS
 </pre></div>
 </div>
 <p>Each OTB Service can then be described individually using the DescribeProcess request, as for example:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=DescribeProcess&amp;service=WPS&amp;version=1.0.0&amp;Identifier=OTB.BandMath
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=DescribeProcess&amp;service=WPS&amp;version=1.0.0&amp;Identifier=OTB.BandMath
 </pre></div>
 </div>
 <p>Here is an example request executing the <em>OTB.BandMath</em> Application with the <a class="reference external" href="https://www.orfeo-toolbox.org/CookBook/CookBook.html">OTB Cookbook</a> sample data as input</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=Execute&amp;service=WPS&amp;version=1.0.0&amp;Identifier=OTB.BandMath&amp;DataInputs=il=Reference@xlink:href=http://hg.orfeo-toolbox.org/OTB-Data/raw-file/ca154074b282/Examples/verySmallFSATSW.tif;il=Reference@xlink:href=http://hg.orfeo-toolbox.org/OTB-Data/raw-file/ca154074b282/Examples/verySmallFSATSW_nir.tif;out=float;exp=im1b3*cos%28im1b1%29,im1b2*cos%28im1b1%29,im1b1*cos%28im1b1%29&amp;RawDataOutput=out@mimeType=image/png
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi?request=Execute&amp;service=WPS&amp;version=1.0.0&amp;Identifier=OTB.BandMath&amp;DataInputs=il=Reference@xlink:href=http://hg.orfeo-toolbox.org/OTB-Data/raw-file/ca154074b282/Examples/verySmallFSATSW.tif;il=Reference@xlink:href=http://hg.orfeo-toolbox.org/OTB-Data/raw-file/ca154074b282/Examples/verySmallFSATSW_nir.tif;out=float;exp=im1b3*cos%28im1b1%29,im1b2*cos%28im1b1%29,im1b1*cos%28im1b1%29&amp;RawDataOutput=out@mimeType=image/png
 </pre></div>
 </div>
 <div class="admonition note">
@@ -290,7 +290,7 @@ make
   <div class="pfoot">
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2009-2022, ZOO-Project team. This work is released under a Creative Commons Attribution-ShareAlike 4.0 International Public License.
+        &copy; Copyright 2009-2023, ZOO-Project team. This work is released under a Creative Commons Attribution-ShareAlike 4.0 International Public License.
     </p>
   </div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> inspired by <a href="https://readthedocs.org">Read the Docs</a>.

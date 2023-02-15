@@ -152,6 +152,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a887dccb1eb694d5fc228a4687de85e17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a887dccb1eb694d5fc228a4687de85e17">parseJBoundingBox</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *req, <a class="el" href="service_8h.html#structelements">elements</a> *element, <a class="el" href="service_8h.html#structmaps">maps</a> *output)</td></tr>
 <tr class="memdesc:a887dccb1eb694d5fc228a4687de85e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse BoundingBox value.  <a href="service__json_8c.html#a887dccb1eb694d5fc228a4687de85e17">More...</a><br /></td></tr>
 <tr class="separator:a887dccb1eb694d5fc228a4687de85e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ec4bcb950f84c9c568b98ec8b5b037a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a6ec4bcb950f84c9c568b98ec8b5b037a">returnBadRequestException</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structelements">elements</a> *peInput)</td></tr>
+<tr class="memdesc:a6ec4bcb950f84c9c568b98ec8b5b037a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an exception response with Status: "400 Bad Request" if inputs are not in the proper format.  <a href="service__json_8c.html#a6ec4bcb950f84c9c568b98ec8b5b037a">More...</a><br /></td></tr>
+<tr class="separator:a6ec4bcb950f84c9c568b98ec8b5b037a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dbe873058816aa8f59064998220673a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a6dbe873058816aa8f59064998220673a">_parseJIOSingle1</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structelements">elements</a> *cio, <a class="el" href="service_8h.html#structmaps">maps</a> **ioMaps, const char *ioType, const char *key, json_object *val, <a class="el" href="service_8h.html#structmaps">maps</a> *cMaps)</td></tr>
 <tr class="memdesc:a6dbe873058816aa8f59064998220673a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a single input / output entity.  <a href="service__json_8c.html#a6dbe873058816aa8f59064998220673a">More...</a><br /></td></tr>
 <tr class="separator:a6dbe873058816aa8f59064998220673a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,8 +174,11 @@ Functions</h2></td></tr>
 <tr class="memdesc:ac207be61d563d3b97a3c91bf94d4547f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the jobs status info cf.  <a href="service__json_8c.html#ac207be61d563d3b97a3c91bf94d4547f">More...</a><br /></td></tr>
 <tr class="separator:ac207be61d563d3b97a3c91bf94d4547f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18a9828f013a6a8f858252ae89a9bf2d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a18a9828f013a6a8f858252ae89a9bf2d">isFilteredPid</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, const char *pccPid)</td></tr>
-<tr class="memdesc:a18a9828f013a6a8f858252ae89a9bf2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Veirify if the process identified by pccPid is part of the processID filters, if any.  <a href="service__json_8c.html#a18a9828f013a6a8f858252ae89a9bf2d">More...</a><br /></td></tr>
+<tr class="memdesc:a18a9828f013a6a8f858252ae89a9bf2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if the process identified by pccPid is part of the processID filters, if any.  <a href="service__json_8c.html#a18a9828f013a6a8f858252ae89a9bf2d">More...</a><br /></td></tr>
 <tr class="separator:a18a9828f013a6a8f858252ae89a9bf2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2a95c80263acfb6b36f4dfa89677d68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ae2a95c80263acfb6b36f4dfa89677d68">isFilteredDMM</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, const char *pccPid)</td></tr>
+<tr class="memdesc:ae2a95c80263acfb6b36f4dfa89677d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if the process identified by pccPid is part of the processID filters, if any.  <a href="service__json_8c.html#ae2a95c80263acfb6b36f4dfa89677d68">More...</a><br /></td></tr>
+<tr class="separator:ae2a95c80263acfb6b36f4dfa89677d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dd81289e1d03b1df43dfdbf629ec1d6"><td class="memItemLeft" align="right" valign="top">json_object *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a7dd81289e1d03b1df43dfdbf629ec1d6">printJobList</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf)</td></tr>
 <tr class="memdesc:a7dd81289e1d03b1df43dfdbf629ec1d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the jobs list.  <a href="service__json_8c.html#a7dd81289e1d03b1df43dfdbf629ec1d6">More...</a><br /></td></tr>
 <tr class="separator:a7dd81289e1d03b1df43dfdbf629ec1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -917,6 +923,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ae2a95c80263acfb6b36f4dfa89677d68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2a95c80263acfb6b36f4dfa89677d68">&#9670;&nbsp;</a></span>isFilteredDMM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isFilteredDMM </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccPid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verify if the process identified by pccPid is part of the processID filters, if any. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pccPid</td><td>the const char pointer to the processID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true in case the filter is empty or in case the processId pccPid is one of the filtered processID, false in other case. </dd></dl>
+
+</div>
+</div>
 <a id="a18a9828f013a6a8f858252ae89a9bf2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18a9828f013a6a8f858252ae89a9bf2d">&#9670;&nbsp;</a></span>isFilteredPid()</h2>
 
@@ -943,7 +987,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Veirify if the process identified by pccPid is part of the processID filters, if any. </p>
+<p>Verify if the process identified by pccPid is part of the processID filters, if any. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
@@ -2511,6 +2555,43 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6ec4bcb950f84c9c568b98ec8b5b037a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ec4bcb950f84c9c568b98ec8b5b037a">&#9670;&nbsp;</a></span>returnBadRequestException()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void returnBadRequestException </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structelements">elements</a> *&#160;</td>
+          <td class="paramname"><em>peInput</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return an exception response with Status: "400 Bad Request" if inputs are not in the proper format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">peInput</td><td>the input causing the issue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8fed1219809b2a1897cf6915b7582dc5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fed1219809b2a1897cf6915b7582dc5">&#9670;&nbsp;</a></span>serviceToJson()</h2>
 
@@ -2541,7 +2622,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 24 2023 09:44:46 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 15 2023 22:21:06 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

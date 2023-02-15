@@ -276,6 +276,12 @@ true, you will simply need to use the value as it was provided in
 a single CDATA node provided in the Execute request.</p></li>
 </ul>
 </div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">extra_supported_codes</span></code>: if this parameter is present in the main
+section, then the response codes list given will be considered as
+valid response code when downloading input data (sample value:
+<code class="docutils literal notranslate"><span class="pre">404,400</span></code>).</p></li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">libPath</span></code> parameter is currently only recognized by services implemented
@@ -589,7 +595,11 @@ about the open API specification it is referring to.</p>
 <code class="docutils literal notranslate"><span class="pre">[openapi]</span></code>. It contains the following parameters:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rootUrl</span></code>: the URL to access the ZOO-Kernel using OGC API - Processing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootUrl</span></code>: the URL to access the ZOO-Kernel using OGC API -
+Processing (in case the <code class="docutils literal notranslate"><span class="pre">rootHost</span></code> and <code class="docutils literal notranslate"><span class="pre">rootPath</span></code> are defined,
+this value will automatically be updated at runtime)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootHost</span></code>: the host (ie. <a class="reference external" href="http://localhost">http://localhost</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootPath</span></code>: the root path to the service (ie. ogc-api)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">links</span></code>: the links provided from the root</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code>: the full paths list</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code>: the parameters list defined in paths</p></li>
@@ -607,6 +617,24 @@ and you want to aknowledge the text/html format in links</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publisherUrl</span></code>: the URL used to publish status updates</p></li>
 </ul>
 </div></blockquote>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">link_href</span></code>: the url to the links.json schema</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code>: tags lits in the order they will be defined in the OpenAPI</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">examplesPath</span></code>: the full path to the examples files, if any</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">examplesUrl</span></code>: the corresponding URL to access the examples files
+to be exposed within the OpenAPI</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exceptionsUrl</span></code>: root URL to the exception</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ensure_type_validation</span></code>: set it to true to not allow passing
+literal value to a complex input, a complex data in place of a
+literal, respectively</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ensure_type_validation_but_ets</span></code>: set it to true to have the type
+validation as with the previous parameter but on for the literal
+data (not accepting complex data)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_result_as_document</span></code>: set it to true in case you want to
+use raw as the default value for the response parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">use_problem_exception</span></code>: set any value only in case you are
+willing to use application/problem+json (see. <a class="reference external" href="https://datatracker.ietf.org/doc/html/rfc7807">RFC7807</a>).</p></li>
+</ul>
 <p>For any links and paths <code class="docutils literal notranslate"><span class="pre">/A</span></code> defined, you will have a corresponding
 <code class="docutils literal notranslate"><span class="pre">[/A]</span></code> and <code class="docutils literal notranslate"><span class="pre">[A]</span></code> sections. In the <code class="docutils literal notranslate"><span class="pre">[/A]</span></code> section you will define
 the rel, type and title used from the root URL to produce the <a class="reference external" href="https://github.com/opengeospatial/wps-rest-binding/blob/master/core/openapi/schemas/link.yaml">links</a>

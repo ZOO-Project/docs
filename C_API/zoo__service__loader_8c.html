@@ -120,6 +120,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a5d43796f4b57988759ce09d64ead3e40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a5d43796f4b57988759ce09d64ead3e40">translateChar</a> (char *str, char toReplace, char toReplaceBy)</td></tr>
 <tr class="memdesc:a5d43796f4b57988759ce09d64ead3e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace a char by another one in a string.  <a href="zoo__service__loader_8c.html#a5d43796f4b57988759ce09d64ead3e40">More...</a><br /></td></tr>
 <tr class="separator:a5d43796f4b57988759ce09d64ead3e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa96c9135a1455fbf6364c2a09977be2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#afa96c9135a1455fbf6364c2a09977be2">createXidFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *pcPath, char *pcUsid, char *pcExtension, char *pcValue)</td></tr>
+<tr class="memdesc:afa96c9135a1455fbf6364c2a09977be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create PID (SID) file referencing the OS process identifier (service id)  <a href="zoo__service__loader_8c.html#afa96c9135a1455fbf6364c2a09977be2">More...</a><br /></td></tr>
+<tr class="separator:afa96c9135a1455fbf6364c2a09977be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e8771e461278f55720812fe431b4aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#ae1e8771e461278f55720812fe431b4aa">createSPidFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *pcPath)</td></tr>
+<tr class="memdesc:ae1e8771e461278f55720812fe431b4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the PID and SID files referencing the OS process identifier and the service id, respectively.  <a href="zoo__service__loader_8c.html#ae1e8771e461278f55720812fe431b4aa">More...</a><br /></td></tr>
+<tr class="separator:ae1e8771e461278f55720812fe431b4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac459c2054ffc38a8d106c6f615c80163"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#ac459c2054ffc38a8d106c6f615c80163">createLenvFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *pcPath, char *pcUsid)</td></tr>
+<tr class="memdesc:ac459c2054ffc38a8d106c6f615c80163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a _lenv.cfg file containing the lenv map.  <a href="zoo__service__loader_8c.html#ac459c2054ffc38a8d106c6f615c80163">More...</a><br /></td></tr>
+<tr class="separator:ac459c2054ffc38a8d106c6f615c80163"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfb4bb29437c182e5b38ee207b642d09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#adfb4bb29437c182e5b38ee207b642d09">dumpBackFinalFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, char *fbkp, char *fbkp1)</td></tr>
 <tr class="memdesc:adfb4bb29437c182e5b38ee207b642d09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump back the final file fbkp1 to fbkp.  <a href="zoo__service__loader_8c.html#adfb4bb29437c182e5b38ee207b642d09">More...</a><br /></td></tr>
 <tr class="separator:adfb4bb29437c182e5b38ee207b642d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,6 +268,146 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="sqlapi_8c.html#adf014ae68b172832b74512bd252263a7" title="Close any connection to the db backend.">close_sql</a>,<a class="el" href="sqlapi_8c.html#afbd59495094a70301979f581eb0551fd" title="Call OGRCleanupAll.">end_sql</a> </dd></dl>
+
+</div>
+</div>
+<a id="ac459c2054ffc38a8d106c6f615c80163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac459c2054ffc38a8d106c6f615c80163">&#9670;&nbsp;</a></span>createLenvFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int createLenvFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcUsid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a _lenv.cfg file containing the lenv map. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">pcPath</td><td>the path to store the sid file </td></tr>
+    <tr><td class="paramname">pcUsid</td><td>the usid value </td></tr>
+    <tr><td class="paramname">pcValue</td><td>the value to be stored </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae1e8771e461278f55720812fe431b4aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e8771e461278f55720812fe431b4aa">&#9670;&nbsp;</a></span>createSPidFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int createSPidFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create the PID and SID files referencing the OS process identifier and the service id, respectively. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">pcPath</td><td>the path to store the files </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afa96c9135a1455fbf6364c2a09977be2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa96c9135a1455fbf6364c2a09977be2">&#9670;&nbsp;</a></span>createXidFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int createXidFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcUsid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcExtension</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create PID (SID) file referencing the OS process identifier (service id) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">pcPath</td><td>the path to store the sid file </td></tr>
+    <tr><td class="paramname">pcUsid</td><td>the usid value </td></tr>
+    <tr><td class="paramname">pcExtension</td><td>the file extension (sid or pid) </td></tr>
+    <tr><td class="paramname">pcValue</td><td>the value to be stored </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1160,7 +1309,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 24 2023 09:44:46 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 15 2023 22:21:07 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

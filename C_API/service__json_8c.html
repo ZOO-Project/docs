@@ -146,6 +146,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aecf33dd2a7fae9e1a3357fe1452ff663"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#aecf33dd2a7fae9e1a3357fe1452ff663">checkCorrespondingJFields</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *req, <a class="el" href="service_8h.html#structmaps">maps</a> *output)</td></tr>
 <tr class="memdesc:aecf33dd2a7fae9e1a3357fe1452ff663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search field names used in the OGC API - Processes specification and replace them by old names from WPS.  <a href="service__json_8c.html#aecf33dd2a7fae9e1a3357fe1452ff663">More...</a><br /></td></tr>
 <tr class="separator:aecf33dd2a7fae9e1a3357fe1452ff663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed36a82185dcd29dc660e6f5cf73c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a7ed36a82185dcd29dc660e6f5cf73c8b">addToJRequests</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **pmsConf, const char *pccValue, const char *name)</td></tr>
+<tr class="memdesc:a7ed36a82185dcd29dc660e6f5cf73c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a http reques to the queue.  <a href="service__json_8c.html#a7ed36a82185dcd29dc660e6f5cf73c8b">More...</a><br /></td></tr>
+<tr class="separator:a7ed36a82185dcd29dc660e6f5cf73c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44619e8966a2889d1c5992b47a70e2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ac44619e8966a2889d1c5992b47a70e2f">parseNestedProcess</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *req, <a class="el" href="service_8h.html#structelements">elements</a> *element, <a class="el" href="service_8h.html#structmaps">maps</a> *output, const char *name)</td></tr>
+<tr class="memdesc:ac44619e8966a2889d1c5992b47a70e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse nested process json object.  <a href="service__json_8c.html#ac44619e8966a2889d1c5992b47a70e2f">More...</a><br /></td></tr>
+<tr class="separator:ac44619e8966a2889d1c5992b47a70e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f1f2508d087e22a4947a48be28c93c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a2f1f2508d087e22a4947a48be28c93c6">parseJComplex</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *req, <a class="el" href="service_8h.html#structelements">elements</a> *element, <a class="el" href="service_8h.html#structmaps">maps</a> *output, const char *name)</td></tr>
 <tr class="memdesc:a2f1f2508d087e22a4947a48be28c93c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse ComplexData value.  <a href="service__json_8c.html#a2f1f2508d087e22a4947a48be28c93c6">More...</a><br /></td></tr>
 <tr class="separator:a2f1f2508d087e22a4947a48be28c93c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -558,6 +564,50 @@ Functions</h2></td></tr>
     <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
     <tr><td class="paramname">fName</td><td>the key to add to the res json object </td></tr>
     <tr><td class="paramname">res</td><td>the json object to store the content </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7ed36a82185dcd29dc660e6f5cf73c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed36a82185dcd29dc660e6f5cf73c8b">&#9670;&nbsp;</a></span>addToJRequests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addToJRequests </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a http reques to the queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pccValue</td><td>the URL to fetch </td></tr>
+    <tr><td class="paramname">name</td><td>the name of the input </td></tr>
   </table>
   </dd>
 </dl>
@@ -1306,7 +1356,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
     <tr><td class="paramname">req</td><td>json_object pointing to the input/output </td></tr>
-    <tr><td class="paramname">element</td><td></td></tr>
+    <tr><td class="paramname">element</td><td>the metadata </td></tr>
     <tr><td class="paramname">output</td><td>the maps to set current json structure </td></tr>
   </table>
   </dd>
@@ -1363,7 +1413,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
     <tr><td class="paramname">req</td><td>json_object pointing to the input/output </td></tr>
-    <tr><td class="paramname">element</td><td></td></tr>
+    <tr><td class="paramname">element</td><td>the metadata </td></tr>
     <tr><td class="paramname">output</td><td>the maps to set current json structure </td></tr>
     <tr><td class="paramname">name</td><td>the name of the request from http_requests </td></tr>
   </table>
@@ -1645,6 +1695,64 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the created json_object </dd></dl>
+
+</div>
+</div>
+<a id="ac44619e8966a2889d1c5992b47a70e2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac44619e8966a2889d1c5992b47a70e2f">&#9670;&nbsp;</a></span>parseNestedProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parseNestedProcess </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>conf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structelements">elements</a> *&#160;</td>
+          <td class="paramname"><em>element</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parse nested process json object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">req</td><td>json_object pointing to the input/output </td></tr>
+    <tr><td class="paramname">element</td><td>the metadata for this input </td></tr>
+    <tr><td class="paramname">output</td><td>the maps to set current json structure </td></tr>
+    <tr><td class="paramname">name</td><td>the name of the request from http_requests </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2622,7 +2730,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 19 2023 14:56:15 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 22 2023 13:34:00 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

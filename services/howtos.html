@@ -210,7 +210,7 @@
           <div role="main" class="document">
             
   <section id="create-your-own-zoo-services">
-<span id="services-create"></span><h1><a class="toc-backref" href="#id6" role="doc-backlink">Create your own ZOO-Services</a><a class="headerlink" href="#create-your-own-zoo-services" title="Permalink to this heading">¶</a></h1>
+<span id="services-create"></span><h1><a class="toc-backref" href="#id8" role="doc-backlink">Create your own ZOO-Services</a><a class="headerlink" href="#create-your-own-zoo-services" title="Permalink to this heading">¶</a></h1>
 <p><a class="reference internal" href="index.html#services-index"><span class="std std-ref">ZOO-Services</span></a> are quite easy to create once you have installed the ZOO Kernel and have
 chosen code (in the language of your choice) to turn into a ZOO service. Here are some
 HelloWorlds in Python, PHP, Java, C#  and JavaScript with links to their corresponding
@@ -218,55 +218,64 @@ HelloWorlds in Python, PHP, Java, C#  and JavaScript with links to their corresp
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#create-your-own-zoo-services" id="id6">Create your own ZOO-Services</a></p>
+<li><p><a class="reference internal" href="#create-your-own-zoo-services" id="id8">Create your own ZOO-Services</a></p>
 <ul>
-<li><p><a class="reference internal" href="#general-information" id="id7">General information</a></p></li>
-<li><p><a class="reference internal" href="#python" id="id8">Python</a></p>
+<li><p><a class="reference internal" href="#general-information" id="id9">General information</a></p></li>
+<li><p><a class="reference internal" href="#python" id="id10">Python</a></p>
 <ul>
-<li><p><a class="reference internal" href="#zoo-api" id="id9">ZOO-API</a></p></li>
-<li><p><a class="reference internal" href="#python-zcfg-requirements" id="id10">Python ZCFG requirements</a></p></li>
-<li><p><a class="reference internal" href="#python-data-structure-used" id="id11">Python Data Structure used</a></p></li>
-<li><p><a class="reference internal" href="#sample-zoo-python-services-provider" id="id12">Sample ZOO Python Services Provider</a></p></li>
+<li><p><a class="reference internal" href="#zoo-api" id="id11">ZOO-API</a></p></li>
+<li><p><a class="reference internal" href="#python-zcfg-requirements" id="id12">Python ZCFG requirements</a></p></li>
+<li><p><a class="reference internal" href="#python-data-structure-used" id="id13">Python Data Structure used</a></p></li>
+<li><p><a class="reference internal" href="#sample-zoo-python-services-provider" id="id14">Sample ZOO Python Services Provider</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#php" id="id13">PHP</a></p>
+<li><p><a class="reference internal" href="#php" id="id15">PHP</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id1" id="id14">ZOO-API</a></p></li>
-<li><p><a class="reference internal" href="#php-zcfg-requirements" id="id15">PHP ZCFG requirements</a></p></li>
-<li><p><a class="reference internal" href="#php-data-structure-used" id="id16">PHP Data Structure used</a></p></li>
-<li><p><a class="reference internal" href="#sample-zoo-php-services-provider" id="id17">Sample ZOO PHP Services Provider</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id16">ZOO-API</a></p></li>
+<li><p><a class="reference internal" href="#php-zcfg-requirements" id="id17">PHP ZCFG requirements</a></p></li>
+<li><p><a class="reference internal" href="#php-data-structure-used" id="id18">PHP Data Structure used</a></p></li>
+<li><p><a class="reference internal" href="#sample-zoo-php-services-provider" id="id19">Sample ZOO PHP Services Provider</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#java" id="id18">Java</a></p>
+<li><p><a class="reference internal" href="#java" id="id20">Java</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id2" id="id19">ZOO-API</a></p></li>
-<li><p><a class="reference internal" href="#java-zcfg-requirements" id="id20">Java ZCFG requirements</a></p></li>
-<li><p><a class="reference internal" href="#java-data-structure-used" id="id21">Java Data Structure used</a></p></li>
-<li><p><a class="reference internal" href="#sample-zoo-java-services-provider" id="id22">Sample ZOO Java Services Provider</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id21">ZOO-API</a></p></li>
+<li><p><a class="reference internal" href="#java-zcfg-requirements" id="id22">Java ZCFG requirements</a></p></li>
+<li><p><a class="reference internal" href="#java-data-structure-used" id="id23">Java Data Structure used</a></p></li>
+<li><p><a class="reference internal" href="#sample-zoo-java-services-provider" id="id24">Sample ZOO Java Services Provider</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#c" id="id23">C#</a></p>
+<li><p><a class="reference internal" href="#c" id="id25">C#</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id3" id="id24">ZOO-API</a></p></li>
-<li><p><a class="reference internal" href="#c-zcfg-requirements" id="id25">C# ZCFG requirements</a></p></li>
-<li><p><a class="reference internal" href="#c-data-structure-used" id="id26">C# Data Structure used</a></p></li>
-<li><p><a class="reference internal" href="#sample-zoo-c-services-provider" id="id27">Sample ZOO C# Services Provider</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id26">ZOO-API</a></p></li>
+<li><p><a class="reference internal" href="#c-zcfg-requirements" id="id27">C# ZCFG requirements</a></p></li>
+<li><p><a class="reference internal" href="#c-data-structure-used" id="id28">C# Data Structure used</a></p></li>
+<li><p><a class="reference internal" href="#sample-zoo-c-services-provider" id="id29">Sample ZOO C# Services Provider</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#javascript" id="id28">Javascript</a></p>
+<li><p><a class="reference internal" href="#javascript-spidermonkey" id="id30">Javascript (SpiderMonkey)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id4" id="id29">ZOO API</a></p></li>
-<li><p><a class="reference internal" href="#javascript-zcfg-requirements" id="id30">Javascript ZCFG requirements</a></p></li>
-<li><p><a class="reference internal" href="#javascript-data-structure-used" id="id31">Javascript Data Structure used</a></p></li>
-<li><p><a class="reference internal" href="#sample-zoo-javascript-services-provider" id="id32">Sample ZOO Javascript Services Provider</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id31">ZOO API</a></p></li>
+<li><p><a class="reference internal" href="#javascript-zcfg-requirements" id="id32">Javascript ZCFG requirements</a></p></li>
+<li><p><a class="reference internal" href="#javascript-data-structure-used" id="id33">Javascript Data Structure used</a></p></li>
+<li><p><a class="reference internal" href="#sample-zoo-javascript-services-provider" id="id34">Sample ZOO Javascript Services Provider</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#r" id="id33">R</a></p>
+<li><p><a class="reference internal" href="#javascript-node-js" id="id35">Javascript (Node.js)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id5" id="id34">ZOO API</a></p></li>
-<li><p><a class="reference internal" href="#r-zcfg-requirements" id="id35">R ZCFG requirements</a></p></li>
-<li><p><a class="reference internal" href="#r-data-structure-used" id="id36">R Data Structure used</a></p></li>
-<li><p><a class="reference internal" href="#sample-zoo-r-services-provider" id="id37">Sample ZOO R Services Provider</a></p></li>
+<li><p><a class="reference internal" href="#environment" id="id36">Environment</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id37">Javascript ZCFG requirements</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id38">Javascript Data Structure used</a></p></li>
+<li><p><a class="reference internal" href="#sample-zoo-node-js-javascript-services-provider" id="id39">Sample ZOO Node.js Javascript Services Provider</a></p></li>
+<li><p><a class="reference internal" href="#using-the-integrated-remote-debugger" id="id40">Using the Integrated Remote Debugger</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#r" id="id41">R</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id7" id="id42">ZOO API</a></p></li>
+<li><p><a class="reference internal" href="#r-zcfg-requirements" id="id43">R ZCFG requirements</a></p></li>
+<li><p><a class="reference internal" href="#r-data-structure-used" id="id44">R Data Structure used</a></p></li>
+<li><p><a class="reference internal" href="#sample-zoo-r-services-provider" id="id45">Sample ZOO R Services Provider</a></p></li>
 </ul>
 </li>
 </ul>
@@ -274,7 +283,7 @@ HelloWorlds in Python, PHP, Java, C#  and JavaScript with links to their corresp
 </ul>
 </nav>
 <section id="general-information">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">General information</a><a class="headerlink" href="#general-information" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">General information</a><a class="headerlink" href="#general-information" title="Permalink to this heading">¶</a></h2>
 <p>The function of the process for each programming language take three arguments: the main
 configuration, inputs and outputs.</p>
 <div class="admonition note">
@@ -287,10 +296,10 @@ configuration, inputs and outputs.</p>
 </div>
 </section>
 <section id="python">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Python</a><a class="headerlink" href="#python" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Python</a><a class="headerlink" href="#python" title="Permalink to this heading">¶</a></h2>
 <p>You’ll find here information needed to deploy your own Python Services Provider.</p>
 <section id="zoo-api">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">ZOO-API</a><a class="headerlink" href="#zoo-api" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">ZOO-API</a><a class="headerlink" href="#zoo-api" title="Permalink to this heading">¶</a></h3>
 <p>From your python module where you define your services, you can access
 the ZOO-API by importing the <code class="docutils literal notranslate"><span class="pre">zoo</span></code> module. No need to install
 anything here, the module will be automatically created from the
@@ -311,7 +320,7 @@ ZOO-Kernel code at runtime.</p>
 </dl>
 </section>
 <section id="python-zcfg-requirements">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">Python ZCFG requirements</a><a class="headerlink" href="#python-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Python ZCFG requirements</a><a class="headerlink" href="#python-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For each Service provided by your ZOO Python Services Provider, the ZCFG File
@@ -329,7 +338,7 @@ you should use <code class="docutils literal notranslate"><span class="pre">my_m
 </dl>
 </section>
 <section id="python-data-structure-used">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">Python Data Structure used</a><a class="headerlink" href="#python-data-structure-used" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Python Data Structure used</a><a class="headerlink" href="#python-data-structure-used" title="Permalink to this heading">¶</a></h3>
 <p>The three parameters of the function are passed to the Python module as dictionaries.</p>
 <p>Following you’ll find an example for each parameters</p>
 <section id="main-configuration">
@@ -419,7 +428,7 @@ for example:</p>
 </section>
 </section>
 <section id="sample-zoo-python-services-provider">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">Sample ZOO Python Services Provider</a><a class="headerlink" href="#sample-zoo-python-services-provider" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Sample ZOO Python Services Provider</a><a class="headerlink" href="#sample-zoo-python-services-provider" title="Permalink to this heading">¶</a></h3>
 <p>The following code represents a simple ZOO Python Services Provider which provides only one
 Service, the HelloPy one.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">zoo</span>
@@ -432,9 +441,9 @@ Service, the HelloPy one.</p>
 </section>
 </section>
 <section id="php">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink">PHP</a><a class="headerlink" href="#php" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">PHP</a><a class="headerlink" href="#php" title="Permalink to this heading">¶</a></h2>
 <section id="id1">
-<h3><a class="toc-backref" href="#id14" role="doc-backlink">ZOO-API</a><a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">ZOO-API</a><a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <p>The ZOO-API for the PHP language is automatically available from your
 service code. The following functions are defined in the ZOO-API:</p>
 <dl class="simple">
@@ -449,7 +458,7 @@ service code. The following functions are defined in the ZOO-API:</p>
 </dl>
 </section>
 <section id="php-zcfg-requirements">
-<h3><a class="toc-backref" href="#id15" role="doc-backlink">PHP ZCFG requirements</a><a class="headerlink" href="#php-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">PHP ZCFG requirements</a><a class="headerlink" href="#php-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
 <p>The ZCFG file should contain the following :</p>
 <dl class="simple">
 <dt>serviceType</dt><dd><p>PHP</p>
@@ -459,12 +468,12 @@ service code. The following functions are defined in the ZOO-API:</p>
 </dl>
 </section>
 <section id="php-data-structure-used">
-<h3><a class="toc-backref" href="#id16" role="doc-backlink">PHP Data Structure used</a><a class="headerlink" href="#php-data-structure-used" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">PHP Data Structure used</a><a class="headerlink" href="#php-data-structure-used" title="Permalink to this heading">¶</a></h3>
 <p>The three parameters are passed to the PHP function as
 <a class="reference external" href="php.net/manual/language.types.array.php">Arrays</a>.</p>
 </section>
 <section id="sample-zoo-php-services-provider">
-<h3><a class="toc-backref" href="#id17" role="doc-backlink">Sample ZOO PHP Services Provider</a><a class="headerlink" href="#sample-zoo-php-services-provider" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">Sample ZOO PHP Services Provider</a><a class="headerlink" href="#sample-zoo-php-services-provider" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?</span>
 <span class="k">function</span> <span class="nf">HelloPHP</span><span class="p">(</span><span class="o">&amp;</span><span class="nv">$main_conf</span><span class="p">,</span><span class="o">&amp;</span><span class="nv">$inputs</span><span class="p">,</span><span class="o">&amp;</span><span class="nv">$outputs</span><span class="p">){</span>
    <span class="nv">$tmp</span><span class="o">=</span><span class="s2">&quot;Hello &quot;</span><span class="o">.</span><span class="nv">$inputs</span><span class="p">[</span><span class="nx">S</span><span class="p">][</span><span class="nx">value</span><span class="p">]</span><span class="o">.</span><span class="s2">&quot; from PHP world !&quot;</span><span class="p">;</span>
@@ -477,7 +486,7 @@ service code. The following functions are defined in the ZOO-API:</p>
 </section>
 </section>
 <section id="java">
-<h2><a class="toc-backref" href="#id18" role="doc-backlink">Java</a><a class="headerlink" href="#java" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">Java</a><a class="headerlink" href="#java" title="Permalink to this heading">¶</a></h2>
 <p>Specifically for the Java support, you may add the following three
 sections to your <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> file:</p>
 <dl class="field-list simple">
@@ -508,7 +517,7 @@ option <code class="docutils literal notranslate"><span class="pre">-XX:a=b</spa
 </dd>
 </dl>
 <section id="id2">
-<h3><a class="toc-backref" href="#id19" role="doc-backlink">ZOO-API</a><a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">ZOO-API</a><a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 <p>Before you build your first ZOO-Service implemented in Java, it is
 recommended that you first build the ZOO class of the Java ZOO-API.</p>
 <div class="admonition note">
@@ -546,7 +555,7 @@ the service has been called asynchronously).</p>
 </dl>
 </section>
 <section id="java-zcfg-requirements">
-<h3><a class="toc-backref" href="#id20" role="doc-backlink">Java ZCFG requirements</a><a class="headerlink" href="#java-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id22" role="doc-backlink">Java ZCFG requirements</a><a class="headerlink" href="#java-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For each Service provided by your ZOO Java Services Provider
@@ -565,12 +574,12 @@ named <code class="docutils literal notranslate"><span class="pre">HelloJava.cla
 </dl>
 </section>
 <section id="java-data-structure-used">
-<h3><a class="toc-backref" href="#id21" role="doc-backlink">Java Data Structure used</a><a class="headerlink" href="#java-data-structure-used" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">Java Data Structure used</a><a class="headerlink" href="#java-data-structure-used" title="Permalink to this heading">¶</a></h3>
 <p>The three parameters are passed to the Java function as
 <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">java.util.HashMap</a>.</p>
 </section>
 <section id="sample-zoo-java-services-provider">
-<h3><a class="toc-backref" href="#id22" role="doc-backlink">Sample ZOO Java Services Provider</a><a class="headerlink" href="#sample-zoo-java-services-provider" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">Sample ZOO Java Services Provider</a><a class="headerlink" href="#sample-zoo-java-services-provider" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span><span class="w"></span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloJava</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">HelloWorldJava</span><span class="p">(</span><span class="n">HashMap</span><span class="w"> </span><span class="n">conf</span><span class="p">,</span><span class="n">HashMap</span><span class="w"> </span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">HashMap</span><span class="w"> </span><span class="n">outputs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -589,7 +598,7 @@ named <code class="docutils literal notranslate"><span class="pre">HelloJava.cla
 </section>
 </section>
 <section id="c">
-<h2><a class="toc-backref" href="#id23" role="doc-backlink">C#</a><a class="headerlink" href="#c" title="Permalink to this heading">¶</a></h2>
+<h2><a class="toc-backref" href="#id25" role="doc-backlink">C#</a><a class="headerlink" href="#c" title="Permalink to this heading">¶</a></h2>
 <p>Specifically for the C# support, you should add the following
 section to your <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> file.</p>
 <dl class="field-list simple">
@@ -599,7 +608,7 @@ required by the Mono .NET Framework.</p>
 </dd>
 </dl>
 <section id="id3">
-<h3><a class="toc-backref" href="#id24" role="doc-backlink">ZOO-API</a><a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id26" role="doc-backlink">ZOO-API</a><a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 <p>Before you build your first ZOO-Service implemented in Mono, you
 should first build the <code class="docutils literal notranslate"><span class="pre">ZMaps.dll</span></code> containing the Mono ZOO-API.</p>
 <div class="admonition note">
@@ -636,7 +645,7 @@ the service has been called asynchronously).</p>
 </dl>
 </section>
 <section id="c-zcfg-requirements">
-<h3><a class="toc-backref" href="#id25" role="doc-backlink">C# ZCFG requirements</a><a class="headerlink" href="#c-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">C# ZCFG requirements</a><a class="headerlink" href="#c-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For each Service provided by your ZOO Mono Services Provider
@@ -658,25 +667,25 @@ service (case-sensitive).</p>
 </dl>
 </section>
 <section id="c-data-structure-used">
-<h3><a class="toc-backref" href="#id26" role="doc-backlink">C# Data Structure used</a><a class="headerlink" href="#c-data-structure-used" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id28" role="doc-backlink">C# Data Structure used</a><a class="headerlink" href="#c-data-structure-used" title="Permalink to this heading">¶</a></h3>
 <p>The three parameters of the function are passed to the Mono static
 function as <code class="docutils literal notranslate"><span class="pre">ZMaps</span></code> which are basically
 <code class="docutils literal notranslate"><span class="pre">Dictionary&lt;String,_ZMaps&gt;</span></code>.</p>
 </section>
 <section id="sample-zoo-c-services-provider">
-<h3><a class="toc-backref" href="#id27" role="doc-backlink">Sample ZOO C# Services Provider</a><a class="headerlink" href="#sample-zoo-c-services-provider" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id29" role="doc-backlink">Sample ZOO C# Services Provider</a><a class="headerlink" href="#sample-zoo-c-services-provider" title="Permalink to this heading">¶</a></h3>
 </section>
 </section>
-<section id="javascript">
-<h2><a class="toc-backref" href="#id28" role="doc-backlink">Javascript</a><a class="headerlink" href="#javascript" title="Permalink to this heading">¶</a></h2>
+<section id="javascript-spidermonkey">
+<h2><a class="toc-backref" href="#id30" role="doc-backlink">Javascript (SpiderMonkey)</a><a class="headerlink" href="#javascript-spidermonkey" title="Permalink to this heading">¶</a></h2>
 <section id="id4">
-<h3><a class="toc-backref" href="#id29" role="doc-backlink">ZOO API</a><a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id31" role="doc-backlink">ZOO API</a><a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h3>
 <p>If you need to use <span class="xref std std-ref">ZOO API</span> in your service, you have first to copy <code class="docutils literal notranslate"><span class="pre">zoo-api.js</span></code>
 and <code class="docutils literal notranslate"><span class="pre">zoo-proj4js.js</span></code> where your services are located (for example in Unix system probably in
 <code class="docutils literal notranslate"><span class="pre">/usr/lib/cgi-bin/</span></code></p>
 </section>
 <section id="javascript-zcfg-requirements">
-<h3><a class="toc-backref" href="#id30" role="doc-backlink">Javascript ZCFG requirements</a><a class="headerlink" href="#javascript-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id32" role="doc-backlink">Javascript ZCFG requirements</a><a class="headerlink" href="#javascript-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For each Service provided by your ZOO Javascript Services Provider, the ZCFG File
@@ -694,11 +703,11 @@ you should use <code class="docutils literal notranslate"><span class="pre">my_m
 </dl>
 </section>
 <section id="javascript-data-structure-used">
-<h3><a class="toc-backref" href="#id31" role="doc-backlink">Javascript Data Structure used</a><a class="headerlink" href="#javascript-data-structure-used" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id33" role="doc-backlink">Javascript Data Structure used</a><a class="headerlink" href="#javascript-data-structure-used" title="Permalink to this heading">¶</a></h3>
 <p>The three parameters of the function are passed to the JavaScript function as Object.</p>
 </section>
 <section id="sample-zoo-javascript-services-provider">
-<h3><a class="toc-backref" href="#id32" role="doc-backlink">Sample ZOO Javascript Services Provider</a><a class="headerlink" href="#sample-zoo-javascript-services-provider" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id34" role="doc-backlink">Sample ZOO Javascript Services Provider</a><a class="headerlink" href="#sample-zoo-javascript-services-provider" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">hellojs</span><span class="p">(</span><span class="nx">conf</span><span class="p">,</span><span class="nx">inputs</span><span class="p">,</span><span class="nx">outputs</span><span class="p">){</span><span class="w"></span>
 <span class="w">   </span><span class="nx">outputs</span><span class="o">=</span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">();</span><span class="w"></span>
 <span class="w">   </span><span class="nx">outputs</span><span class="o">=</span><span class="p">{};</span><span class="w"></span>
@@ -709,10 +718,74 @@ you should use <code class="docutils literal notranslate"><span class="pre">my_m
 </div>
 </section>
 </section>
-<section id="r">
-<h2><a class="toc-backref" href="#id33" role="doc-backlink">R</a><a class="headerlink" href="#r" title="Permalink to this heading">¶</a></h2>
+<section id="javascript-node-js">
+<h2><a class="toc-backref" href="#id35" role="doc-backlink">Javascript (Node.js)</a><a class="headerlink" href="#javascript-node-js" title="Permalink to this heading">¶</a></h2>
+<section id="environment">
+<h3><a class="toc-backref" href="#id36" role="doc-backlink">Environment</a><a class="headerlink" href="#environment" title="Permalink to this heading">¶</a></h3>
+<p>The Node.js services environment offers a fully functional Node.js environment.
+The <code class="docutils literal notranslate"><span class="pre">gdal-async</span></code>, <code class="docutils literal notranslate"><span class="pre">proj4</span></code> and <code class="docutils literal notranslate"><span class="pre">wps-js-52-north</span></code> modules are supported
+out of the box and can be imported/required. Loading of external CJS and ES6
+modules installed from the NPM registry in a <code class="docutils literal notranslate"><span class="pre">node_modules</span></code> sub-directory is
+also supported when this directory is present in the same directory as the
+service JavaScript file.</p>
+</section>
 <section id="id5">
-<h3><a class="toc-backref" href="#id34" role="doc-backlink">ZOO API</a><a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id37" role="doc-backlink">Javascript ZCFG requirements</a><a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For each Service provided by your ZOO Javascript Services Provider, the ZCFG File
+must be named the same as the exported Javascript function name (also the case of
+characters is important).</p>
+</div>
+<p>The ZCFG file should contain the following :</p>
+<dl class="simple">
+<dt>serviceType</dt><dd><p>NodeJS</p>
+</dd>
+<dt>serviceProvider</dt><dd><p>The name of the JavaScript file to use as a ZOO Service Provider. For instance, if your
+script, located in the same directory as your ZOO Kernel, was named <code class="docutils literal notranslate"><span class="pre">my_module.js</span></code> then
+you should use <code class="docutils literal notranslate"><span class="pre">my_module.js</span></code>.</p>
+</dd>
+<dt>jsModuleType (optional, default is <code class="docutils literal notranslate"><span class="pre">CJS</span></code>)</dt><dd><p>The module type used, <code class="docutils literal notranslate"><span class="pre">CJS</span></code> for CommonJS or <code class="docutils literal notranslate"><span class="pre">ES6</span></code> for ECMAScript 6 modules. CommonJS
+modules should contain a <code class="docutils literal notranslate"><span class="pre">modules.export</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">serviceName:</span> <span class="pre">entryFunction</span> <span class="pre">}</span></code> while
+ECMAScript 6 modules should contain <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">serviceName</span></code>.</p>
+</dd>
+<dt>inspector (optional, default <code class="docutils literal notranslate"><span class="pre">false</span></code>)</dt><dd><p>Enables the built-in debugger. When enabled the service won’t run until a V8 Inspector
+Protocol has connected to port 9229.</p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h3><a class="toc-backref" href="#id38" role="doc-backlink">Javascript Data Structure used</a><a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h3>
+<p>The three parameters of the function are passed to the JavaScript function as Object. The main
+entry point function should return one of the predefined values: <code class="docutils literal notranslate"><span class="pre">SERVICE_ACCEPTED</span></code>,
+<code class="docutils literal notranslate"><span class="pre">SERVICE_STARTED</span></code>, <code class="docutils literal notranslate"><span class="pre">SERVICE_PAUSED</span></code>, <code class="docutils literal notranslate"><span class="pre">SERVICE_SUCCEEDED</span></code> or <code class="docutils literal notranslate"><span class="pre">SERVICE_FAILED</span></code>.</p>
+</section>
+<section id="sample-zoo-node-js-javascript-services-provider">
+<h3><a class="toc-backref" href="#id39" role="doc-backlink">Sample ZOO Node.js Javascript Services Provider</a><a class="headerlink" href="#sample-zoo-node-js-javascript-services-provider" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">hellojs</span><span class="p">(</span><span class="nx">conf</span><span class="p">,</span><span class="nx">inputs</span><span class="p">,</span><span class="nx">outputs</span><span class="p">){</span><span class="w"></span>
+<span class="w">   </span><span class="nx">outputs</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;Hello &quot;</span><span class="o">+</span><span class="nx">inputs</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot; from JS World !&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">SERVICE_SUCCEEDED</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hellojs</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="using-the-integrated-remote-debugger">
+<h3><a class="toc-backref" href="#id40" role="doc-backlink">Using the Integrated Remote Debugger</a><a class="headerlink" href="#using-the-integrated-remote-debugger" title="Permalink to this heading">¶</a></h3>
+<p>The Node.js runtime supports debugging of Javascript services directly in their
+normal execution environment. The debugger is enabled by setting <code class="docutils literal notranslate"><span class="pre">inspector</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>
+in the service configuration file. Once enabled, the debugger will automatically pause
+the service upon launching it and it will wait for a V8 Inspector Protocol compliant client
+to connect to port 9229. The Chrome browser includes one such client that is accessible
+by typing <code class="docutils literal notranslate"><span class="pre">chrome://inspect</span></code> in the URL bar. Another popular debugging client is
+Visual Studio Code.</p>
+</section>
+</section>
+<section id="r">
+<h2><a class="toc-backref" href="#id41" role="doc-backlink">R</a><a class="headerlink" href="#r" title="Permalink to this heading">¶</a></h2>
+<section id="id7">
+<h3><a class="toc-backref" href="#id42" role="doc-backlink">ZOO API</a><a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h3>
 <p>For using the R language from the ZOO-Project, you have first to copy
 <code class="docutils literal notranslate"><span class="pre">minimal.r</span></code> in the same directory as the ZOO-Kernel.</p>
 <p>The ZOO-API is available from a R script and provide access to a
@@ -740,7 +813,7 @@ the service has been called asynchronously).</p>
 </dl>
 </section>
 <section id="r-zcfg-requirements">
-<h3><a class="toc-backref" href="#id35" role="doc-backlink">R ZCFG requirements</a><a class="headerlink" href="#r-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id43" role="doc-backlink">R ZCFG requirements</a><a class="headerlink" href="#r-zcfg-requirements" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For each Service provided by your ZOO R Services Provider,
@@ -758,7 +831,7 @@ you should use <code class="docutils literal notranslate"><span class="pre">my_m
 </dl>
 </section>
 <section id="r-data-structure-used">
-<h3><a class="toc-backref" href="#id36" role="doc-backlink">R Data Structure used</a><a class="headerlink" href="#r-data-structure-used" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id44" role="doc-backlink">R Data Structure used</a><a class="headerlink" href="#r-data-structure-used" title="Permalink to this heading">¶</a></h3>
 <p>The three parameters of the function are passed to the R function as
 R dictionaries.</p>
 <p>The specificity of the R language make that it was easier to use
@@ -768,7 +841,7 @@ access outpus by using the global variable as for the main
 configuration dictionary.</p>
 </section>
 <section id="sample-zoo-r-services-provider">
-<h3><a class="toc-backref" href="#id37" role="doc-backlink">Sample ZOO R Services Provider</a><a class="headerlink" href="#sample-zoo-r-services-provider" title="Permalink to this heading">¶</a></h3>
+<h3><a class="toc-backref" href="#id45" role="doc-backlink">Sample ZOO R Services Provider</a><a class="headerlink" href="#sample-zoo-r-services-provider" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="nf">source</span><span class="p">(</span><span class="s">&quot;minimal.r&quot;</span><span class="p">)</span>
 
 <span class="n">hellor</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>

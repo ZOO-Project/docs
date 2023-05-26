@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ZOO-Project: caching.h Source File</title>
+<title>ZOO-Project: service_internal_nodejs.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,13 +62,13 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">caching.h</div>  </div>
+<div class="title">service_internal_nodejs.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="caching_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Author : Gérald Fenoy</span></div>
+<a href="service__internal__nodejs_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Author : Momtchil MOMTCHEV</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Copyright 2008-2015 GeoLabs SARL. All rights reserved.</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright 2022 Google (as part of GSoC 2022). All rights reserved.</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
@@ -89,37 +89,33 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * THE SOFTWARE.</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ulinet_8h.html">ulinet.h</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="service_8h.html">service.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef ZOO_SERVICE_INTERNAL_NODEJS_H</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define ZOO_SERVICE_INTERNAL_NODEJS_H 1</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="caching_8h.html#a0106eb212e28af2ca0c9c88fff2d129f">addToCache</a>(<a class="code" href="service_8h.html#structmaps">maps</a>*,<span class="keywordtype">char</span>*,<span class="keywordtype">char</span>*,<span class="keywordtype">char</span>*,<span class="keywordtype">int</span>,<span class="keywordtype">char</span>*,<span class="keywordtype">size_t</span>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">char</span>* <a class="code" href="caching_8h.html#a6701fc456b44527d2aaf589bf0ff18e1">isInCache</a>(<a class="code" href="service_8h.html#structmaps">maps</a>*,<span class="keywordtype">char</span>*);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="caching_8h.html#a1adf501747eec935f6be6c0120e46cbc">runHttpRequests</a>(<a class="code" href="service_8h.html#structmaps">maps</a>**,<a class="code" href="service_8h.html#structmaps">maps</a>**,<a class="code" href="ulinet_8h.html#structHINTERNET">HINTERNET</a>*,<a class="code" href="service_8h.html#structmap">map</a>**);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="caching_8h.html#ae8a834e79ee0cf66b2fb0ccf7e00505c">addRequestToQueue</a>(<a class="code" href="service_8h.html#structmaps">maps</a>**,<a class="code" href="ulinet_8h.html#structHINTERNET">HINTERNET</a>*,<span class="keyword">const</span> <span class="keywordtype">char</span>*,<span class="keywordtype">bool</span>);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="caching_8h.html#ac2b0d3c7779508d0ce8f17d5df20ceec">loadRemoteFile</a>(<a class="code" href="service_8h.html#structmaps">maps</a>**,<a class="code" href="service_8h.html#structmap">map</a>**,<a class="code" href="ulinet_8h.html#structHINTERNET">HINTERNET</a>*,<span class="keywordtype">char</span>*);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">char</span>* <a class="code" href="caching_8h.html#a60716364bdb67bbd9d33f59460a569c8">getMd5f</a>(<span class="keywordtype">char</span>*);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="caching_8h.html#aede18be5aad62f598f51ee7a55dd31aa">storeMd5</a>(<span class="keywordtype">char</span>*);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="service_8h.html">service.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="service__internal_8h.html">service_internal.h</a>&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;napi.h&gt;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;node_api.h&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">int</span> <a class="code" href="service__internal__nodejs_8h.html#acd25144e540090982bb0a7296808d079">zoo_nodejs_support</a>(<a class="code" href="service_8h.html#structmaps">maps</a> **, <a class="code" href="service_8h.html#structmap">map</a> *, <a class="code" href="service_8h.html#structservice">service</a> *, <a class="code" href="service_8h.html#structmaps">maps</a> **, <a class="code" href="service_8h.html#structmaps">maps</a> **);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="acaching_8h_html_a1adf501747eec935f6be6c0120e46cbc"><div class="ttname"><a href="caching_8h.html#a1adf501747eec935f6be6c0120e46cbc">runHttpRequests</a></div><div class="ttdeci">int runHttpRequests(maps **, maps **, HINTERNET *, map **)</div><div class="ttdoc">Effectively run all the HTTP requests in the queue.</div><div class="ttdef"><b>Definition:</b> caching.c:638</div></div>
-<div class="ttc" id="acaching_8h_html_a0106eb212e28af2ca0c9c88fff2d129f"><div class="ttname"><a href="caching_8h.html#a0106eb212e28af2ca0c9c88fff2d129f">addToCache</a></div><div class="ttdeci">void addToCache(maps *, char *, char *, char *, int, char *, size_t)</div><div class="ttdoc">Cache a file for a given request.</div><div class="ttdef"><b>Definition:</b> caching.c:293</div></div>
 <div class="ttc" id="aservice_8h_html"><div class="ttname"><a href="service_8h.html">service.h</a></div></div>
-<div class="ttc" id="acaching_8h_html_ac2b0d3c7779508d0ce8f17d5df20ceec"><div class="ttname"><a href="caching_8h.html#ac2b0d3c7779508d0ce8f17d5df20ceec">loadRemoteFile</a></div><div class="ttdeci">int loadRemoteFile(maps **, map **, HINTERNET *, char *)</div><div class="ttdoc">Try to load file from cache or download a remote file if not in cache.</div><div class="ttdef"><b>Definition:</b> caching.c:698</div></div>
-<div class="ttc" id="acaching_8h_html_ae8a834e79ee0cf66b2fb0ccf7e00505c"><div class="ttname"><a href="caching_8h.html#ae8a834e79ee0cf66b2fb0ccf7e00505c">addRequestToQueue</a></div><div class="ttdeci">void addRequestToQueue(maps **, HINTERNET *, const char *, bool)</div><div class="ttdoc">Add a request in the download queue.</div><div class="ttdef"><b>Definition:</b> caching.c:672</div></div>
-<div class="ttc" id="acaching_8h_html_a60716364bdb67bbd9d33f59460a569c8"><div class="ttname"><a href="caching_8h.html#a60716364bdb67bbd9d33f59460a569c8">getMd5f</a></div><div class="ttdeci">char * getMd5f(char *)</div><div class="ttdoc">Compute md5 of a file.</div><div class="ttdef"><b>Definition:</b> caching.c:71</div></div>
-<div class="ttc" id="acaching_8h_html_a6701fc456b44527d2aaf589bf0ff18e1"><div class="ttname"><a href="caching_8h.html#a6701fc456b44527d2aaf589bf0ff18e1">isInCache</a></div><div class="ttdeci">char * isInCache(maps *, char *)</div><div class="ttdoc">Verify if a url is available in the cache.</div><div class="ttdef"><b>Definition:</b> caching.c:359</div></div>
+<div class="ttc" id="aservice_8h_html_structservice"><div class="ttname"><a href="service_8h.html#structservice">service</a></div><div class="ttdoc">Metadata information about a full Service.</div><div class="ttdef"><b>Definition:</b> service.h:309</div></div>
 <div class="ttc" id="aservice_8h_html_structmaps"><div class="ttname"><a href="service_8h.html#structmaps">maps</a></div><div class="ttdoc">linked list of map pointer</div><div class="ttdef"><b>Definition:</b> service.h:272</div></div>
+<div class="ttc" id="aservice__internal_8h_html"><div class="ttname"><a href="service__internal_8h.html">service_internal.h</a></div></div>
 <div class="ttc" id="aservice_8h_html_structmap"><div class="ttname"><a href="service_8h.html#structmap">map</a></div><div class="ttdoc">KVP linked list.</div><div class="ttdef"><b>Definition:</b> service.h:251</div></div>
-<div class="ttc" id="aulinet_8h_html"><div class="ttname"><a href="ulinet_8h.html">ulinet.h</a></div></div>
-<div class="ttc" id="acaching_8h_html_aede18be5aad62f598f51ee7a55dd31aa"><div class="ttname"><a href="caching_8h.html#aede18be5aad62f598f51ee7a55dd31aa">storeMd5</a></div><div class="ttdeci">int storeMd5(char *)</div><div class="ttdef"><b>Definition:</b> caching.c:171</div></div>
-<div class="ttc" id="aulinet_8h_html_structHINTERNET"><div class="ttname"><a href="ulinet_8h.html#structHINTERNET">HINTERNET</a></div><div class="ttdoc">Multiple CURL handlers.</div><div class="ttdef"><b>Definition:</b> ulinet.h:95</div></div>
+<div class="ttc" id="aservice__internal__nodejs_8h_html_acd25144e540090982bb0a7296808d079"><div class="ttname"><a href="service__internal__nodejs_8h.html#acd25144e540090982bb0a7296808d079">zoo_nodejs_support</a></div><div class="ttdeci">int zoo_nodejs_support(maps **, map *, service *, maps **, maps **)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Fri May 26 2023 14:30:14 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">

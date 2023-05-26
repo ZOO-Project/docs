@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ZOO-Project: service_internal_php.h File Reference</title>
+<title>ZOO-Project: service_internal_nodejs.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,57 +64,57 @@ $(function() {
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">service_internal_php.h File Reference</div>  </div>
+<div class="title">service_internal_nodejs.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="service_8h_source.html">service.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="service__internal_8h_source.html">service_internal.h</a>&quot;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;napi.h&gt;</code><br />
+<code>#include &lt;node_api.h&gt;</code><br />
 </div>
-<p><a href="service__internal__php_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="service__internal__nodejs_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a69590600918be76140d4a5fdbd2439b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__php_8h.html#a69590600918be76140d4a5fdbd2439b1">zoo_php_support</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *, <a class="el" href="service_8h.html#structservice">service</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmaps">maps</a> **)</td></tr>
-<tr class="memdesc:a69590600918be76140d4a5fdbd2439b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a PHP script then run the function corresponding to the service by passing the conf, inputs and outputs parameters by reference.  <a href="service__internal__php_8h.html#a69590600918be76140d4a5fdbd2439b1">More...</a><br /></td></tr>
-<tr class="separator:a69590600918be76140d4a5fdbd2439b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd25144e540090982bb0a7296808d079"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__nodejs_8h.html#acd25144e540090982bb0a7296808d079">zoo_nodejs_support</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *, <a class="el" href="service_8h.html#structservice">service</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmaps">maps</a> **)</td></tr>
+<tr class="separator:acd25144e540090982bb0a7296808d079"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a69590600918be76140d4a5fdbd2439b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69590600918be76140d4a5fdbd2439b1">&#9670;&nbsp;</a></span>zoo_php_support()</h2>
+<a id="acd25144e540090982bb0a7296808d079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd25144e540090982bb0a7296808d079">&#9670;&nbsp;</a></span>zoo_nodejs_support()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int zoo_php_support </td>
+          <td class="memname">int zoo_nodejs_support </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
-          <td class="paramname"><em>main_conf</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td>
-          <td class="paramname"><em>request</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structservice">service</a> *&#160;</td>
-          <td class="paramname"><em>s</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
-          <td class="paramname"><em>real_inputs</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
-          <td class="paramname"><em>real_outputs</em>&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -123,18 +123,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Load a PHP script then run the function corresponding to the service by passing the conf, inputs and outputs parameters by reference. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">main_conf</td><td>the conf maps containing the main.cfg settings </td></tr>
-    <tr><td class="paramname">request</td><td>the map containing the HTTP request </td></tr>
-    <tr><td class="paramname">s</td><td>the service structure </td></tr>
-    <tr><td class="paramname">real_inputs</td><td>the maps containing the inputs </td></tr>
-    <tr><td class="paramname">real_outputs</td><td>the maps containing the outputs </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

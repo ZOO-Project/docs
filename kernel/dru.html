@@ -229,15 +229,11 @@ any step as an input to subsequent steps.</p>
 optional DRU support.</p>
 <p>Be sure you have all the prerequisistes setup before starting the
 installation.</p>
-<p>For deploying the ZOO-Project in production on a Kubernetes cluster
-(e.g. commercial providers), please proceed to the section [Install on
-a Kubernetes Cluster](Install on a Kubernetes Cluster).</p>
 <p>For deploying the ZOO-Project for developing and testing purposes
-(e.g. on local machine), please proceed to the section [Install on a
-Minikube Cluster](Install on a Minikube Cluster)</p>
+(e.g. on local machine), please proceed to the section
+<a class="reference internal" href="#id1"><span class="std std-ref">Installation on a Minikube Cluster</span></a>.</p>
 <p>For building the ZOO-Project docker image using the project source
-code, please proceed to the section [Build from source](Build from
-source)</p>
+code, please proceed to the section <a class="reference internal" href="#building-the-docker-image-for-developper"><span class="std std-ref">Building the docker image (for developper)</span></a>.</p>
 <section id="prerequisites">
 <h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">¶</a></h3>
 <blockquote>
@@ -249,7 +245,7 @@ trunk version</p></li>
 </div></blockquote>
 </section>
 <section id="id1">
-<h3>Installation on a Minikube Cluster<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<span id="id2"></span><h3>Installation on a Minikube Cluster<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <section id="zoo-project-dru-helm-chart">
 <h4>ZOO-Project DRU Helm chart<a class="headerlink" href="#zoo-project-dru-helm-chart" title="Permalink to this heading">¶</a></h4>
 <p>The current helm chart is available from here:
@@ -263,7 +259,7 @@ this repository and make the following modifications to it.</p>
 <p>By default, the ZOO-Project uses Longhorn storage class for
 instantiating Kubernetes volumes. Minikube does not support Longhorn,
 therefor we highly recommend to use the standard storage class.</p>
-<p>To configure Minikube standard storage class please use the
+<p>To configure Minikube standard storage class, please use the
 parameters defined in the <a class="reference external" href="https://github.com/EOEPCA/proc-ades-dev/blob/develop/charts/ades/mycharts/values_minikube.yaml">chart/ades/mycharts/values_minikube.yaml</a>
 file.</p>
 </section>
@@ -361,7 +357,7 @@ processings job on Kubernetes.</p>
 </div>
 </section>
 <section id="deploy-using-helm">
-<span id="id3"></span><h5>Deploy using Helm<a class="headerlink" href="#deploy-using-helm" title="Permalink to this heading">¶</a></h5>
+<span id="id4"></span><h5>Deploy using Helm<a class="headerlink" href="#deploy-using-helm" title="Permalink to this heading">¶</a></h5>
 <p>The ZOO-Project with DRU support is setup via helm specifying an
 optional “release name”.</p>
 <p>For instance, we will install the ZOO-Project with the name <cite>zoo-project-dru</cite>.</p>
@@ -408,7 +404,7 @@ be accesible from this address:
 <a class="reference external" href="http://127.0.0.1:8080/ogc-api/api.html">http://127.0.0.1:8080/ogc-api/api.html</a>.</p>
 </section>
 <section id="building-the-docker-image-for-developper">
-<h5>Building the docker image (for developper)<a class="headerlink" href="#building-the-docker-image-for-developper" title="Permalink to this heading">¶</a></h5>
+<span id="id5"></span><h5>Building the docker image (for developper)<a class="headerlink" href="#building-the-docker-image-for-developper" title="Permalink to this heading">¶</a></h5>
 <p>For a developper it may be convenient to test a new functionality
 on Minikube. To do so, use the following commands to build a dedicated
 ZOO-Project (with DRU support enabled) binary image to be used to

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['jcapabilities_1488',['jcapabilities',['../service__json_8h.html#ac01e58eecd1201df9ea8046a2f5e1194',1,'service_json.h']]]
+  ['jcapabilities_1495',['jcapabilities',['../service__json_8h.html#a87ae318bd78ce21f77d72bce417cef85',1,'service_json.h']]]
 ];

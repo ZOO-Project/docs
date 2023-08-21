@@ -70,8 +70,10 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="service_8h_source.html">service.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="service__internal__amqp_8h_source.html">service_internal_amqp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="service__json_8h_source.html">service_json.h</a>&quot;</code><br />
 <code>#include &lt;amqp_tcp_socket.h&gt;</code><br />
 <code>#include &lt;amqp_framing.h&gt;</code><br />
+<code>#include &quot;json.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -99,6 +101,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad82ef61a047ca541390086dd1d3e5bf8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#ad82ef61a047ca541390086dd1d3e5bf8">send_msg</a> (const char *msg, const char *content_type)</td></tr>
 <tr class="memdesc:ad82ef61a047ca541390086dd1d3e5bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message.  <a href="service__internal__amqp_8c.html#ad82ef61a047ca541390086dd1d3e5bf8">More...</a><br /></td></tr>
 <tr class="separator:ad82ef61a047ca541390086dd1d3e5bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a095aa975ce3e4a55e70b356a54aa0487"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a095aa975ce3e4a55e70b356a54aa0487">publish_amqp_msg</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, int *eres, <a class="el" href="service_8h.html#structmap">map</a> *pmRequest, <a class="el" href="service_8h.html#structmaps">maps</a> *pmsInputs, <a class="el" href="service_8h.html#structmaps">maps</a> *pmsOututs)</td></tr>
+<tr class="memdesc:a095aa975ce3e4a55e70b356a54aa0487"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publish a message in RabbitMQ.  <a href="service__internal__amqp_8c.html#a095aa975ce3e4a55e70b356a54aa0487">More...</a><br /></td></tr>
+<tr class="separator:a095aa975ce3e4a55e70b356a54aa0487"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a042f9b399887719eab4a9790ac259171"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a042f9b399887719eab4a9790ac259171">close_amqp</a> ()</td></tr>
 <tr class="memdesc:a042f9b399887719eab4a9790ac259171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the AMQP connection.  <a href="service__internal__amqp_8c.html#a042f9b399887719eab4a9790ac259171">More...</a><br /></td></tr>
 <tr class="separator:a042f9b399887719eab4a9790ac259171"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -320,6 +325,63 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a095aa975ce3e4a55e70b356a54aa0487"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a095aa975ce3e4a55e70b356a54aa0487">&#9670;&nbsp;</a></span>publish_amqp_msg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void publish_amqp_msg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>eres</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td>
+          <td class="paramname"><em>pmRequest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsInputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsOututs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Publish a message in RabbitMQ. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps pointing to the main configuration file </td></tr>
+    <tr><td class="paramname">pmRequest</td><td>the request as it has been parsed till now </td></tr>
+    <tr><td class="paramname">pmsInpuits</td><td>the inputs maps </td></tr>
+    <tr><td class="paramname">pmsOutpuits</td><td>the outputs maps </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad82ef61a047ca541390086dd1d3e5bf8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad82ef61a047ca541390086dd1d3e5bf8">&#9670;&nbsp;</a></span>send_msg()</h2>
 
@@ -509,7 +571,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Author : David Saggiorato. </p>
-<p>Copyright 2015-2022 GeoLabs SARL. All rights reserved.</p>
+<p>Copyright 2015-2023 GeoLabs SARL. All rights reserved.</p>
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. AMQP connection state </p>
@@ -519,7 +581,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 12 2023 02:29:57 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 21 2023 16:02:09 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

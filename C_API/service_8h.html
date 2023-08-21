@@ -167,7 +167,13 @@ Macros</h2></td></tr>
 <tr class="memitem:a8511ab591a9cb27ebdc1dfed861cf192"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a8511ab591a9cb27ebdc1dfed861cf192">SERVICE_DISMISSED</a>&#160;&#160;&#160;5</td></tr>
 <tr class="memdesc:a8511ab591a9cb27ebdc1dfed861cf192"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global dismissed status for a service.  <a href="service_8h.html#a8511ab591a9cb27ebdc1dfed861cf192">More...</a><br /></td></tr>
 <tr class="separator:a8511ab591a9cb27ebdc1dfed861cf192"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a109eccc0fa63b3684051fb091131615a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a109eccc0fa63b3684051fb091131615a">ZOO_DEBUG</a>(message)&#160;&#160;&#160;fprintf(stderr,&quot; [ZOO_DEBUG] ++----++ %s %s %d: &quot;,__func__,__FILE__,__LINE__);fprintf(stderr,&quot;(%s)\<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>&quot;,message);</td></tr>
+<tr class="memitem:a97db3751334d18c66054ce755318224e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a97db3751334d18c66054ce755318224e">SERVICE_DEPLOYED</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:a97db3751334d18c66054ce755318224e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global deployed status for a service.  <a href="service_8h.html#a97db3751334d18c66054ce755318224e">More...</a><br /></td></tr>
+<tr class="separator:a97db3751334d18c66054ce755318224e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ac48ea6bbbc0ae2cab1e688e94ad55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a36ac48ea6bbbc0ae2cab1e688e94ad55">SERVICE_UNDEPLOYED</a>&#160;&#160;&#160;7</td></tr>
+<tr class="memdesc:a36ac48ea6bbbc0ae2cab1e688e94ad55"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global undelployed status for a service.  <a href="service_8h.html#a36ac48ea6bbbc0ae2cab1e688e94ad55">More...</a><br /></td></tr>
+<tr class="separator:a36ac48ea6bbbc0ae2cab1e688e94ad55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109eccc0fa63b3684051fb091131615a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a109eccc0fa63b3684051fb091131615a">ZOO_DEBUG</a>(message)&#160;&#160;&#160;fprintf(stderr,&quot; [ZOO_DEBUG] ++- %d -++ %s %s %d: &quot;,getpid(),__func__,__FILE__,__LINE__);fprintf(stderr,&quot;(%s)\<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>&quot;,message);</td></tr>
 <tr class="memdesc:a109eccc0fa63b3684051fb091131615a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ZOO_DEBUG macro print message with function name, file name and line number.  <a href="service_8h.html#a109eccc0fa63b3684051fb091131615a">More...</a><br /></td></tr>
 <tr class="separator:a109eccc0fa63b3684051fb091131615a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22187317320e774cb8e603969de63b19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a22187317320e774cb8e603969de63b19">ELEMENTS_SIZE</a>&#160;&#160;&#160;(sizeof(char*)+(((2*sizeof(char*))+sizeof(<a class="el" href="service_8h.html#structmaps">maps</a>*))*3)+sizeof(char*)+((sizeof(<a class="el" href="service_8h.html#structmap">map</a>*) + sizeof(<a class="el" href="service_8h.html#structiotype">iotype</a>*))*2)+(2*sizeof(<a class="el" href="service_8h.html#structelements">elements</a>*)))</td></tr>
@@ -489,9 +495,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a372ee42fd9b36e0f4af4734a6426a67f"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a372ee42fd9b36e0f4af4734a6426a67f">WPSExceptionCode</a> []</td></tr>
 <tr class="memdesc:a372ee42fd9b36e0f4af4734a6426a67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard WPS exception codes.  <a href="service_8h.html#a372ee42fd9b36e0f4af4734a6426a67f">More...</a><br /></td></tr>
 <tr class="separator:a372ee42fd9b36e0f4af4734a6426a67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee3e6bf7a5b59065a03278aa94a89695"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#aee3e6bf7a5b59065a03278aa94a89695">OAPIPCorrespondances</a> [4][2]</td></tr>
-<tr class="memdesc:aee3e6bf7a5b59065a03278aa94a89695"><td class="mdescLeft">&#160;</td><td class="mdescRight">WPS exception codes to OGC API - Processes ones.  <a href="service_8h.html#aee3e6bf7a5b59065a03278aa94a89695">More...</a><br /></td></tr>
-<tr class="separator:aee3e6bf7a5b59065a03278aa94a89695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58122c68bbdb3a430daeb021d35fd635"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a58122c68bbdb3a430daeb021d35fd635">OAPIPCorrespondances</a> [6][2]</td></tr>
+<tr class="memdesc:a58122c68bbdb3a430daeb021d35fd635"><td class="mdescLeft">&#160;</td><td class="mdescRight">WPS exception codes to OGC API - Processes ones.  <a href="service_8h.html#a58122c68bbdb3a430daeb021d35fd635">More...</a><br /></td></tr>
+<tr class="separator:a58122c68bbdb3a430daeb021d35fd635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e9f96f2aec6b7caebfaab258824dac2"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a6e9f96f2aec6b7caebfaab258824dac2">OAPIPExceptionCode</a> []</td></tr>
 <tr class="memdesc:a6e9f96f2aec6b7caebfaab258824dac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">OGC API - Processes exception codes.  <a href="service_8h.html#a6e9f96f2aec6b7caebfaab258824dac2">More...</a><br /></td></tr>
 <tr class="separator:a6e9f96f2aec6b7caebfaab258824dac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -928,6 +934,22 @@ the next registry pointer </td></tr>
 
 </div>
 </div>
+<a id="a97db3751334d18c66054ce755318224e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97db3751334d18c66054ce755318224e">&#9670;&nbsp;</a></span>SERVICE_DEPLOYED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERVICE_DEPLOYED&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The global deployed status for a service. </p>
+
+</div>
+</div>
 <a id="a8511ab591a9cb27ebdc1dfed861cf192"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8511ab591a9cb27ebdc1dfed861cf192">&#9670;&nbsp;</a></span>SERVICE_DISMISSED</h2>
 
@@ -1021,6 +1043,22 @@ the next registry pointer </td></tr>
 </div><div class="memdoc">
 
 <p>The global succeeded status for a service. </p>
+
+</div>
+</div>
+<a id="a36ac48ea6bbbc0ae2cab1e688e94ad55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36ac48ea6bbbc0ae2cab1e688e94ad55">&#9670;&nbsp;</a></span>SERVICE_UNDEPLOYED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SERVICE_UNDEPLOYED&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The global undelployed status for a service. </p>
 
 </div>
 </div>
@@ -1159,7 +1197,7 @@ the next registry pointer </td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">message</td><td>)</td>
-          <td>&#160;&#160;&#160;fprintf(stderr,&quot; [ZOO_DEBUG] ++----++ %s %s %d: &quot;,__func__,__FILE__,__LINE__);fprintf(stderr,&quot;(%s)\<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>&quot;,message);</td>
+          <td>&#160;&#160;&#160;fprintf(stderr,&quot; [ZOO_DEBUG] ++- %d -++ %s %s %d: &quot;,getpid(),__func__,__FILE__,__LINE__);fprintf(stderr,&quot;(%s)\<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>&quot;,message);</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -4102,8 +4140,8 @@ the next registry pointer </td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="aee3e6bf7a5b59065a03278aa94a89695"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee3e6bf7a5b59065a03278aa94a89695">&#9670;&nbsp;</a></span>OAPIPCorrespondances</h2>
+<a id="a58122c68bbdb3a430daeb021d35fd635"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58122c68bbdb3a430daeb021d35fd635">&#9670;&nbsp;</a></span>OAPIPCorrespondances</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4112,7 +4150,7 @@ the next registry pointer </td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int OAPIPCorrespondances[4][2]</td>
+          <td class="memname">const int OAPIPCorrespondances[6][2]</td>
         </tr>
       </table>
   </td>
@@ -4125,7 +4163,9 @@ the next registry pointer </td></tr>
 <div class="line">    {9,0},</div>
 <div class="line">    {20,1},</div>
 <div class="line">    {21,2},</div>
-<div class="line">    {22,3}</div>
+<div class="line">    {22,3},</div>
+<div class="line">    {23,4},</div>
+<div class="line">    {24,5}</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
 <p>WPS exception codes to OGC API - Processes ones. </p>
@@ -4156,11 +4196,13 @@ the next registry pointer </td></tr>
 <div class="line">    <span class="stringliteral">&quot;no-such-process&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;no-such-job&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;result-not-ready&quot;</span>,</div>
-<div class="line">    <span class="stringliteral">&quot;invalid-query-parameter-value&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;invalid-query-parameter-value&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;duplicated-process&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;immutable-process&quot;</span></div>
 <div class="line">  }</div>
 </div><!-- fragment -->
 <p>OGC API - Processes exception codes. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="service_8h.html#a372ee42fd9b36e0f4af4734a6426a67f" title="Standard WPS exception codes.">WPSExceptionCode</a>, <a class="el" href="service_8h.html#aee3e6bf7a5b59065a03278aa94a89695" title="WPS exception codes to OGC API - Processes ones.">OAPIPCorrespondances</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service_8h.html#a372ee42fd9b36e0f4af4734a6426a67f" title="Standard WPS exception codes.">WPSExceptionCode</a>, <a class="el" href="service_8h.html#a58122c68bbdb3a430daeb021d35fd635" title="WPS exception codes to OGC API - Processes ones.">OAPIPCorrespondances</a> </dd></dl>
 
 </div>
 </div>
@@ -4206,7 +4248,9 @@ the next registry pointer </td></tr>
 <div class="line">    <span class="stringliteral">&quot;InternalServerError&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;NoSuchJob&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;ResultNotReady&quot;</span>,</div>
-<div class="line">    <span class="stringliteral">&quot;InvalidQueryParameterValue&quot;</span></div>
+<div class="line">    <span class="stringliteral">&quot;InvalidQueryParameterValue&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;DuplicatedProcess&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;ImmutableProcess&quot;</span></div>
 <div class="line">  }</div>
 </div><!-- fragment -->
 <p>Standard WPS exception codes. </p>
@@ -4289,6 +4333,8 @@ the next registry pointer </td></tr>
 <div class="line">    <span class="stringliteral">&quot;SERVICE_SUCCEEDED&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;SERVICE_FAILED&quot;</span>,</div>
 <div class="line">    <span class="stringliteral">&quot;SERVICE_DISMISSED&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;SERVICE_DEPLOYED&quot;</span>,</div>
+<div class="line">    <span class="stringliteral">&quot;SERVICE_UNDEPLOYED&quot;</span>,</div>
 <div class="line">    NULL</div>
 <div class="line">  }</div>
 </div><!-- fragment -->
@@ -4299,7 +4345,7 @@ the next registry pointer </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 12 2023 02:29:57 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 21 2023 16:02:09 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

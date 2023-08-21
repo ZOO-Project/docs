@@ -78,6 +78,9 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:abd6fc4eb88b230478a4af3657f9cda27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#abd6fc4eb88b230478a4af3657f9cda27">ensureFiltered</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **, const char *)</td></tr>
+<tr class="memdesc:abd6fc4eb88b230478a4af3657f9cda27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the execution of the security module in case security is activated.  <a href="response__print_8c.html#abd6fc4eb88b230478a4af3657f9cda27">More...</a><br /></td></tr>
+<tr class="separator:abd6fc4eb88b230478a4af3657f9cda27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae354e7b920d69d1bae4afce8100b2c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#aae354e7b920d69d1bae4afce8100b2c2">addPrefix</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmap">map</a> *pmLevel, <a class="el" href="service_8h.html#structservice">service</a> *psService)</td></tr>
 <tr class="memdesc:aae354e7b920d69d1bae4afce8100b2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add prefix to the service name.  <a href="response__print_8c.html#aae354e7b920d69d1bae4afce8100b2c2">More...</a><br /></td></tr>
 <tr class="separator:aae354e7b920d69d1bae4afce8100b2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,6 +173,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0dcdb636a242d4784efe6c78b6627870"><td class="memItemLeft" align="right" valign="top">xmlNodePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#a0dcdb636a242d4784efe6c78b6627870">createExceptionReportNode</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, <a class="el" href="service_8h.html#structmap">map</a> *s, int use_ns)</td></tr>
 <tr class="memdesc:a0dcdb636a242d4784efe6c78b6627870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an OWS ExceptionReport Node.  <a href="response__print_8c.html#a0dcdb636a242d4784efe6c78b6627870">More...</a><br /></td></tr>
 <tr class="separator:a0dcdb636a242d4784efe6c78b6627870"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a395d2a130263761bf495c70bee5cd085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#a395d2a130263761bf495c70bee5cd085">localPrintException</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmap">map</a> *pmError)</td></tr>
+<tr class="memdesc:a395d2a130263761bf495c70bee5cd085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the ensureFiltered then printExceptionReportResponseJ functions.  <a href="response__print_8c.html#a395d2a130263761bf495c70bee5cd085">More...</a><br /></td></tr>
+<tr class="separator:a395d2a130263761bf495c70bee5cd085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfb5550cb82223ac4a24ace033bb5b61"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#abfb5550cb82223ac4a24ace033bb5b61">errorException</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, const char *message, const char *errorcode, const char *locator)</td></tr>
 <tr class="memdesc:abfb5550cb82223ac4a24ace033bb5b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print an OWS ExceptionReport.  <a href="response__print_8c.html#abfb5550cb82223ac4a24ace033bb5b61">More...</a><br /></td></tr>
 <tr class="separator:abfb5550cb82223ac4a24ace033bb5b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,12 +188,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a8f04f7eda1ab7dc8d035576cc9bd1e80"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#a8f04f7eda1ab7dc8d035576cc9bd1e80">getNumberOfOutputs</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *outputs)</td></tr>
 <tr class="memdesc:a8f04f7eda1ab7dc8d035576cc9bd1e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of outputs provided in the execute request body.  <a href="response__print_8c.html#a8f04f7eda1ab7dc8d035576cc9bd1e80">More...</a><br /></td></tr>
 <tr class="separator:a8f04f7eda1ab7dc8d035576cc9bd1e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4d685d5bcd70f86efe56a34fe31e47b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#aa4d685d5bcd70f86efe56a34fe31e47b">printRawdataOutputs</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structservice">service</a> *s, <a class="el" href="service_8h.html#structmaps">maps</a> *outputs)</td></tr>
-<tr class="memdesc:aa4d685d5bcd70f86efe56a34fe31e47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print all outputs as raw.  <a href="response__print_8c.html#aa4d685d5bcd70f86efe56a34fe31e47b">More...</a><br /></td></tr>
-<tr class="separator:aa4d685d5bcd70f86efe56a34fe31e47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab65fd7863b88502d17c059daa1a2ec86"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#ab65fd7863b88502d17c059daa1a2ec86">printRawdataOutput</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *outputs)</td></tr>
-<tr class="memdesc:ab65fd7863b88502d17c059daa1a2ec86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print one outputs as raw.  <a href="response__print_8c.html#ab65fd7863b88502d17c059daa1a2ec86">More...</a><br /></td></tr>
-<tr class="separator:ab65fd7863b88502d17c059daa1a2ec86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb7d6bb2927ad01245e94fd3e73240a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#a0bb7d6bb2927ad01245e94fd3e73240a">printRawdataOutputs</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structservice">service</a> *s, <a class="el" href="service_8h.html#structmaps">maps</a> *outputs)</td></tr>
+<tr class="memdesc:a0bb7d6bb2927ad01245e94fd3e73240a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print all outputs as raw.  <a href="response__print_8c.html#a0bb7d6bb2927ad01245e94fd3e73240a">More...</a><br /></td></tr>
+<tr class="separator:a0bb7d6bb2927ad01245e94fd3e73240a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0230b8c3cd8c51a13963b1430e0374c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#a0230b8c3cd8c51a13963b1430e0374c3">printRawdataOutput</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *outputs)</td></tr>
+<tr class="memdesc:a0230b8c3cd8c51a13963b1430e0374c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print one outputs as raw.  <a href="response__print_8c.html#a0230b8c3cd8c51a13963b1430e0374c3">More...</a><br /></td></tr>
+<tr class="separator:a0230b8c3cd8c51a13963b1430e0374c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afeafb536cd14c868c2ef098abe5d7e31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#afeafb536cd14c868c2ef098abe5d7e31">printBoundingBox</a> (xmlNsPtr ns_ows, xmlNodePtr <a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>, <a class="el" href="service_8h.html#structmap">map</a> *boundingbox)</td></tr>
 <tr class="memdesc:afeafb536cd14c868c2ef098abe5d7e31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create required XML nodes for boundingbox and update the current XML node.  <a href="response__print_8c.html#afeafb536cd14c868c2ef098abe5d7e31">More...</a><br /></td></tr>
 <tr class="separator:afeafb536cd14c868c2ef098abe5d7e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -659,6 +665,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="abd6fc4eb88b230478a4af3657f9cda27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd6fc4eb88b230478a4af3657f9cda27">&#9670;&nbsp;</a></span>ensureFiltered()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ensureFiltered </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pcType</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invoke the execution of the security module in case security is activated. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps pointing to the main.cfg file content </td></tr>
+    <tr><td class="paramname">pcType</td><td>the string defining the process to execute ('in' or 'out') </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, 1 in case or error </dd></dl>
+
+</div>
+</div>
 <a id="abfb5550cb82223ac4a24ace033bb5b61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abfb5550cb82223ac4a24ace033bb5b61">&#9670;&nbsp;</a></span>errorException()</h2>
 
@@ -744,6 +788,44 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a395d2a130263761bf495c70bee5cd085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a395d2a130263761bf495c70bee5cd085">&#9670;&nbsp;</a></span>localPrintException()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void localPrintException </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td>
+          <td class="paramname"><em>pmError</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invoke the ensureFiltered then printExceptionReportResponseJ functions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pmError</td><td>the map containing the text,code,locator keys (or a map array) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__json_8h.html#a45f4e9428a89a80a5bb6e852ed03c3ad" title="Print an OWS ExceptionReport Document and HTTP headers (when required) depending on the code.">printExceptionReportResponseJ</a>,<a class="el" href="response__print_8c.html#abd6fc4eb88b230478a4af3657f9cda27" title="Invoke the execution of the security module in case security is activated.">ensureFiltered</a> </dd></dl>
 
 </div>
 </div>
@@ -1603,14 +1685,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab65fd7863b88502d17c059daa1a2ec86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab65fd7863b88502d17c059daa1a2ec86">&#9670;&nbsp;</a></span>printRawdataOutput()</h2>
+<a id="a0230b8c3cd8c51a13963b1430e0374c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0230b8c3cd8c51a13963b1430e0374c3">&#9670;&nbsp;</a></span>printRawdataOutput()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* printRawdataOutput </td>
+          <td class="memname">void printRawdataOutput </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
           <td class="paramname"><em>conf</em>, </td>
@@ -1640,14 +1722,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa4d685d5bcd70f86efe56a34fe31e47b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4d685d5bcd70f86efe56a34fe31e47b">&#9670;&nbsp;</a></span>printRawdataOutputs()</h2>
+<a id="a0bb7d6bb2927ad01245e94fd3e73240a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb7d6bb2927ad01245e94fd3e73240a">&#9670;&nbsp;</a></span>printRawdataOutputs()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void* printRawdataOutputs </td>
+          <td class="memname">void printRawdataOutputs </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
           <td class="paramname"><em>conf</em>, </td>
@@ -2148,7 +2230,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Aug 12 2023 02:29:57 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 21 2023 16:02:09 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

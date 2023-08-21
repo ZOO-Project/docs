@@ -57,9 +57,6 @@
         };
     </script>
       <script type="text/javascript" src="../_static/documentation_options.js"></script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
       <script type="text/javascript" src="../_static/sphinx_highlight.js"></script>
 
@@ -137,6 +134,7 @@
 <li class="toctree-l2"><a class="reference internal" href="orfeotoolbox.html">Optional Orfeo Toolbox support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sagagis.html">Optional SAGA GIS support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hpc.html">Optional HPC support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dru.html">Optional DRU support</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../services/index.html">ZOO-Services</a><ul>
@@ -256,13 +254,13 @@
 <p>In this case, ZOO-Kernel will return the GetMap/GetFeature/GetCoverage request as KVP in a specific location header, which implies that the browser is supposed to request MapServer directly.</p>
 <p>Whatever the default output <em>mimeType</em> returned by a WPS service is, it is used if the <em>useMapserver</em> option is found at runtime. As an example, if <code class="docutils literal notranslate"><span class="pre">&lt;Default&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;Supported&gt;</span></code> blocks are found in the ZOO Service configuration file as shown bellow, this means that the service returns GML 3.1.0 features by default.</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Default&gt;</span>
- mimeType = text/xml
- encoding = UTF-8
- schema = http://schemas.opengis.net/gml/3.1.0/base/feature.xsd
+<span class="w"> </span>mimeType<span class="w"> </span>=<span class="w"> </span>text/xml
+<span class="w"> </span>encoding<span class="w"> </span>=<span class="w"> </span>UTF-8
+<span class="w"> </span>schema<span class="w"> </span>=<span class="w"> </span>http://schemas.opengis.net/gml/3.1.0/base/feature.xsd
 <span class="nt">&lt;/Default&gt;</span>
 <span class="nt">&lt;Supported&gt;</span>
- mimeType = image/png
- useMapserver = true
+<span class="w"> </span>mimeType<span class="w"> </span>=<span class="w"> </span>image/png
+<span class="w"> </span>useMapserver<span class="w"> </span>=<span class="w"> </span>true
 <span class="nt">&lt;/Supported&gt;</span>
 </pre></div>
 </div>
@@ -305,8 +303,8 @@ sudo make install
 <section id="main-configuration-file">
 <span id="kernel-mapserver-main-cfg"></span><h3>Main configuration file<a class="headerlink" href="#main-configuration-file" title="Permalink to this heading">¶</a></h3>
 <p>Open and edit the <code class="docutils literal notranslate"><span class="pre">/usr/lib/cgi-bin/main.cfg</span></code> file, by adding the following content in the <code class="docutils literal notranslate"><span class="pre">[main]</span></code> section:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">dataPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="w"></span>
-<span class="n">mapserverAddress</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="o">/</span><span class="n">mapserv</span><span class="w"></span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">dataPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
+<span class="n">mapserverAddress</span><span class="o">=</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span><span class="o">/</span><span class="n">mapserv</span>
 </pre></div>
 </div>
 <p>You can also add the following lines to the <code class="docutils literal notranslate"><span class="pre">[main]</span></code> section, in case
@@ -318,8 +316,8 @@ layer.</p>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">dataPath</span></code> directory is mandatory and must belong to the Apache user.</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="w"></span>
-<span class="n">chown</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="n">apache</span><span class="p">:</span><span class="n">apache</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span><span class="w"></span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
+<span class="n">chown</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="n">apache</span><span class="p">:</span><span class="n">apache</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>A <code class="docutils literal notranslate"><span class="pre">symbols.sym</span></code> file is required in this directory. Create it and add the following content in it:</p>
@@ -394,8 +392,8 @@ the
 <code class="docutils literal notranslate"><span class="pre">msInclude</span></code> and <code class="docutils literal notranslate"><span class="pre">msLayer</span></code> options in the output <code class="docutils literal notranslate"><span class="pre">ComplexData</span></code>
 <code class="docutils literal notranslate"><span class="pre">&lt;Default&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">&lt;Supported&gt;</span></code> nodes of its zcfg file. You can see below an
 example of use of this two options with the associated mapfile.</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">msInclude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">template</span><span class="o">.</span><span class="n">map</span><span class="w"></span>
-<span class="n">msLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heatmap</span><span class="w"></span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">msInclude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">template</span><span class="o">.</span><span class="n">map</span>
+<span class="n">msLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">heatmap</span>
 </pre></div>
 </div>
 <p>You can find below a sample <code class="docutils literal notranslate"><span class="pre">/var/data/template.map</span></code>:</p>
@@ -454,28 +452,28 @@ example of use of this two options with the associated mapfile.</p>
 <h4>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h4>
 <p>An example <a class="reference internal" href="../services/zcfg-reference.html#services-zcfg"><span class="std std-ref">ZOO-Service configuration file</span></a> file configured for the optional MapServer support is shown bellow:</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;Default&gt;</span>
- mimeType = text/xml
- encoding = UTF-8
- schema = http://schemas.opengis.net/gml/3.1.0/base/feature.xsd
- useMapserver = true
+<span class="w"> </span>mimeType<span class="w"> </span>=<span class="w"> </span>text/xml
+<span class="w"> </span>encoding<span class="w"> </span>=<span class="w"> </span>UTF-8
+<span class="w"> </span>schema<span class="w"> </span>=<span class="w"> </span>http://schemas.opengis.net/gml/3.1.0/base/feature.xsd
+<span class="w"> </span>useMapserver<span class="w"> </span>=<span class="w"> </span>true
 <span class="nt">&lt;/Default&gt;</span>
 <span class="nt">&lt;Supported&gt;</span>
- mimeType = image/png
- useMapserver = true
- asReference = true
- msStyle = STYLE COLOR 125 0 105 OUTLINECOLOR 0 0 0 WIDTH 3 END
+<span class="w"> </span>mimeType<span class="w"> </span>=<span class="w"> </span>image/png
+<span class="w"> </span>useMapserver<span class="w"> </span>=<span class="w"> </span>true
+<span class="w"> </span>asReference<span class="w"> </span>=<span class="w"> </span>true
+<span class="w"> </span>msStyle<span class="w"> </span>=<span class="w"> </span>STYLE<span class="w"> </span>COLOR<span class="w"> </span>125<span class="w"> </span>0<span class="w"> </span>105<span class="w"> </span>OUTLINECOLOR<span class="w"> </span>0<span class="w"> </span>0<span class="w"> </span>0<span class="w"> </span>WIDTH<span class="w"> </span>3<span class="w"> </span>END
 <span class="nt">&lt;/Supported&gt;</span>
 <span class="nt">&lt;Supported&gt;</span>
- mimeType = application/vnd.google-earth.kmz
- useMapserver = true
- asReference = true
- msStyle = STYLE COLOR 125 0 105 OUTLINECOLOR 0 0 0 WIDTH 3 END
+<span class="w"> </span>mimeType<span class="w"> </span>=<span class="w"> </span>application/vnd.google-earth.kmz
+<span class="w"> </span>useMapserver<span class="w"> </span>=<span class="w"> </span>true
+<span class="w"> </span>asReference<span class="w"> </span>=<span class="w"> </span>true
+<span class="w"> </span>msStyle<span class="w"> </span>=<span class="w"> </span>STYLE<span class="w"> </span>COLOR<span class="w"> </span>125<span class="w"> </span>0<span class="w"> </span>105<span class="w"> </span>OUTLINECOLOR<span class="w"> </span>0<span class="w"> </span>0<span class="w"> </span>0<span class="w"> </span>WIDTH<span class="w"> </span>3<span class="w"> </span>END
 <span class="nt">&lt;/Supported&gt;</span>
 <span class="nt">&lt;Supported&gt;</span>
- mimeType = image/tif
- useMapserver = true
- asReference = true
- msClassify = true
+<span class="w"> </span>mimeType<span class="w"> </span>=<span class="w"> </span>image/tif
+<span class="w"> </span>useMapserver<span class="w"> </span>=<span class="w"> </span>true
+<span class="w"> </span>asReference<span class="w"> </span>=<span class="w"> </span>true
+<span class="w"> </span>msClassify<span class="w"> </span>=<span class="w"> </span>true
 <span class="nt">&lt;/Supported&gt;</span>
 </pre></div>
 </div>

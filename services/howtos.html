@@ -57,9 +57,6 @@
         };
     </script>
       <script type="text/javascript" src="../_static/documentation_options.js"></script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
       <script type="text/javascript" src="../_static/sphinx_highlight.js"></script>
 
@@ -137,6 +134,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../kernel/orfeotoolbox.html">Optional Orfeo Toolbox support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../kernel/sagagis.html">Optional SAGA GIS support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../kernel/hpc.html">Optional HPC support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kernel/dru.html">Optional DRU support</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">ZOO-Services</a><ul class="current">
@@ -480,7 +478,7 @@ service code. The following functions are defined in the ZOO-API:</p>
    <span class="nv">$outputs</span><span class="p">[</span><span class="s2">&quot;Result&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="nx">zoo_Translate</span><span class="p">(</span><span class="nv">$tmp</span><span class="p">);</span>
    <span class="k">return</span> <span class="nx">zoo_SERVICE_SUCCEEDED</span><span class="p">();</span>
 <span class="p">}</span>
-<span class="cp">?&gt;</span><span class="x"></span>
+<span class="cp">?&gt;</span>
 </pre></div>
 </div>
 </section>
@@ -580,19 +578,19 @@ named <code class="docutils literal notranslate"><span class="pre">HelloJava.cla
 </section>
 <section id="sample-zoo-java-services-provider">
 <h3><a class="toc-backref" href="#id24" role="doc-backlink">Sample ZOO Java Services Provider</a><a class="headerlink" href="#sample-zoo-java-services-provider" title="Permalink to this heading">¶</a></h3>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span><span class="w"></span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloJava</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">HelloWorldJava</span><span class="p">(</span><span class="n">HashMap</span><span class="w"> </span><span class="n">conf</span><span class="p">,</span><span class="n">HashMap</span><span class="w"> </span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">HashMap</span><span class="w"> </span><span class="n">outputs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">     </span><span class="n">HashMap</span><span class="w"> </span><span class="n">hm1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="p">();</span><span class="w"></span>
-<span class="w">     </span><span class="n">hm1</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;dataType&quot;</span><span class="p">,</span><span class="s">&quot;string&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">     </span><span class="n">HashMap</span><span class="w"> </span><span class="n">tmp</span><span class="o">=</span><span class="p">(</span><span class="n">HashMap</span><span class="p">)(</span><span class="n">inputs</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">));</span><span class="w"></span>
-<span class="w">     </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">String</span><span class="w"> </span><span class="n">v</span><span class="o">=</span><span class="n">tmp</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">).</span><span class="na">toString</span><span class="p">();</span><span class="w"></span>
-<span class="w">     </span><span class="n">hm1</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">,</span><span class="s">&quot;Hello &quot;</span><span class="o">+</span><span class="n">v</span><span class="o">+</span><span class="s">&quot; from JAVA WOrld !&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">     </span><span class="n">outputs</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Result&quot;</span><span class="p">,</span><span class="n">hm1</span><span class="p">);</span><span class="w"></span>
-<span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello from JAVA WOrld !&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">ZOO</span><span class="p">.</span><span class="na">SERVICE_SUCCEEDED</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloJava</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">HelloWorldJava</span><span class="p">(</span><span class="n">HashMap</span><span class="w"> </span><span class="n">conf</span><span class="p">,</span><span class="n">HashMap</span><span class="w"> </span><span class="n">inputs</span><span class="p">,</span><span class="w"> </span><span class="n">HashMap</span><span class="w"> </span><span class="n">outputs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="n">HashMap</span><span class="w"> </span><span class="n">hm1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="p">();</span>
+<span class="w">     </span><span class="n">hm1</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;dataType&quot;</span><span class="p">,</span><span class="s">&quot;string&quot;</span><span class="p">);</span>
+<span class="w">     </span><span class="n">HashMap</span><span class="w"> </span><span class="n">tmp</span><span class="o">=</span><span class="p">(</span><span class="n">HashMap</span><span class="p">)(</span><span class="n">inputs</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;S&quot;</span><span class="p">));</span>
+<span class="w">     </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">String</span><span class="w"> </span><span class="n">v</span><span class="o">=</span><span class="n">tmp</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">).</span><span class="na">toString</span><span class="p">();</span>
+<span class="w">     </span><span class="n">hm1</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;value&quot;</span><span class="p">,</span><span class="s">&quot;Hello &quot;</span><span class="o">+</span><span class="n">v</span><span class="o">+</span><span class="s">&quot; from JAVA WOrld !&quot;</span><span class="p">);</span>
+<span class="w">     </span><span class="n">outputs</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;Result&quot;</span><span class="p">,</span><span class="n">hm1</span><span class="p">);</span>
+<span class="w">     </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello from JAVA WOrld !&quot;</span><span class="p">);</span>
+<span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="n">ZOO</span><span class="p">.</span><span class="na">SERVICE_SUCCEEDED</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
@@ -708,12 +706,12 @@ you should use <code class="docutils literal notranslate"><span class="pre">my_m
 </section>
 <section id="sample-zoo-javascript-services-provider">
 <h3><a class="toc-backref" href="#id34" role="doc-backlink">Sample ZOO Javascript Services Provider</a><a class="headerlink" href="#sample-zoo-javascript-services-provider" title="Permalink to this heading">¶</a></h3>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">hellojs</span><span class="p">(</span><span class="nx">conf</span><span class="p">,</span><span class="nx">inputs</span><span class="p">,</span><span class="nx">outputs</span><span class="p">){</span><span class="w"></span>
-<span class="w">   </span><span class="nx">outputs</span><span class="o">=</span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">();</span><span class="w"></span>
-<span class="w">   </span><span class="nx">outputs</span><span class="o">=</span><span class="p">{};</span><span class="w"></span>
-<span class="w">   </span><span class="nx">outputs</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;Hello &quot;</span><span class="o">+</span><span class="nx">inputs</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot; from JS World !&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="nx">outputs</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">hellojs</span><span class="p">(</span><span class="nx">conf</span><span class="p">,</span><span class="nx">inputs</span><span class="p">,</span><span class="nx">outputs</span><span class="p">){</span>
+<span class="w">   </span><span class="nx">outputs</span><span class="o">=</span><span class="ow">new</span><span class="w"> </span><span class="nb">Array</span><span class="p">();</span>
+<span class="w">   </span><span class="nx">outputs</span><span class="o">=</span><span class="p">{};</span>
+<span class="w">   </span><span class="nx">outputs</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;Hello &quot;</span><span class="o">+</span><span class="nx">inputs</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot; from JS World !&quot;</span><span class="p">;</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nb">Array</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="nx">outputs</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
@@ -762,12 +760,12 @@ entry point function should return one of the predefined values: <code class="do
 </section>
 <section id="sample-zoo-node-js-javascript-services-provider">
 <h3><a class="toc-backref" href="#id39" role="doc-backlink">Sample ZOO Node.js Javascript Services Provider</a><a class="headerlink" href="#sample-zoo-node-js-javascript-services-provider" title="Permalink to this heading">¶</a></h3>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">hellojs</span><span class="p">(</span><span class="nx">conf</span><span class="p">,</span><span class="nx">inputs</span><span class="p">,</span><span class="nx">outputs</span><span class="p">){</span><span class="w"></span>
-<span class="w">   </span><span class="nx">outputs</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;Hello &quot;</span><span class="o">+</span><span class="nx">inputs</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot; from JS World !&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">SERVICE_SUCCEEDED</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">hellojs</span><span class="p">(</span><span class="nx">conf</span><span class="p">,</span><span class="nx">inputs</span><span class="p">,</span><span class="nx">outputs</span><span class="p">){</span>
+<span class="w">   </span><span class="nx">outputs</span><span class="p">[</span><span class="s2">&quot;result&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;Hello &quot;</span><span class="o">+</span><span class="nx">inputs</span><span class="p">[</span><span class="s2">&quot;S&quot;</span><span class="p">][</span><span class="s2">&quot;value&quot;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot; from JS World !&quot;</span><span class="p">;</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="nx">SERVICE_SUCCEEDED</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hellojs</span><span class="p">;</span><span class="w"></span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">hellojs</span><span class="p">;</span>
 </pre></div>
 </div>
 </section>
@@ -844,11 +842,11 @@ configuration dictionary.</p>
 <h3><a class="toc-backref" href="#id45" role="doc-backlink">Sample ZOO R Services Provider</a><a class="headerlink" href="#sample-zoo-r-services-provider" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="nf">source</span><span class="p">(</span><span class="s">&quot;minimal.r&quot;</span><span class="p">)</span>
 
-<span class="n">hellor</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1"># Set the result</span>
-    <span class="n">zoo</span><span class="p">[[</span><span class="s">&quot;outputs&quot;</span><span class="p">]][[</span><span class="s">&quot;Result&quot;</span><span class="p">]][[</span><span class="s">&quot;value&quot;</span><span class="p">]]</span> <span class="o">&lt;&lt;-</span> <span class="nf">ZOOTranslate</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">[[</span><span class="s">&quot;S&quot;</span><span class="p">]][[</span><span class="s">&quot;value&quot;</span><span class="p">]],</span><span class="s">&quot;from the R World!&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot; &quot;</span><span class="p">))</span>
-    <span class="c1"># Return SERVICE_SUCCEEDEED</span>
-    <span class="nf">return</span><span class="p">(</span><span class="n">zoo</span><span class="p">[[</span><span class="s">&quot;SERVICE_SUCCEEDEED&quot;</span><span class="p">]])</span>
+<span class="n">hellor</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1"># Set the result</span>
+<span class="w">    </span><span class="n">zoo</span><span class="p">[[</span><span class="s">&quot;outputs&quot;</span><span class="p">]][[</span><span class="s">&quot;Result&quot;</span><span class="p">]][[</span><span class="s">&quot;value&quot;</span><span class="p">]]</span><span class="w"> </span><span class="o">&lt;&lt;-</span><span class="w"> </span><span class="nf">ZOOTranslate</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">[[</span><span class="s">&quot;S&quot;</span><span class="p">]][[</span><span class="s">&quot;value&quot;</span><span class="p">]],</span><span class="s">&quot;from the R World!&quot;</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot; &quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="c1"># Return SERVICE_SUCCEEDEED</span>
+<span class="w">    </span><span class="nf">return</span><span class="p">(</span><span class="n">zoo</span><span class="p">[[</span><span class="s">&quot;SERVICE_SUCCEEDEED&quot;</span><span class="p">]])</span>
 <span class="p">}</span>
 </pre></div>
 </div>

@@ -57,9 +57,6 @@
         };
     </script>
       <script type="text/javascript" src="../_static/documentation_options.js"></script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
       <script type="text/javascript" src="../_static/sphinx_highlight.js"></script>
 
@@ -137,6 +134,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../kernel/orfeotoolbox.html">Optional Orfeo Toolbox support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../kernel/sagagis.html">Optional SAGA GIS support</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../kernel/hpc.html">Optional HPC support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kernel/dru.html">Optional DRU support</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../services/index.html">ZOO-Services</a><ul>
@@ -253,54 +251,54 @@ once. This line will look like the following:</p>
 in the <cite>assets/js</cite> directory containing your main application
 code. First, you define there the required JavaScript libraries and
 potentially their configuration, then you can add any relevant code.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nx">requirejs</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="w">    </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;assets/js&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="w">    </span><span class="nx">paths</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos"> 4</span><span class="w">        </span><span class="nx">jquery</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/jquery/jquery-1.11.0.min&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 5</span><span class="w">        </span><span class="nx">hogan</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/hogan/hogan-3.0.2&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">        </span><span class="nx">xml2json</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/xml2json/xml2json.min&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="nx">queryString</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/query-string/query-string&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">        </span><span class="nx">wpsPayloads</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/zoo/payloads&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="nx">wpsPayload</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/zoo/wps-payload&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">10</span><span class="w">        </span><span class="nx">utils</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/zoo/utils&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">        </span><span class="nx">zoo</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/zoo/zoo&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">        </span><span class="nx">domReady</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/domReady&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">        </span><span class="nx">app</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;first-app&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">    </span><span class="nx">shim</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">        </span><span class="nx">wpsPayloads</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">            </span><span class="nx">deps</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;hogan&#39;</span><span class="p">],</span><span class="w"></span>
-<span class="linenos">18</span><span class="w">        </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">19</span><span class="w">        </span><span class="nx">wpsPayload</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">            </span><span class="nx">deps</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;wpsPayloads&#39;</span><span class="p">],</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">            </span><span class="nx">exports</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;wpsPayload&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">        </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">        </span><span class="nx">hogan</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">            </span><span class="nx">exports</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Hogan&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">        </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">26</span><span class="w">        </span><span class="nx">xml2json</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">27</span><span class="w">          </span><span class="nx">exports</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;X2JS&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">        </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">        </span><span class="nx">queryString</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">            </span><span class="nx">exports</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;queryString&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">        </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">33</span><span class="p">});</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nx">requirejs</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;assets/js&#39;</span><span class="p">,</span>
+<span class="linenos"> 3</span><span class="w">    </span><span class="nx">paths</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">        </span><span class="nx">jquery</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/jquery/jquery-1.11.0.min&#39;</span><span class="p">,</span>
+<span class="linenos"> 5</span><span class="w">        </span><span class="nx">hogan</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/hogan/hogan-3.0.2&#39;</span><span class="p">,</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="nx">xml2json</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/xml2json/xml2json.min&#39;</span><span class="p">,</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="nx">queryString</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/query-string/query-string&#39;</span><span class="p">,</span>
+<span class="linenos"> 8</span><span class="w">        </span><span class="nx">wpsPayloads</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/zoo/payloads&#39;</span><span class="p">,</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="nx">wpsPayload</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/zoo/wps-payload&#39;</span><span class="p">,</span>
+<span class="linenos">10</span><span class="w">        </span><span class="nx">utils</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/zoo/utils&#39;</span><span class="p">,</span>
+<span class="linenos">11</span><span class="w">        </span><span class="nx">zoo</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/zoo/zoo&#39;</span><span class="p">,</span>
+<span class="linenos">12</span><span class="w">        </span><span class="nx">domReady</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;lib/domReady&#39;</span><span class="p">,</span>
+<span class="linenos">13</span><span class="w">        </span><span class="nx">app</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;first-app&#39;</span><span class="p">,</span>
+<span class="linenos">14</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos">15</span><span class="w">    </span><span class="nx">shim</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">16</span><span class="w">        </span><span class="nx">wpsPayloads</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">17</span><span class="w">            </span><span class="nx">deps</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;hogan&#39;</span><span class="p">],</span>
+<span class="linenos">18</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos">19</span><span class="w">        </span><span class="nx">wpsPayload</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">20</span><span class="w">            </span><span class="nx">deps</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;wpsPayloads&#39;</span><span class="p">],</span>
+<span class="linenos">21</span><span class="w">            </span><span class="nx">exports</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;wpsPayload&#39;</span><span class="p">,</span>
+<span class="linenos">22</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos">23</span><span class="w">        </span><span class="nx">hogan</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">24</span><span class="w">            </span><span class="nx">exports</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Hogan&#39;</span><span class="p">,</span>
+<span class="linenos">25</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos">26</span><span class="w">        </span><span class="nx">xml2json</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">27</span><span class="w">          </span><span class="nx">exports</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;X2JS&quot;</span><span class="p">,</span>
+<span class="linenos">28</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos">29</span><span class="w">        </span><span class="nx">queryString</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">30</span><span class="w">            </span><span class="nx">exports</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;queryString&#39;</span><span class="p">,</span>
+<span class="linenos">31</span><span class="w">        </span><span class="p">},</span>
+<span class="linenos">32</span><span class="w">    </span><span class="p">},</span>
+<span class="linenos">33</span><span class="p">});</span>
 <span class="linenos">34</span>
-<span class="linenos">35</span><span class="nx">requirejs</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">    </span><span class="nx">config</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">37</span><span class="w">        </span><span class="nx">app</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">38</span><span class="w">            </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/cgi-bin/zoo_loader.cgi&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">39</span><span class="w">            </span><span class="nx">delay</span><span class="o">:</span><span class="w"> </span><span class="mf">2000</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">40</span><span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">41</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">42</span><span class="p">});</span><span class="w"></span>
+<span class="linenos">35</span><span class="nx">requirejs</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span>
+<span class="linenos">36</span><span class="w">    </span><span class="nx">config</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">37</span><span class="w">        </span><span class="nx">app</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">38</span><span class="w">            </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/cgi-bin/zoo_loader.cgi&#39;</span><span class="p">,</span>
+<span class="linenos">39</span><span class="w">            </span><span class="nx">delay</span><span class="o">:</span><span class="w"> </span><span class="mf">2000</span><span class="p">,</span>
+<span class="linenos">40</span><span class="w">        </span><span class="p">}</span>
+<span class="linenos">41</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">42</span><span class="p">});</span>
 <span class="linenos">43</span>
-<span class="linenos">44</span><span class="nx">require</span><span class="p">([</span><span class="s1">&#39;domReady&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;app&#39;</span><span class="p">],</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">domReady</span><span class="p">,</span><span class="w"> </span><span class="nx">app</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">45</span><span class="w">    </span><span class="nx">domReady</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">46</span><span class="w">        </span><span class="nx">app</span><span class="p">.</span><span class="nx">initialize</span><span class="p">();</span><span class="w"></span>
-<span class="linenos">47</span><span class="w">    </span><span class="p">});</span><span class="w"></span>
-<span class="linenos">48</span><span class="p">});</span><span class="w"></span>
+<span class="linenos">44</span><span class="nx">require</span><span class="p">([</span><span class="s1">&#39;domReady&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;app&#39;</span><span class="p">],</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">domReady</span><span class="p">,</span><span class="w"> </span><span class="nx">app</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">45</span><span class="w">    </span><span class="nx">domReady</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">46</span><span class="w">        </span><span class="nx">app</span><span class="p">.</span><span class="nx">initialize</span><span class="p">();</span>
+<span class="linenos">47</span><span class="w">    </span><span class="p">});</span>
+<span class="linenos">48</span><span class="p">});</span>
 </pre></div>
 </div>
 <p>On line 2, you define the url where your files are located on the web
@@ -311,52 +309,52 @@ application.</p>
 <p>In this application, we use the <a class="reference external" href="http://github.com/requirejs/domReady">domReady</a> module to call the
 <cite>initialize</cite> function defined in the <cite>app</cite> module, which is defined in
 the <cite>first-app.js</cite> file as defined on line 13.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nx">define</span><span class="p">([</span><span class="w"></span>
-<span class="linenos"> 2</span><span class="w">    </span><span class="s1">&#39;module&#39;</span><span class="p">,</span><span class="s1">&#39;zoo&#39;</span><span class="p">,</span><span class="s1">&#39;wpsPayload&#39;</span><span class="w"></span>
-<span class="linenos"> 3</span><span class="p">],</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">module</span><span class="p">,</span><span class="w"> </span><span class="nx">ZooProcess</span><span class="p">,</span><span class="w"> </span><span class="nx">wpsPayload</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nx">define</span><span class="p">([</span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="s1">&#39;module&#39;</span><span class="p">,</span><span class="s1">&#39;zoo&#39;</span><span class="p">,</span><span class="s1">&#39;wpsPayload&#39;</span>
+<span class="linenos"> 3</span><span class="p">],</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">module</span><span class="p">,</span><span class="w"> </span><span class="nx">ZooProcess</span><span class="p">,</span><span class="w"> </span><span class="nx">wpsPayload</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">myZooObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ZooProcess</span><span class="p">({</span><span class="w"></span>
-<span class="linenos"> 6</span><span class="w">        </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">module</span><span class="p">.</span><span class="nx">config</span><span class="p">().</span><span class="nx">url</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 7</span><span class="w">        </span><span class="nx">delay</span><span class="o">:</span><span class="w"> </span><span class="nx">module</span><span class="p">.</span><span class="nx">config</span><span class="p">().</span><span class="nx">delay</span><span class="p">,</span><span class="w"></span>
-<span class="linenos"> 8</span><span class="w">    </span><span class="p">});</span><span class="w"></span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">myZooObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">ZooProcess</span><span class="p">({</span>
+<span class="linenos"> 6</span><span class="w">        </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nx">module</span><span class="p">.</span><span class="nx">config</span><span class="p">().</span><span class="nx">url</span><span class="p">,</span>
+<span class="linenos"> 7</span><span class="w">        </span><span class="nx">delay</span><span class="o">:</span><span class="w"> </span><span class="nx">module</span><span class="p">.</span><span class="nx">config</span><span class="p">().</span><span class="nx">delay</span><span class="p">,</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="p">});</span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">initialize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">11</span><span class="w">        </span><span class="nx">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">12</span><span class="w">        </span><span class="nx">myZooObject</span><span class="p">.</span><span class="nx">getCapabilities</span><span class="p">({</span><span class="w"></span>
-<span class="linenos">13</span><span class="w">           </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">14</span><span class="w">             </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span><span class="w"></span>
-<span class="linenos">15</span><span class="w">                     </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">16</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">17</span><span class="w">        </span><span class="p">});</span><span class="w"></span>
+<span class="linenos">10</span><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">initialize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">11</span><span class="w">        </span><span class="nx">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="linenos">12</span><span class="w">        </span><span class="nx">myZooObject</span><span class="p">.</span><span class="nx">getCapabilities</span><span class="p">({</span>
+<span class="linenos">13</span><span class="w">           </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+<span class="linenos">14</span><span class="w">             </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+<span class="linenos">15</span><span class="w">                     </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="linenos">16</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">17</span><span class="w">        </span><span class="p">});</span>
 <span class="linenos">18</span>
-<span class="linenos">19</span><span class="w">        </span><span class="nx">myZooObject</span><span class="p">.</span><span class="nx">describeProcess</span><span class="p">({</span><span class="w"></span>
-<span class="linenos">20</span><span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">21</span><span class="w">            </span><span class="nx">identifier</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;all&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">22</span><span class="w">            </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span><span class="w"></span>
-<span class="linenos">23</span><span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">24</span><span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">25</span><span class="w">        </span><span class="p">});</span><span class="w"></span>
+<span class="linenos">19</span><span class="w">        </span><span class="nx">myZooObject</span><span class="p">.</span><span class="nx">describeProcess</span><span class="p">({</span>
+<span class="linenos">20</span><span class="w">            </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+<span class="linenos">21</span><span class="w">            </span><span class="nx">identifier</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;all&quot;</span><span class="p">,</span>
+<span class="linenos">22</span><span class="w">            </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+<span class="linenos">23</span><span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="linenos">24</span><span class="w">            </span><span class="p">}</span>
+<span class="linenos">25</span><span class="w">        </span><span class="p">});</span>
 <span class="linenos">26</span>
-<span class="linenos">27</span><span class="w">       </span><span class="nx">myZooObject</span><span class="p">.</span><span class="nx">execute</span><span class="p">({</span><span class="w"></span>
-<span class="linenos">28</span><span class="w">           </span><span class="nx">identifier</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Buffer&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">29</span><span class="w">           </span><span class="nx">dataInputs</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">&quot;identifier&quot;</span><span class="o">:</span><span class="s2">&quot;InputPolygon&quot;</span><span class="p">,</span><span class="s2">&quot;href&quot;</span><span class="o">:</span><span class="s2">&quot;XXX&quot;</span><span class="p">,</span><span class="s2">&quot;mimeType&quot;</span><span class="o">:</span><span class="s2">&quot;text/xml&quot;</span><span class="p">}],</span><span class="w"></span>
-<span class="linenos">30</span><span class="w">           </span><span class="nx">dataOutputs</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">&quot;identifier&quot;</span><span class="o">:</span><span class="s2">&quot;Result&quot;</span><span class="p">,</span><span class="s2">&quot;mimeType&quot;</span><span class="o">:</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;raw&quot;</span><span class="p">}],</span><span class="w"></span>
-<span class="linenos">31</span><span class="w">           </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="linenos">32</span><span class="w">           </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">33</span><span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">34</span><span class="w">           </span><span class="p">},</span><span class="w"></span>
-<span class="linenos">35</span><span class="w">           </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span><span class="w"></span>
-<span class="linenos">36</span><span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
-<span class="linenos">37</span><span class="w">           </span><span class="p">}</span><span class="w"></span>
-<span class="linenos">38</span><span class="w">        </span><span class="p">});</span><span class="w"></span>
-<span class="linenos">39</span><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="linenos">27</span><span class="w">       </span><span class="nx">myZooObject</span><span class="p">.</span><span class="nx">execute</span><span class="p">({</span>
+<span class="linenos">28</span><span class="w">           </span><span class="nx">identifier</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Buffer&quot;</span><span class="p">,</span>
+<span class="linenos">29</span><span class="w">           </span><span class="nx">dataInputs</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">&quot;identifier&quot;</span><span class="o">:</span><span class="s2">&quot;InputPolygon&quot;</span><span class="p">,</span><span class="s2">&quot;href&quot;</span><span class="o">:</span><span class="s2">&quot;XXX&quot;</span><span class="p">,</span><span class="s2">&quot;mimeType&quot;</span><span class="o">:</span><span class="s2">&quot;text/xml&quot;</span><span class="p">}],</span>
+<span class="linenos">30</span><span class="w">           </span><span class="nx">dataOutputs</span><span class="o">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">&quot;identifier&quot;</span><span class="o">:</span><span class="s2">&quot;Result&quot;</span><span class="p">,</span><span class="s2">&quot;mimeType&quot;</span><span class="o">:</span><span class="s2">&quot;application/json&quot;</span><span class="p">,</span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;raw&quot;</span><span class="p">}],</span>
+<span class="linenos">31</span><span class="w">           </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+<span class="linenos">32</span><span class="w">           </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">33</span><span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="linenos">34</span><span class="w">           </span><span class="p">},</span>
+<span class="linenos">35</span><span class="w">           </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+<span class="linenos">36</span><span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="linenos">37</span><span class="w">           </span><span class="p">}</span>
+<span class="linenos">38</span><span class="w">        </span><span class="p">});</span>
+<span class="linenos">39</span><span class="w">    </span><span class="p">}</span>
 <span class="linenos">40</span>
-<span class="linenos">41</span><span class="w">    </span><span class="c1">// Return public methods</span><span class="w"></span>
-<span class="linenos">42</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="linenos">43</span><span class="w">        </span><span class="nx">initialize</span><span class="o">:</span><span class="w"> </span><span class="nx">initialize</span><span class="w"></span>
-<span class="linenos">44</span><span class="w">    </span><span class="p">};</span><span class="w"></span>
+<span class="linenos">41</span><span class="w">    </span><span class="c1">// Return public methods</span>
+<span class="linenos">42</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="linenos">43</span><span class="w">        </span><span class="nx">initialize</span><span class="o">:</span><span class="w"> </span><span class="nx">initialize</span>
+<span class="linenos">44</span><span class="w">    </span><span class="p">};</span>
 <span class="linenos">45</span>
-<span class="linenos">46</span><span class="p">});</span><span class="w"></span>
+<span class="linenos">46</span><span class="p">});</span>
 </pre></div>
 </div>
 <p>On line 5 you create a “global” <cite>ZooProcess</cite> instance named

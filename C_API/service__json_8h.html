@@ -106,9 +106,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a61713fb0f39647409bc0673b1b0789c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#a61713fb0f39647409bc0673b1b0789c5">printGetCapabilitiesForProcessJ</a> (<a class="el" href="service_8h.html#structregistry">registry</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *, void *, void *, <a class="el" href="service_8h.html#structservice">service</a> *)</td></tr>
 <tr class="memdesc:a61713fb0f39647409bc0673b1b0789c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add all the capabilities properties to a json_object.  <a href="service__json_8h.html#a61713fb0f39647409bc0673b1b0789c5">More...</a><br /></td></tr>
 <tr class="separator:a61713fb0f39647409bc0673b1b0789c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45f4e9428a89a80a5bb6e852ed03c3ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#a45f4e9428a89a80a5bb6e852ed03c3ad">printExceptionReportResponseJ</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, <a class="el" href="service_8h.html#structmap">map</a> *)</td></tr>
-<tr class="memdesc:a45f4e9428a89a80a5bb6e852ed03c3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print an OWS ExceptionReport Document and HTTP headers (when required) depending on the code.  <a href="service__json_8h.html#a45f4e9428a89a80a5bb6e852ed03c3ad">More...</a><br /></td></tr>
-<tr class="separator:a45f4e9428a89a80a5bb6e852ed03c3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af750951048413d8e62754803526558df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#af750951048413d8e62754803526558df">printExceptionReportResponseJ</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *)</td></tr>
+<tr class="memdesc:af750951048413d8e62754803526558df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print an OWS ExceptionReport Document and HTTP headers (when required) depending on the code.  <a href="service__json_8h.html#af750951048413d8e62754803526558df">More...</a><br /></td></tr>
+<tr class="separator:af750951048413d8e62754803526558df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a737177b30625c7f9abee7b9903488b61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#a737177b30625c7f9abee7b9903488b61">parseJRequest</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, <a class="el" href="service_8h.html#structservice">service</a> *, json_object *, <a class="el" href="service_8h.html#structmap">map</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmaps">maps</a> **)</td></tr>
 <tr class="memdesc:a737177b30625c7f9abee7b9903488b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse Json Request.  <a href="service__json_8h.html#a737177b30625c7f9abee7b9903488b61">More...</a><br /></td></tr>
 <tr class="separator:a737177b30625c7f9abee7b9903488b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -747,8 +747,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a45f4e9428a89a80a5bb6e852ed03c3ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45f4e9428a89a80a5bb6e852ed03c3ad">&#9670;&nbsp;</a></span>printExceptionReportResponseJ()</h2>
+<a id="af750951048413d8e62754803526558df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af750951048413d8e62754803526558df">&#9670;&nbsp;</a></span>printExceptionReportResponseJ()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -756,8 +756,8 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void printExceptionReportResponseJ </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -777,7 +777,7 @@ Variables</h2></td></tr>
 <p>Set hasPrinted value to true in the [lenv] section. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="service__json_8c.html#a7e078fe8d5680f4288ae018f91654782" title="Produce an exception JSON object.">createExceptionJ</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">m</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
     <tr><td class="paramname">s</td><td>the map containing the text,code,locator keys (or a map array of the same keys) </td></tr>
   </table>
   </dd>
@@ -1350,7 +1350,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 23 2023 15:33:42 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 25 2023 09:27:39 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

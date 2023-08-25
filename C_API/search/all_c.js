@@ -12,7 +12,7 @@ var searchData=
   ['local_5farguments_363',['local_arguments',['../service__callback_8c.html#ad4b2d572656d2a1c7444a344cf3de5a2',1,'service_callback.c']]],
   ['local_5ffile_364',['local_file',['../service__internal__hpc_8c.html#a3feb06f2692772a7b7552e124442dc33',1,'local_params']]],
   ['local_5fparams_365',['local_params',['../service__internal__hpc_8c.html#structlocal__params',1,'']]],
-  ['localprintexception_366',['localPrintException',['../response__print_8c.html#a395d2a130263761bf495c70bee5cd085',1,'localPrintException(maps *pmsConf, map *pmError):&#160;response_print.c'],['../response__print_8h.html#a4a80ab0f9b6d30c011e355ce65f1a4e4',1,'localPrintException(maps *, map *):&#160;response_print.c']]],
+  ['localprintexception_366',['localPrintException',['../response__print_8c.html#a8c6d8b7875eaff6d26068b9d5c046510',1,'localPrintException(maps **pmsConf, map *pmError):&#160;response_print.c'],['../response__print_8h.html#a678dcb1d6c28261993b05d94f6dbb6ea',1,'localPrintException(maps **, map *):&#160;response_print.c']]],
   ['localprintexceptionj_367',['localPrintExceptionJ',['../zoo__service__loader_8c.html#ae10e752eb71be10ad1a7c49e001adeba',1,'zoo_service_loader.c']]],
   ['lock_368',['lock',['../service__internal_8h.html#a4ff45257363b319cab8252646ce53196',1,'zooLock']]],
   ['lockfile_369',['lockfile',['../service__internal_8h.html#a148c35ab3f51220d1c1a16f6147009c4',1,'zooLock::lockfile()'],['../service__internal_8c.html#aa8c1042e9d6be22aac67d60565887494',1,'lockFile(maps *conf, const char *filename, const char mode):&#160;service_internal.c'],['../service__internal_8h.html#a1e34c17a2c86cd1c52008a447cb199cf',1,'lockFile(maps *, const char *, const char):&#160;service_internal.c']]],

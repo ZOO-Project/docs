@@ -12,10 +12,10 @@ var searchData=
   ['epair_193',['EPAIR',['../main__conf__read_8y.html#a94067062245b8fb393dc2275704168cf',1,'EPAIR():&#160;main_conf_read.y'],['../service__conf_8y.html#a94067062245b8fb393dc2275704168cf',1,'EPAIR():&#160;service_conf.y']]],
   ['error_194',['error',['../service__internal__python_8c.html#ae7c076709e128f5d18a6939bd4f0a320',1,'module_state']]],
   ['error_5fmsg_5fmax_5flength_195',['ERROR_MSG_MAX_LENGTH',['../service__internal_8c.html#aa9a1c83687bc64b1c898ecf055f0838d',1,'service_internal.c']]],
-  ['errorexception_196',['errorException',['../response__print_8c.html#abfb5550cb82223ac4a24ace033bb5b61',1,'errorException(maps *m, const char *message, const char *errorcode, const char *locator):&#160;response_print.c'],['../response__print_8h.html#a5589cd6ae97b40e5727645eadc9f18f5',1,'errorException(maps *, const char *, const char *, const char *):&#160;response_print.c']]],
+  ['errorexception_196',['errorException',['../response__print_8c.html#ab4326769bc06a3ed5e66dab6c9ff5ad1',1,'errorException(maps **pmsConf, const char *message, const char *errorcode, const char *locator):&#160;response_print.c'],['../response__print_8h.html#a2c44da03c6fe71cc8fbf150c48d69c2c',1,'errorException(maps **, const char *, const char *, const char *):&#160;response_print.c']]],
   ['etag_197',['ETag',['../service__conf_8y.html#af96f1c92878b3ef0cdcfaf2a4a3ac151',1,'service_conf.y']]],
   ['execsql_198',['execSql',['../sqlapi_8c.html#aabf3e863c9df9d262bae06f80fc78f3c',1,'sqlapi.c']]],
   ['execute_199',['Execute',['../classMyCommand.html#a817d62a8d02713571e701897f136df34',1,'MyCommand::Execute(itk::Object *caller, const itk::EventObject &amp;event)'],['../classMyCommand.html#a695fa474bfbb8b07f17390c46cf84ce5',1,'MyCommand::Execute(const itk::Object *caller, const itk::EventObject &amp;event)']]],
-  ['exitandcleanup_200',['exitAndCleanUp',['../zoo__service__loader_8c.html#acea294f20ce65838125a0957f0a2c86e',1,'zoo_service_loader.c']]],
+  ['exitandcleanup_200',['exitAndCleanUp',['../zoo__service__loader_8c.html#a2337e73b7a8c39371acf22d381c755d4',1,'zoo_service_loader.c']]],
   ['extractfromdoc_201',['extractFromDoc',['../request__parser_8c.html#ae658b9e878d2971eae5debf5fa11cf66',1,'extractFromDoc(xmlDocPtr doc, const char *search):&#160;request_parser.c'],['../request__parser_8h.html#a63ebee544b25aa03683b33c90ebeaa85',1,'extractFromDoc(xmlDocPtr, const char *):&#160;request_parser.c']]]
 ];

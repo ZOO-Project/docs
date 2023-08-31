@@ -173,7 +173,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a36ac48ea6bbbc0ae2cab1e688e94ad55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a36ac48ea6bbbc0ae2cab1e688e94ad55">SERVICE_UNDEPLOYED</a>&#160;&#160;&#160;7</td></tr>
 <tr class="memdesc:a36ac48ea6bbbc0ae2cab1e688e94ad55"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global undelployed status for a service.  <a href="service_8h.html#a36ac48ea6bbbc0ae2cab1e688e94ad55">More...</a><br /></td></tr>
 <tr class="separator:a36ac48ea6bbbc0ae2cab1e688e94ad55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a109eccc0fa63b3684051fb091131615a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a109eccc0fa63b3684051fb091131615a">ZOO_DEBUG</a>(message)&#160;&#160;&#160;fprintf(stderr,&quot; [ZOO_DEBUG] ++- %d -++ %s %s %d: &quot;,getpid(),__func__,__FILE__,__LINE__);fprintf(stderr,&quot;(%s)\<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>&quot;,message);</td></tr>
+<tr class="memitem:a109eccc0fa63b3684051fb091131615a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a109eccc0fa63b3684051fb091131615a">ZOO_DEBUG</a>(message)&#160;&#160;&#160;fprintf(stderr,&quot; [ZOO_DEBUG] ++- %d -++ %s %s %d: &quot;,getpid(),__func__,__FILE__,__LINE__);fprintf(stderr,&quot;(%s)\<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>&quot;,message);fflush(stderr);</td></tr>
 <tr class="memdesc:a109eccc0fa63b3684051fb091131615a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ZOO_DEBUG macro print message with function name, file name and line number.  <a href="service_8h.html#a109eccc0fa63b3684051fb091131615a">More...</a><br /></td></tr>
 <tr class="separator:a109eccc0fa63b3684051fb091131615a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22187317320e774cb8e603969de63b19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a22187317320e774cb8e603969de63b19">ELEMENTS_SIZE</a>&#160;&#160;&#160;(sizeof(char*)+(((2*sizeof(char*))+sizeof(<a class="el" href="service_8h.html#structmaps">maps</a>*))*3)+sizeof(char*)+((sizeof(<a class="el" href="service_8h.html#structmap">map</a>*) + sizeof(<a class="el" href="service_8h.html#structiotype">iotype</a>*))*2)+(2*sizeof(<a class="el" href="service_8h.html#structelements">elements</a>*)))</td></tr>
@@ -1197,7 +1197,7 @@ the next registry pointer </td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">message</td><td>)</td>
-          <td>&#160;&#160;&#160;fprintf(stderr,&quot; [ZOO_DEBUG] ++- %d -++ %s %s %d: &quot;,getpid(),__func__,__FILE__,__LINE__);fprintf(stderr,&quot;(%s)\<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>&quot;,message);</td>
+          <td>&#160;&#160;&#160;fprintf(stderr,&quot; [ZOO_DEBUG] ++- %d -++ %s %s %d: &quot;,getpid(),__func__,__FILE__,__LINE__);fprintf(stderr,&quot;(%s)\<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>&quot;,message);fflush(stderr);</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -4345,7 +4345,7 @@ the next registry pointer </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 31 2023 08:03:49 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 31 2023 13:16:44 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -203,6 +203,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a5bc2d22d4e3475cca6168f326e1c15cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a5bc2d22d4e3475cca6168f326e1c15cf">createNextLinks</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *obj)</td></tr>
 <tr class="memdesc:a5bc2d22d4e3475cca6168f326e1c15cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the next links.  <a href="service__json_8c.html#a5bc2d22d4e3475cca6168f326e1c15cf">More...</a><br /></td></tr>
 <tr class="separator:a5bc2d22d4e3475cca6168f326e1c15cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062ffae8ab21d93d7b11cc8c34d4abd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a062ffae8ab21d93d7b11cc8c34d4abd3">fetchUsid</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf)</td></tr>
+<tr class="memdesc:a062ffae8ab21d93d7b11cc8c34d4abd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch the current jobid (can be usid or gs_usid in the lenv section).  <a href="service__json_8c.html#a062ffae8ab21d93d7b11cc8c34d4abd3">More...</a><br /></td></tr>
+<tr class="separator:a062ffae8ab21d93d7b11cc8c34d4abd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587c78261a881f213c1ecb22c474df26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a587c78261a881f213c1ecb22c474df26">createStatusLinksFromLogs</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *pjoObj)</td></tr>
+<tr class="memdesc:a587c78261a881f213c1ecb22c474df26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect if there is a _logs.cfg file associated with the execution.  <a href="service__json_8c.html#a587c78261a881f213c1ecb22c474df26">More...</a><br /></td></tr>
+<tr class="separator:a587c78261a881f213c1ecb22c474df26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30417fc3cdbb640684f9af0fcc788c97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a30417fc3cdbb640684f9af0fcc788c97">createStatusLinks</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, int result, json_object *obj)</td></tr>
 <tr class="memdesc:a30417fc3cdbb640684f9af0fcc788c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the status links.  <a href="service__json_8c.html#a30417fc3cdbb640684f9af0fcc788c97">More...</a><br /></td></tr>
 <tr class="separator:a30417fc3cdbb640684f9af0fcc788c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -911,6 +917,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a587c78261a881f213c1ecb22c474df26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a587c78261a881f213c1ecb22c474df26">&#9670;&nbsp;</a></span>createStatusLinksFromLogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createStatusLinksFromLogs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>conf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>pjoObj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detect if there is a _logs.cfg file associated with the execution. </p>
+<p>If yes, add the links defined in the section to the standard links associated with a job statusInfo.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pjoObj</td><td>the JSON object pointer to add the links to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae0546dea780eed3a1830829021e9dddd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae0546dea780eed3a1830829021e9dddd">&#9670;&nbsp;</a></span>elementsToJson()</h2>
 
@@ -935,6 +979,32 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a json_object pointer to the created json_object </dd></dl>
+
+</div>
+</div>
+<a id="a062ffae8ab21d93d7b11cc8c34d4abd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a062ffae8ab21d93d7b11cc8c34d4abd3">&#9670;&nbsp;</a></span>fetchUsid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="service_8h.html#structmap">map</a>* fetchUsid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fetch the current jobid (can be usid or gs_usid in the lenv section). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2760,7 +2830,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 21 2023 20:23:47 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 26 2023 11:05:35 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

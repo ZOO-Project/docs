@@ -154,6 +154,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab9e6f8c71836b1df8fa53af14a457957"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#ab9e6f8c71836b1df8fa53af14a457957">jsonIsFalse</a> (json_bool)</td></tr>
 <tr class="memdesc:ab9e6f8c71836b1df8fa53af14a457957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trivial verification, check if a json_bool is equal to FALSE.  <a href="service__json_8h.html#ab9e6f8c71836b1df8fa53af14a457957">More...</a><br /></td></tr>
 <tr class="separator:ab9e6f8c71836b1df8fa53af14a457957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1273a85b376895cb5779cc972157e45b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#a1273a85b376895cb5779cc972157e45b">serviceIsFilter</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, char *)</td></tr>
+<tr class="memdesc:a1273a85b376895cb5779cc972157e45b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify that a service name correspond to the Deploy or Undeploy service name.  <a href="service__json_8h.html#a1273a85b376895cb5779cc972157e45b">More...</a><br /></td></tr>
+<tr class="separator:a1273a85b376895cb5779cc972157e45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -1055,6 +1058,44 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a1273a85b376895cb5779cc972157e45b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1273a85b376895cb5779cc972157e45b">&#9670;&nbsp;</a></span>serviceIsFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool serviceIsFilter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcService</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verify that a service name correspond to the Deploy or Undeploy service name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the main configuration maps pointer </td></tr>
+    <tr><td class="paramname">pcService</td><td>the service name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the process name corresponds to a filter_in or filter_out; false otherwise </dd></dl>
+
+</div>
+</div>
 <a id="ae4b50c81f1a37b2d9b40f96443d12153"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae4b50c81f1a37b2d9b40f96443d12153">&#9670;&nbsp;</a></span>serviceToJson()</h2>
 
@@ -1350,7 +1391,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 14 2023 17:32:43 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 24 2023 17:34:04 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

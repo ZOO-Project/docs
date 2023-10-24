@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iotype_1598',['iotype',['../service_8h.html#a789f0ff9b69b60739bf4c99cd6439f32',1,'service.h']]]
+  ['iotype_1608',['iotype',['../service_8h.html#a789f0ff9b69b60739bf4c99cd6439f32',1,'service.h']]]
 ];

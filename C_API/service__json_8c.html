@@ -101,6 +101,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8fed1219809b2a1897cf6915b7582dc5"><td class="memItemLeft" align="right" valign="top">json_object *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a8fed1219809b2a1897cf6915b7582dc5">serviceToJson</a> (<a class="el" href="service_8h.html#structservice">service</a> *myService)</td></tr>
 <tr class="memdesc:a8fed1219809b2a1897cf6915b7582dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an service to a json object.  <a href="service__json_8c.html#a8fed1219809b2a1897cf6915b7582dc5">More...</a><br /></td></tr>
 <tr class="separator:a8fed1219809b2a1897cf6915b7582dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90fa48bd2c6d3f3052a7847288c97a37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a90fa48bd2c6d3f3052a7847288c97a37">addDescription</a> (<a class="el" href="service_8h.html#structmap">map</a> *pmElement, int iIndex, json_object *output, json_object *output1)</td></tr>
+<tr class="memdesc:a90fa48bd2c6d3f3052a7847288c97a37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a description to one or two json objects using the abstract_file or abstract value.  <a href="service__json_8c.html#a90fa48bd2c6d3f3052a7847288c97a37">More...</a><br /></td></tr>
+<tr class="separator:a90fa48bd2c6d3f3052a7847288c97a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4edb9cc9642164d5350ac2d3670a7b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ab4edb9cc9642164d5350ac2d3670a7b2">printAllowedRangesJ</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, <a class="el" href="service_8h.html#structiotype">iotype</a> *iot, json_object *prop)</td></tr>
 <tr class="memdesc:ab4edb9cc9642164d5350ac2d3670a7b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add Allowed Range properties to a json_object.  <a href="service__json_8c.html#ab4edb9cc9642164d5350ac2d3670a7b2">More...</a><br /></td></tr>
 <tr class="separator:ab4edb9cc9642164d5350ac2d3670a7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,6 +257,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8ebac22b5b5ce763a73cca082ced3cec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a8ebac22b5b5ce763a73cca082ced3cec">produceApi</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *res)</td></tr>
 <tr class="memdesc:a8ebac22b5b5ce763a73cca082ced3cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce the JSON object for /api.  <a href="service__json_8c.html#a8ebac22b5b5ce763a73cca082ced3cec">More...</a><br /></td></tr>
 <tr class="separator:a8ebac22b5b5ce763a73cca082ced3cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8557a189eab219d9bbb96a507a78cbe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#af8557a189eab219d9bbb96a507a78cbe">serviceIsFilter</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *pcService)</td></tr>
+<tr class="memdesc:af8557a189eab219d9bbb96a507a78cbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify that a service name correspond to the Deploy or Undeploy service name.  <a href="service__json_8c.html#af8557a189eab219d9bbb96a507a78cbe">More...</a><br /></td></tr>
+<tr class="separator:af8557a189eab219d9bbb96a507a78cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a98c569bd47dcd98f624bb60eec4848bb"></a>
@@ -431,6 +437,58 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">m</td><td>the main configuration maps pointer </td></tr>
     <tr><td class="paramname">el</td><td>the elements pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a90fa48bd2c6d3f3052a7847288c97a37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90fa48bd2c6d3f3052a7847288c97a37">&#9670;&nbsp;</a></span>addDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addDescription </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td>
+          <td class="paramname"><em>pmElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>output1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a description to one or two json objects using the abstract_file or abstract value. </p>
+<p>In case an abstract_file is found, then the ZOO-Kernel will try to read the provided file path and use its content as the description value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmElement</td><td>the current map to search for abstract_file/abstract field </td></tr>
+    <tr><td class="paramname">iIndex</td><td>the index to use to fetch from the map array </td></tr>
+    <tr><td class="paramname">output</td><td>the first json object to add the description </td></tr>
+    <tr><td class="paramname">output1</td><td>the second json object to add the description (optional) </td></tr>
   </table>
   </dd>
 </dl>
@@ -2800,6 +2858,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="af8557a189eab219d9bbb96a507a78cbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8557a189eab219d9bbb96a507a78cbe">&#9670;&nbsp;</a></span>serviceIsFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool serviceIsFilter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcService</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verify that a service name correspond to the Deploy or Undeploy service name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the main configuration maps pointer </td></tr>
+    <tr><td class="paramname">pcService</td><td>the service name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the process name corresponds to a filter_in or filter_out; false otherwise </dd></dl>
+
+</div>
+</div>
 <a id="a8fed1219809b2a1897cf6915b7582dc5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fed1219809b2a1897cf6915b7582dc5">&#9670;&nbsp;</a></span>serviceToJson()</h2>
 
@@ -2830,7 +2926,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Oct 14 2023 17:32:43 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Oct 24 2023 17:34:04 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

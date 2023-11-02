@@ -254,6 +254,9 @@ Functions</h2></td></tr>
 <tr class="separator:ac080127b59355415e0d805b2a5ff506b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6c71807b4fdfedaea9adf771831ad80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ac6c71807b4fdfedaea9adf771831ad80">produceApiComponents</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *res)</td></tr>
 <tr class="separator:ac6c71807b4fdfedaea9adf771831ad80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bbbeff1bafcd08c8df710c2f6f34549"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a7bbbeff1bafcd08c8df710c2f6f34549">produceOperationId</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmaps">maps</a> *pmsContent, int iIndex, json_object *pjoRes)</td></tr>
+<tr class="memdesc:a7bbbeff1bafcd08c8df710c2f6f34549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate an unique operationId attribute for a given endpoints.  <a href="service__json_8c.html#a7bbbeff1bafcd08c8df710c2f6f34549">More...</a><br /></td></tr>
+<tr class="separator:a7bbbeff1bafcd08c8df710c2f6f34549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ebac22b5b5ce763a73cca082ced3cec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a8ebac22b5b5ce763a73cca082ced3cec">produceApi</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *res)</td></tr>
 <tr class="memdesc:a8ebac22b5b5ce763a73cca082ced3cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce the JSON object for /api.  <a href="service__json_8c.html#a8ebac22b5b5ce763a73cca082ced3cec">More...</a><br /></td></tr>
 <tr class="separator:a8ebac22b5b5ce763a73cca082ced3cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2821,6 +2824,57 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a7bbbeff1bafcd08c8df710c2f6f34549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bbbeff1bafcd08c8df710c2f6f34549">&#9670;&nbsp;</a></span>produceOperationId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void produceOperationId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsContent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>pjoRes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate an unique operationId attribute for a given endpoints. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>maps pointing to the main confif maps </td></tr>
+    <tr><td class="paramname">pmsContent</td><td>the maps containing endpoint's metadata information </td></tr>
+    <tr><td class="paramname">iIndex</td><td>the index for map array, 0 otherwise </td></tr>
+    <tr><td class="paramname">pjoRes</td><td>the json object to store the operationId attribute </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a6ec4bcb950f84c9c568b98ec8b5b037a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ec4bcb950f84c9c568b98ec8b5b037a">&#9670;&nbsp;</a></span>returnBadRequestException()</h2>
 
@@ -2926,7 +2980,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 24 2023 18:50:32 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 2 2023 17:06:04 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

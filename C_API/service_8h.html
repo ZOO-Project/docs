@@ -486,6 +486,9 @@ Functions</h2></td></tr>
 <tr class="separator:abf5944bdece3b9581d92c384a590143f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaecee60bdcb4cf22a4cc1ecace6c256d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#aaecee60bdcb4cf22a4cc1ecace6c256d">getValueFromMaps</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, const char *)</td></tr>
 <tr class="separator:aaecee60bdcb4cf22a4cc1ecace6c256d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad981933a58ed10981f00057e0bcb7db6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#ad981933a58ed10981f00057e0bcb7db6">_translateChar</a> (char *, char, char)</td></tr>
+<tr class="memdesc:ad981933a58ed10981f00057e0bcb7db6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace a char by another one in a string.  <a href="service_8h.html#ad981933a58ed10981f00057e0bcb7db6">More...</a><br /></td></tr>
+<tr class="separator:ad981933a58ed10981f00057e0bcb7db6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -1546,6 +1549,50 @@ the next registry pointer </td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pmMap</td><td>the map to dump </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad981933a58ed10981f00057e0bcb7db6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad981933a58ed10981f00057e0bcb7db6">&#9670;&nbsp;</a></span>_translateChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> void _translateChar </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>toReplace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>toReplaceBy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replace a char by another one in a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>the string to update </td></tr>
+    <tr><td class="paramname">toReplace</td><td>the char to replace </td></tr>
+    <tr><td class="paramname">toReplaceBy</td><td>the char that will be used </td></tr>
   </table>
   </dd>
 </dl>
@@ -4345,7 +4392,7 @@ the next registry pointer </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 24 2023 18:50:32 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 2 2023 17:06:03 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

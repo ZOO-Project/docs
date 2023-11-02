@@ -149,21 +149,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a136da0e0aaffe9bc7561fdf19da2d468"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a136da0e0aaffe9bc7561fdf19da2d468">recursReaddirF</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structregistry">registry</a> *r, void *doc1, void *n1, char *conf_dir_, char *prefix, int saved_stdout, int level, void(func)(<a class="el" href="service_8h.html#structregistry">registry</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *, void *, void *, <a class="el" href="service_8h.html#structservice">service</a> *))</td></tr>
 <tr class="memdesc:a136da0e0aaffe9bc7561fdf19da2d468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursivelly parse zcfg from search path (services namespace and cwd).  <a href="zoo__service__loader_8c.html#a136da0e0aaffe9bc7561fdf19da2d468">More...</a><br /></td></tr>
 <tr class="separator:a136da0e0aaffe9bc7561fdf19da2d468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2337e73b7a8c39371acf22d381c755d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a2337e73b7a8c39371acf22d381c755d4">exitAndCleanUp</a> (<a class="el" href="service_8h.html#structregistry">registry</a> *zooRegistry, <a class="el" href="service_8h.html#structmaps">maps</a> *m, const char *zcfg, const char *code, const char *locator, char *orig, char *corig, void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *))</td></tr>
-<tr class="memdesc:a2337e73b7a8c39371acf22d381c755d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">When th zcfg file is not found, print error message and cleanup memory.  <a href="zoo__service__loader_8c.html#a2337e73b7a8c39371acf22d381c755d4">More...</a><br /></td></tr>
-<tr class="separator:a2337e73b7a8c39371acf22d381c755d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3a3d78c19ef1f491ee2ddcc1de1507"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a6e3a3d78c19ef1f491ee2ddcc1de1507">exitAndCleanUp</a> (<a class="el" href="service_8h.html#structregistry">registry</a> *zooRegistry, <a class="el" href="service_8h.html#structmaps">maps</a> **ppmsConf, const char *zcfg, const char *code, const char *locator, char *orig, char *corig, void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *))</td></tr>
+<tr class="memdesc:a6e3a3d78c19ef1f491ee2ddcc1de1507"><td class="mdescLeft">&#160;</td><td class="mdescRight">When th zcfg file is not found, print error message and cleanup memory Note this function does free the *ppmsConf memory.  <a href="zoo__service__loader_8c.html#a6e3a3d78c19ef1f491ee2ddcc1de1507">More...</a><br /></td></tr>
+<tr class="separator:a6e3a3d78c19ef1f491ee2ddcc1de1507"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af125ec32e958d96aff42af2ed48430d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#af125ec32e958d96aff42af2ed48430d6">_fetchService</a> (<a class="el" href="service_8h.html#structregistry">registry</a> *zooRegistry, <a class="el" href="service_8h.html#structmaps">maps</a> *m, <a class="el" href="service_8h.html#structservice">service</a> **spService, <a class="el" href="service_8h.html#structmap">map</a> *request_inputs, char *pcDir, char *cIdentifier, void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *))</td></tr>
 <tr class="memdesc:af125ec32e958d96aff42af2ed48430d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the ZOO-Service ZCFG to fill the service datastructure.  <a href="zoo__service__loader_8c.html#af125ec32e958d96aff42af2ed48430d6">More...</a><br /></td></tr>
 <tr class="separator:af125ec32e958d96aff42af2ed48430d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25ee09b7cd05822e4b1f539829bec8eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a25ee09b7cd05822e4b1f539829bec8eb">fetchService</a> (<a class="el" href="service_8h.html#structregistry">registry</a> *zooRegistry, <a class="el" href="service_8h.html#structmaps">maps</a> *m, <a class="el" href="service_8h.html#structservice">service</a> **spService, <a class="el" href="service_8h.html#structmap">map</a> *request_inputs, char *pcDir, char *cIdentifier, void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *))</td></tr>
 <tr class="memdesc:a25ee09b7cd05822e4b1f539829bec8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the ZOO-Service ZCFG to fill the service datastructure.  <a href="zoo__service__loader_8c.html#a25ee09b7cd05822e4b1f539829bec8eb">More...</a><br /></td></tr>
 <tr class="separator:a25ee09b7cd05822e4b1f539829bec8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2904581b13f24a60ec94fc4991abf1a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a2904581b13f24a60ec94fc4991abf1a1">_fetchServicesForDescription</a> (<a class="el" href="service_8h.html#structregistry">registry</a> *zooRegistry, <a class="el" href="service_8h.html#structmaps">maps</a> *m, char *r_inputs, void(func)(<a class="el" href="service_8h.html#structregistry">registry</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *, void *, void *, <a class="el" href="service_8h.html#structservice">service</a> *), void *doc, void *<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>, char *conf_dir, <a class="el" href="service_8h.html#structmap">map</a> *request_inputs, void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *))</td></tr>
-<tr class="memdesc:a2904581b13f24a60ec94fc4991abf1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search services from various possible sources.  <a href="zoo__service__loader_8c.html#a2904581b13f24a60ec94fc4991abf1a1">More...</a><br /></td></tr>
-<tr class="separator:a2904581b13f24a60ec94fc4991abf1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3223874ca4a4b03e7e3ee4d7edae877"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#af3223874ca4a4b03e7e3ee4d7edae877">fetchServicesForDescription</a> (<a class="el" href="service_8h.html#structregistry">registry</a> *zooRegistry, <a class="el" href="service_8h.html#structmaps">maps</a> *m, char *r_inputs, void(func)(<a class="el" href="service_8h.html#structregistry">registry</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *, void *, void *, <a class="el" href="service_8h.html#structservice">service</a> *), void *doc, void *<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>, char *pcDir, <a class="el" href="service_8h.html#structmap">map</a> *request_inputs, void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *))</td></tr>
-<tr class="memdesc:af3223874ca4a4b03e7e3ee4d7edae877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search services from various possible sources.  <a href="zoo__service__loader_8c.html#af3223874ca4a4b03e7e3ee4d7edae877">More...</a><br /></td></tr>
-<tr class="separator:af3223874ca4a4b03e7e3ee4d7edae877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2550dd70cbdc2c320b445c249d79df7d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a2550dd70cbdc2c320b445c249d79df7d">_fetchServicesForDescription</a> (<a class="el" href="service_8h.html#structregistry">registry</a> *zooRegistry, <a class="el" href="service_8h.html#structmaps">maps</a> **pmsConf, char *r_inputs, void(func)(<a class="el" href="service_8h.html#structregistry">registry</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *, void *, void *, <a class="el" href="service_8h.html#structservice">service</a> *), void *doc, void *<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>, char *conf_dir, <a class="el" href="service_8h.html#structmap">map</a> *request_inputs, void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *))</td></tr>
+<tr class="memdesc:a2550dd70cbdc2c320b445c249d79df7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search services from various possible sources.  <a href="zoo__service__loader_8c.html#a2550dd70cbdc2c320b445c249d79df7d">More...</a><br /></td></tr>
+<tr class="separator:a2550dd70cbdc2c320b445c249d79df7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62e884cb9c0ae9a41ba7de3af5baa43f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a62e884cb9c0ae9a41ba7de3af5baa43f">fetchServicesForDescription</a> (<a class="el" href="service_8h.html#structregistry">registry</a> *zooRegistry, <a class="el" href="service_8h.html#structmaps">maps</a> **pmsConf, char *r_inputs, void(func)(<a class="el" href="service_8h.html#structregistry">registry</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *, void *, void *, <a class="el" href="service_8h.html#structservice">service</a> *), void *doc, void *<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>, char *pcDir, <a class="el" href="service_8h.html#structmap">map</a> *request_inputs, void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *))</td></tr>
+<tr class="memdesc:a62e884cb9c0ae9a41ba7de3af5baa43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search services from various possible sources.  <a href="zoo__service__loader_8c.html#a62e884cb9c0ae9a41ba7de3af5baa43f">More...</a><br /></td></tr>
+<tr class="separator:a62e884cb9c0ae9a41ba7de3af5baa43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a6f8e38b32b41c4c0686d9133d533a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__service__loader_8c.html#a2a6f8e38b32b41c4c0686d9133d533a9">initAllEnvironment</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmap">map</a> *request_inputs, const char *cPath, const char *request)</td></tr>
 <tr class="memdesc:a2a6f8e38b32b41c4c0686d9133d533a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize environment sections, load env, and populate lenv and renv.  <a href="zoo__service__loader_8c.html#a2a6f8e38b32b41c4c0686d9133d533a9">More...</a><br /></td></tr>
 <tr class="separator:a2a6f8e38b32b41c4c0686d9133d533a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -322,8 +322,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2904581b13f24a60ec94fc4991abf1a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2904581b13f24a60ec94fc4991abf1a1">&#9670;&nbsp;</a></span>_fetchServicesForDescription()</h2>
+<a id="a2550dd70cbdc2c320b445c249d79df7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2550dd70cbdc2c320b445c249d79df7d">&#9670;&nbsp;</a></span>_fetchServicesForDescription()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,8 +337,8 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -406,6 +406,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in case of success, 1 otherwise </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="zoo__service__loader_8c.html#a6e3a3d78c19ef1f491ee2ddcc1de1507" title="When th zcfg file is not found, print error message and cleanup memory Note this function does free t...">exitAndCleanUp</a> </dd></dl>
 <p>No support for dot in service name stored in metadb!? #ifdef META_DB service* s2=extractServiceFromDb(m,tmpMapI-&gt;value,0); if(s2==NULL){ #endif</p>
 
 </div>
@@ -807,8 +808,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2337e73b7a8c39371acf22d381c755d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2337e73b7a8c39371acf22d381c755d4">&#9670;&nbsp;</a></span>exitAndCleanUp()</h2>
+<a id="a6e3a3d78c19ef1f491ee2ddcc1de1507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3a3d78c19ef1f491ee2ddcc1de1507">&#9670;&nbsp;</a></span>exitAndCleanUp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -822,8 +823,8 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"><em>ppmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -869,11 +870,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>When th zcfg file is not found, print error message and cleanup memory. </p>
+<p>When th zcfg file is not found, print error message and cleanup memory Note this function does free the *ppmsConf memory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">zooRegistry</td><td>the populated registry </td></tr>
-    <tr><td class="paramname">m</td><td>the maps pointer to the content of main.cfg file </td></tr>
+    <tr><td class="paramname">ppmsConf</td><td>the maps pointer address to the content of main.cfg file </td></tr>
     <tr><td class="paramname">zcfg</td><td>the zcfg file name </td></tr>
     <tr><td class="paramname">code</td><td>the string determining the nature of the error </td></tr>
     <tr><td class="paramname">locator</td><td>the string determining which parameter the error refer to </td></tr>
@@ -958,8 +959,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af3223874ca4a4b03e7e3ee4d7edae877"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3223874ca4a4b03e7e3ee4d7edae877">&#9670;&nbsp;</a></span>fetchServicesForDescription()</h2>
+<a id="a62e884cb9c0ae9a41ba7de3af5baa43f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62e884cb9c0ae9a41ba7de3af5baa43f">&#9670;&nbsp;</a></span>fetchServicesForDescription()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -973,8 +974,8 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1575,7 +1576,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 24 2023 18:50:32 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 2 2023 17:06:04 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

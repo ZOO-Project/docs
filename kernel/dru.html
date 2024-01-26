@@ -253,162 +253,91 @@ version</p></li>
 <section id="zoo-project-dru-helm-chart">
 <h4>ZOO-Project DRU Helm chart<a class="headerlink" href="#zoo-project-dru-helm-chart" title="Permalink to this heading">¶</a></h4>
 <p>The current helm chart is available from here:
-<a class="reference external" href="https://github.com/EOEPCA/proc-ades-dev.git">https://github.com/EOEPCA/proc-ades-dev.git</a>. You will need to clone
+<a class="reference external" href="https://github.com/ZOO-Project/charts.git">https://github.com/ZOO-Project/charts.git</a>. You will need to clone
 this repository and make the following modifications to it.</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/EOEPCA/proc-ades-dev.git
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ZOO-Project/charts.git
 </pre></div>
 </div>
-<section id="storage-class-configuration">
-<h5>Storage Class configuration<a class="headerlink" href="#storage-class-configuration" title="Permalink to this heading">¶</a></h5>
-<p>By default, the ZOO-Project uses Longhorn storage class for
-instantiating Kubernetes volumes. Minikube does not support Longhorn,
-therefor we highly recommend to use the standard storage class.</p>
-<p>To configure Minikube standard storage class, please use the
-parameters defined in the <a class="reference external" href="https://github.com/EOEPCA/proc-ades-dev/blob/develop/charts/ades/mycharts/values_minikube.yaml">chart/ades/mycharts/values_minikube.yaml</a>
-file.</p>
-</section>
-<section id="setup-a-minio-s3-object-storage-on-kubernetes-optional">
-<h5>Setup a Minio S3 Object Storage on Kubernetes (optional)<a class="headerlink" href="#setup-a-minio-s3-object-storage-on-kubernetes-optional" title="Permalink to this heading">¶</a></h5>
-<p>The ZOO-Project stores the processing results on a S3 bucket. For
-simplicity , we recommend using a S3 storage running on an external
-cloud provider such as AWS, but it is also possible to manually setup
-one on your Kubernetes cluster using Minio.</p>
-<p>Create a file called my-minio-fs.yaml containing the following
-content:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## Create persistent volume claim for minio to store data.</span>
-<span class="n">apiVersion</span><span class="p">:</span> <span class="n">v1</span>
-<span class="n">kind</span><span class="p">:</span> <span class="n">PersistentVolumeClaim</span>
-<span class="n">metadata</span><span class="p">:</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">my</span><span class="o">-</span><span class="n">minio</span><span class="o">-</span><span class="n">fs</span><span class="o">-</span><span class="n">pvc</span>
-<span class="n">spec</span><span class="p">:</span>
-  <span class="n">accessModes</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">ReadWriteOnce</span>
-  <span class="n">resources</span><span class="p">:</span>
-    <span class="n">requests</span><span class="p">:</span>
-      <span class="n">storage</span><span class="p">:</span> <span class="mi">1</span><span class="n">Gi</span>
-<span class="o">---</span>
-<span class="c1">## Run minio fs deployment.</span>
-<span class="n">apiVersion</span><span class="p">:</span> <span class="n">apps</span><span class="o">/</span><span class="n">v1</span>
-<span class="n">kind</span><span class="p">:</span> <span class="n">Deployment</span>
-<span class="n">metadata</span><span class="p">:</span>
-  <span class="n">name</span><span class="p">:</span> <span class="n">my</span><span class="o">-</span><span class="n">minio</span><span class="o">-</span><span class="n">fs</span>
-<span class="n">spec</span><span class="p">:</span>
-  <span class="n">strategy</span><span class="p">:</span>
-    <span class="nb">type</span><span class="p">:</span> <span class="n">Recreate</span>
-  <span class="n">selector</span><span class="p">:</span>
-    <span class="n">matchLabels</span><span class="p">:</span>
-      <span class="n">app</span><span class="p">:</span> <span class="n">my</span><span class="o">-</span><span class="n">minio</span><span class="o">-</span><span class="n">fs</span>
-  <span class="n">template</span><span class="p">:</span>
-    <span class="n">metadata</span><span class="p">:</span>
-      <span class="n">labels</span><span class="p">:</span>
-        <span class="n">app</span><span class="p">:</span> <span class="n">my</span><span class="o">-</span><span class="n">minio</span><span class="o">-</span><span class="n">fs</span>
-    <span class="n">spec</span><span class="p">:</span>
-      <span class="n">volumes</span><span class="p">:</span>
-      <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">data</span>
-        <span class="n">persistentVolumeClaim</span><span class="p">:</span>
-          <span class="n">claimName</span><span class="p">:</span> <span class="n">my</span><span class="o">-</span><span class="n">minio</span><span class="o">-</span><span class="n">fs</span><span class="o">-</span><span class="n">pvc</span>
-      <span class="n">containers</span><span class="p">:</span>
-      <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">my</span><span class="o">-</span><span class="n">minio</span><span class="o">-</span><span class="n">fs</span>
-        <span class="n">volumeMounts</span><span class="p">:</span>
-        <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">data</span> 
-          <span class="n">mountPath</span><span class="p">:</span> <span class="s2">&quot;/data&quot;</span>
-        <span class="n">image</span><span class="p">:</span> <span class="n">minio</span><span class="o">/</span><span class="n">minio</span><span class="p">:</span><span class="n">RELEASE</span><span class="mf">.2017</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">22</span><span class="n">T19</span><span class="o">-</span><span class="mi">55</span><span class="o">-</span><span class="mi">46</span><span class="n">Z</span>
-        <span class="n">args</span><span class="p">:</span>
-        <span class="o">-</span> <span class="n">server</span>
-        <span class="o">-</span> <span class="o">/</span><span class="n">data</span>
-        <span class="n">env</span><span class="p">:</span>
-        <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">MINIO_ACCESS_KEY</span>
-          <span class="n">value</span><span class="p">:</span> <span class="s2">&quot;minio&quot;</span>
-        <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">MINIO_SECRET_KEY</span>
-          <span class="n">value</span><span class="p">:</span> <span class="s2">&quot;minio123&quot;</span>
-        <span class="n">ports</span><span class="p">:</span>
-        <span class="o">-</span> <span class="n">containerPort</span><span class="p">:</span> <span class="mi">9000</span>
-          <span class="n">hostPort</span><span class="p">:</span> <span class="mi">9000</span>
-</pre></div>
-</div>
-<p>Now run the commands bellow.</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span># Create a namespace called minio
-kubectl create ns minio
-# Deploy Minio
-kubectl create -f my-minio-fs.yaml -n minio
-# Make the above deployment accessible from other namespaces
-kubectl expose deployment/my-minio-fs --type=&quot;NodePort&quot; --port 9000 -n minio
-# Run the port-forwarding of the Minio service
-kubectl port-forward svc/my-minio-fs 9000:9000 -n minio
-</pre></div>
-</div>
-<p>Access the Minio dashboard from your browser at the address
-<a class="reference external" href="http://localhost:9000/minio">http://localhost:9000/minio</a>. Using the dashboard, create a bucket
-called <strong>processingresults</strong>. Now, you can configure the storage
-endpoint in the <a class="reference external" href="https://github.com/EOEPCA/proc-ades-dev/blob/develop/charts/ades/mycharts/values_minikube.yaml">chart/ades/mycharts/values_minikube.yaml</a>
-file with the following values:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">AWS_SERVICEURL</span><span class="o">:</span><span class="w"> </span><span class="n">http</span><span class="o">://</span><span class="n">my</span><span class="o">-</span><span class="n">minio</span><span class="o">-</span><span class="n">fs</span><span class="o">.</span><span class="na">minio</span><span class="o">.</span><span class="na">svc</span><span class="o">.</span><span class="na">cluster</span><span class="o">.</span><span class="na">local</span><span class="o">:</span><span class="mi">9000</span>
-<span class="n">AWS_ACCESS_KEY_ID</span><span class="o">:</span><span class="w"> </span><span class="n">minio</span>
-<span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">:</span><span class="w"> </span><span class="n">minio123</span>
-<span class="n">AWS_REGION</span><span class="o">:</span><span class="w"> </span><span class="n">RegionOne</span>
-<span class="n">STAGEOUT_OUTPUT</span><span class="o">:</span><span class="w"> </span><span class="n">s3</span><span class="o">://</span><span class="n">processingresults</span>
-</pre></div>
-</div>
-</section>
 <section id="create-a-dedicated-namespace-for-the-zoo-project">
 <h5>Create a dedicated namespace for the ZOO-Project<a class="headerlink" href="#create-a-dedicated-namespace-for-the-zoo-project" title="Permalink to this heading">¶</a></h5>
 <p>This namespace will be reserved for the operation of the ZOO-Project
 in order to separate the ZOO-Project proper execution from its
 processings job on Kubernetes.</p>
 <p>For instance, let’s create a <cite>zoo-project-dru</cite> namespace.</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>kubectl create ns zoo-project-dru
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>kubectl create ns zoo
 </pre></div>
 </div>
 </section>
 <section id="deploy-using-helm">
-<span id="id4"></span><h5>Deploy using Helm<a class="headerlink" href="#deploy-using-helm" title="Permalink to this heading">¶</a></h5>
+<span id="id3"></span><h5>Deploy using Helm<a class="headerlink" href="#deploy-using-helm" title="Permalink to this heading">¶</a></h5>
 <p>The ZOO-Project with DRU support is setup via helm specifying an
 optional “release name”.</p>
 <p>For instance, we will install the ZOO-Project with the name <cite>zoo-project-dru</cite>.</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>helm upgrade --install zoo-project-dru charts/ades/ -f charts/ades/mycharts/values_minikube.yaml -n zoo-project-dru
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>helm upgrade --install zoo-project-dru zoo-project-dru -f zoo-project-dru/values_minikube.yaml -n zoo
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Release &quot;zoo-project-dru&quot; does not exist. Installing it now.
 NAME: zoo-project-dru
-LAST DEPLOYED: Mon Aug 21 14:26:22 2023
-NAMESPACE: zoo-project-dru
+LAST DEPLOYED: Wed Jan 24 09:52:52 2024
+NAMESPACE: zoo
 STATUS: deployed
 REVISION: 1
 NOTES:
 1. Get the application URL by running these commands:
-  export POD_NAME=$(kubectl get pods --namespace zoo-project-dru -l &quot;app.kubernetes.io/name=ades,app.kubernetes.io/instance=zoo-project-dru&quot; -o jsonpath=&quot;{.items[0].metadata.name}&quot;)
-  export CONTAINER_PORT=$(kubectl get pod --namespace zoo-project-dru $POD_NAME -o jsonpath=&quot;{.spec.containers[0].ports[0].containerPort}&quot;)
+  export POD_WS_NAME=$(kubectl get pods --namespace zoo -l &quot;app.kubernetes.io/name=zoo-project-dru-websocketd,app.kubernetes.io/instance=zoo-project-dru-websocketd&quot; -o jsonpath=&quot;{.items[0].metadata.name}&quot;)
+  export CONTAINER_WS_PORT=$(kubectl get pod --namespace zoo $POD_WS_NAME -o jsonpath=&quot;{.spec.containers[0].ports[0].containerPort}&quot;)
+  echo &quot;Visit ws://127.0.0.1:8888 to use your application&quot;
+  kubectl --namespace zoo port-forward $POD_WS_NAME 8888:$CONTAINER_WS_PORT &amp;
+  export POD_NAME=$(kubectl get pods --namespace zoo -l &quot;app.kubernetes.io/name=zoo-project-dru,app.kubernetes.io/instance=zoo-project-dru&quot; -o jsonpath=&quot;{.items[0].metadata.name}&quot;)
+  export CONTAINER_PORT=$(kubectl get pod --namespace zoo $POD_NAME -o jsonpath=&quot;{.spec.containers[0].ports[0].containerPort}&quot;)
   echo &quot;Visit http://127.0.0.1:8080 to use your application&quot;
-  kubectl --namespace zoo-project-dru port-forward $POD_NAME 8080:$CONTAINER_PORT
+  kubectl --namespace zoo port-forward $POD_NAME 8080:$CONTAINER_PORT
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>💡 detailed information of all the chart parameter is available in
-the <a class="reference external" href="https://github.com/EOEPCA/proc-ades/blob/develop/charts/ades/README.md">ADES chart README</a></p>
+the <a class="reference external" href="https://github.com/ZOO-Project/charts/blob/main/zoo-project-dru/README.md">chart README</a></p>
 </div>
 <p>Check that service is available</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>kubectl get service zoo-project-dru-ades --namespace zoo-project-dru
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>kubectl get service zoo-project-dru-service --namespace zoo
 </pre></div>
 </div>
 <p>Should return something like:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>NAME                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
-zoo-project-dru-ades   ClusterIP   10.104.248.111   &lt;none&gt;        80/TCP    8m
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>NAME                      TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
+zoo-project-dru-service   ClusterIP   10.104.248.111   &lt;none&gt;        80/TCP    8m
 </pre></div>
 </div>
 <p>Get the application URL by running these commands:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="n">POD_NAME</span><span class="o">=$</span><span class="p">(</span><span class="n">kubectl</span><span class="w"> </span><span class="n">get</span><span class="w"> </span><span class="n">pods</span><span class="w"> </span><span class="o">--</span><span class="n">namespace</span><span class="w"> </span><span class="n">zoo</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">dru</span><span class="w"> </span><span class="o">-</span><span class="n">l</span><span class="w"> </span><span class="s2">&quot;app.kubernetes.io/name=ades,app.kubernetes.io/instance=zoo-project-dru&quot;</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[0].metadata.name}&quot;</span><span class="p">)</span>
-<span class="k">export</span><span class="w"> </span><span class="n">CONTAINER_PORT</span><span class="o">=$</span><span class="p">(</span><span class="n">kubectl</span><span class="w"> </span><span class="n">get</span><span class="w"> </span><span class="n">pod</span><span class="w"> </span><span class="o">--</span><span class="n">namespace</span><span class="w"> </span><span class="n">zoo</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">dru</span><span class="w"> </span><span class="o">$</span><span class="n">POD_NAME</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.containers[0].ports[0].containerPort}&quot;</span><span class="p">)</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="k">export</span><span class="w"> </span><span class="n">POD_WS_NAME</span><span class="o">=$</span><span class="p">(</span><span class="n">kubectl</span><span class="w"> </span><span class="n">get</span><span class="w"> </span><span class="n">pods</span><span class="w"> </span><span class="o">--</span><span class="n">namespace</span><span class="w"> </span><span class="n">zoo</span><span class="w"> </span><span class="o">-</span><span class="n">l</span><span class="w"> </span><span class="s2">&quot;app.kubernetes.io/name=zoo-project-dru-websocketd,app.kubernetes.io/instance=zoo-project-dru-websocketd&quot;</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[0].metadata.name}&quot;</span><span class="p">)</span>
+<span class="k">export</span><span class="w"> </span><span class="n">CONTAINER_WS_PORT</span><span class="o">=$</span><span class="p">(</span><span class="n">kubectl</span><span class="w"> </span><span class="n">get</span><span class="w"> </span><span class="n">pod</span><span class="w"> </span><span class="o">--</span><span class="n">namespace</span><span class="w"> </span><span class="n">zoo</span><span class="w"> </span><span class="o">$</span><span class="n">POD_WS_NAME</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.containers[0].ports[0].containerPort}&quot;</span><span class="p">)</span>
+<span class="n">echo</span><span class="w"> </span><span class="s2">&quot;Visit ws://127.0.0.1:8888 to use your application&quot;</span>
+<span class="n">kubectl</span><span class="w"> </span><span class="o">--</span><span class="n">namespace</span><span class="w"> </span><span class="n">zoo</span><span class="w"> </span><span class="n">port</span><span class="o">-</span><span class="n">forward</span><span class="w"> </span><span class="o">$</span><span class="n">POD_WS_NAME</span><span class="w"> </span><span class="mi">8888</span><span class="p">:</span><span class="o">$</span><span class="n">CONTAINER_WS_PORT</span><span class="w"> </span><span class="o">&amp;</span>
+<span class="k">export</span><span class="w"> </span><span class="n">POD_NAME</span><span class="o">=$</span><span class="p">(</span><span class="n">kubectl</span><span class="w"> </span><span class="n">get</span><span class="w"> </span><span class="n">pods</span><span class="w"> </span><span class="o">--</span><span class="n">namespace</span><span class="w"> </span><span class="n">zoo</span><span class="w"> </span><span class="o">-</span><span class="n">l</span><span class="w"> </span><span class="s2">&quot;app.kubernetes.io/name=zoo-project-dru,app.kubernetes.io/instance=zoo-project-dru&quot;</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[0].metadata.name}&quot;</span><span class="p">)</span>
+<span class="k">export</span><span class="w"> </span><span class="n">CONTAINER_PORT</span><span class="o">=$</span><span class="p">(</span><span class="n">kubectl</span><span class="w"> </span><span class="n">get</span><span class="w"> </span><span class="n">pod</span><span class="w"> </span><span class="o">--</span><span class="n">namespace</span><span class="w"> </span><span class="n">zoo</span><span class="w"> </span><span class="o">$</span><span class="n">POD_NAME</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="n">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.spec.containers[0].ports[0].containerPort}&quot;</span><span class="p">)</span>
 <span class="n">echo</span><span class="w"> </span><span class="s2">&quot;Visit http://127.0.0.1:8080 to use your application&quot;</span>
-<span class="n">kubectl</span><span class="w"> </span><span class="o">--</span><span class="n">namespace</span><span class="w"> </span><span class="n">zoo</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">dru</span><span class="w"> </span><span class="n">port</span><span class="o">-</span><span class="n">forward</span><span class="w"> </span><span class="o">$</span><span class="n">POD_NAME</span><span class="w"> </span><span class="mi">8080</span><span class="p">:</span><span class="o">$</span><span class="n">CONTAINER_PORT</span><span class="w"> </span><span class="o">&amp;</span>
+<span class="n">kubectl</span><span class="w"> </span><span class="o">--</span><span class="n">namespace</span><span class="w"> </span><span class="n">zoo</span><span class="w"> </span><span class="n">port</span><span class="o">-</span><span class="n">forward</span><span class="w"> </span><span class="o">$</span><span class="n">POD_NAME</span><span class="w"> </span><span class="mi">8080</span><span class="p">:</span><span class="o">$</span><span class="n">CONTAINER_PORT</span>
 </pre></div>
 </div>
 <p>At this step, the ZOO-Project-DRU deployment using helm chart should
 be accesible from this address:
 <a class="reference external" href="http://127.0.0.1:8080/ogc-api/api.html">http://127.0.0.1:8080/ogc-api/api.html</a>.</p>
 </section>
+<section id="remove-zoo-project-dru-from-minikube">
+<h5>Remove ZOO-Project-DRU from Minikube<a class="headerlink" href="#remove-zoo-project-dru-from-minikube" title="Permalink to this heading">¶</a></h5>
+<p>In case you want to remove the ZOO-Project-DRU from your Minikube, you
+can use the commands bellow.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>helm uninstall zoo-project-dru -n zoo &amp;&amp; \
+kubectl delete pvc data-zoo-project-dru-postgresql-0 \
+                   data-zoo-project-dru-rabbitmq-0 \
+                   redis-data-zoo-project-dru-redis-master-0\
+                   redis-data-zoo-project-dru-redis-replicas-0\
+                   -n zoo
+</pre></div>
+</div>
+</section>
 <section id="building-the-docker-image-for-developper">
-<span id="id5"></span><h5>Building the docker image (for developper)<a class="headerlink" href="#building-the-docker-image-for-developper" title="Permalink to this heading">¶</a></h5>
+<span id="id4"></span><h5>Building the docker image (for developper)<a class="headerlink" href="#building-the-docker-image-for-developper" title="Permalink to this heading">¶</a></h5>
 <p>For a developper it may be convenient to test a new functionality
 on Minikube. To do so, use the following commands to build a dedicated
 ZOO-Project (with DRU support enabled) binary image to be used to
@@ -437,19 +366,6 @@ file.</p>
 images to the one defined during the <cite>docker build</cite> command used to
 build the docker image locally.</p>
 <p>Now you can deploy on Minikube as defined here: <a class="reference internal" href="#deploy-using-helm"><span class="std std-ref">Deploy using Helm</span></a></p>
-</section>
-<section id="remove-zoo-project-dru-from-minikube">
-<h5>Remove ZOO-Project-DRU from Minikube<a class="headerlink" href="#remove-zoo-project-dru-from-minikube" title="Permalink to this heading">¶</a></h5>
-<p>In case you want to remove the ZOO-Project-DRU from your Minikube, you
-can use the commands bellow.</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>helm uninstall zoo-project-dru -n zoo-project-dru &amp;&amp; \
-kubectl delete pvc data-zoo-project-dru-postgresql-0\
-                   data-zoo-project-dru-rabbitmq-0\
-                   redis-data-zoo-project-dru-redis-master-0\
-                   redis-data-zoo-project-dru-redis-replicas-0\
-                   -n zoo-project-dru
-</pre></div>
-</div>
 </section>
 </section>
 </section>

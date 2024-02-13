@@ -156,7 +156,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a7ed36a82185dcd29dc660e6f5cf73c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a http reques to the queue.  <a href="service__json_8c.html#a7ed36a82185dcd29dc660e6f5cf73c8b">More...</a><br /></td></tr>
 <tr class="separator:a7ed36a82185dcd29dc660e6f5cf73c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac44619e8966a2889d1c5992b47a70e2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ac44619e8966a2889d1c5992b47a70e2f">parseNestedProcess</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *req, <a class="el" href="service_8h.html#structelements">elements</a> *element, <a class="el" href="service_8h.html#structmaps">maps</a> *output, const char *name)</td></tr>
-<tr class="memdesc:ac44619e8966a2889d1c5992b47a70e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse nested process json object.  <a href="service__json_8c.html#ac44619e8966a2889d1c5992b47a70e2f">More...</a><br /></td></tr>
+<tr class="memdesc:ac44619e8966a2889d1c5992b47a70e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a nested process json object.  <a href="service__json_8c.html#ac44619e8966a2889d1c5992b47a70e2f">More...</a><br /></td></tr>
 <tr class="separator:ac44619e8966a2889d1c5992b47a70e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f1f2508d087e22a4947a48be28c93c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a2f1f2508d087e22a4947a48be28c93c6">parseJComplex</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *req, <a class="el" href="service_8h.html#structelements">elements</a> *element, <a class="el" href="service_8h.html#structmaps">maps</a> *output, const char *name)</td></tr>
 <tr class="memdesc:a2f1f2508d087e22a4947a48be28c93c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse ComplexData value.  <a href="service__json_8c.html#a2f1f2508d087e22a4947a48be28c93c6">More...</a><br /></td></tr>
@@ -252,6 +252,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac080127b59355415e0d805b2a5ff506b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ac080127b59355415e0d805b2a5ff506b">produceApiSecuritySchemes</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *res)</td></tr>
 <tr class="memdesc:ac080127b59355415e0d805b2a5ff506b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce the JSON object for api securitySchemes.  <a href="service__json_8c.html#ac080127b59355415e0d805b2a5ff506b">More...</a><br /></td></tr>
 <tr class="separator:ac080127b59355415e0d805b2a5ff506b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f7b299d086a2dea93159ebe13123cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ac0f7b299d086a2dea93159ebe13123cc">produceApiSchemas</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *res)</td></tr>
+<tr class="memdesc:ac0f7b299d086a2dea93159ebe13123cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce the JSON object for api schemas.  <a href="service__json_8c.html#ac0f7b299d086a2dea93159ebe13123cc">More...</a><br /></td></tr>
+<tr class="separator:ac0f7b299d086a2dea93159ebe13123cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6c71807b4fdfedaea9adf771831ad80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ac6c71807b4fdfedaea9adf771831ad80">produceApiComponents</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, json_object *res)</td></tr>
 <tr class="separator:ac6c71807b4fdfedaea9adf771831ad80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bbbeff1bafcd08c8df710c2f6f34549"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a7bbbeff1bafcd08c8df710c2f6f34549">produceOperationId</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmaps">maps</a> *pmsContent, int iIndex, json_object *pjoRes)</td></tr>
@@ -1903,7 +1906,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Parse nested process json object. </p>
+<p>Parse a nested process json object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
@@ -2787,6 +2790,43 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac0f7b299d086a2dea93159ebe13123cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f7b299d086a2dea93159ebe13123cc">&#9670;&nbsp;</a></span>produceApiSchemas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void produceApiSchemas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>conf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>res</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Produce the JSON object for api schemas. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">res</td><td>the JSON object to populate with the parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac080127b59355415e0d805b2a5ff506b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac080127b59355415e0d805b2a5ff506b">&#9670;&nbsp;</a></span>produceApiSecuritySchemes()</h2>
 
@@ -2980,7 +3020,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 4 2024 14:56:55 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 13 2024 10:31:29 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

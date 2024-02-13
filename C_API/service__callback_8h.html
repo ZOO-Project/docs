@@ -76,6 +76,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aa5a1d6290029db4363c9993a9ccd9901"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8h.html#aa5a1d6290029db4363c9993a9ccd9901">invokeBasicCallback</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, int)</td></tr>
 <tr class="memdesc:aa5a1d6290029db4363c9993a9ccd9901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the callback in case there is a [subscriber] section containing one or more url parameter.  <a href="service__callback_8h.html#aa5a1d6290029db4363c9993a9ccd9901">More...</a><br /></td></tr>
 <tr class="separator:aa5a1d6290029db4363c9993a9ccd9901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab64cc87b05d51e13f782954dcdc2a4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8h.html#aab64cc87b05d51e13f782954dcdc2a4f">handleJobStatus</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *)</td></tr>
+<tr class="memdesc:aab64cc87b05d51e13f782954dcdc2a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the handleJobStatus for a given input.  <a href="service__callback_8h.html#aab64cc87b05d51e13f782954dcdc2a4f">More...</a><br /></td></tr>
+<tr class="separator:aab64cc87b05d51e13f782954dcdc2a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88cb0d30b6b3806a4481c9245d65660"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8h.html#ac88cb0d30b6b3806a4481c9245d65660">cleanupJobStatusThreads</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **)</td></tr>
+<tr class="memdesc:ac88cb0d30b6b3806a4481c9245d65660"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for the threads to end then, clean used memory.  <a href="service__callback_8h.html#ac88cb0d30b6b3806a4481c9245d65660">More...</a><br /></td></tr>
+<tr class="separator:ac88cb0d30b6b3806a4481c9245d65660"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a922d7ce935750d3e8ff6af577dbeda62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8h.html#a922d7ce935750d3e8ff6af577dbeda62">cleanupCallbackThreads</a> ()</td></tr>
 <tr class="memdesc:a922d7ce935750d3e8ff6af577dbeda62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for the threads to end then, clean used memory.  <a href="service__callback_8h.html#a922d7ce935750d3e8ff6af577dbeda62">More...</a><br /></td></tr>
 <tr class="separator:a922d7ce935750d3e8ff6af577dbeda62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,6 +103,64 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Wait for the threads to end then, clean used memory. </p>
+
+</div>
+</div>
+<a id="ac88cb0d30b6b3806a4481c9245d65660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88cb0d30b6b3806a4481c9245d65660">&#9670;&nbsp;</a></span>cleanupJobStatusThreads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cleanupJobStatusThreads </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wait for the threads to end then, clean used memory. </p>
+
+</div>
+</div>
+<a id="aab64cc87b05d51e13f782954dcdc2a4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab64cc87b05d51e13f782954dcdc2a4f">&#9670;&nbsp;</a></span>handleJobStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool handleJobStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsInputs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invoke the handleJobStatus for a given input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the main configuration file definitions </td></tr>
+    <tr><td class="paramname">pmsInputs</td><td>the inputs defined in the request </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool true in case of success, false in other cases </dd></dl>
 
 </div>
 </div>
@@ -141,7 +205,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 4 2024 14:56:55 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 13 2024 10:31:29 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

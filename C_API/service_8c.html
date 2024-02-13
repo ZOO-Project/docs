@@ -160,6 +160,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a63cfb8db98511c8b6513cf30b9f9155e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a63cfb8db98511c8b6513cf30b9f9155e">addToMapA</a> (<a class="el" href="service_8h.html#structmap">map</a> *pMap, const char *pccName, const char *pccValue)</td></tr>
 <tr class="memdesc:a63cfb8db98511c8b6513cf30b9f9155e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add key value pair to an existing map or append the value.  <a href="service_8c.html#a63cfb8db98511c8b6513cf30b9f9155e">More...</a><br /></td></tr>
 <tr class="separator:a63cfb8db98511c8b6513cf30b9f9155e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50ff0007a4b709d3f40dffffe957f5ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a50ff0007a4b709d3f40dffffe957f5ce">addToMapAF</a> (<a class="el" href="service_8h.html#structmap">map</a> *pMap, const char *pccName, const char *pccValue, const char *pccSeparator)</td></tr>
+<tr class="memdesc:a50ff0007a4b709d3f40dffffe957f5ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add key value pair to an existing map or append the value.  <a href="service_8c.html#a50ff0007a4b709d3f40dffffe957f5ce">More...</a><br /></td></tr>
+<tr class="separator:a50ff0007a4b709d3f40dffffe957f5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84509e18d8ffedc1b309e6cdcc89a20c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a84509e18d8ffedc1b309e6cdcc89a20c">addIntToMap</a> (<a class="el" href="service_8h.html#structmap">map</a> *pMap, const char *pccName, const int iValue)</td></tr>
 <tr class="memdesc:a84509e18d8ffedc1b309e6cdcc89a20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a key and an integer value to an existing map.  <a href="service_8c.html#a84509e18d8ffedc1b309e6cdcc89a20c">More...</a><br /></td></tr>
 <tr class="separator:a84509e18d8ffedc1b309e6cdcc89a20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -837,6 +840,58 @@ Functions</h2></td></tr>
     <tr><td class="paramname">pMap</td><td>the map to add the KVP </td></tr>
     <tr><td class="paramname">pccName</td><td>the key to add </td></tr>
     <tr><td class="paramname">pccValue</td><td>the corresponding value to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a50ff0007a4b709d3f40dffffe957f5ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50ff0007a4b709d3f40dffffe957f5ce">&#9670;&nbsp;</a></span>addToMapAF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addToMapAF </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td>
+          <td class="paramname"><em>pMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccSeparator</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add key value pair to an existing map or append the value. </p>
+<p>Use the pccSeparator parameter to separate the values.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pMap</td><td>the map to add the KVP </td></tr>
+    <tr><td class="paramname">pccName</td><td>the key to add </td></tr>
+    <tr><td class="paramname">pccValue</td><td>the corresponding value to add </td></tr>
+    <tr><td class="paramname">pccSeparator</td><td>the separator to use </td></tr>
   </table>
   </dd>
 </dl>
@@ -3117,7 +3172,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 4 2024 14:56:55 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 13 2024 10:31:29 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

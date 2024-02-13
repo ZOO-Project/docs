@@ -82,18 +82,31 @@ $(function() {
 <code>#include &quot;<a class="el" href="service__json_8h_source.html">service_json.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sqlapi_8h_source.html">sqlapi.h</a>&quot;</code><br />
 <code>#include &lt;<a class="el" href="ulinet_8h_source.html">ulinet.h</a>&gt;</code><br />
+<code>#include &quot;json_object_iterator.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:structlocal__params"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__hpc_8c.html#structlocal__params">local_params</a></td></tr>
 <tr class="memdesc:structlocal__params"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameter definition to be used for sending parameters to a thread.  <a href="service__internal__hpc_8c.html#structlocal__params">More...</a><br /></td></tr>
 <tr class="separator:structlocal__params"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structjob__handlers__params"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#structjob__handlers__params">job_handlers_params</a></td></tr>
+<tr class="memdesc:structjob__handlers__params"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameter definition to be used for sending parameters to a thread.  <a href="service__callback_8c.html#structjob__handlers__params">More...</a><br /></td></tr>
+<tr class="separator:structjob__handlers__params"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae6a8c14eb3dba565c68c0acefe5e4ede"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#ae6a8c14eb3dba565c68c0acefe5e4ede">isProhibited</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, const char *serviceName)</td></tr>
 <tr class="memdesc:ae6a8c14eb3dba565c68c0acefe5e4ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a service name is prohibited, meaning that the Kernel doesn't have to invoke the callback for this specific service.  <a href="service__callback_8c.html#ae6a8c14eb3dba565c68c0acefe5e4ede">More...</a><br /></td></tr>
 <tr class="separator:ae6a8c14eb3dba565c68c0acefe5e4ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e43bc2a3e51ceead6e9ef810aee8359"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#a3e43bc2a3e51ceead6e9ef810aee8359">_handleJobStatus</a> (void *args)</td></tr>
+<tr class="memdesc:a3e43bc2a3e51ceead6e9ef810aee8359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Practically handle the job status, meaning polling for status until the end of process execution.  <a href="service__callback_8c.html#a3e43bc2a3e51ceead6e9ef810aee8359">More...</a><br /></td></tr>
+<tr class="separator:a3e43bc2a3e51ceead6e9ef810aee8359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96940aa31beb95ac7ad3e885828dfbcc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#a96940aa31beb95ac7ad3e885828dfbcc">handleJobStatus</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmaps">maps</a> *pmsInputs)</td></tr>
+<tr class="memdesc:a96940aa31beb95ac7ad3e885828dfbcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the handleJobStatus for a given input.  <a href="service__callback_8c.html#a96940aa31beb95ac7ad3e885828dfbcc">More...</a><br /></td></tr>
+<tr class="separator:a96940aa31beb95ac7ad3e885828dfbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad84b7a01d3640f5f60310be0fd8ee8fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#ad84b7a01d3640f5f60310be0fd8ee8fa">cleanupJobStatusThreads</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **pmsInputs)</td></tr>
+<tr class="memdesc:ad84b7a01d3640f5f60310be0fd8ee8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for the threads to end then, clean used memory.  <a href="service__callback_8c.html#ad84b7a01d3640f5f60310be0fd8ee8fa">More...</a><br /></td></tr>
+<tr class="separator:ad84b7a01d3640f5f60310be0fd8ee8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad246d16c8269715b3aaa61d6bc5d2c88"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#ad246d16c8269715b3aaa61d6bc5d2c88">_invokeBasicCallback</a> (void *args)</td></tr>
 <tr class="memdesc:ad246d16c8269715b3aaa61d6bc5d2c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Practically invoke the callback, meaning sending the HTTP POST request.  <a href="service__callback_8c.html#ad246d16c8269715b3aaa61d6bc5d2c88">More...</a><br /></td></tr>
 <tr class="separator:ad246d16c8269715b3aaa61d6bc5d2c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,6 +119,12 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a0f2baa3697921e3a5e0d63b9ca7728b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#a0f2baa3697921e3a5e0d63b9ca7728b8">iNbJobsHandlers</a> =0</td></tr>
+<tr class="memdesc:a0f2baa3697921e3a5e0d63b9ca7728b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of threads associated with a job handler.  <a href="service__callback_8c.html#a0f2baa3697921e3a5e0d63b9ca7728b8">More...</a><br /></td></tr>
+<tr class="separator:a0f2baa3697921e3a5e0d63b9ca7728b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8db6097d8923375a9aeab62f96d61118"><td class="memItemLeft" align="right" valign="top">pthread_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#a8db6097d8923375a9aeab62f96d61118">ppJobsHandlers</a> =NULL</td></tr>
+<tr class="memdesc:a8db6097d8923375a9aeab62f96d61118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread array associated with a job handler.  <a href="service__callback_8c.html#a8db6097d8923375a9aeab62f96d61118">More...</a><br /></td></tr>
+<tr class="separator:a8db6097d8923375a9aeab62f96d61118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac99f2ae8c5e24b78f7246a76e809bfac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#ac99f2ae8c5e24b78f7246a76e809bfac">nbThreads</a> =0</td></tr>
 <tr class="memdesc:ac99f2ae8c5e24b78f7246a76e809bfac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of threads.  <a href="service__callback_8c.html#ac99f2ae8c5e24b78f7246a76e809bfac">More...</a><br /></td></tr>
 <tr class="separator:ac99f2ae8c5e24b78f7246a76e809bfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -127,6 +146,9 @@ Variables</h2></td></tr>
 <tr class="memitem:ad4b2d572656d2a1c7444a344cf3de5a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service__internal__hpc_8c.html#structlocal__params">local_params</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#ad4b2d572656d2a1c7444a344cf3de5a2">local_arguments</a></td></tr>
 <tr class="memdesc:ad4b2d572656d2a1c7444a344cf3de5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arguments array to give to the _invokeCallback thread's function.  <a href="service__callback_8c.html#ad4b2d572656d2a1c7444a344cf3de5a2">More...</a><br /></td></tr>
 <tr class="separator:ad4b2d572656d2a1c7444a344cf3de5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37da402d2169143965499c136d4ed098"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service__callback_8c.html#structjob__handlers__params">job_handlers_params</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#a37da402d2169143965499c136d4ed098">job_handler_arguments</a></td></tr>
+<tr class="memdesc:a37da402d2169143965499c136d4ed098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arguments array to give to the _handleJobStatus thread's function.  <a href="service__callback_8c.html#a37da402d2169143965499c136d4ed098">More...</a><br /></td></tr>
+<tr class="separator:a37da402d2169143965499c136d4ed098"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/><h2 class="groupheader">Data Structure Documentation</h2>
 <a name="structlocal__params" id="structlocal__params"></a>
@@ -189,7 +211,70 @@ the callback url maps </td></tr>
 
 </div>
 </div>
+<a name="structjob__handlers__params" id="structjob__handlers__params"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structjob__handlers__params">&#9670;&nbsp;</a></span>job_handlers_params</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct job_handlers_params</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Parameter definition to be used for sending parameters to a thread. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a8494152c64bd6bd167c051334ed0c735"></a><a class="el" href="service_8h.html#structmaps">maps</a> *</td>
+<td class="fieldname">
+conf</td>
+<td class="fielddoc">
+the main configuration file </td></tr>
+<tr><td class="fieldtype">
+<a id="a0e1643d5e5d9dca0bf3d946047c517f0"></a>int</td>
+<td class="fieldname">
+id</td>
+<td class="fielddoc">
+the job handler identifier </td></tr>
+<tr><td class="fieldtype">
+<a id="a77039733f7e5f4744d68845c62d668b6"></a><a class="el" href="service_8h.html#structmap">map</a> *</td>
+<td class="fieldname">
+input</td>
+<td class="fielddoc">
+the input maps </td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a3e43bc2a3e51ceead6e9ef810aee8359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e43bc2a3e51ceead6e9ef810aee8359">&#9670;&nbsp;</a></span>_handleJobStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* _handleJobStatus </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Practically handle the job status, meaning polling for status until the end of process execution. </p>
+<p>Once status is suceeded, the result is fetched. Depending on the transmission mode, the result is either downloaded or the value si stored in the input map.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td><a class="el" href="service__callback_8c.html#structjob__handlers__params" title="Parameter definition to be used for sending parameters to a thread.">job_handlers_params</a> containing the variables required </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad246d16c8269715b3aaa61d6bc5d2c88"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad246d16c8269715b3aaa61d6bc5d2c88">&#9670;&nbsp;</a></span>_invokeBasicCallback()</h2>
 
@@ -232,6 +317,64 @@ the callback url maps </td></tr>
 </div><div class="memdoc">
 
 <p>Wait for the threads to end then, clean used memory. </p>
+
+</div>
+</div>
+<a id="ad84b7a01d3640f5f60310be0fd8ee8fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad84b7a01d3640f5f60310be0fd8ee8fa">&#9670;&nbsp;</a></span>cleanupJobStatusThreads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cleanupJobStatusThreads </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"><em>pmsInputs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wait for the threads to end then, clean used memory. </p>
+
+</div>
+</div>
+<a id="a96940aa31beb95ac7ad3e885828dfbcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96940aa31beb95ac7ad3e885828dfbcc">&#9670;&nbsp;</a></span>handleJobStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool handleJobStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsInputs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invoke the handleJobStatus for a given input. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the main configuration file definitions </td></tr>
+    <tr><td class="paramname">pmsInputs</td><td>the inputs defined in the request </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool true in case of success, false in other cases </dd></dl>
 
 </div>
 </div>
@@ -328,6 +471,22 @@ the callback url maps </td></tr>
 
 </div>
 </div>
+<a id="a0f2baa3697921e3a5e0d63b9ca7728b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f2baa3697921e3a5e0d63b9ca7728b8">&#9670;&nbsp;</a></span>iNbJobsHandlers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int iNbJobsHandlers =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of threads associated with a job handler. </p>
+
+</div>
+</div>
 <a id="a0cc26cb87c1d360f0a566c0708b0a61e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0cc26cb87c1d360f0a566c0708b0a61e">&#9670;&nbsp;</a></span>isOngoing</h2>
 
@@ -341,6 +500,22 @@ the callback url maps </td></tr>
 </div><div class="memdoc">
 
 <p>Is there any ongoing HTTP request. </p>
+
+</div>
+</div>
+<a id="a37da402d2169143965499c136d4ed098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37da402d2169143965499c136d4ed098">&#9670;&nbsp;</a></span>job_handler_arguments</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="service__callback_8c.html#structjob__handlers__params">job_handlers_params</a>** job_handler_arguments</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Arguments array to give to the _handleJobStatus thread's function. </p>
 
 </div>
 </div>
@@ -408,6 +583,22 @@ the callback url maps </td></tr>
 
 </div>
 </div>
+<a id="a8db6097d8923375a9aeab62f96d61118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8db6097d8923375a9aeab62f96d61118">&#9670;&nbsp;</a></span>ppJobsHandlers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_t* ppJobsHandlers =NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Thread array associated with a job handler. </p>
+
+</div>
+</div>
 <a id="a606144b4ee3da32670f235888bb83094"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a606144b4ee3da32670f235888bb83094">&#9670;&nbsp;</a></span>steps</h2>
 
@@ -436,7 +627,7 @@ the callback url maps </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 4 2024 14:56:55 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 13 2024 10:31:29 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

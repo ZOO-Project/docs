@@ -105,23 +105,27 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="service__callback_8h.html#aa5a1d6290029db4363c9993a9ccd9901">invokeBasicCallback</a>(<a class="code" href="service_8h.html#structmaps">maps</a>*,<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#ifdef USE_CALLBACK</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">bool</span> invokeCallback(<a class="code" href="service_8h.html#structmaps">maps</a>*,<a class="code" href="service_8h.html#structmaps">maps</a>*,<a class="code" href="service_8h.html#structmaps">maps</a>*,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="service__callback_8h.html#a922d7ce935750d3e8ff6af577dbeda62">cleanupCallbackThreads</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="service__callback_8h.html#aab64cc87b05d51e13f782954dcdc2a4f">handleJobStatus</a>(<a class="code" href="service_8h.html#structmaps">maps</a>*,<a class="code" href="service_8h.html#structmaps">maps</a>*);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="service__callback_8h.html#ac88cb0d30b6b3806a4481c9245d65660">cleanupJobStatusThreads</a>(<a class="code" href="service_8h.html#structmaps">maps</a>**);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#ifdef USE_CALLBACK</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">bool</span> invokeCallback(<a class="code" href="service_8h.html#structmaps">maps</a>*,<a class="code" href="service_8h.html#structmaps">maps</a>*,<a class="code" href="service_8h.html#structmaps">maps</a>*,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="service__callback_8h.html#a922d7ce935750d3e8ff6af577dbeda62">cleanupCallbackThreads</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aservice_8h_html"><div class="ttname"><a href="service_8h.html">service.h</a></div></div>
-<div class="ttc" id="aservice__callback_8h_html_a922d7ce935750d3e8ff6af577dbeda62"><div class="ttname"><a href="service__callback_8h.html#a922d7ce935750d3e8ff6af577dbeda62">cleanupCallbackThreads</a></div><div class="ttdeci">void cleanupCallbackThreads()</div><div class="ttdoc">Wait for the threads to end then, clean used memory.</div><div class="ttdef"><b>Definition:</b> service_callback.c:1046</div></div>
-<div class="ttc" id="aservice__callback_8h_html_aa5a1d6290029db4363c9993a9ccd9901"><div class="ttname"><a href="service__callback_8h.html#aa5a1d6290029db4363c9993a9ccd9901">invokeBasicCallback</a></div><div class="ttdeci">bool invokeBasicCallback(maps *, int)</div><div class="ttdoc">Invoke the callback in case there is a [subscriber] section containing one or more url parameter.</div><div class="ttdef"><b>Definition:</b> service_callback.c:238</div></div>
+<div class="ttc" id="aservice__callback_8h_html_aab64cc87b05d51e13f782954dcdc2a4f"><div class="ttname"><a href="service__callback_8h.html#aab64cc87b05d51e13f782954dcdc2a4f">handleJobStatus</a></div><div class="ttdeci">bool handleJobStatus(maps *, maps *)</div><div class="ttdoc">Invoke the handleJobStatus for a given input.</div><div class="ttdef"><b>Definition:</b> service_callback.c:349</div></div>
+<div class="ttc" id="aservice__callback_8h_html_a922d7ce935750d3e8ff6af577dbeda62"><div class="ttname"><a href="service__callback_8h.html#a922d7ce935750d3e8ff6af577dbeda62">cleanupCallbackThreads</a></div><div class="ttdeci">void cleanupCallbackThreads()</div><div class="ttdoc">Wait for the threads to end then, clean used memory.</div><div class="ttdef"><b>Definition:</b> service_callback.c:1346</div></div>
+<div class="ttc" id="aservice__callback_8h_html_aa5a1d6290029db4363c9993a9ccd9901"><div class="ttname"><a href="service__callback_8h.html#aa5a1d6290029db4363c9993a9ccd9901">invokeBasicCallback</a></div><div class="ttdeci">bool invokeBasicCallback(maps *, int)</div><div class="ttdoc">Invoke the callback in case there is a [subscriber] section containing one or more url parameter.</div><div class="ttdef"><b>Definition:</b> service_callback.c:540</div></div>
+<div class="ttc" id="aservice__callback_8h_html_ac88cb0d30b6b3806a4481c9245d65660"><div class="ttname"><a href="service__callback_8h.html#ac88cb0d30b6b3806a4481c9245d65660">cleanupJobStatusThreads</a></div><div class="ttdeci">void cleanupJobStatusThreads(maps **)</div><div class="ttdoc">Wait for the threads to end then, clean used memory.</div><div class="ttdef"><b>Definition:</b> service_callback.c:381</div></div>
 <div class="ttc" id="aservice_8h_html_structmaps"><div class="ttname"><a href="service_8h.html#structmaps">maps</a></div><div class="ttdoc">linked list of map pointer</div><div class="ttdef"><b>Definition:</b> service.h:280</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 4 2024 14:56:55 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 13 2024 10:31:29 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

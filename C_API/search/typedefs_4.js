@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['registry_1620',['registry',['../service_8h.html#a33c3b760c012450922ff3b474fbfa59c',1,'service.h']]]
+  ['registry_1642',['registry',['../service_8h.html#a33c3b760c012450922ff3b474fbfa59c',1,'service.h']]]
 ];

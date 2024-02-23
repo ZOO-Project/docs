@@ -1,7 +1,7 @@
 var searchData=
 [
   ['handle_274',['handle',['../ulinet_8h.html#a9d667228a9d8d957f86db95e3e2594a2',1,'_HINTERNET::handle()'],['../ulinet_8h.html#a0b631b2321ff2b1b74eafd582140e4e9',1,'HINTERNET::handle()']]],
-  ['handlejobstatus_275',['handleJobStatus',['../service__callback_8c.html#a96940aa31beb95ac7ad3e885828dfbcc',1,'handleJobStatus(maps *pmsConf, maps *pmsInputs):&#160;service_callback.c'],['../service__callback_8h.html#aab64cc87b05d51e13f782954dcdc2a4f',1,'handleJobStatus(maps *, maps *):&#160;service_callback.c']]],
+  ['handlejobstatus_275',['handleJobStatus',['../service__callback_8c.html#aff51352a3e578191432ef6d7bc9c41cb',1,'handleJobStatus(maps *pmsConf, maps *pmsInputs, int iCnt):&#160;service_callback.c'],['../service__callback_8h.html#a7ae269738eb866bf88d7be4aec6bca18',1,'handleJobStatus(maps *, maps *, int):&#160;service_callback.c']]],
   ['hascachefile_276',['hasCacheFile',['../ulinet_8h.html#a916493db2ace515593b263bc08373c15',1,'_HINTERNET']]],
   ['hasdbs_277',['hasDbs',['../service__internal_8c.html#a541df8f0aececd1e4d0f2321e9228f33',1,'hasDbs(maps *pmsConf):&#160;service_internal.c'],['../service__internal_8h.html#affb3c611c442367dec9974388029310d',1,'hasDbs(maps *):&#160;service_internal.c']]],
   ['haselement_278',['hasElement',['../service_8c.html#af38d21e5e7b150e6d42e53bcb555a4b9',1,'hasElement(elements *peElem, const char *pccKey):&#160;service.c'],['../service_8h.html#ab033282f1d8ca1266999157a3836181f',1,'hasElement(elements *, const char *):&#160;service.c']]],

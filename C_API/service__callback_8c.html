@@ -101,9 +101,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a3e43bc2a3e51ceead6e9ef810aee8359"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#a3e43bc2a3e51ceead6e9ef810aee8359">_handleJobStatus</a> (void *args)</td></tr>
 <tr class="memdesc:a3e43bc2a3e51ceead6e9ef810aee8359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Practically handle the job status, meaning polling for status until the end of process execution.  <a href="service__callback_8c.html#a3e43bc2a3e51ceead6e9ef810aee8359">More...</a><br /></td></tr>
 <tr class="separator:a3e43bc2a3e51ceead6e9ef810aee8359"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96940aa31beb95ac7ad3e885828dfbcc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#a96940aa31beb95ac7ad3e885828dfbcc">handleJobStatus</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmaps">maps</a> *pmsInputs)</td></tr>
-<tr class="memdesc:a96940aa31beb95ac7ad3e885828dfbcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the handleJobStatus for a given input.  <a href="service__callback_8c.html#a96940aa31beb95ac7ad3e885828dfbcc">More...</a><br /></td></tr>
-<tr class="separator:a96940aa31beb95ac7ad3e885828dfbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff51352a3e578191432ef6d7bc9c41cb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#aff51352a3e578191432ef6d7bc9c41cb">handleJobStatus</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmaps">maps</a> *pmsInputs, int iCnt)</td></tr>
+<tr class="memdesc:aff51352a3e578191432ef6d7bc9c41cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the handleJobStatus for a given input.  <a href="service__callback_8c.html#aff51352a3e578191432ef6d7bc9c41cb">More...</a><br /></td></tr>
+<tr class="separator:aff51352a3e578191432ef6d7bc9c41cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad84b7a01d3640f5f60310be0fd8ee8fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#ad84b7a01d3640f5f60310be0fd8ee8fa">cleanupJobStatusThreads</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **pmsInputs)</td></tr>
 <tr class="memdesc:ad84b7a01d3640f5f60310be0fd8ee8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for the threads to end then, clean used memory.  <a href="service__callback_8c.html#ad84b7a01d3640f5f60310be0fd8ee8fa">More...</a><br /></td></tr>
 <tr class="separator:ad84b7a01d3640f5f60310be0fd8ee8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,6 +122,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a0f2baa3697921e3a5e0d63b9ca7728b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#a0f2baa3697921e3a5e0d63b9ca7728b8">iNbJobsHandlers</a> =0</td></tr>
 <tr class="memdesc:a0f2baa3697921e3a5e0d63b9ca7728b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of threads associated with a job handler.  <a href="service__callback_8c.html#a0f2baa3697921e3a5e0d63b9ca7728b8">More...</a><br /></td></tr>
 <tr class="separator:a0f2baa3697921e3a5e0d63b9ca7728b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9423ae3e738caaee2953044d4929d58c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#a9423ae3e738caaee2953044d4929d58c">iNbJobsHandled</a> =0</td></tr>
+<tr class="memdesc:a9423ae3e738caaee2953044d4929d58c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of job handled.  <a href="service__callback_8c.html#a9423ae3e738caaee2953044d4929d58c">More...</a><br /></td></tr>
+<tr class="separator:a9423ae3e738caaee2953044d4929d58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8db6097d8923375a9aeab62f96d61118"><td class="memItemLeft" align="right" valign="top">pthread_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__callback_8c.html#a8db6097d8923375a9aeab62f96d61118">ppJobsHandlers</a> =NULL</td></tr>
 <tr class="memdesc:a8db6097d8923375a9aeab62f96d61118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread array associated with a job handler.  <a href="service__callback_8c.html#a8db6097d8923375a9aeab62f96d61118">More...</a><br /></td></tr>
 <tr class="separator:a8db6097d8923375a9aeab62f96d61118"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -340,8 +343,8 @@ the input maps </td></tr>
 
 </div>
 </div>
-<a id="a96940aa31beb95ac7ad3e885828dfbcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96940aa31beb95ac7ad3e885828dfbcc">&#9670;&nbsp;</a></span>handleJobStatus()</h2>
+<a id="aff51352a3e578191432ef6d7bc9c41cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff51352a3e578191432ef6d7bc9c41cb">&#9670;&nbsp;</a></span>handleJobStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +359,13 @@ the input maps </td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>pmsInputs</em>&#160;</td>
+          <td class="paramname"><em>pmsInputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iCnt</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -468,6 +477,22 @@ the input maps </td></tr>
 </div><div class="memdoc">
 
 <p>Current step. </p>
+
+</div>
+</div>
+<a id="a9423ae3e738caaee2953044d4929d58c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9423ae3e738caaee2953044d4929d58c">&#9670;&nbsp;</a></span>iNbJobsHandled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int iNbJobsHandled =0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of job handled. </p>
 
 </div>
 </div>
@@ -627,7 +652,7 @@ the input maps </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 23 2024 13:50:34 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 23 2024 16:06:52 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

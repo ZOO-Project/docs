@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ZOO-Project: service_internal_otb.h Source File</title>
+<title>ZOO-Project: service_internal_gdal.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,13 +62,13 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">service_internal_otb.h</div>  </div>
+<div class="title">service_internal_gdal.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="service__internal__otb_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="service__internal__gdal_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Author : Gérald FENOY</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2015 GeoLabs SARL</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *  Copyright 2024 GeoLabs SARL</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
@@ -88,39 +88,28 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> * THE SOFTWARE.</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef ZOO_SERVICE_INTERNAL_OTB_H</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define ZOO_SERVICE_INTERNAL_OTB_H 1</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#pragma once </span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;otbWrapperApplication.h&quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;otbWrapperApplicationRegistry.h&quot;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;otbWrapperInputImageListParameter.h&quot;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;otbWrapperListViewParameter.h&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;otbWrapperAddProcessToWatchEvent.h&quot;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="otbZooWatcher_8h.html">otbZooWatcher.h</a>&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="service__internal_8h.html">service_internal.h</a>&quot;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="service_8h.html">service.h</a>&quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifdef WIN32</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;windows.h&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;direct.h&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="service__internal__otb_8h.html#a0ac473866b3a4ff43863399c7d8c1ea8">   46</a></span>&#160;<span class="keyword">typedef</span> std::vector&lt;ZooWatcher *&gt; <a class="code" href="service__internal__otb_8h.html#a0ac473866b3a4ff43863399c7d8c1ea8">WatcherListType</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">int</span> <a class="code" href="service__internal__otb_8h.html#a79ea2bb03b1233679e626ba99b7e62f2">zoo_otb_support</a>(<a class="code" href="service_8h.html#structmaps">maps</a>**,<a class="code" href="service_8h.html#structmap">map</a>*,<a class="code" href="service_8h.html#structservice">service</a>*,<a class="code" href="service_8h.html#structmaps">maps</a>**,<a class="code" href="service_8h.html#structmaps">maps</a>**);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifndef ZOO_SERVICE_INTERNAL_GDAL_H</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define ZOO_SERVICE_INTERNAL_GDAL_H 1</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="service_8h.html">service.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> <span class="keywordtype">void</span> <a class="code" href="service__internal__gdal_8h.html#a6bfef84927130921c1e941d093ae8646">GdalZOOServiceInit</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>*,<span class="keywordtype">int</span>*,<span class="keywordtype">char</span>***,<a class="code" href="service_8h.html#structmaps">maps</a>*,<a class="code" href="service_8h.html#structmaps">maps</a>*,<a class="code" href="service_8h.html#structmaps">maps</a>*);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aservice_8h_html"><div class="ttname"><a href="service_8h.html">service.h</a></div></div>
-<div class="ttc" id="aservice_8h_html_structservice"><div class="ttname"><a href="service_8h.html#structservice">service</a></div><div class="ttdoc">Metadata information about a full Service.</div><div class="ttdef"><b>Definition:</b> service.h:317</div></div>
-<div class="ttc" id="aservice__internal__otb_8h_html_a0ac473866b3a4ff43863399c7d8c1ea8"><div class="ttname"><a href="service__internal__otb_8h.html#a0ac473866b3a4ff43863399c7d8c1ea8">WatcherListType</a></div><div class="ttdeci">std::vector&lt; ZooWatcher * &gt; WatcherListType</div><div class="ttdoc">A vector to store the ZooWatcher.</div><div class="ttdef"><b>Definition:</b> service_internal_otb.h:46</div></div>
 <div class="ttc" id="aservice_8h_html_structmaps"><div class="ttname"><a href="service_8h.html#structmaps">maps</a></div><div class="ttdoc">linked list of map pointer</div><div class="ttdef"><b>Definition:</b> service.h:280</div></div>
-<div class="ttc" id="aservice__internal__otb_8h_html_a79ea2bb03b1233679e626ba99b7e62f2"><div class="ttname"><a href="service__internal__otb_8h.html#a79ea2bb03b1233679e626ba99b7e62f2">zoo_otb_support</a></div><div class="ttdeci">int zoo_otb_support(maps **, map *, service *, maps **, maps **)</div><div class="ttdoc">Load and run an OTB Application corresponding to the service by using inputs parameters.</div><div class="ttdef"><b>Definition:</b> service_internal_otb.c:116</div></div>
-<div class="ttc" id="aservice__internal_8h_html"><div class="ttname"><a href="service__internal_8h.html">service_internal.h</a></div></div>
-<div class="ttc" id="aservice_8h_html_structmap"><div class="ttname"><a href="service_8h.html#structmap">map</a></div><div class="ttdoc">KVP linked list.</div><div class="ttdef"><b>Definition:</b> service.h:259</div></div>
-<div class="ttc" id="aotbZooWatcher_8h_html"><div class="ttname"><a href="otbZooWatcher_8h.html">otbZooWatcher.h</a></div></div>
+<div class="ttc" id="aservice_8h_html_a25a4c8be42fe6068166c381a32d15663"><div class="ttname"><a href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a></div><div class="ttdeci">#define ZOO_DLL_EXPORT</div><div class="ttdef"><b>Definition:</b> service.h:33</div></div>
+<div class="ttc" id="aservice__internal__gdal_8h_html_a6bfef84927130921c1e941d093ae8646"><div class="ttname"><a href="service__internal__gdal_8h.html#a6bfef84927130921c1e941d093ae8646">GdalZOOServiceInit</a></div><div class="ttdeci">ZOO_DLL_EXPORT void GdalZOOServiceInit(const char *, int *, char ***, maps *, maps *, maps *)</div><div class="ttdoc">Convert input and output maps to arguments for the GDAL Application to execute as a service.</div><div class="ttdef"><b>Definition:</b> service_internal_gdal.c:41</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Wed Apr 24 2024 14:10:29 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">

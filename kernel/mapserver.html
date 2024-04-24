@@ -277,8 +277,8 @@
 <li><p><a class="reference external" href="http://mapserver/org">MapServer</a> version &gt;= 6.0.1</p></li>
 </ul>
 </div></blockquote>
-<p>First download the lastest zoo-kernel by checking out the svn. Use the following command from do the directory where your previously checked out (in this example we will use <code class="docutils literal notranslate"><span class="pre">$PREV_SVN_CO</span></code> to design this directory).</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>svn checkout http://svn.zoo-project.org/svn/trunk/ $PREV_SVN_CO
+<p>First download the lastest zoo-kernel by cloning the GitHub repository. Use the following command from do the directory where you previously cloned the repo (in this example we will use <code class="docutils literal notranslate"><span class="pre">$PREV_SVN_CO</span></code> to design this directory).</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ZOO-Project/ZOO-Project.git $PREV_SVN_CO
 cd $PREV_SVN_CO
 </pre></div>
 </div>
@@ -316,6 +316,7 @@ layer.</p>
 <span class="n">msStylePoint</span><span class="o">=</span><span class="n">STYLE</span> <span class="n">COLOR</span> <span class="mi">202</span> <span class="mi">109</span> <span class="mi">19</span> <span class="n">OUTLINECOLOR</span> <span class="mi">105</span> <span class="mi">105</span> <span class="mi">105</span> <span class="n">SYMBOL</span> <span class="mi">0</span> <span class="kr">SIZE</span> <span class="mi">14</span> <span class="kr">END</span>
 </pre></div>
 </div>
+<p>You can add a specific <code class="docutils literal notranslate"><span class="pre">[ms_web_metadata]</span></code> section for adding parameters and value to the <code class="docutils literal notranslate"><span class="pre">WEB</span> <span class="pre">METADATA</span></code> block of the produced mapfile (ie. <code class="docutils literal notranslate"><span class="pre">wms_allow_getmap_without_styles=true</span></code>).</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">dataPath</span></code> directory is mandatory and must belong to the Apache user.</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>
 <span class="n">chown</span><span class="w"> </span><span class="o">-</span><span class="n">r</span><span class="w"> </span><span class="n">apache</span><span class="p">:</span><span class="n">apache</span><span class="w"> </span><span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">temp</span><span class="o">/</span>

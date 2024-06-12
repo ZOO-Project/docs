@@ -149,6 +149,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8d63d55b9e48cae04148f5412d45cc5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__internal_8c.html#a8d63d55b9e48cae04148f5412d45cc5e">runGetStatus</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, char *pid, char *req)</td></tr>
 <tr class="memdesc:a8d63d55b9e48cae04148f5412d45cc5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run GetStatus requests.  <a href="server__internal_8c.html#a8d63d55b9e48cae04148f5412d45cc5e">More...</a><br /></td></tr>
 <tr class="separator:a8d63d55b9e48cae04148f5412d45cc5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a54ad06988b1bb6439ebbe301151597"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__internal_8c.html#a9a54ad06988b1bb6439ebbe301151597">removeSubdirectory</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *acDirectoryName)</td></tr>
+<tr class="memdesc:a9a54ad06988b1bb6439ebbe301151597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a directory and its content.  <a href="server__internal_8c.html#a9a54ad06988b1bb6439ebbe301151597">More...</a><br /></td></tr>
+<tr class="separator:a9a54ad06988b1bb6439ebbe301151597"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada5d921a573e91ea1a090ff33dd40a99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__internal_8c.html#ada5d921a573e91ea1a090ff33dd40a99">runDismiss</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, char *pid)</td></tr>
 <tr class="memdesc:ada5d921a573e91ea1a090ff33dd40a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run Dismiss requests.  <a href="server__internal_8c.html#ada5d921a573e91ea1a090ff33dd40a99">More...</a><br /></td></tr>
 <tr class="separator:ada5d921a573e91ea1a090ff33dd40a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -933,6 +936,37 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9a54ad06988b1bb6439ebbe301151597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a54ad06988b1bb6439ebbe301151597">&#9670;&nbsp;</a></span>removeSubdirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeSubdirectory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>acDirectoryName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a directory and its content. </p>
+<p>@pmsConf the maps containing the setting of the main.cfg file @acDirectory the directory to remove </p>
+
+</div>
+</div>
 <a id="ada5d921a573e91ea1a090ff33dd40a99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada5d921a573e91ea1a090ff33dd40a99">&#9670;&nbsp;</a></span>runDismiss()</h2>
 
@@ -1177,7 +1211,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 7 2024 15:03:15 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 12 2024 09:48:11 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

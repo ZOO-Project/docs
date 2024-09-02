@@ -138,7 +138,7 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">char</span>* <a class="code" href="server__internal_8h.html#a994f9a791870ccfd43136b3b67342339">produceErrorMessage</a>(<a class="code" href="service_8h.html#structmaps">maps</a>*);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="server__internal_8h.html#a602f143defb8154b97bb28f5fb8cc2e7">zoo_path_compare</a>(<span class="keywordtype">char</span>* path1, <span class="keywordtype">char</span>* path2);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="server__internal_8h.html#a6e47873a12bd11fb6bbc818881c5005a">getServicesNamespacePath</a>(<a class="code" href="service_8h.html#structmaps">maps</a>*,<span class="keywordtype">char</span>*,<span class="keywordtype">char</span>*,<span class="keywordtype">int</span>);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#ifdef WIN32</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">char</span>* getMapsAsKVP(<a class="code" href="service_8h.html#structmaps">maps</a>*,<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -177,10 +177,11 @@ $(function() {
 <div class="ttc" id="aserver__internal_8h_html_a32dac1f9eabe233f67c003f09626bd1f"><div class="ttname"><a href="server__internal_8h.html#a32dac1f9eabe233f67c003f09626bd1f">url_decode</a></div><div class="ttdeci">char * url_decode(char *)</div><div class="ttdoc">Decode an URLEncoded url.</div><div class="ttdef"><b>Definition:</b> server_internal.c:254</div></div>
 <div class="ttc" id="aserver__internal_8h_html_a8b8e432a192855c0a83f1d05d9d4d8cd"><div class="ttname"><a href="server__internal_8h.html#a8b8e432a192855c0a83f1d05d9d4d8cd">readServiceFile</a></div><div class="ttdeci">int readServiceFile(maps *, char *, service **, char *)</div><div class="ttdoc">Parse the service file using getServiceFromFile or use getServiceFromYAML if YAML support was activat...</div><div class="ttdef"><b>Definition:</b> server_internal.c:1262</div></div>
 <div class="ttc" id="aserver__internal_8h_html_a0fc909db00fc696b09cd34129eeb5266"><div class="ttname"><a href="server__internal_8h.html#a0fc909db00fc696b09cd34129eeb5266">createRegistry</a></div><div class="ttdeci">int createRegistry(maps *, registry **, char *)</div><div class="ttdoc">Create the profile registry.</div><div class="ttdef"><b>Definition:</b> server_internal.c:1288</div></div>
+<div class="ttc" id="aserver__internal_8h_html_a6e47873a12bd11fb6bbc818881c5005a"><div class="ttname"><a href="server__internal_8h.html#a6e47873a12bd11fb6bbc818881c5005a">getServicesNamespacePath</a></div><div class="ttdeci">int getServicesNamespacePath(maps *, char *, char *, int)</div><div class="ttdoc">Checks if the zooServicesNamespace map is present in the main map; if it is, the path to the director...</div><div class="ttdef"><b>Definition:</b> server_internal.c:1389</div></div>
 <div class="ttc" id="aserver__internal_8h_html_a4f9afe994bf73a10752eb4b177551364"><div class="ttname"><a href="server__internal_8h.html#a4f9afe994bf73a10752eb4b177551364">getLastErrorMessage</a></div><div class="ttdeci">char * getLastErrorMessage()</div><div class="ttdoc">Access the last error message returned by the OS when trying to dynamically load a shared library.</div><div class="ttdef"><b>Definition:</b> server_internal.c:895</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 30 2024 07:03:19 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 2 2024 14:59:14 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

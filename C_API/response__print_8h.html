@@ -132,6 +132,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a3ada67d2d34c38c2f8c6cb0619d792f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8h.html#a3ada67d2d34c38c2f8c6cb0619d792f3">printSessionHeaders</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *)</td></tr>
 <tr class="memdesc:a3ada67d2d34c38c2f8c6cb0619d792f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the Set-Cookie header if necessary (conf["lenv"]["cookie"]) and save the session file.  <a href="response__print_8h.html#a3ada67d2d34c38c2f8c6cb0619d792f3">More...</a><br /></td></tr>
 <tr class="separator:a3ada67d2d34c38c2f8c6cb0619d792f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a197687ec42b76b24ace30e9992fdbb37"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8h.html#a197687ec42b76b24ace30e9992fdbb37">printAFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, char *, <a class="el" href="service_8h.html#a4968ed7a77d3a27aac102c9bc855888b">zStatStruct</a>, void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *))</td></tr>
+<tr class="memdesc:a197687ec42b76b24ace30e9992fdbb37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a file red as binary.  <a href="response__print_8h.html#a197687ec42b76b24ace30e9992fdbb37">More...</a><br /></td></tr>
+<tr class="separator:a197687ec42b76b24ace30e9992fdbb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e04e69e842ab55652fbe36f695c96bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8h.html#a3e04e69e842ab55652fbe36f695c96bc">zooXmlSearchForNs</a> (const char *)</td></tr>
 <tr class="memdesc:a3e04e69e842ab55652fbe36f695c96bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search for an existing XML namespace in usedNS.  <a href="response__print_8h.html#a3e04e69e842ab55652fbe36f695c96bc">More...</a><br /></td></tr>
 <tr class="separator:a3e04e69e842ab55652fbe36f695c96bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -854,6 +857,55 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a map containing all the bounding box keys </dd></dl>
+
+</div>
+</div>
+<a id="a197687ec42b76b24ace30e9992fdbb37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a197687ec42b76b24ace30e9992fdbb37">&#9670;&nbsp;</a></span>printAFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int printAFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcFilePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#a4968ed7a77d3a27aac102c9bc855888b">zStatStruct</a>&#160;</td>
+          <td class="paramname"><em>zssStatus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print a file red as binary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pjoRes</td><td>the JSON object to populate </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2492,7 +2544,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 30 2024 07:03:19 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 2 2024 14:59:14 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

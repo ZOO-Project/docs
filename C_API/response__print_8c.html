@@ -81,6 +81,9 @@ Functions</h2></td></tr>
 <tr class="memitem:abd6fc4eb88b230478a4af3657f9cda27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#abd6fc4eb88b230478a4af3657f9cda27">ensureFiltered</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **, const char *)</td></tr>
 <tr class="memdesc:abd6fc4eb88b230478a4af3657f9cda27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the execution of the security module in case security is activated.  <a href="response__print_8c.html#abd6fc4eb88b230478a4af3657f9cda27">More...</a><br /></td></tr>
 <tr class="separator:abd6fc4eb88b230478a4af3657f9cda27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accaa44eb6933d8368bd9e858b6a994b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#accaa44eb6933d8368bd9e858b6a994b3">printAFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *pcFilePath, <a class="el" href="service_8h.html#a4968ed7a77d3a27aac102c9bc855888b">zStatStruct</a> zssStatus, void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *))</td></tr>
+<tr class="memdesc:accaa44eb6933d8368bd9e858b6a994b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a file red as binary.  <a href="response__print_8c.html#accaa44eb6933d8368bd9e858b6a994b3">More...</a><br /></td></tr>
+<tr class="separator:accaa44eb6933d8368bd9e858b6a994b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae354e7b920d69d1bae4afce8100b2c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#aae354e7b920d69d1bae4afce8100b2c2">addPrefix</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmap">map</a> *pmLevel, <a class="el" href="service_8h.html#structservice">service</a> *psService)</td></tr>
 <tr class="memdesc:aae354e7b920d69d1bae4afce8100b2c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add prefix to the service name.  <a href="response__print_8c.html#aae354e7b920d69d1bae4afce8100b2c2">More...</a><br /></td></tr>
 <tr class="separator:aae354e7b920d69d1bae4afce8100b2c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -935,6 +938,55 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a map containing all the bounding box keys </dd></dl>
+
+</div>
+</div>
+<a id="accaa44eb6933d8368bd9e858b6a994b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accaa44eb6933d8368bd9e858b6a994b3">&#9670;&nbsp;</a></span>printAFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int printAFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcFilePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#a4968ed7a77d3a27aac102c9bc855888b">zStatStruct</a>&#160;</td>
+          <td class="paramname"><em>zssStatus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(funcError)(<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> *)&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print a file red as binary. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pjoRes</td><td>the JSON object to populate </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2230,7 +2282,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 30 2024 07:03:19 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 2 2024 14:59:14 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -155,6 +155,9 @@ Functions</h2></td></tr>
 <tr class="separator:a994f9a791870ccfd43136b3b67342339"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a602f143defb8154b97bb28f5fb8cc2e7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__internal_8h.html#a602f143defb8154b97bb28f5fb8cc2e7">zoo_path_compare</a> (char *path1, char *path2)</td></tr>
 <tr class="separator:a602f143defb8154b97bb28f5fb8cc2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e47873a12bd11fb6bbc818881c5005a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__internal_8h.html#a6e47873a12bd11fb6bbc818881c5005a">getServicesNamespacePath</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, char *, char *, int)</td></tr>
+<tr class="memdesc:a6e47873a12bd11fb6bbc818881c5005a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the zooServicesNamespace map is present in the main map; if it is, the path to the directory where the ZOO-kernel should search for service providers will be updated.  <a href="server__internal_8h.html#a6e47873a12bd11fb6bbc818881c5005a">More...</a><br /></td></tr>
+<tr class="separator:a6e47873a12bd11fb6bbc818881c5005a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a571d206f685143270b33524e8426e004"></a>
@@ -560,6 +563,57 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>1 on success, -1 if error occurred </dd></dl>
+
+</div>
+</div>
+<a id="a6e47873a12bd11fb6bbc818881c5005a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e47873a12bd11fb6bbc818881c5005a">&#9670;&nbsp;</a></span>getServicesNamespacePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getServicesNamespacePath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>oldPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>newPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the zooServicesNamespace map is present in the main map; if it is, the path to the directory where the ZOO-kernel should search for service providers will be updated. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">oldPath</td><td>default location where the ZOO-kernel should search for service providers </td></tr>
+    <tr><td class="paramname">newPath</td><td>location where the ZOO-kernel should search for service providers considering the namespace </td></tr>
+    <tr><td class="paramname">maxSize</td><td>maximum number of bytes to be used in the newPath buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1059,7 +1113,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 30 2024 07:03:19 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 2 2024 14:59:14 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

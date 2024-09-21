@@ -232,9 +232,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab503628df0552e38b5b69d5ecb1c552b"><td class="memItemLeft" align="right" valign="top">json_object *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ab503628df0552e38b5b69d5ecb1c552b">json_readFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, char *filePath)</td></tr>
 <tr class="memdesc:ab503628df0552e38b5b69d5ecb1c552b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a json file.  <a href="service__json_8c.html#ab503628df0552e38b5b69d5ecb1c552b">More...</a><br /></td></tr>
 <tr class="separator:ab503628df0552e38b5b69d5ecb1c552b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6076645ace991892dd105c96452d14ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a6076645ace991892dd105c96452d14ef">json_getStatusAttributes</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmap">map</a> *pmSessId, json_object *res)</td></tr>
-<tr class="memdesc:a6076645ace991892dd105c96452d14ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch the statusFields attributes.  <a href="service__json_8c.html#a6076645ace991892dd105c96452d14ef">More...</a><br /></td></tr>
-<tr class="separator:a6076645ace991892dd105c96452d14ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27caf4aeea19c9db23efa6e976faed13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a27caf4aeea19c9db23efa6e976faed13">json_getStatusAttributes</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structmap">map</a> *pmSessId, json_object *res, int iStatus)</td></tr>
+<tr class="memdesc:a27caf4aeea19c9db23efa6e976faed13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch the statusFields attributes.  <a href="service__json_8c.html#a27caf4aeea19c9db23efa6e976faed13">More...</a><br /></td></tr>
+<tr class="separator:a27caf4aeea19c9db23efa6e976faed13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06095c040b5f261b170edca3b0608b5e"><td class="memItemLeft" align="right" valign="top">json_object *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a06095c040b5f261b170edca3b0608b5e">createStatus</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, int status)</td></tr>
 <tr class="memdesc:a06095c040b5f261b170edca3b0608b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the json object for job status.  <a href="service__json_8c.html#a06095c040b5f261b170edca3b0608b5e">More...</a><br /></td></tr>
 <tr class="separator:a06095c040b5f261b170edca3b0608b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1237,8 +1237,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6076645ace991892dd105c96452d14ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6076645ace991892dd105c96452d14ef">&#9670;&nbsp;</a></span>json_getStatusAttributes()</h2>
+<a id="a27caf4aeea19c9db23efa6e976faed13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27caf4aeea19c9db23efa6e976faed13">&#9670;&nbsp;</a></span>json_getStatusAttributes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1259,7 +1259,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">json_object *&#160;</td>
-          <td class="paramname"><em>res</em>&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iStatus</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1270,6 +1276,15 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fetch the statusFields attributes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">pmSessId</td><td>the map pointer to the session id </td></tr>
+    <tr><td class="paramname">res</td><td>the object to store metadata informations </td></tr>
+    <tr><td class="paramname">status</td><td>integer of the current execution status </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="service__json_8h.html#a3af51ac8a78580ada145e94ad2717c39" title="Names of field to output in the status object.">statusFields</a>, </dd></dl>
 
 </div>
@@ -3265,7 +3280,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 21 2024 14:07:48 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 21 2024 14:21:30 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

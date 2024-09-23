@@ -805,6 +805,20 @@ the HelloPy processes.</p>
 <p>In the example, we used the demonstration <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/blob/main/zoo-project/zoo-services/utils/security/basicAuth/service.c">securityIn and securityOut
 services</a>
 for handling HTTP Basic Authentication.</p>
+<section id="filter-in-and-filter-out">
+<h4>filter_in and filter_out<a class="headerlink" href="#filter-in-and-filter-out" title="Permalink to this heading">¶</a></h4>
+<p>One can use the <code class="docutils literal notranslate"><span class="pre">filter_in</span></code> service to secure an endpoint by verifying that authentication is valid.
+If a service in <code class="docutils literal notranslate"><span class="pre">filter_in</span></code> returns <code class="docutils literal notranslate"><span class="pre">SERVICE_SUCCEEDED</span></code>, the authentication succeeded, and the request handling can continue; if <code class="docutils literal notranslate"><span class="pre">SERVICE_FAILED</span></code>, it didn’t, the handling should stop.</p>
+<p>If endpoints do not require authentication, the sections <code class="docutils literal notranslate"><span class="pre">filter_in</span></code> and <code class="docutils literal notranslate"><span class="pre">filter_out</span></code> can still be activated.
+The services are invoked the same way.
+The only difference is that the ZOO-Kernel won’t consider the value returned by the service when deciding whether to continue handling the request.</p>
+<p>At runtime, the ZOO-Kernel invokes the <code class="docutils literal notranslate"><span class="pre">filter_in</span></code> services, if any, before handling the request in any way.
+This means that the service can stop the request from being processed.
+To achieve this, the service should define in the <code class="docutils literal notranslate"><span class="pre">lenv</span></code> section a <code class="docutils literal notranslate"><span class="pre">response</span></code> key containing the response body to be returned or a <code class="docutils literal notranslate"><span class="pre">response_generated_file</span></code> key specifying the full path to the file where the response is stored (ie. <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/blob/main/zoo-project/zoo-services/utils/security/eoapi-proxy/eoapi_service.py#L43">eoapi-proxy</a>).</p>
+<p>On the other hand, the <code class="docutils literal notranslate"><span class="pre">filter_out</span></code> is invoked just before returning the produced response back to the client.
+The service can modify the response to return to the client.
+From the <code class="docutils literal notranslate"><span class="pre">filter_out</span></code> service, the developer can access the current response as a string using the <code class="docutils literal notranslate"><span class="pre">json_response_object</span></code> key from the <code class="docutils literal notranslate"><span class="pre">lenv</span></code> section (ie. <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/tree/main/zoo-project/zoo-services/utils/security/eoapi-proxy">eoapi-proxy</a>).
+One can use this key to update the response’s content.</p>
 <p class="rubric">Footnotes</p>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="f1" role="note">
@@ -820,6 +834,7 @@ for handling HTTP Basic Authentication.</p>
 <p>ZOO-Kernel and MapServer are sharing the same metadata for OGC Web Services if the <a class="reference internal" href="mapserver.html#kernel-mapserver"><span class="std std-ref">Optional MapServer support</span></a> is activated.</p>
 </aside>
 </aside>
+</section>
 </section>
 </section>
 </section>

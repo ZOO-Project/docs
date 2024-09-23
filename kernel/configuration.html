@@ -733,6 +733,17 @@ script in the cgi-bin directory of your web server.</p>
 to this <a class="reference external" href="https://github.com/opengeospatial/wps-rest-binding#overview">page</a> or use
 the <a class="reference external" href="https://swagger.io/tools/swagger-ui/">Swagger UI</a>. A live
 instance is available <a class="reference external" href="https://demo.mapmint.com/swagger-ui/dist/">here</a>.</p>
+<section id="hidden-processes-section">
+<h3>hidden_processes section<a class="headerlink" href="#hidden-processes-section" title="Permalink to this heading">¶</a></h3>
+<p>In this section you can set the list of services that should not be listed as avaiable to the processes list.</p>
+<p>You can see below an example of such a section for hidding two services identified as <code class="docutils literal notranslate"><span class="pre">myHiddenService1</span></code> and <code class="docutils literal notranslate"><span class="pre">myHiddenService2</span></code>.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">[hidden_processes]</span>
+<span class="linenos">2</span><span class="na">length</span><span class="o">=</span><span class="s">2</span>
+<span class="linenos">3</span><span class="na">service</span><span class="o">=</span><span class="s">myHiddenService1</span>
+<span class="linenos">4</span><span class="na">service_1</span><span class="o">=</span><span class="s">myHiddenService2</span>
+</pre></div>
+</div>
+</section>
 <section id="openapi-security">
 <h3>OpenAPI Security<a class="headerlink" href="#openapi-security" title="Permalink to this heading">¶</a></h3>
 <p>OpenAPI permits the definition of security restrictions to access a

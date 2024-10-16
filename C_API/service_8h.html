@@ -72,14 +72,15 @@ $(function() {
 <div class="title">service.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;version.h&quot;</code><br />
+<code>#include &lt;sys/time.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;sys/stat.h&gt;</code><br />
 <code>#include &quot;unistd.h&quot;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
-<code>#include &quot;version.h&quot;</code><br />
 </div>
 <p><a href="service_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -113,6 +114,8 @@ Macros</h2></td></tr>
 <tr class="separator:a25a4c8be42fe6068166c381a32d15663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeec6f2debcbcebd09391e98ba80391a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#aeec6f2debcbcebd09391e98ba80391a4">zDateFormat</a>&#160;&#160;&#160;&quot;%Y-%m-%dT%H:%M:%SZ&quot;</td></tr>
 <tr class="separator:aeec6f2debcbcebd09391e98ba80391a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7db1dd590b95b0d03765000653f514"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#adf7db1dd590b95b0d03765000653f514">zLogDateFormat</a>&#160;&#160;&#160;&quot;%Y-%m-%d %H:%M:%S&quot;</td></tr>
+<tr class="separator:adf7db1dd590b95b0d03765000653f514"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a665b0cc9ee2ced31785321d55cde349e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a665b0cc9ee2ced31785321d55cde349e">__bool_true_false_are_defined</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a665b0cc9ee2ced31785321d55cde349e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7023bf657df424d300a3ec75a8dedbf2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a7023bf657df424d300a3ec75a8dedbf2">zStrdup</a>&#160;&#160;&#160;strdup</td></tr>
@@ -173,8 +176,23 @@ Macros</h2></td></tr>
 <tr class="memitem:a36ac48ea6bbbc0ae2cab1e688e94ad55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a36ac48ea6bbbc0ae2cab1e688e94ad55">SERVICE_UNDEPLOYED</a>&#160;&#160;&#160;7</td></tr>
 <tr class="memdesc:a36ac48ea6bbbc0ae2cab1e688e94ad55"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global undelployed status for a service.  <a href="service_8h.html#a36ac48ea6bbbc0ae2cab1e688e94ad55">More...</a><br /></td></tr>
 <tr class="separator:a36ac48ea6bbbc0ae2cab1e688e94ad55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a109eccc0fa63b3684051fb091131615a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a109eccc0fa63b3684051fb091131615a">ZOO_DEBUG</a>(message)&#160;&#160;&#160;fprintf(stderr,&quot; [ZOO_DEBUG] ++- %d -++ %s %s %d: &quot;,getpid(),__func__,__FILE__,__LINE__);fprintf(stderr,&quot;(%s)\<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>&quot;,message);fflush(stderr);</td></tr>
-<tr class="memdesc:a109eccc0fa63b3684051fb091131615a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ZOO_DEBUG macro print message with function name, file name and line number.  <a href="service_8h.html#a109eccc0fa63b3684051fb091131615a">More...</a><br /></td></tr>
+<tr class="memitem:a0a93e677a7e51cf317e816cd279df855"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a0a93e677a7e51cf317e816cd279df855">ZOO_DEBUG_LEVEL_DEBUG</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a0a93e677a7e51cf317e816cd279df855"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global debug level: DEBUG.  <a href="service_8h.html#a0a93e677a7e51cf317e816cd279df855">More...</a><br /></td></tr>
+<tr class="separator:a0a93e677a7e51cf317e816cd279df855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca85e034b77c2277bb278b920aa31f28"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#aca85e034b77c2277bb278b920aa31f28">ZOO_DEBUG_LEVEL_INFO</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:aca85e034b77c2277bb278b920aa31f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global debug level: INFO.  <a href="service_8h.html#aca85e034b77c2277bb278b920aa31f28">More...</a><br /></td></tr>
+<tr class="separator:aca85e034b77c2277bb278b920aa31f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b207ec20e3f13ede5b9496695a88d89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a2b207ec20e3f13ede5b9496695a88d89">ZOO_DEBUG_LEVEL_WARN</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:a2b207ec20e3f13ede5b9496695a88d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global debug level: WARN.  <a href="service_8h.html#a2b207ec20e3f13ede5b9496695a88d89">More...</a><br /></td></tr>
+<tr class="separator:a2b207ec20e3f13ede5b9496695a88d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fabbc8754a977819f23abc5c5f48c9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a2fabbc8754a977819f23abc5c5f48c9a">ZOO_DEBUG_LEVEL_ERROR</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:a2fabbc8754a977819f23abc5c5f48c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global debug level: ERROR.  <a href="service_8h.html#a2fabbc8754a977819f23abc5c5f48c9a">More...</a><br /></td></tr>
+<tr class="separator:a2fabbc8754a977819f23abc5c5f48c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb53e0c6e8d9bfbf2acd33e471bd9d2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#aeb53e0c6e8d9bfbf2acd33e471bd9d2d">ZOO_DEBUG_LEVEL_FATAL</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memdesc:aeb53e0c6e8d9bfbf2acd33e471bd9d2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global debug level: FATAL.  <a href="service_8h.html#aeb53e0c6e8d9bfbf2acd33e471bd9d2d">More...</a><br /></td></tr>
+<tr class="separator:aeb53e0c6e8d9bfbf2acd33e471bd9d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109eccc0fa63b3684051fb091131615a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a109eccc0fa63b3684051fb091131615a">ZOO_DEBUG</a>(message)</td></tr>
+<tr class="memdesc:a109eccc0fa63b3684051fb091131615a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ZOO_DEBUG macro print a message with date time, process id (UNIX pid), file name, function name, and line number.  <a href="service_8h.html#a109eccc0fa63b3684051fb091131615a">More...</a><br /></td></tr>
 <tr class="separator:a109eccc0fa63b3684051fb091131615a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22187317320e774cb8e603969de63b19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a22187317320e774cb8e603969de63b19">ELEMENTS_SIZE</a>&#160;&#160;&#160;(sizeof(char*)+(((2*sizeof(char*))+sizeof(<a class="el" href="service_8h.html#structmaps">maps</a>*))*3)+sizeof(char*)+((sizeof(<a class="el" href="service_8h.html#structmap">map</a>*) + sizeof(<a class="el" href="service_8h.html#structiotype">iotype</a>*))*2)+(2*sizeof(<a class="el" href="service_8h.html#structelements">elements</a>*)))</td></tr>
 <tr class="memdesc:a22187317320e774cb8e603969de63b19"><td class="mdescLeft">&#160;</td><td class="mdescRight">The memory size to create an elements.  <a href="service_8h.html#a22187317320e774cb8e603969de63b19">More...</a><br /></td></tr>
@@ -492,6 +510,12 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:ab9239fd2ceb88b3dc1eb0ef59b3138cf"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#ab9239fd2ceb88b3dc1eb0ef59b3138cf">pccLogLevel</a> [5]</td></tr>
+<tr class="memdesc:ab9239fd2ceb88b3dc1eb0ef59b3138cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global log level names.  <a href="service_8h.html#ab9239fd2ceb88b3dc1eb0ef59b3138cf">More...</a><br /></td></tr>
+<tr class="separator:ab9239fd2ceb88b3dc1eb0ef59b3138cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd88d08269c5843712d53bc797984125"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#abd88d08269c5843712d53bc797984125">iZooLogLevel</a> =0</td></tr>
+<tr class="memdesc:abd88d08269c5843712d53bc797984125"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global log level.  <a href="service_8h.html#abd88d08269c5843712d53bc797984125">More...</a><br /></td></tr>
+<tr class="separator:abd88d08269c5843712d53bc797984125"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d35d1543bb7e2fe022c54eda2842b8b"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a3d35d1543bb7e2fe022c54eda2842b8b">ZOO_STATUS</a> []</td></tr>
 <tr class="memdesc:a3d35d1543bb7e2fe022c54eda2842b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Statuses list.  <a href="service_8h.html#a3d35d1543bb7e2fe022c54eda2842b8b">More...</a><br /></td></tr>
 <tr class="separator:a3d35d1543bb7e2fe022c54eda2842b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1192,6 +1216,20 @@ the next registry pointer </td></tr>
 
 </div>
 </div>
+<a id="adf7db1dd590b95b0d03765000653f514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7db1dd590b95b0d03765000653f514">&#9670;&nbsp;</a></span>zLogDateFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define zLogDateFormat&#160;&#160;&#160;&quot;%Y-%m-%d %H:%M:%S&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a109eccc0fa63b3684051fb091131615a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a109eccc0fa63b3684051fb091131615a">&#9670;&nbsp;</a></span>ZOO_DEBUG</h2>
 
@@ -1203,12 +1241,109 @@ the next registry pointer </td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">message</td><td>)</td>
-          <td>&#160;&#160;&#160;fprintf(stderr,&quot; [ZOO_DEBUG] ++- %d -++ %s %s %d: &quot;,getpid(),__func__,__FILE__,__LINE__);fprintf(stderr,&quot;(%s)\<a class="el" href="service__conf_8y.html#a924423425f8ca7c1ee527ba97d5d168d">n</a>&quot;,message);fflush(stderr);</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The ZOO_DEBUG macro print message with function name, file name and line number. </p>
+<p>The ZOO_DEBUG macro print a message with date time, process id (UNIX pid), file name, function name, and line number. </p>
+<p>The message uses the ZOO_LOG_FORMAT to format the output.</p>
+<p>The values that should be included in this specific order in the ZOO_LOG_FORMAT are:</p>
+<ul>
+<li>s: the date time</li>
+<li>d: the milliseconds</li>
+<li>s: the log level</li>
+<li>s: the file name</li>
+<li>s: the function name</li>
+<li>d: the line number</li>
+<li>s: the message</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>the message to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a93e677a7e51cf317e816cd279df855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a93e677a7e51cf317e816cd279df855">&#9670;&nbsp;</a></span>ZOO_DEBUG_LEVEL_DEBUG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZOO_DEBUG_LEVEL_DEBUG&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The global debug level: DEBUG. </p>
+
+</div>
+</div>
+<a id="a2fabbc8754a977819f23abc5c5f48c9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fabbc8754a977819f23abc5c5f48c9a">&#9670;&nbsp;</a></span>ZOO_DEBUG_LEVEL_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZOO_DEBUG_LEVEL_ERROR&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The global debug level: ERROR. </p>
+
+</div>
+</div>
+<a id="aeb53e0c6e8d9bfbf2acd33e471bd9d2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb53e0c6e8d9bfbf2acd33e471bd9d2d">&#9670;&nbsp;</a></span>ZOO_DEBUG_LEVEL_FATAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZOO_DEBUG_LEVEL_FATAL&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The global debug level: FATAL. </p>
+
+</div>
+</div>
+<a id="aca85e034b77c2277bb278b920aa31f28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca85e034b77c2277bb278b920aa31f28">&#9670;&nbsp;</a></span>ZOO_DEBUG_LEVEL_INFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZOO_DEBUG_LEVEL_INFO&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The global debug level: INFO. </p>
+
+</div>
+</div>
+<a id="a2b207ec20e3f13ede5b9496695a88d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b207ec20e3f13ede5b9496695a88d89">&#9670;&nbsp;</a></span>ZOO_DEBUG_LEVEL_WARN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZOO_DEBUG_LEVEL_WARN&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The global debug level: WARN. </p>
 
 </div>
 </div>
@@ -4190,6 +4325,30 @@ the next registry pointer </td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="abd88d08269c5843712d53bc797984125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd88d08269c5843712d53bc797984125">&#9670;&nbsp;</a></span>iZooLogLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int iZooLogLevel =0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The global log level. </p>
+
+</div>
+</div>
 <a id="a2c47e1f41e75d28c3de42793a773e00e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c47e1f41e75d28c3de42793a773e00e">&#9670;&nbsp;</a></span>OAPIPCorrespondances</h2>
 
@@ -4286,6 +4445,37 @@ the next registry pointer </td></tr>
 <div class="line">  }</div>
 </div><!-- fragment -->
 <p>OGC API - Processes supported Content-Type list. </p>
+
+</div>
+</div>
+<a id="ab9239fd2ceb88b3dc1eb0ef59b3138cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9239fd2ceb88b3dc1eb0ef59b3138cf">&#9670;&nbsp;</a></span>pccLogLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* pccLogLevel[5]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">={</div>
+<div class="line">  <span class="stringliteral">&quot;DEBUG&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;INFO&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;WARN&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;ERROR&quot;</span>,</div>
+<div class="line">  <span class="stringliteral">&quot;FATAL&quot;</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>The global log level names. </p>
 
 </div>
 </div>
@@ -4429,7 +4619,7 @@ the next registry pointer </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 16 2024 05:54:15 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Oct 16 2024 13:54:59 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

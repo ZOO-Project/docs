@@ -16,7 +16,7 @@ var searchData=
   ['_5fcreateinitstring_13',['_createInitString',['../sqlapi_8c.html#a73726efab9b6b481da07612b65c0600e',1,'sqlapi.c']]],
   ['_5fdumpmap_14',['_dumpMap',['../service_8c.html#a35a3793d01aef657e2582ff6108429b0',1,'_dumpMap(map *pmMap):&#160;service.c'],['../service_8h.html#ad0f81a6d67970c293ae06da6fe16e4bb',1,'_dumpMap(map *):&#160;service.c']]],
   ['_5fdumpmapstofile_15',['_dumpMapsToFile',['../service_8c.html#a4f5906a95be5473b87b33ecf609757d5',1,'service.c']]],
-  ['_5ffetchservice_16',['_fetchService',['../zoo__service__loader_8c.html#af125ec32e958d96aff42af2ed48430d6',1,'zoo_service_loader.c']]],
+  ['_5ffetchservice_16',['_fetchService',['../zoo__service__loader_8c.html#a2a3802d1c31839512d7d3c4c5857ded5',1,'zoo_service_loader.c']]],
   ['_5ffetchservicesfordescription_17',['_fetchServicesForDescription',['../zoo__service__loader_8c.html#a2550dd70cbdc2c320b445c249d79df7d',1,'zoo_service_loader.c']]],
   ['_5fgetstatus_18',['_getStatus',['../service__internal_8c.html#abcea19c67d14604b6e78490272d21221',1,'_getStatus(maps *conf, char *lid):&#160;service_internal.c'],['../service__internal_8h.html#ae532815ed422cf86cc73e559e7d7f1b5',1,'_getStatus(maps *, char *):&#160;service_internal.c']]],
   ['_5fgetstatusfield_19',['_getStatusField',['../service__internal_8c.html#a2adf64278877032a09d2312d0387d4c1',1,'_getStatusField(maps *conf, char *a, const char *b):&#160;service_internal.c'],['../service__internal_8h.html#a24d9f5a3655cf81c7f8eedf6d33017f5',1,'_getStatusField(maps *, char *, const char *):&#160;service_internal.c']]],
@@ -40,5 +40,6 @@ var searchData=
   ['_5ftranslatechar_37',['_translateChar',['../service_8c.html#aee52cac98f0dca12484204a9a755913a',1,'_translateChar(char *str, char toReplace, char toReplaceBy):&#160;service.c'],['../service_8h.html#ad981933a58ed10981f00057e0bcb7db6',1,'_translateChar(char *, char, char):&#160;service.c']]],
   ['_5fulinet_38',['_ULINET',['../ulinet_8c.html#a4b23c8f7aa3ccb11709e6311d585c3c8',1,'ulinet.c']]],
   ['_5fupdatestatus_39',['_updateStatus',['../service__internal_8c.html#a2daa9962fa8066dd8c40219bd16bd806',1,'_updateStatus(maps *conf):&#160;service_internal.c'],['../service__internal_8h.html#a6128e7a2ed472778409b228c70aa1112',1,'_updateStatus(maps *):&#160;service_internal.c']]],
-  ['_5fzoo_5fsaga_40',['_ZOO_SAGA',['../service__internal__saga_8c.html#aa00b27c9afa3c36ba684739fda2046af',1,'service_internal_saga.c']]]
+  ['_5fzoo_5fdebug_40',['_ZOO_DEBUG',['../service_8h.html#a866efcd4e07e48eec8d78ac18228cb98',1,'service.h']]],
+  ['_5fzoo_5fsaga_41',['_ZOO_SAGA',['../service__internal__saga_8c.html#aa00b27c9afa3c36ba684739fda2046af',1,'service_internal_saga.c']]]
 ];

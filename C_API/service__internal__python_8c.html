@@ -71,6 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="service__internal__python_8h_source.html">service_internal_python.h</a>&quot;</code><br />
+<code>#include &quot;frameobject.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -118,6 +119,30 @@ Functions</h2></td></tr>
 <tr class="memitem:a5a96cafeea73c3f992902f8645495e8c"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__python_8c.html#a5a96cafeea73c3f992902f8645495e8c">PythonUpdateStatus</a> (PyObject *self, PyObject *args)</td></tr>
 <tr class="memdesc:a5a96cafeea73c3f992902f8645495e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the ongoing status of a running service from the Python environment.  <a href="service__internal__python_8c.html#a5a96cafeea73c3f992902f8645495e8c">More...</a><br /></td></tr>
 <tr class="separator:a5a96cafeea73c3f992902f8645495e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a216957930c6449c5ddb0fd620cb7a5"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__python_8c.html#a7a216957930c6449c5ddb0fd620cb7a5">PythonPrintDebugMessage</a> (PyObject *self, PyObject *args)</td></tr>
+<tr class="memdesc:a7a216957930c6449c5ddb0fd620cb7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ZOO-API debug message handling in Python.  <a href="service__internal__python_8c.html#a7a216957930c6449c5ddb0fd620cb7a5">More...</a><br /></td></tr>
+<tr class="separator:a7a216957930c6449c5ddb0fd620cb7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01113c1ade638e4f44b9a33e9dc68a62"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__python_8c.html#a01113c1ade638e4f44b9a33e9dc68a62">PythonTraceMessage</a> (PyObject *self, PyObject *args)</td></tr>
+<tr class="memdesc:a01113c1ade638e4f44b9a33e9dc68a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">ZOO-API equivalent to logger.debug() in Python.  <a href="service__internal__python_8c.html#a01113c1ade638e4f44b9a33e9dc68a62">More...</a><br /></td></tr>
+<tr class="separator:a01113c1ade638e4f44b9a33e9dc68a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a721dc8851e51e0d38a3dc721b71f1f6b"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__python_8c.html#a721dc8851e51e0d38a3dc721b71f1f6b">PythonDebugMessage</a> (PyObject *self, PyObject *args)</td></tr>
+<tr class="memdesc:a721dc8851e51e0d38a3dc721b71f1f6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ZOO-API equivalent to logger.debug() in Python.  <a href="service__internal__python_8c.html#a721dc8851e51e0d38a3dc721b71f1f6b">More...</a><br /></td></tr>
+<tr class="separator:a721dc8851e51e0d38a3dc721b71f1f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7b54831e747e51316f67daa7a21e585"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__python_8c.html#ac7b54831e747e51316f67daa7a21e585">PythonInfoMessage</a> (PyObject *self, PyObject *args)</td></tr>
+<tr class="memdesc:ac7b54831e747e51316f67daa7a21e585"><td class="mdescLeft">&#160;</td><td class="mdescRight">ZOO-API equivalent to logger.debug() in Python.  <a href="service__internal__python_8c.html#ac7b54831e747e51316f67daa7a21e585">More...</a><br /></td></tr>
+<tr class="separator:ac7b54831e747e51316f67daa7a21e585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c9c65dadb3426900c47d166110490d"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__python_8c.html#a73c9c65dadb3426900c47d166110490d">PythonSuccessMessage</a> (PyObject *self, PyObject *args)</td></tr>
+<tr class="memdesc:a73c9c65dadb3426900c47d166110490d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ZOO-API equivalent to logger.debug() in Python.  <a href="service__internal__python_8c.html#a73c9c65dadb3426900c47d166110490d">More...</a><br /></td></tr>
+<tr class="separator:a73c9c65dadb3426900c47d166110490d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11aed5a7788d15e3443876aad3706f50"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__python_8c.html#a11aed5a7788d15e3443876aad3706f50">PythonWarningMessage</a> (PyObject *self, PyObject *args)</td></tr>
+<tr class="memdesc:a11aed5a7788d15e3443876aad3706f50"><td class="mdescLeft">&#160;</td><td class="mdescRight">ZOO-API equivalent to logger.debug() in Python.  <a href="service__internal__python_8c.html#a11aed5a7788d15e3443876aad3706f50">More...</a><br /></td></tr>
+<tr class="separator:a11aed5a7788d15e3443876aad3706f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a020ce920410498a17dcad3c969ea6c26"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__python_8c.html#a020ce920410498a17dcad3c969ea6c26">PythonErrorMessage</a> (PyObject *self, PyObject *args)</td></tr>
+<tr class="memdesc:a020ce920410498a17dcad3c969ea6c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">ZOO-API equivalent to logger.debug() in Python.  <a href="service__internal__python_8c.html#a020ce920410498a17dcad3c969ea6c26">More...</a><br /></td></tr>
+<tr class="separator:a020ce920410498a17dcad3c969ea6c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa686e66cb173b1496a1dfb6b3cbba29"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__python_8c.html#afa686e66cb173b1496a1dfb6b3cbba29">PythonCriticalMessage</a> (PyObject *self, PyObject *args)</td></tr>
+<tr class="memdesc:afa686e66cb173b1496a1dfb6b3cbba29"><td class="mdescLeft">&#160;</td><td class="mdescRight">ZOO-API equivalent to logger.debug() in Python.  <a href="service__internal__python_8c.html#afa686e66cb173b1496a1dfb6b3cbba29">More...</a><br /></td></tr>
+<tr class="separator:afa686e66cb173b1496a1dfb6b3cbba29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -364,6 +389,279 @@ error</td>
 
 </div>
 </div>
+<a id="afa686e66cb173b1496a1dfb6b3cbba29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa686e66cb173b1496a1dfb6b3cbba29">&#9670;&nbsp;</a></span>PythonCriticalMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* PythonCriticalMessage </td>
+          <td>(</td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ZOO-API equivalent to logger.debug() in Python. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>the Python object on which we can run the method </td></tr>
+    <tr><td class="paramname">args</td><td>the Python arguments given from the Python environment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new Python string containing the translated value </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__internal_8h.html#adf50d5a8196c19fbcdd7d486789fb848" title="ZOO-Services messages translation function.">_ss</a> </dd></dl>
+
+</div>
+</div>
+<a id="a721dc8851e51e0d38a3dc721b71f1f6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a721dc8851e51e0d38a3dc721b71f1f6b">&#9670;&nbsp;</a></span>PythonDebugMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* PythonDebugMessage </td>
+          <td>(</td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ZOO-API equivalent to logger.debug() in Python. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>the Python object on which we can run the method </td></tr>
+    <tr><td class="paramname">args</td><td>the Python arguments given from the Python environment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new Python string containing the translated value </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__internal_8h.html#adf50d5a8196c19fbcdd7d486789fb848" title="ZOO-Services messages translation function.">_ss</a> </dd></dl>
+
+</div>
+</div>
+<a id="a020ce920410498a17dcad3c969ea6c26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a020ce920410498a17dcad3c969ea6c26">&#9670;&nbsp;</a></span>PythonErrorMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* PythonErrorMessage </td>
+          <td>(</td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ZOO-API equivalent to logger.debug() in Python. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>the Python object on which we can run the method </td></tr>
+    <tr><td class="paramname">args</td><td>the Python arguments given from the Python environment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new Python string containing the translated value </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__internal_8h.html#adf50d5a8196c19fbcdd7d486789fb848" title="ZOO-Services messages translation function.">_ss</a> </dd></dl>
+
+</div>
+</div>
+<a id="ac7b54831e747e51316f67daa7a21e585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7b54831e747e51316f67daa7a21e585">&#9670;&nbsp;</a></span>PythonInfoMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* PythonInfoMessage </td>
+          <td>(</td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ZOO-API equivalent to logger.debug() in Python. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>the Python object on which we can run the method </td></tr>
+    <tr><td class="paramname">args</td><td>the Python arguments given from the Python environment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new Python string containing the translated value </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__internal_8h.html#adf50d5a8196c19fbcdd7d486789fb848" title="ZOO-Services messages translation function.">_ss</a> </dd></dl>
+
+</div>
+</div>
+<a id="a7a216957930c6449c5ddb0fd620cb7a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a216957930c6449c5ddb0fd620cb7a5">&#9670;&nbsp;</a></span>PythonPrintDebugMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* PythonPrintDebugMessage </td>
+          <td>(</td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ZOO-API debug message handling in Python. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>the Python object on which we can run the method </td></tr>
+    <tr><td class="paramname">args</td><td>the Python arguments given from the Python environment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new Python string containing the translated value </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__internal_8h.html#adf50d5a8196c19fbcdd7d486789fb848" title="ZOO-Services messages translation function.">_ss</a> </dd></dl>
+
+</div>
+</div>
+<a id="a73c9c65dadb3426900c47d166110490d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c9c65dadb3426900c47d166110490d">&#9670;&nbsp;</a></span>PythonSuccessMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* PythonSuccessMessage </td>
+          <td>(</td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ZOO-API equivalent to logger.debug() in Python. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>the Python object on which we can run the method </td></tr>
+    <tr><td class="paramname">args</td><td>the Python arguments given from the Python environment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new Python string containing the translated value </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__internal_8h.html#adf50d5a8196c19fbcdd7d486789fb848" title="ZOO-Services messages translation function.">_ss</a> </dd></dl>
+
+</div>
+</div>
+<a id="a01113c1ade638e4f44b9a33e9dc68a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01113c1ade638e4f44b9a33e9dc68a62">&#9670;&nbsp;</a></span>PythonTraceMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* PythonTraceMessage </td>
+          <td>(</td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ZOO-API equivalent to logger.debug() in Python. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>the Python object on which we can run the method </td></tr>
+    <tr><td class="paramname">args</td><td>the Python arguments given from the Python environment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new Python string containing the translated value </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__internal_8h.html#adf50d5a8196c19fbcdd7d486789fb848" title="ZOO-Services messages translation function.">_ss</a> </dd></dl>
+
+</div>
+</div>
 <a id="ab184da9e4b9c12e8bafbbc5a8d9b81cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab184da9e4b9c12e8bafbbc5a8d9b81cb">&#9670;&nbsp;</a></span>PythonTranslate()</h2>
 
@@ -439,6 +737,45 @@ error</td>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None to the Python environment </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="service__internal_8h.html#a6128e7a2ed472778409b228c70aa1112" title="Update the current status of the running service.">_updateStatus</a> </dd></dl>
+
+</div>
+</div>
+<a id="a11aed5a7788d15e3443876aad3706f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11aed5a7788d15e3443876aad3706f50">&#9670;&nbsp;</a></span>PythonWarningMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject* PythonWarningMessage </td>
+          <td>(</td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ZOO-API equivalent to logger.debug() in Python. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">self</td><td>the Python object on which we can run the method </td></tr>
+    <tr><td class="paramname">args</td><td>the Python arguments given from the Python environment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new Python string containing the translated value </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__internal_8h.html#adf50d5a8196c19fbcdd7d486789fb848" title="ZOO-Services messages translation function.">_ss</a> </dd></dl>
 
 </div>
 </div>
@@ -605,6 +942,13 @@ error</td>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">  {<span class="stringliteral">&quot;_&quot;</span>, <a class="code" href="service__internal__python_8c.html#ab184da9e4b9c12e8bafbbc5a8d9b81cb">PythonTranslate</a>, METH_VARARGS, <span class="stringliteral">&quot;Translate a string using the zoo-services textdomain.&quot;</span>},</div>
 <div class="line">  {<span class="stringliteral">&quot;update_status&quot;</span>, <a class="code" href="service__internal__python_8c.html#a5a96cafeea73c3f992902f8645495e8c">PythonUpdateStatus</a>, METH_VARARGS, <span class="stringliteral">&quot;Update status percentage of a running process.&quot;</span>},</div>
+<div class="line">  {<span class="stringliteral">&quot;trace&quot;</span>, <a class="code" href="service__internal__python_8c.html#a01113c1ade638e4f44b9a33e9dc68a62">PythonTraceMessage</a>, METH_VARARGS, <span class="stringliteral">&quot;Equivalent to logger.trace().&quot;</span>},</div>
+<div class="line">  {<span class="stringliteral">&quot;debug&quot;</span>, <a class="code" href="service__internal__python_8c.html#a721dc8851e51e0d38a3dc721b71f1f6b">PythonDebugMessage</a>, METH_VARARGS, <span class="stringliteral">&quot;Equivalent to logger.debug().&quot;</span>},</div>
+<div class="line">  {<span class="stringliteral">&quot;info&quot;</span>, <a class="code" href="service__internal__python_8c.html#ac7b54831e747e51316f67daa7a21e585">PythonInfoMessage</a>, METH_VARARGS, <span class="stringliteral">&quot;Equivalent to logger.info().&quot;</span>},</div>
+<div class="line">  {<span class="stringliteral">&quot;success&quot;</span>, <a class="code" href="service__internal__python_8c.html#a73c9c65dadb3426900c47d166110490d">PythonSuccessMessage</a>, METH_VARARGS, <span class="stringliteral">&quot;Equivalent to logger.success().&quot;</span>},</div>
+<div class="line">  {<span class="stringliteral">&quot;warning&quot;</span>, <a class="code" href="service__internal__python_8c.html#a11aed5a7788d15e3443876aad3706f50">PythonWarningMessage</a>, METH_VARARGS, <span class="stringliteral">&quot;Equivalent to logger.warning().&quot;</span>},</div>
+<div class="line">  {<span class="stringliteral">&quot;error&quot;</span>, <a class="code" href="service__internal__python_8c.html#a020ce920410498a17dcad3c969ea6c26">PythonErrorMessage</a>, METH_VARARGS|METH_COEXIST, <span class="stringliteral">&quot;Equivalent to logger.error().&quot;</span>},</div>
+<div class="line">  {<span class="stringliteral">&quot;critical&quot;</span>, <a class="code" href="service__internal__python_8c.html#afa686e66cb173b1496a1dfb6b3cbba29">PythonCriticalMessage</a>, METH_VARARGS, <span class="stringliteral">&quot;Equivalent to logger.critical().&quot;</span>},</div>
 <div class="line">  {NULL, NULL, 0, NULL} </div>
 <div class="line">}</div>
 </div><!-- fragment -->
@@ -618,11 +962,18 @@ error</td>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aservice__internal__python_8c_html_ab184da9e4b9c12e8bafbbc5a8d9b81cb"><div class="ttname"><a href="service__internal__python_8c.html#ab184da9e4b9c12e8bafbbc5a8d9b81cb">PythonTranslate</a></div><div class="ttdeci">PyObject * PythonTranslate(PyObject *self, PyObject *args)</div><div class="ttdoc">Use the ZOO-Services messages translation function from the Python environment.</div><div class="ttdef"><b>Definition:</b> service_internal_python.c:878</div></div>
-<div class="ttc" id="aservice__internal__python_8c_html_a5a96cafeea73c3f992902f8645495e8c"><div class="ttname"><a href="service__internal__python_8c.html#a5a96cafeea73c3f992902f8645495e8c">PythonUpdateStatus</a></div><div class="ttdeci">PyObject * PythonUpdateStatus(PyObject *self, PyObject *args)</div><div class="ttdoc">Update the ongoing status of a running service from the Python environment.</div><div class="ttdef"><b>Definition:</b> service_internal_python.c:899</div></div>
+<div class="ttc" id="aservice__internal__python_8c_html_a721dc8851e51e0d38a3dc721b71f1f6b"><div class="ttname"><a href="service__internal__python_8c.html#a721dc8851e51e0d38a3dc721b71f1f6b">PythonDebugMessage</a></div><div class="ttdeci">PyObject * PythonDebugMessage(PyObject *self, PyObject *args)</div><div class="ttdoc">ZOO-API equivalent to logger.debug() in Python.</div><div class="ttdef"><b>Definition:</b> service_internal_python.c:984</div></div>
+<div class="ttc" id="aservice__internal__python_8c_html_a01113c1ade638e4f44b9a33e9dc68a62"><div class="ttname"><a href="service__internal__python_8c.html#a01113c1ade638e4f44b9a33e9dc68a62">PythonTraceMessage</a></div><div class="ttdeci">PyObject * PythonTraceMessage(PyObject *self, PyObject *args)</div><div class="ttdoc">ZOO-API equivalent to logger.debug() in Python.</div><div class="ttdef"><b>Definition:</b> service_internal_python.c:970</div></div>
+<div class="ttc" id="aservice__internal__python_8c_html_a020ce920410498a17dcad3c969ea6c26"><div class="ttname"><a href="service__internal__python_8c.html#a020ce920410498a17dcad3c969ea6c26">PythonErrorMessage</a></div><div class="ttdeci">PyObject * PythonErrorMessage(PyObject *self, PyObject *args)</div><div class="ttdoc">ZOO-API equivalent to logger.debug() in Python.</div><div class="ttdef"><b>Definition:</b> service_internal_python.c:1040</div></div>
+<div class="ttc" id="aservice__internal__python_8c_html_ab184da9e4b9c12e8bafbbc5a8d9b81cb"><div class="ttname"><a href="service__internal__python_8c.html#ab184da9e4b9c12e8bafbbc5a8d9b81cb">PythonTranslate</a></div><div class="ttdeci">PyObject * PythonTranslate(PyObject *self, PyObject *args)</div><div class="ttdoc">Use the ZOO-Services messages translation function from the Python environment.</div><div class="ttdef"><b>Definition:</b> service_internal_python.c:882</div></div>
+<div class="ttc" id="aservice__internal__python_8c_html_a11aed5a7788d15e3443876aad3706f50"><div class="ttname"><a href="service__internal__python_8c.html#a11aed5a7788d15e3443876aad3706f50">PythonWarningMessage</a></div><div class="ttdeci">PyObject * PythonWarningMessage(PyObject *self, PyObject *args)</div><div class="ttdoc">ZOO-API equivalent to logger.debug() in Python.</div><div class="ttdef"><b>Definition:</b> service_internal_python.c:1026</div></div>
+<div class="ttc" id="aservice__internal__python_8c_html_afa686e66cb173b1496a1dfb6b3cbba29"><div class="ttname"><a href="service__internal__python_8c.html#afa686e66cb173b1496a1dfb6b3cbba29">PythonCriticalMessage</a></div><div class="ttdeci">PyObject * PythonCriticalMessage(PyObject *self, PyObject *args)</div><div class="ttdoc">ZOO-API equivalent to logger.debug() in Python.</div><div class="ttdef"><b>Definition:</b> service_internal_python.c:1054</div></div>
+<div class="ttc" id="aservice__internal__python_8c_html_a73c9c65dadb3426900c47d166110490d"><div class="ttname"><a href="service__internal__python_8c.html#a73c9c65dadb3426900c47d166110490d">PythonSuccessMessage</a></div><div class="ttdeci">PyObject * PythonSuccessMessage(PyObject *self, PyObject *args)</div><div class="ttdoc">ZOO-API equivalent to logger.debug() in Python.</div><div class="ttdef"><b>Definition:</b> service_internal_python.c:1012</div></div>
+<div class="ttc" id="aservice__internal__python_8c_html_ac7b54831e747e51316f67daa7a21e585"><div class="ttname"><a href="service__internal__python_8c.html#ac7b54831e747e51316f67daa7a21e585">PythonInfoMessage</a></div><div class="ttdeci">PyObject * PythonInfoMessage(PyObject *self, PyObject *args)</div><div class="ttdoc">ZOO-API equivalent to logger.debug() in Python.</div><div class="ttdef"><b>Definition:</b> service_internal_python.c:998</div></div>
+<div class="ttc" id="aservice__internal__python_8c_html_a5a96cafeea73c3f992902f8645495e8c"><div class="ttname"><a href="service__internal__python_8c.html#a5a96cafeea73c3f992902f8645495e8c">PythonUpdateStatus</a></div><div class="ttdeci">PyObject * PythonUpdateStatus(PyObject *self, PyObject *args)</div><div class="ttdoc">Update the ongoing status of a running service from the Python environment.</div><div class="ttdef"><b>Definition:</b> service_internal_python.c:903</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 18 2024 05:41:13 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 20 2024 15:48:02 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

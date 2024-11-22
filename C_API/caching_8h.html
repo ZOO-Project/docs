@@ -80,6 +80,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a6701fc456b44527d2aaf589bf0ff18e1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8h.html#a6701fc456b44527d2aaf589bf0ff18e1">isInCache</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, char *)</td></tr>
 <tr class="memdesc:a6701fc456b44527d2aaf589bf0ff18e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if a url is available in the cache.  <a href="caching_8h.html#a6701fc456b44527d2aaf589bf0ff18e1">More...</a><br /></td></tr>
 <tr class="separator:a6701fc456b44527d2aaf589bf0ff18e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc37f69e7fc7a49a4341fcaeb19f3574"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8h.html#afc37f69e7fc7a49a4341fcaeb19f3574">isAllowedPath</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, const char *)</td></tr>
+<tr class="memdesc:afc37f69e7fc7a49a4341fcaeb19f3574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure that the <a href="file://">file://</a> protocol is used only for allowed paths.  <a href="caching_8h.html#afc37f69e7fc7a49a4341fcaeb19f3574">More...</a><br /></td></tr>
+<tr class="separator:afc37f69e7fc7a49a4341fcaeb19f3574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1adf501747eec935f6be6c0120e46cbc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8h.html#a1adf501747eec935f6be6c0120e46cbc">runHttpRequests</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="ulinet_8h.html#structHINTERNET">HINTERNET</a> *, <a class="el" href="service_8h.html#structmap">map</a> **)</td></tr>
 <tr class="memdesc:a1adf501747eec935f6be6c0120e46cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectively run all the HTTP requests in the queue.  <a href="caching_8h.html#a1adf501747eec935f6be6c0120e46cbc">More...</a><br /></td></tr>
 <tr class="separator:a1adf501747eec935f6be6c0120e46cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,6 +250,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="afc37f69e7fc7a49a4341fcaeb19f3574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc37f69e7fc7a49a4341fcaeb19f3574">&#9670;&nbsp;</a></span>isAllowedPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isAllowedPath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ensure that the <a href="file://">file://</a> protocol is used only for allowed paths. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pccPath</td><td>the path to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the path is accessible, false otherwise </dd></dl>
+
+</div>
+</div>
 <a id="a6701fc456b44527d2aaf589bf0ff18e1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6701fc456b44527d2aaf589bf0ff18e1">&#9670;&nbsp;</a></span>isInCache()</h2>
 
@@ -411,7 +452,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 21 2024 22:54:10 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 22 2024 09:26:36 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

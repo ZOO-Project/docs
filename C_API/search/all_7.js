@@ -11,7 +11,7 @@ var searchData=
   ['getencoding_243',['getEncoding',['../server__internal_8c.html#a2ba3910ae191bb5a9a4cc7ac924a19dc',1,'getEncoding(maps *m):&#160;server_internal.c'],['../server__internal_8h.html#a03aef6593487baca25e339535f3c6d15',1,'getEncoding(maps *):&#160;server_internal.c']]],
   ['getfileextension_244',['getFileExtension',['../mimetypes_8h.html#aabd61df2c4929c2d8fdc77937cf33a2c',1,'mimetypes.h']]],
   ['getfileextensionmap_245',['getFileExtensionMap',['../mimetypes_8h.html#a3ecde3cd2e7101c224bc7dc1bca8d483',1,'mimetypes.h']]],
-  ['getfilenameforrequest_246',['getFilenameForRequest',['../caching_8c.html#a1674744571ba9c0932783cc74d2c0d29',1,'caching.c']]],
+  ['getfilenameforrequest_246',['getFilenameForRequest',['../caching_8c.html#a8ab6e8374dce15b27d0344cbf29bd4a5',1,'caching.c']]],
   ['getinputvalue_247',['getInputValue',['../service__internal_8c.html#a587a66114d3ed8d62e00277d74ac4650',1,'getInputValue(maps *inputs, const char *parameterName, size_t *numberOfBytes):&#160;service_internal.c'],['../service__internal_8h.html#a0bf0c9aa4fdb443059bac6737a9e8d55',1,'getInputValue(maps *, const char *, size_t *):&#160;service_internal.c']]],
   ['getiotypefromelement_248',['getIoTypeFromElement',['../service_8c.html#a69010fa2b4808aef63e7a16626dc8215',1,'getIoTypeFromElement(elements *peElem, char *pcName, map *pcValues):&#160;service.c'],['../service_8h.html#a31a518f1493881179d19901322e8d7ca',1,'getIoTypeFromElement(elements *, char *, map *):&#160;service.c']]],
   ['getkeyvalue_249',['getKeyValue',['../service__internal_8c.html#a00650db79ea32b742a26650f736eaf51',1,'service_internal.c']]],

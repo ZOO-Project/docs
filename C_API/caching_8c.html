@@ -82,39 +82,39 @@ Functions</h2></td></tr>
 <tr class="memitem:ae419a5533a6ddaa6f753d91c7e76f71d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#ae419a5533a6ddaa6f753d91c7e76f71d">getMd5f</a> (char *file)</td></tr>
 <tr class="memdesc:ae419a5533a6ddaa6f753d91c7e76f71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute md5 of a file.  <a href="caching_8c.html#ae419a5533a6ddaa6f753d91c7e76f71d">More...</a><br /></td></tr>
 <tr class="separator:ae419a5533a6ddaa6f753d91c7e76f71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1674744571ba9c0932783cc74d2c0d29"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#a1674744571ba9c0932783cc74d2c0d29">getFilenameForRequest</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, const char *request)</td></tr>
-<tr class="memdesc:a1674744571ba9c0932783cc74d2c0d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a URL by appending every request header listed in the security section.This imply that the URL will contain any authentication informations that should be fowarded to the server from which de input was download.  <a href="caching_8c.html#a1674744571ba9c0932783cc74d2c0d29">More...</a><br /></td></tr>
-<tr class="separator:a1674744571ba9c0932783cc74d2c0d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab6e8374dce15b27d0344cbf29bd4a5"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#a8ab6e8374dce15b27d0344cbf29bd4a5">getFilenameForRequest</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, const char *request)</td></tr>
+<tr class="memdesc:a8ab6e8374dce15b27d0344cbf29bd4a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a URL by appending every request header listed in the security section.This imply that the URL will contain any authentication informations that should be fowarded to the server from which de input was download.  <a href="caching_8c.html#a8ab6e8374dce15b27d0344cbf29bd4a5">More...</a><br /></td></tr>
+<tr class="separator:a8ab6e8374dce15b27d0344cbf29bd4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa28466f80bf8485078d2c516b162cfc2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#aa28466f80bf8485078d2c516b162cfc2">storeMd5</a> (char *file)</td></tr>
 <tr class="separator:aa28466f80bf8485078d2c516b162cfc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a0f57463a06fcec67c66c97b70b3a26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#a2a0f57463a06fcec67c66c97b70b3a26">cacheFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, char *request, char *mimeType, int <a class="el" href="service__loader_8c.html#a58c1cb56a392e72402ca2384bab50361">length</a>, char *filename)</td></tr>
-<tr class="memdesc:a2a0f57463a06fcec67c66c97b70b3a26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache a file for a given request.  <a href="caching_8c.html#a2a0f57463a06fcec67c66c97b70b3a26">More...</a><br /></td></tr>
-<tr class="separator:a2a0f57463a06fcec67c66c97b70b3a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad79b15ef33b26196e6a65de6faf5cf3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#ad79b15ef33b26196e6a65de6faf5cf3f">addToCache</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, char *request, char *<a class="el" href="main__conf__read_8y.html#a0adbaa568d951cc05630f0e44dddaa7f">content</a>, char *mimeType, int <a class="el" href="service__loader_8c.html#a58c1cb56a392e72402ca2384bab50361">length</a>, char *filepath, size_t max_path)</td></tr>
-<tr class="memdesc:ad79b15ef33b26196e6a65de6faf5cf3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache a file for a given request.  <a href="caching_8c.html#ad79b15ef33b26196e6a65de6faf5cf3f">More...</a><br /></td></tr>
-<tr class="separator:ad79b15ef33b26196e6a65de6faf5cf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a75c69161fcac7669b9f061c9289d8e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#a5a75c69161fcac7669b9f061c9289d8e">isInCache</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, char *request)</td></tr>
-<tr class="memdesc:a5a75c69161fcac7669b9f061c9289d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if a url is available in the cache.  <a href="caching_8c.html#a5a75c69161fcac7669b9f061c9289d8e">More...</a><br /></td></tr>
-<tr class="separator:a5a75c69161fcac7669b9f061c9289d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4f8baf18bdee0d5f398c562ac3a625d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#ac4f8baf18bdee0d5f398c562ac3a625d">readCurrentInput</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **m, <a class="el" href="service_8h.html#structmaps">maps</a> **in, int *index, <a class="el" href="ulinet_8h.html#structHINTERNET">HINTERNET</a> *hInternet, <a class="el" href="service_8h.html#structmap">map</a> **error)</td></tr>
-<tr class="memdesc:ac4f8baf18bdee0d5f398c562ac3a625d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the downloaded file for a specific input.  <a href="caching_8c.html#ac4f8baf18bdee0d5f398c562ac3a625d">More...</a><br /></td></tr>
-<tr class="separator:ac4f8baf18bdee0d5f398c562ac3a625d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac328b98c3b060240d2a22d9569572fd4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#ac328b98c3b060240d2a22d9569572fd4">runHttpRequests</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **m, <a class="el" href="service_8h.html#structmaps">maps</a> **inputs, <a class="el" href="ulinet_8h.html#structHINTERNET">HINTERNET</a> *hInternet, <a class="el" href="service_8h.html#structmap">map</a> **error)</td></tr>
-<tr class="memdesc:ac328b98c3b060240d2a22d9569572fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectively run all the HTTP requests in the queue.  <a href="caching_8c.html#ac328b98c3b060240d2a22d9569572fd4">More...</a><br /></td></tr>
-<tr class="separator:ac328b98c3b060240d2a22d9569572fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae18cfd83d9dc360d8a4dbdab071cab02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#ae18cfd83d9dc360d8a4dbdab071cab02">cacheFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *request, char *mimeType, int <a class="el" href="service__loader_8c.html#a58c1cb56a392e72402ca2384bab50361">length</a>, char *filename)</td></tr>
+<tr class="memdesc:ae18cfd83d9dc360d8a4dbdab071cab02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache a file for a given request.  <a href="caching_8c.html#ae18cfd83d9dc360d8a4dbdab071cab02">More...</a><br /></td></tr>
+<tr class="separator:ae18cfd83d9dc360d8a4dbdab071cab02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1cdf390671976ad47d5dee2840710dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#ab1cdf390671976ad47d5dee2840710dd">addToCache</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *request, char *<a class="el" href="main__conf__read_8y.html#a0adbaa568d951cc05630f0e44dddaa7f">content</a>, char *mimeType, int <a class="el" href="service__loader_8c.html#a58c1cb56a392e72402ca2384bab50361">length</a>, char *filepath, size_t max_path)</td></tr>
+<tr class="memdesc:ab1cdf390671976ad47d5dee2840710dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache a file for a given request.  <a href="caching_8c.html#ab1cdf390671976ad47d5dee2840710dd">More...</a><br /></td></tr>
+<tr class="separator:ab1cdf390671976ad47d5dee2840710dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e6aac56f13e5bb3083c181619f7c7a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#ab1e6aac56f13e5bb3083c181619f7c7a">isInCache</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *request)</td></tr>
+<tr class="memdesc:ab1e6aac56f13e5bb3083c181619f7c7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if a url is available in the cache.  <a href="caching_8c.html#ab1e6aac56f13e5bb3083c181619f7c7a">More...</a><br /></td></tr>
+<tr class="separator:ab1e6aac56f13e5bb3083c181619f7c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64000e4454eea2b3c47e49c90229825a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#a64000e4454eea2b3c47e49c90229825a">readCurrentInput</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **ppmsConf, <a class="el" href="service_8h.html#structmaps">maps</a> **in, int *index, <a class="el" href="ulinet_8h.html#structHINTERNET">HINTERNET</a> *hInternet, <a class="el" href="service_8h.html#structmap">map</a> **error)</td></tr>
+<tr class="memdesc:a64000e4454eea2b3c47e49c90229825a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the downloaded file for a specific input.  <a href="caching_8c.html#a64000e4454eea2b3c47e49c90229825a">More...</a><br /></td></tr>
+<tr class="separator:a64000e4454eea2b3c47e49c90229825a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada6388ed5eb575e455639af6509f0b14"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#ada6388ed5eb575e455639af6509f0b14">runHttpRequests</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **ppmsConf, <a class="el" href="service_8h.html#structmaps">maps</a> **inputs, <a class="el" href="ulinet_8h.html#structHINTERNET">HINTERNET</a> *hInternet, <a class="el" href="service_8h.html#structmap">map</a> **error)</td></tr>
+<tr class="memdesc:ada6388ed5eb575e455639af6509f0b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectively run all the HTTP requests in the queue.  <a href="caching_8c.html#ada6388ed5eb575e455639af6509f0b14">More...</a><br /></td></tr>
+<tr class="separator:ada6388ed5eb575e455639af6509f0b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40c6416c07e48b959588aac37cd7cd8c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#a40c6416c07e48b959588aac37cd7cd8c">isAllowedPath</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, const char *pccPath)</td></tr>
 <tr class="memdesc:a40c6416c07e48b959588aac37cd7cd8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure that the <a href="file://">file://</a> protocol is used only for allowed paths.  <a href="caching_8c.html#a40c6416c07e48b959588aac37cd7cd8c">More...</a><br /></td></tr>
 <tr class="separator:a40c6416c07e48b959588aac37cd7cd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fee7fa61f6d29e7cefc2617a1aa3281"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#a8fee7fa61f6d29e7cefc2617a1aa3281">addRequestToQueue</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **m, <a class="el" href="ulinet_8h.html#structHINTERNET">HINTERNET</a> *hInternet, const char *url, bool req)</td></tr>
-<tr class="memdesc:a8fee7fa61f6d29e7cefc2617a1aa3281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a request in the download queue.  <a href="caching_8c.html#a8fee7fa61f6d29e7cefc2617a1aa3281">More...</a><br /></td></tr>
-<tr class="separator:a8fee7fa61f6d29e7cefc2617a1aa3281"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa0e0771ad3aa131f09d9334e6c8d617"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#aaa0e0771ad3aa131f09d9334e6c8d617">loadRemoteFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **m, <a class="el" href="service_8h.html#structmap">map</a> **<a class="el" href="main__conf__read_8y.html#a0adbaa568d951cc05630f0e44dddaa7f">content</a>, <a class="el" href="ulinet_8h.html#structHINTERNET">HINTERNET</a> *hInternet, char *url)</td></tr>
-<tr class="memdesc:aaa0e0771ad3aa131f09d9334e6c8d617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to load file from cache or download a remote file if not in cache.  <a href="caching_8c.html#aaa0e0771ad3aa131f09d9334e6c8d617">More...</a><br /></td></tr>
-<tr class="separator:aaa0e0771ad3aa131f09d9334e6c8d617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6786ba608045251567e456505b1ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#a6c6786ba608045251567e456505b1ef8">addRequestToQueue</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **ppmsConf, <a class="el" href="ulinet_8h.html#structHINTERNET">HINTERNET</a> *hInternet, const char *url, bool req)</td></tr>
+<tr class="memdesc:a6c6786ba608045251567e456505b1ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a request in the download queue.  <a href="caching_8c.html#a6c6786ba608045251567e456505b1ef8">More...</a><br /></td></tr>
+<tr class="separator:a6c6786ba608045251567e456505b1ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb65272941924823d5eeb17655f18d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="caching_8c.html#a8fb65272941924823d5eeb17655f18d6">loadRemoteFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **ppmsConf, <a class="el" href="service_8h.html#structmap">map</a> **<a class="el" href="main__conf__read_8y.html#a0adbaa568d951cc05630f0e44dddaa7f">content</a>, <a class="el" href="ulinet_8h.html#structHINTERNET">HINTERNET</a> *hInternet, char *url)</td></tr>
+<tr class="memdesc:a8fb65272941924823d5eeb17655f18d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to load file from cache or download a remote file if not in cache.  <a href="caching_8c.html#a8fb65272941924823d5eeb17655f18d6">More...</a><br /></td></tr>
+<tr class="separator:a8fb65272941924823d5eeb17655f18d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8fee7fa61f6d29e7cefc2617a1aa3281"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fee7fa61f6d29e7cefc2617a1aa3281">&#9670;&nbsp;</a></span>addRequestToQueue()</h2>
+<a id="a6c6786ba608045251567e456505b1ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6786ba608045251567e456505b1ef8">&#9670;&nbsp;</a></span>addRequestToQueue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -123,7 +123,7 @@ Functions</h2></td></tr>
           <td class="memname">void addRequestToQueue </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramname"><em>ppmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -162,8 +162,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad79b15ef33b26196e6a65de6faf5cf3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad79b15ef33b26196e6a65de6faf5cf3f">&#9670;&nbsp;</a></span>addToCache()</h2>
+<a id="ab1cdf390671976ad47d5dee2840710dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1cdf390671976ad47d5dee2840710dd">&#9670;&nbsp;</a></span>addToCache()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,7 +172,7 @@ Functions</h2></td></tr>
           <td class="memname">void addToCache </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -222,7 +222,7 @@ Functions</h2></td></tr>
 <p>For each cached file, the are two files stored, a .zca and a .zcm containing the downloaded content and the mimeType respectively.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
     <tr><td class="paramname">request</td><td>the url used too fetch the content </td></tr>
     <tr><td class="paramname">content</td><td>the downloaded content </td></tr>
     <tr><td class="paramname">mimeType</td><td>the content mimeType </td></tr>
@@ -236,8 +236,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2a0f57463a06fcec67c66c97b70b3a26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a0f57463a06fcec67c66c97b70b3a26">&#9670;&nbsp;</a></span>cacheFile()</h2>
+<a id="ae18cfd83d9dc360d8a4dbdab071cab02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae18cfd83d9dc360d8a4dbdab071cab02">&#9670;&nbsp;</a></span>cacheFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +246,7 @@ Functions</h2></td></tr>
           <td class="memname">void cacheFile </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -284,7 +284,7 @@ Functions</h2></td></tr>
 <p>For each cached file, the are two files stored, a .zca and a .zcm containing the downloaded content and the mimeType respectively.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
     <tr><td class="paramname">request</td><td>the url used too fetch the content </td></tr>
     <tr><td class="paramname">content</td><td>the downloaded content </td></tr>
     <tr><td class="paramname">mimeType</td><td>the content mimeType </td></tr>
@@ -298,8 +298,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1674744571ba9c0932783cc74d2c0d29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1674744571ba9c0932783cc74d2c0d29">&#9670;&nbsp;</a></span>getFilenameForRequest()</h2>
+<a id="a8ab6e8374dce15b27d0344cbf29bd4a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab6e8374dce15b27d0344cbf29bd4a5">&#9670;&nbsp;</a></span>getFilenameForRequest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +308,7 @@ Functions</h2></td></tr>
           <td class="memname">char* getFilenameForRequest </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -327,7 +327,7 @@ Functions</h2></td></tr>
 <p>Create a URL by appending every request header listed in the security section.This imply that the URL will contain any authentication informations that should be fowarded to the server from which de input was download. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the main configuration maps </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the main configuration maps </td></tr>
     <tr><td class="paramname">request</td><td>the URL to transform. </td></tr>
   </table>
   </dd>
@@ -431,8 +431,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5a75c69161fcac7669b9f061c9289d8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a75c69161fcac7669b9f061c9289d8e">&#9670;&nbsp;</a></span>isInCache()</h2>
+<a id="ab1e6aac56f13e5bb3083c181619f7c7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1e6aac56f13e5bb3083c181619f7c7a">&#9670;&nbsp;</a></span>isInCache()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,7 +441,7 @@ Functions</h2></td></tr>
           <td class="memname">char* isInCache </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -460,7 +460,7 @@ Functions</h2></td></tr>
 <p>Verify if a url is available in the cache. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
     <tr><td class="paramname">request</td><td>the url </td></tr>
   </table>
   </dd>
@@ -470,8 +470,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aaa0e0771ad3aa131f09d9334e6c8d617"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa0e0771ad3aa131f09d9334e6c8d617">&#9670;&nbsp;</a></span>loadRemoteFile()</h2>
+<a id="a8fb65272941924823d5eeb17655f18d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb65272941924823d5eeb17655f18d6">&#9670;&nbsp;</a></span>loadRemoteFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -480,7 +480,7 @@ Functions</h2></td></tr>
           <td class="memname">int loadRemoteFile </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramname"><em>ppmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -522,8 +522,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac4f8baf18bdee0d5f398c562ac3a625d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4f8baf18bdee0d5f398c562ac3a625d">&#9670;&nbsp;</a></span>readCurrentInput()</h2>
+<a id="a64000e4454eea2b3c47e49c90229825a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64000e4454eea2b3c47e49c90229825a">&#9670;&nbsp;</a></span>readCurrentInput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -532,7 +532,7 @@ Functions</h2></td></tr>
           <td class="memname">int readCurrentInput </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramname"><em>ppmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -586,8 +586,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac328b98c3b060240d2a22d9569572fd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac328b98c3b060240d2a22d9569572fd4">&#9670;&nbsp;</a></span>runHttpRequests()</h2>
+<a id="ada6388ed5eb575e455639af6509f0b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6388ed5eb575e455639af6509f0b14">&#9670;&nbsp;</a></span>runHttpRequests()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -596,7 +596,7 @@ Functions</h2></td></tr>
           <td class="memname">int runHttpRequests </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramname"><em>ppmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -659,7 +659,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 28 2024 02:40:49 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 28 2024 10:17:45 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -578,6 +578,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a9aeb58b5ba433eb4e411c612865c6879"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a9aeb58b5ba433eb4e411c612865c6879">OAPIPCorrespondances</a> [8][2]</td></tr>
 <tr class="memdesc:a9aeb58b5ba433eb4e411c612865c6879"><td class="mdescLeft">&#160;</td><td class="mdescRight">WPS exception codes to OGC API - Processes ones.  <a href="service_8h.html#a9aeb58b5ba433eb4e411c612865c6879">More...</a><br /></td></tr>
 <tr class="separator:a9aeb58b5ba433eb4e411c612865c6879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a326c5f3bad987a675aef8581676e5876"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a326c5f3bad987a675aef8581676e5876">OAPIPExceptionLimits</a> [1][2]</td></tr>
+<tr class="memdesc:a326c5f3bad987a675aef8581676e5876"><td class="mdescLeft">&#160;</td><td class="mdescRight">OGC API - Processes exception limits.  <a href="service_8h.html#a326c5f3bad987a675aef8581676e5876">More...</a><br /></td></tr>
+<tr class="separator:a326c5f3bad987a675aef8581676e5876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e9f96f2aec6b7caebfaab258824dac2"><td class="memItemLeft" align="right" valign="top">static const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a6e9f96f2aec6b7caebfaab258824dac2">OAPIPExceptionCode</a> []</td></tr>
 <tr class="memdesc:a6e9f96f2aec6b7caebfaab258824dac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">OGC API - Processes exception codes.  <a href="service_8h.html#a6e9f96f2aec6b7caebfaab258824dac2">More...</a><br /></td></tr>
 <tr class="separator:a6e9f96f2aec6b7caebfaab258824dac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4851,6 +4854,34 @@ the next registry pointer </td></tr>
 
 </div>
 </div>
+<a id="a326c5f3bad987a675aef8581676e5876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326c5f3bad987a675aef8581676e5876">&#9670;&nbsp;</a></span>OAPIPExceptionLimits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int OAPIPExceptionLimits[1][2]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {4,1}</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+<p>OGC API - Processes exception limits. </p>
+<p>Used to determine which exceptionsUrl to use for the current exception. The first value is the index in the WPSExceptionCode array, and the second one is the index in the exceptionsUrl map array (i.e. when exception code index is 4 or upper, we should use exceptionUrl_1). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="service_8h.html#a372ee42fd9b36e0f4af4734a6426a67f" title="Standard WPS exception codes.">WPSExceptionCode</a>, <a class="el" href="service_8h.html#a9aeb58b5ba433eb4e411c612865c6879" title="WPS exception codes to OGC API - Processes ones.">OAPIPCorrespondances</a> </dd></dl>
+
+</div>
+</div>
 <a id="af08fa874d4d94f17ee84cfef99d7e6a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af08fa874d4d94f17ee84cfef99d7e6a5">&#9670;&nbsp;</a></span>OAPIPSupportedContentTypes</h2>
 
@@ -5056,7 +5087,7 @@ the next registry pointer </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 15 2025 16:51:31 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 7 2025 11:29:32 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['_5f_0',['_',['../response__print_8h.html#a32a3cf3d9dd914f5aeeca5423c157934',1,'_():&#160;response_print.h'],['../service__internal_8h.html#a32a3cf3d9dd914f5aeeca5423c157934',1,'_():&#160;service_internal.h'],['../zoo__service__loader_8c.html#a32a3cf3d9dd914f5aeeca5423c157934',1,'_():&#160;zoo_service_loader.c']]],
+  ['_5f_0',['_',['../response__print_8h.html#a32a3cf3d9dd914f5aeeca5423c157934',1,'_():&#160;response_print.h'],['../server__internal_8h.html#a32a3cf3d9dd914f5aeeca5423c157934',1,'_():&#160;server_internal.h'],['../service__internal_8h.html#a32a3cf3d9dd914f5aeeca5423c157934',1,'_():&#160;service_internal.h'],['../zoo__service__loader_8c.html#a32a3cf3d9dd914f5aeeca5423c157934',1,'_():&#160;zoo_service_loader.c']]],
   ['_5f_5f_1',['__',['../zoo__service__loader_8c.html#a19b9dc4872e78e68ca50c42f5134a5e7',1,'zoo_service_loader.c']]],
   ['_5f_5fbool_5ftrue_5ffalse_5fare_5fdefined_2',['__bool_true_false_are_defined',['../service_8h.html#a665b0cc9ee2ced31785321d55cde349e',1,'service.h']]],
   ['_5f_5fpad0_5f_5f_3',['__pad0__',['../main__conf__read_8y.html#a7282132336eb970809a9bc4a9fff8c1e',1,'__pad0__():&#160;main_conf_read.y'],['../service__conf_8y.html#a7282132336eb970809a9bc4a9fff8c1e',1,'__pad0__():&#160;service_conf.y']]],
@@ -35,7 +35,7 @@ var searchData=
   ['_5fservice_5ffailed_32',['_SERVICE_FAILED',['../service__internal__php_8c.html#aecf6f60d5a1b22084205293b0270605d',1,'_SERVICE_FAILED():&#160;service_internal_php.c'],['../service__internal__php7_8c.html#aecf6f60d5a1b22084205293b0270605d',1,'_SERVICE_FAILED():&#160;service_internal_php7.c']]],
   ['_5fservice_5fsucceeded_33',['_SERVICE_SUCCEEDED',['../service__internal__php_8c.html#a431c4ab18506c82c43c5a0523fe7ec37',1,'_SERVICE_SUCCEEDED():&#160;service_internal_php.c'],['../service__internal__php7_8c.html#a431c4ab18506c82c43c5a0523fe7ec37',1,'_SERVICE_SUCCEEDED():&#160;service_internal_php7.c']]],
   ['_5fsocket_34',['_socket',['../service__internal__amqp_8c.html#af4a3dce70f9ac094561192583a043afd',1,'service_internal_amqp.c']]],
-  ['_5fss_35',['_ss',['../response__print_8h.html#adf50d5a8196c19fbcdd7d486789fb848',1,'_ss():&#160;response_print.h'],['../service__internal_8h.html#adf50d5a8196c19fbcdd7d486789fb848',1,'_ss():&#160;service_internal.h']]],
+  ['_5fss_35',['_ss',['../response__print_8h.html#adf50d5a8196c19fbcdd7d486789fb848',1,'_ss():&#160;response_print.h'],['../server__internal_8h.html#adf50d5a8196c19fbcdd7d486789fb848',1,'_ss():&#160;server_internal.h'],['../service__internal_8h.html#adf50d5a8196c19fbcdd7d486789fb848',1,'_ss():&#160;service_internal.h']]],
   ['_5fstate_36',['_state',['../service__internal__python_8c.html#adb5f4e26ed08b1f5e57d51f452404533',1,'service_internal_python.c']]],
   ['_5ftranslatechar_37',['_translateChar',['../service_8c.html#aee52cac98f0dca12484204a9a755913a',1,'_translateChar(char *str, char toReplace, char toReplaceBy):&#160;service.c'],['../service_8h.html#ad981933a58ed10981f00057e0bcb7db6',1,'_translateChar(char *, char, char):&#160;service.c']]],
   ['_5fulinet_38',['_ULINET',['../ulinet_8c.html#a4b23c8f7aa3ccb11709e6311d585c3c8',1,'ulinet.c']]],

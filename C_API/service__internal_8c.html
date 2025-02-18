@@ -72,6 +72,8 @@ $(function() {
 <div class="textblock"><code>#include &quot;cpl_vsi.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="service__internal_8h_source.html">service_internal.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="service__callback_8h_source.html">service_callback.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="request__parser_8h_source.html">request_parser.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="caching_8h_source.html">caching.h</a>&quot;</code><br />
 <code>#include &quot;dirent.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -140,6 +142,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a587a66114d3ed8d62e00277d74ac4650"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal_8c.html#a587a66114d3ed8d62e00277d74ac4650">getInputValue</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *inputs, const char *parameterName, size_t *numberOfBytes)</td></tr>
 <tr class="memdesc:a587a66114d3ed8d62e00277d74ac4650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access an input value.  <a href="service__internal_8c.html#a587a66114d3ed8d62e00277d74ac4650">More...</a><br /></td></tr>
 <tr class="separator:a587a66114d3ed8d62e00277d74ac4650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad4d29b35b1b64ef22bf51572f36492"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal_8c.html#aaad4d29b35b1b64ef22bf51572f36492">validateVRT</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, const char *pccVRTName)</td></tr>
+<tr class="memdesc:aaad4d29b35b1b64ef22bf51572f36492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate that the VRT contains only allowed path.  <a href="service__internal_8c.html#aaad4d29b35b1b64ef22bf51572f36492">More...</a><br /></td></tr>
+<tr class="separator:aaad4d29b35b1b64ef22bf51572f36492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb318a8008403036a46649572c162980"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal_8c.html#aeb318a8008403036a46649572c162980">readVSIFile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, const char *dataSource)</td></tr>
 <tr class="memdesc:aeb318a8008403036a46649572c162980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a file using the GDAL VSI API.  <a href="service__internal_8c.html#aeb318a8008403036a46649572c162980">More...</a><br /></td></tr>
 <tr class="separator:aeb318a8008403036a46649572c162980"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1015,10 +1020,48 @@ value for SETVAL </td></tr>
 
 </div>
 </div>
+<a id="aaad4d29b35b1b64ef22bf51572f36492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad4d29b35b1b64ef22bf51572f36492">&#9670;&nbsp;</a></span>validateVRT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool validateVRT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccVRTName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Validate that the VRT contains only allowed path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the maps pointing to the main configuration </td></tr>
+    <tr><td class="paramname">pccVRTName</td><td>the name of the VRT file to validate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the VRT is valid, false otherwise </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 10 2025 17:26:34 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 18 2025 07:58:53 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

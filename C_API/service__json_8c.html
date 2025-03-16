@@ -120,9 +120,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a834ee6f1ef9080b3e4617e79e239e9d2"><td class="memItemLeft" align="right" valign="top">json_object *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a834ee6f1ef9080b3e4617e79e239e9d2">addArray</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, <a class="el" href="service_8h.html#structelements">elements</a> *el)</td></tr>
 <tr class="memdesc:a834ee6f1ef9080b3e4617e79e239e9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add support for type array in extended-schema.  <a href="service__json_8c.html#a834ee6f1ef9080b3e4617e79e239e9d2">More...</a><br /></td></tr>
 <tr class="separator:a834ee6f1ef9080b3e4617e79e239e9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac99db544b755fa76f64f5a8cd027ed91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#ac99db544b755fa76f64f5a8cd027ed91">printBoundingBoxJ</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, <a class="el" href="service_8h.html#structelements">elements</a> *in, json_object *input)</td></tr>
-<tr class="memdesc:ac99db544b755fa76f64f5a8cd027ed91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add basic schema definition for the BoundingBox type.  <a href="service__json_8c.html#ac99db544b755fa76f64f5a8cd027ed91">More...</a><br /></td></tr>
-<tr class="separator:ac99db544b755fa76f64f5a8cd027ed91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b846aac18625f5092627cb3b317ac3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a32b846aac18625f5092627cb3b317ac3">getDefinitionFromSchemas</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, const char *pccName, json_object *pjoInput)</td></tr>
+<tr class="memdesc:a32b846aac18625f5092627cb3b317ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the data format definition from the schemas section, return 1 if found.  <a href="service__json_8c.html#a32b846aac18625f5092627cb3b317ac3">More...</a><br /></td></tr>
+<tr class="separator:a32b846aac18625f5092627cb3b317ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e8c86dd95f0dda8e3b451c5e73ece4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a32e8c86dd95f0dda8e3b451c5e73ece4">printBoundingBoxJ</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, <a class="el" href="service_8h.html#structelements">elements</a> *in, json_object *input)</td></tr>
+<tr class="memdesc:a32e8c86dd95f0dda8e3b451c5e73ece4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add basic schema definition for the BoundingBox type.  <a href="service__json_8c.html#a32e8c86dd95f0dda8e3b451c5e73ece4">More...</a><br /></td></tr>
+<tr class="separator:a32e8c86dd95f0dda8e3b451c5e73ece4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26128a05101e878d905e68a5a14eaf1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8c.html#a26128a05101e878d905e68a5a14eaf1f">printFormatJ1</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, <a class="el" href="service_8h.html#structiotype">iotype</a> *iot, json_object *res, bool isDefault, <a class="el" href="service_8h.html#structmap">map</a> *maxSize)</td></tr>
 <tr class="memdesc:a26128a05101e878d905e68a5a14eaf1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add schema property to a json_object (ComplexData)  <a href="service__json_8c.html#a26128a05101e878d905e68a5a14eaf1f">More...</a><br /></td></tr>
 <tr class="separator:a26128a05101e878d905e68a5a14eaf1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1124,6 +1127,50 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a32b846aac18625f5092627cb3b317ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b846aac18625f5092627cb3b317ac3">&#9670;&nbsp;</a></span>getDefinitionFromSchemas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getDefinitionFromSchemas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>pjoInput</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the data format definition from the schemas section, return 1 if found. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>the main configuration maps pointer </td></tr>
+    <tr><td class="paramname">pccName</td><td>the name of the data format to search for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if found, 0 otherwise </dd></dl>
+
+</div>
+</div>
 <a id="aaf85c87d81e79d19422fe6e51ab2bf7f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf85c87d81e79d19422fe6e51ab2bf7f">&#9670;&nbsp;</a></span>getResultPath()</h2>
 
@@ -2069,8 +2116,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac99db544b755fa76f64f5a8cd027ed91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac99db544b755fa76f64f5a8cd027ed91">&#9670;&nbsp;</a></span>printBoundingBoxJ()</h2>
+<a id="a32e8c86dd95f0dda8e3b451c5e73ece4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e8c86dd95f0dda8e3b451c5e73ece4">&#9670;&nbsp;</a></span>printBoundingBoxJ()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2079,7 +2126,7 @@ Functions</h2></td></tr>
           <td class="memname">void printBoundingBoxJ </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2105,7 +2152,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">m</td><td>the main configuration maps pointer </td></tr>
-    <tr><td class="paramname">in</td><td>the main configuration maps pointer </td></tr>
+    <tr><td class="paramname">in</td><td>the elements pointing to an input/output </td></tr>
     <tr><td class="paramname">input</td><td>the json_object pointer used to store the schema definition </td></tr>
   </table>
   </dd>
@@ -3281,7 +3328,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 14 2025 07:49:12 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Mar 16 2025 13:26:14 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -368,6 +368,224 @@ images to the one defined during the <cite>docker build</cite> command used to
 build the docker image locally.</p>
 <p>Now you can deploy on Minikube as defined here: <a class="reference internal" href="#deploy-using-helm"><span class="std std-ref">Deploy using Helm</span></a></p>
 </section>
+<section id="cwl-supported-types">
+<span id="id5"></span><h5>CWL Supported types<a class="headerlink" href="#cwl-supported-types" title="Permalink to this heading">¶</a></h5>
+<p>OGC API - Processes - Part 1: Core introduced the <cite>format</cite> key in the <cite>schema</cite>
+property giving the opportunity to provide additional semantic context that
+can aid in the interpretation of the data (cf.
+<a class="reference external" href="https://docs.ogc.org/DRAFTS/18-062.html#format-key-values">Table 13 Additional values for the JSON schema format key for OGC Process Description</a>).
+The <cite>format</cite> key can be particularly useful when dealing with complex data
+types (especially when they have the same media type) or when integrating with
+other systems that require specific data formats.</p>
+<p>A set of <a class="reference external" href="https://eoap.github.io/schemas/">CWL Custom Types</a> has beend
+defined by the <a class="reference external" href="https://github.com/eoap">Earth Observation Application Package (EOAP) GitHub
+Organization</a>.
+They helps to define the data structure used in the CWL workflow description
+for the additional values to the JSON Schema formats key for OGC Process
+Descripton. They are managed on the
+<a class="reference external" href="https://github.com/eoap/schemas">Schemas EOAP GitHub repository</a>.</p>
+<p>They are organized in the following three definition files:</p>
+<ul class="simple">
+<li><p><strong>OGC</strong>: <a class="reference external" href="https://raw.githubusercontent.com/eoap/schemas/refs/heads/main/ogc.yaml">ogc.yaml</a></p></li>
+<li><p><strong>GeoJSON</strong>: <a class="reference external" href="https://raw.githubusercontent.com/eoap/schemas/refs/heads/main/geojson.yaml">geojson.yaml</a></p></li>
+<li><p><strong>STAC</strong>: <a class="reference external" href="https://raw.githubusercontent.com/eoap/schemas/refs/heads/main/stac.yaml">stac.yaml</a></p></li>
+</ul>
+<p>In the <cite>oas.cfg</cite> file, the <cite>schemas</cite> property can be defined to list the
+predefined schemas definition used in the exposed OpenAPI.
+The value explicitely linked to the <cite>format</cite> key in the <cite>schema</cite> property is
+the URL of the OpenAPI or JSON Schema definition file.</p>
+<p>Below is the list of the predefined format names and their corresponding
+schemas.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="k">[schemas]</span>
+<span class="na">length</span><span class="o">=</span><span class="s">7</span>
+<span class="na">value</span><span class="o">=</span><span class="s">https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/bbox.yaml</span>
+<span class="na">name</span><span class="o">=</span><span class="s">ogc-bbox</span>
+<span class="na">value_1</span><span class="o">=</span><span class="s">https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/featureCollectionGeoJSON.yaml</span>
+<span class="na">name_1</span><span class="o">=</span><span class="s">geojson-feature-collection</span>
+<span class="na">value_2</span><span class="o">=</span><span class="s">https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/featureGeoJSON.yaml</span>
+<span class="na">name_2</span><span class="o">=</span><span class="s">geojson-feature</span>
+<span class="na">value_3</span><span class="o">=</span><span class="s">https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/geometrycollectionGeoJSON.yaml</span>
+<span class="na">name_3</span><span class="o">=</span><span class="s">geojson-geometry</span>
+<span class="na">value_4</span><span class="o">=</span><span class="s">https://raw.githubusercontent.com/radiantearth/stac-api-spec/refs/heads/release/v1.0.0/stac-spec/catalog-spec/json-schema/catalog.json</span>
+<span class="na">name_4</span><span class="o">=</span><span class="s">stac-catalog</span>
+<span class="na">value_5</span><span class="o">=</span><span class="s">https://raw.githubusercontent.com/radiantearth/stac-api-spec/refs/heads/release/v1.0.0/stac-spec/collection-spec/json-schema/collection.json</span>
+<span class="na">name_5</span><span class="o">=</span><span class="s">stac-collection</span>
+<span class="na">value_6</span><span class="o">=</span><span class="s">https://raw.githubusercontent.com/radiantearth/stac-api-spec/refs/heads/release/v1.0.0/stac-spec/item-spec/json-schema/item.json</span>
+<span class="na">name_6</span><span class="o">=</span><span class="s">stac-item</span>
+</pre></div>
+</div>
+<p>The table below provides the list of the predefined supported CWL Custom Types
+and their corresponding format key values and OGC Processes Description.</p>
+<table class="docutils align-center" id="id6">
+<caption><span class="caption-text">CWL Custom Types and OGC Processes Description</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15.0%" />
+<col style="width: 10.0%" />
+<col style="width: 75.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>CWL Custom Type</p></th>
+<th class="head"><p>Short code</p></th>
+<th class="head"><p>OGC Processes Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>geojson.yaml#FeatureCollection</p></td>
+<td><p>geojson-feature-collection</p></td>
+<td><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>&quot;schema&quot;: {
+  &quot;allOf&quot;: [
+    {
+      &quot;format&quot;: &quot;geojson-feature-collection&quot;
+    },
+    {
+      &quot;$ref&quot;: &quot;https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/featureCollectionGeoJSON.yaml&quot;
+    }
+  ]
+ }
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>geojson.yaml#Feature</p></td>
+<td><p>geojson-feature</p></td>
+<td><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>&quot;schema&quot;: {
+  &quot;allOf&quot;: [
+    {
+      &quot;format&quot;: &quot;geojson-feature&quot;
+    },
+    {
+      &quot;$ref&quot;: &quot;https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/featureGeoJSON.yaml&quot;
+    }
+  ]
+ }
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><ul class="simple">
+<li><p>geojson.yaml#GeometryCollection</p></li>
+<li><p>geojson.yaml#Polygon</p></li>
+<li><p>geojson.yaml#LineString</p></li>
+<li><p>geojson.yaml#Point</p></li>
+<li><p>geojson.yaml#MultiPolygon</p></li>
+<li><p>geojson.yaml#MultiLineString</p></li>
+<li><p>geojson.yaml#MultiPoint</p></li>
+</ul>
+</td>
+<td><p>geojson-geometry</p></td>
+<td><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>&quot;schema&quot;: {
+  &quot;allOf&quot;: [
+    {
+      &quot;format&quot;: &quot;geojson-geometry&quot;
+    },
+    {
+      &quot;$ref&quot;: &quot;https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/geometrycollectionGeoJSON.yaml&quot;
+    }
+  ]
+ }
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ogc.yaml#BBox</p></td>
+<td><p>ogc-bbox</p></td>
+<td><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>&quot;schema&quot;: {
+  &quot;allOf&quot;: [
+    {
+      &quot;format&quot;: &quot;ogc-bbox&quot;
+    },
+    {
+      &quot;$ref&quot;: &quot;https://schemas.opengis.net/ogcapi/processes/part1/1.0/openapi/schemas/bbox.yaml&quot;
+    }
+  ]
+ }
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>None</p></td>
+<td><p>epsg-code</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p>None</p></td>
+<td><p>wkt2-def</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p>None</p></td>
+<td><p>cql2-text</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p>None</p></td>
+<td><p>cql2-json</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p>None</p></td>
+<td><p>collection-id</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p>stac.yaml#Collection</p></td>
+<td><p>stac-collection</p></td>
+<td><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>&quot;schema&quot;: {
+  &quot;allOf&quot;: [
+    {
+      &quot;format&quot;: &quot;stac-collection&quot;
+    },
+    {
+      &quot;$ref&quot;: &quot;https://raw.githubusercontent.com/radiantearth/stac-api-spec/refs/heads/release/v1.0.0/stac-spec/collection-spec/json-schema/collection.json&quot;
+    }
+  ]
+ }
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>stac.yaml#Catalog</p></td>
+<td><p>stac-catalog</p></td>
+<td><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>&quot;schema&quot;: {
+  &quot;allOf&quot;: [
+    {
+      &quot;format&quot;: &quot;stac-catalog&quot;
+    },
+    {
+      &quot;$ref&quot;: &quot;https://raw.githubusercontent.com/radiantearth/stac-api-spec/refs/heads/release/v1.0.0/stac-spec/catalog-spec/json-schema/catalog.json&quot;
+    }
+  ]
+ }
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>None</p></td>
+<td><p>stac-itemCollection</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p>stac.yaml#Item</p></td>
+<td><p>stac-item</p></td>
+<td><div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>&quot;schema&quot;: {
+  &quot;allOf&quot;: [
+    {
+      &quot;format&quot;: &quot;stac-item&quot;
+    },
+    {
+      &quot;$ref&quot;: &quot;https://raw.githubusercontent.com/radiantearth/stac-api-spec/refs/heads/release/v1.0.0/stac-spec/item-spec/json-schema/item.json&quot;
+    }
+  ]
+ }
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>None</p></td>
+<td><p>ogc-feature-collection</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p>None</p></td>
+<td><p>ogc-coverage-collection</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 </section>
 </section>

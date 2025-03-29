@@ -80,7 +80,7 @@ var searchData=
   ['serviceisfiltered_715',['serviceIsFiltered',['../service__json_8c.html#a83c0278cbeb69182803830a738826cda',1,'service_json.c']]],
   ['services_716',['services',['../service_8h.html#structservices',1,'services'],['../service_8h.html#af499f6727de815cfe69b91669c0ac24c',1,'services():&#160;service.h']]],
   ['services_5fsize_717',['SERVICES_SIZE',['../service_8h.html#ac34a714dbd7ab2f00c48e585b4bfcdad',1,'service.h']]],
-  ['servicetojson_718',['serviceToJson',['../service__json_8c.html#a8fed1219809b2a1897cf6915b7582dc5',1,'serviceToJson(service *myService):&#160;service_json.c'],['../service__json_8h.html#ae4b50c81f1a37b2d9b40f96443d12153',1,'serviceToJson(service *):&#160;service_json.c']]],
+  ['servicetojson_718',['serviceToJson',['../service__json_8c.html#a5f7f80debc34a5d2a578b7e779ef6cdb',1,'serviceToJson(service *psService):&#160;service_json.c'],['../service__json_8h.html#ae4b50c81f1a37b2d9b40f96443d12153',1,'serviceToJson(service *):&#160;service_json.c']]],
   ['session_719',['session',['../sshapi_8h.html#aa09757ee91d331cef797d1dc4b1908b9',1,'SSHCON']]],
   ['sessions_720',['sessions',['../sshapi_8c.html#a4fa485b7ca163a8338d54163c44990de',1,'sshapi.c']]],
   ['setbasicauth_721',['setBasicAuth',['../ulinet_8c.html#a499ec8a7d33a88b18e21a1bfee0e8ec0',1,'setBasicAuth(HINTERNET hInternet, char *login, char *passwd):&#160;ulinet.c'],['../ulinet_8h.html#a212ed170ac7ba53dae559490d2d94af5',1,'setBasicAuth(HINTERNET, char *, char *):&#160;ulinet.c']]],

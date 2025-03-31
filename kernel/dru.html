@@ -225,32 +225,108 @@ implementation of each step in a workflow as a container. It provides
 simple, flexible mechanisms for specifying constraints between the
 steps in a workflow and artifact management for linking the output of
 any step as an input to subsequent steps.</p>
-<section id="installation-on-a-minikube-cluster">
-<h2>Installation on a Minikube Cluster<a class="headerlink" href="#installation-on-a-minikube-cluster" title="Permalink to this heading">¶</a></h2>
+<p>The ZOO-Project with DRU support is available as a
+<a class="reference external" href="https://artifacthub.io/packages/helm/zoo-project/zoo-project-dru">helm chart that</a>
+can be deployed on a Kubernetes cluster.</p>
+<section id="installation-on-a-local-kubernetes-cluster">
+<h2>Installation on a local Kubernetes Cluster<a class="headerlink" href="#installation-on-a-local-kubernetes-cluster" title="Permalink to this heading">¶</a></h2>
 <p>Follow the steps described below in order to activate the ZOO-Project
 optional DRU support.</p>
 <p>Be sure you have all the prerequisistes setup before starting the
 installation.</p>
 <p>For deploying the ZOO-Project for developing and testing purposes
 (e.g. on local machine), please proceed to the section
-<a class="reference internal" href="#id1"><span class="std std-ref">Installation on a Minikube Cluster</span></a>.</p>
+<a class="reference internal" href="#installation-on-a-minikube-cluster"><span class="std std-ref">Installation on a Minikube Cluster</span></a>.</p>
 <p>For building the ZOO-Project docker image using the project source
 code, please proceed to the section <a class="reference internal" href="#building-the-docker-image-for-developper"><span class="std std-ref">Building the docker image (for developper)</span></a>.</p>
 <section id="prerequisites">
 <h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference external" href="https://docs.docker.com/get-docker/">Docker</a></p></li>
+<li><p><a class="reference external" href="https://docs.docker.com/get-docker/">Docker</a> (Apple silicon users should activate kubernetes from Docker Desktop, the virtual machine options should be set to Apple virtualization framework with the option “Use Rosetta for x86/64 emulation on Apple silicon” activated)</p></li>
 <li><p><a class="reference external" href="https://kubernetes.io/fr/docs/tasks/tools/install-kubectl/">Kubectl</a></p></li>
 <li><p><a class="reference external" href="https://helm.sh/docs/intro/install/">Helm</a></p></li>
-<li><p><a class="reference external" href="https://minikube.sigs.k8s.io/docs/start/">Minikube</a></p></li>
+<li><p><a class="reference external" href="https://minikube.sigs.k8s.io/docs/start/">Minikube</a> (not required for Apple silicon)</p></li>
+<li><p><a class="reference external" href="https://skaffold.dev/docs/install/">Skaffold</a> (for developers)</p></li>
 <li><p>latest <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/">ZOO-Project</a>
 version</p></li>
 </ul>
 </div></blockquote>
 </section>
-<section id="id1">
-<span id="id2"></span><h3>Installation on a Minikube Cluster<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<section id="building-and-installing-using-skaffold">
+<span id="installation-using-skaffold"></span><h3>Building and installing using skaffold<a class="headerlink" href="#building-and-installing-using-skaffold" title="Permalink to this heading">¶</a></h3>
+<p>The ZOO-Project with DRU support can be setup using skaffold. There are
+multiple profiles defined in the <cite>skaffold.yaml</cite> file. The profiles are the
+following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt><cite>dru</cite>:</dt><dd><p>it will deploy the ZOO-Project-DRU on a Kubernetes cluster with
+the ZOO-Project-DRU docker image built from the source code and the
+default <a class="reference external" href="https://github.com/EOEPCA/zoo-calrissian-runner">zoo-calrissian-runner</a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>dru-wes</cite>:</dt><dd><p>it will deploy the ZOO-Project-DRU on a Kubernetes cluster with
+the ZOO-Project-DRU docker image built from the source code and
+the WES support (using the
+<a class="reference external" href="https://github.com/ZOO-Project/zoo-wes-runner">zoo-wes-runner</a>).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><cite>dru-argo</cite>:</dt><dd><p>it will deploy the ZOO-Project-DRU on a Kubernetes cluster
+with the ZOO-Project-DRU docker image built from the source code and
+the Argo Workflows support (using the <a class="reference external" href="https://github.com/EOEPCA/zoo-argowf-runner/tree/develop">zoo-argowf-runner</a>).</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<p>Associated with each profile, there is a corresponding <cite>X-hostpath</cite> prfile
+where <cite>X</cite> is a profile name (<cite>dru</cite>, <cite>dru-wes</cite> or <cite>dru-argo</cite>). These profiles
+should be used when deploying on Apple Silicon.</p>
+<p>For instance, to deploy the ZOO-Project-DRU on a x86/amd64 Kubernetes cluster
+with the default zoo-calrissian-runner, use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ZOO-Project/ZOO-Project.git
+de<span class="w"> </span>ZOO-Project
+skaffold<span class="w"> </span>dev<span class="w"> </span>-p<span class="w"> </span>dru
+</pre></div>
+</div>
+<p>For deploying on arm64 (Apple silicon) Kubernetes cluster, use the following
+command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ZOO-Project/ZOO-Project.git
+de<span class="w"> </span>ZOO-Project
+skaffold<span class="w"> </span>dev<span class="w"> </span>-p<span class="w"> </span>dru-hostpath<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--platform<span class="o">=</span>linux/amd64<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>--enable-platform-node-affinity<span class="o">=</span><span class="nb">true</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>💡 The <cite>skaffold.yaml</cite> file is located in the root directory of the
+ZOO-Project repository. It is used to build
+the docker image and deploy the ZOO-Project on a Kubernetes
+cluster. Usually, you should use a specific version of the
+ZOO-Project-DRU docker image, as defined in the Helm chart.
+During the development phase, skaffold can be used to build and deploy
+using the current state of the local source code.</p>
+</div>
+<p>For deploying the ZOO-Project-DRU using Argo Workflows, you don’t need to
+deploy any object storage, the ZOO-Project will use the one created by the Argo
+server. In consequence, we also provide an optional <cite>skaffold-argo.yaml</cite> file
+that can be used to deploy the ZOO-Project-DRU using Argo Workflows without
+extra object storage. To deplot this version on a x86/amd64 Kubernetes cluster,
+use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ZOO-Project/ZOO-Project.git
+de<span class="w"> </span>ZOO-Project
+skaffold<span class="w"> </span>dev<span class="w"> </span>-p<span class="w"> </span>dru-argo<span class="w"> </span>-f<span class="w"> </span>docker/dru/skaffold-argo.yaml
+</pre></div>
+</div>
+</section>
+<section id="installation-on-a-minikube-cluster">
+<span id="id1"></span><h3>Installation on a Minikube Cluster<a class="headerlink" href="#installation-on-a-minikube-cluster" title="Permalink to this heading">¶</a></h3>
 <section id="zoo-project-dru-helm-chart">
 <h4>ZOO-Project DRU Helm chart<a class="headerlink" href="#zoo-project-dru-helm-chart" title="Permalink to this heading">¶</a></h4>
 <p>The current helm chart is available from here:
@@ -270,7 +346,7 @@ processings job on Kubernetes.</p>
 </div>
 </section>
 <section id="deploy-using-helm">
-<span id="id3"></span><h5>Deploy using Helm<a class="headerlink" href="#deploy-using-helm" title="Permalink to this heading">¶</a></h5>
+<span id="id2"></span><h5>Deploy using Helm<a class="headerlink" href="#deploy-using-helm" title="Permalink to this heading">¶</a></h5>
 <p>The ZOO-Project with DRU support is setup via helm specifying an
 optional “release name”.</p>
 <p>For instance, we will install the ZOO-Project with the name <cite>zoo-project-dru</cite>.</p>
@@ -338,7 +414,7 @@ kubectl delete pvc data-zoo-project-dru-postgresql-0 \
 </div>
 </section>
 <section id="building-the-docker-image-for-developper">
-<span id="id4"></span><h5>Building the docker image (for developper)<a class="headerlink" href="#building-the-docker-image-for-developper" title="Permalink to this heading">¶</a></h5>
+<span id="id3"></span><h5>Building the docker image (for developper)<a class="headerlink" href="#building-the-docker-image-for-developper" title="Permalink to this heading">¶</a></h5>
 <p>For a developper it may be convenient to test a new functionality
 on Minikube. To do so, use the following commands to build a dedicated
 ZOO-Project (with DRU support enabled) binary image to be used to
@@ -368,14 +444,17 @@ images to the one defined during the <cite>docker build</cite> command used to
 build the docker image locally.</p>
 <p>Now you can deploy on Minikube as defined here: <a class="reference internal" href="#deploy-using-helm"><span class="std std-ref">Deploy using Helm</span></a></p>
 </section>
+</section>
+</section>
+</section>
 <section id="cwl-supported-types">
-<span id="id5"></span><h5>CWL Supported types<a class="headerlink" href="#cwl-supported-types" title="Permalink to this heading">¶</a></h5>
+<span id="id4"></span><h2>CWL Supported types<a class="headerlink" href="#cwl-supported-types" title="Permalink to this heading">¶</a></h2>
 <p>The ZOO-Project handle <a class="reference external" href="../services/zcfg-reference.html#type-of-data-nodes">three kind of input types</a> for every process/service.
 One of them are the LiteralData, which are simple values like strings, numbers, etc.</p>
 <p>You can find below the exhaustive list of supported types for the LiteralData
 depending on the type defined in the CWL used to deploy a process.</p>
-<table class="docutils align-center" id="id6">
-<caption><span class="caption-text">CWL Types for LiteralData</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<table class="docutils align-center" id="id5">
+<caption><span class="caption-text">CWL Types for LiteralData</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 18.8%" />
 <col style="width: 81.2%" />
@@ -484,8 +563,8 @@ schemas.</p>
 </div>
 <p>The table below provides the list of the predefined supported CWL Custom Types
 and their corresponding format key values and OGC Processes Description.</p>
-<table class="docutils align-center" id="id7">
-<caption><span class="caption-text">CWL Custom Types and OGC Processes Description</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<table class="docutils align-center" id="id6">
+<caption><span class="caption-text">CWL Custom Types and OGC Processes Description</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 15.0%" />
 <col style="width: 10.0%" />
@@ -653,9 +732,6 @@ and their corresponding format key values and OGC Processes Description.</p>
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-</section>
 </section>
 </section>
 

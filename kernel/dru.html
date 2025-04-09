@@ -252,6 +252,27 @@ code, please proceed to the section <a class="reference internal" href="#buildin
 version</p></li>
 </ul>
 </div></blockquote>
+<section id="checking-the-requirements">
+<h4>Checking the requirements<a class="headerlink" href="#checking-the-requirements" title="Permalink to this heading">¶</a></h4>
+<p>After installing these tools, ensure they are available in your terminal by running the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>--version
+kubectl<span class="w"> </span>version<span class="w"> </span>--client
+helm<span class="w"> </span>version
+skaffold<span class="w"> </span>version
+<span class="c1"># The following command is not required to work on Apple silicon</span>
+minikube<span class="w"> </span>version
+</pre></div>
+</div>
+</section>
+<section id="add-the-helm-repositories">
+<h4>Add the helm repositories<a class="headerlink" href="#add-the-helm-repositories" title="Permalink to this heading">¶</a></h4>
+<p>Before starting the next steps, make sure to run the following command to
+ensure that your local environment is ready to deploy the ZOO-Project-DRU.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>localstack<span class="w"> </span>https://helm.localstack.cloud
+helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>zoo-project<span class="w"> </span>https://zoo-project.github.io/charts/
+</pre></div>
+</div>
+</section>
 </section>
 <section id="building-and-installing-using-skaffold">
 <span id="installation-using-skaffold"></span><h3>Building and installing using skaffold<a class="headerlink" href="#building-and-installing-using-skaffold" title="Permalink to this heading">¶</a></h3>

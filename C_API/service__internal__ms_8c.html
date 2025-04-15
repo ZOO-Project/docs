@@ -84,30 +84,30 @@ Functions</h2></td></tr>
 <tr class="memitem:aa14fa0b26e34ddc01c24498561288493"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#aa14fa0b26e34ddc01c24498561288493">getCorrespondance</a> ()</td></tr>
 <tr class="memdesc:aa14fa0b26e34ddc01c24498561288493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of configuration keys having a corresponding mandatory ows_*.  <a href="service__internal__ms_8c.html#aa14fa0b26e34ddc01c24498561288493">More...</a><br /></td></tr>
 <tr class="separator:aa14fa0b26e34ddc01c24498561288493"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae199f402b52698ffd14d90f5fc9eb472"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#ae199f402b52698ffd14d90f5fc9eb472">getPublishedId</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *elem)</td></tr>
-<tr class="memdesc:ae199f402b52698ffd14d90f5fc9eb472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current publish_id value.  <a href="service__internal__ms_8c.html#ae199f402b52698ffd14d90f5fc9eb472">More...</a><br /></td></tr>
-<tr class="separator:ae199f402b52698ffd14d90f5fc9eb472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6e270e423418db2f29500ca117412db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#aa6e270e423418db2f29500ca117412db">setMapSize</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *output, double minx, double miny, double maxx, double maxy)</td></tr>
-<tr class="memdesc:aa6e270e423418db2f29500ca117412db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add width and height keys to an output maps containing the maximum width and height for displaying the full data extent.  <a href="service__internal__ms_8c.html#aa6e270e423418db2f29500ca117412db">More...</a><br /></td></tr>
-<tr class="separator:aa6e270e423418db2f29500ca117412db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affbc5942c996c2ea0c6ea48dd14bdd5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#affbc5942c996c2ea0c6ea48dd14bdd5d">setReferenceUrl</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *m, <a class="el" href="service_8h.html#structmaps">maps</a> *tmpI)</td></tr>
-<tr class="memdesc:affbc5942c996c2ea0c6ea48dd14bdd5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a Reference key to an output containing the WMFS/WFS/WCS request for accessing service result.  <a href="service__internal__ms_8c.html#affbc5942c996c2ea0c6ea48dd14bdd5d">More...</a><br /></td></tr>
-<tr class="separator:affbc5942c996c2ea0c6ea48dd14bdd5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a287f2055cd6244f9d8fe64b1eebca4ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#a287f2055cd6244f9d8fe64b1eebca4ab">setSrsInformations</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *output, mapObj *m, layerObj *myLayer, char *pszProjection)</td></tr>
-<tr class="memdesc:a287f2055cd6244f9d8fe64b1eebca4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set projection for a layer in a MAPFILE using Authority Code and Name if available or fallback to proj4 definition if available or fallback to default EPSG:4326.  <a href="service__internal__ms_8c.html#a287f2055cd6244f9d8fe64b1eebca4ab">More...</a><br /></td></tr>
-<tr class="separator:a287f2055cd6244f9d8fe64b1eebca4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3084597e7a3e3ed80dac83ef908294fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#a3084597e7a3e3ed80dac83ef908294fe">setMsExtent</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *output, mapObj *m, layerObj *myLayer, double minX, double minY, double maxX, double maxY)</td></tr>
-<tr class="memdesc:a3084597e7a3e3ed80dac83ef908294fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the MAPFILE extent, the the ows_extent for the layer, add wms_extent and wfs_extent to the output maps and call setMapSize.  <a href="service__internal__ms_8c.html#a3084597e7a3e3ed80dac83ef908294fe">More...</a><br /></td></tr>
-<tr class="separator:a3084597e7a3e3ed80dac83ef908294fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe8ef9017239515901f2679b178fcc54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#abe8ef9017239515901f2679b178fcc54">tryOgr</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *output, mapObj *m)</td></tr>
-<tr class="memdesc:abe8ef9017239515901f2679b178fcc54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to open a vector output and define the corresponding layer in the MAPFILE.  <a href="service__internal__ms_8c.html#abe8ef9017239515901f2679b178fcc54">More...</a><br /></td></tr>
-<tr class="separator:abe8ef9017239515901f2679b178fcc54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace80e7fae9690e7cd13657c2be7f2a21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#ace80e7fae9690e7cd13657c2be7f2a21">tryGdal</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *output, mapObj *m)</td></tr>
-<tr class="memdesc:ace80e7fae9690e7cd13657c2be7f2a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to open a raster output and define the corresponding layer in the MAPFILE.  <a href="service__internal__ms_8c.html#ace80e7fae9690e7cd13657c2be7f2a21">More...</a><br /></td></tr>
-<tr class="separator:ace80e7fae9690e7cd13657c2be7f2a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8296e66954b6058beb929bdc6415045"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#ad8296e66954b6058beb929bdc6415045">outputMapfile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *outputs)</td></tr>
-<tr class="memdesc:ad8296e66954b6058beb929bdc6415045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a MapFile for WMS, WFS or WCS Service output.  <a href="service__internal__ms_8c.html#ad8296e66954b6058beb929bdc6415045">More...</a><br /></td></tr>
-<tr class="separator:ad8296e66954b6058beb929bdc6415045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0880d9fca316d9dbc1be857a9b2b07e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#ab0880d9fca316d9dbc1be857a9b2b07e">getPublishedId</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsElem)</td></tr>
+<tr class="memdesc:ab0880d9fca316d9dbc1be857a9b2b07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current publish_id value.  <a href="service__internal__ms_8c.html#ab0880d9fca316d9dbc1be857a9b2b07e">More...</a><br /></td></tr>
+<tr class="separator:ab0880d9fca316d9dbc1be857a9b2b07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a385dd9e10c28a8169207056e4797b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#a57a385dd9e10c28a8169207056e4797b">setMapSize</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsOutput, double dMinx, double dMiny, double dMaxx, double dMaxy)</td></tr>
+<tr class="memdesc:a57a385dd9e10c28a8169207056e4797b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add width and height keys to an output maps containing the maximum width and height for displaying the full data extent.  <a href="service__internal__ms_8c.html#a57a385dd9e10c28a8169207056e4797b">More...</a><br /></td></tr>
+<tr class="separator:a57a385dd9e10c28a8169207056e4797b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d3abfd249b6436ac7f641c2a8d6c9c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#a1d3abfd249b6436ac7f641c2a8d6c9c8">setReferenceUrl</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **ppmsConf, <a class="el" href="service_8h.html#structmaps">maps</a> *pmsTmp)</td></tr>
+<tr class="memdesc:a1d3abfd249b6436ac7f641c2a8d6c9c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a Reference key to an output containing the WMFS/WFS/WCS request for accessing service result.  <a href="service__internal__ms_8c.html#a1d3abfd249b6436ac7f641c2a8d6c9c8">More...</a><br /></td></tr>
+<tr class="separator:a1d3abfd249b6436ac7f641c2a8d6c9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabf960e84237ca3eac46cb5a4a10267e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#aabf960e84237ca3eac46cb5a4a10267e">setSrsInformations</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsOutput, mapObj *m, layerObj *myLayer, char *pszProjection)</td></tr>
+<tr class="memdesc:aabf960e84237ca3eac46cb5a4a10267e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set projection for a layer in a MAPFILE using Authority Code and Name if available or fallback to proj4 definition if available or fallback to default EPSG:4326.  <a href="service__internal__ms_8c.html#aabf960e84237ca3eac46cb5a4a10267e">More...</a><br /></td></tr>
+<tr class="separator:aabf960e84237ca3eac46cb5a4a10267e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ccd318919000a7999ce8824e31e20e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#a1ccd318919000a7999ce8824e31e20e0">setMsExtent</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsOutput, mapObj *m, layerObj *myLayer, double minX, double minY, double maxX, double maxY)</td></tr>
+<tr class="memdesc:a1ccd318919000a7999ce8824e31e20e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the MAPFILE extent, the the ows_extent for the layer, add wms_extent and wfs_extent to the output maps and call setMapSize.  <a href="service__internal__ms_8c.html#a1ccd318919000a7999ce8824e31e20e0">More...</a><br /></td></tr>
+<tr class="separator:a1ccd318919000a7999ce8824e31e20e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7de03a59b483421fbc88d31ce9d25d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#acf7de03a59b483421fbc88d31ce9d25d">tryOgr</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *pmsOutput, mapObj *m)</td></tr>
+<tr class="memdesc:acf7de03a59b483421fbc88d31ce9d25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to open a vector output and define the corresponding layer in the MAPFILE.  <a href="service__internal__ms_8c.html#acf7de03a59b483421fbc88d31ce9d25d">More...</a><br /></td></tr>
+<tr class="separator:acf7de03a59b483421fbc88d31ce9d25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4941e5bc0bef8fb9d758897a6738f56e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#a4941e5bc0bef8fb9d758897a6738f56e">tryGdal</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *pmsOutput, mapObj *m)</td></tr>
+<tr class="memdesc:a4941e5bc0bef8fb9d758897a6738f56e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to open a raster output and define the corresponding layer in the MAPFILE.  <a href="service__internal__ms_8c.html#a4941e5bc0bef8fb9d758897a6738f56e">More...</a><br /></td></tr>
+<tr class="separator:a4941e5bc0bef8fb9d758897a6738f56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff2ee1349cbedad7b9710f7f00cc32ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#aff2ee1349cbedad7b9710f7f00cc32ca">outputMapfile</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *pmsOutputs)</td></tr>
+<tr class="memdesc:aff2ee1349cbedad7b9710f7f00cc32ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a MapFile for WMS, WFS or WCS Service output.  <a href="service__internal__ms_8c.html#aff2ee1349cbedad7b9710f7f00cc32ca">More...</a><br /></td></tr>
+<tr class="separator:aff2ee1349cbedad7b9710f7f00cc32ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73b1b341bc88a5f4c814d00826b1bc7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__ms_8c.html#a73b1b341bc88a5f4c814d00826b1bc7d">saveMapNames</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, <a class="el" href="service_8h.html#structmaps">maps</a> *output, char *mapfile)</td></tr>
 <tr class="memdesc:a73b1b341bc88a5f4c814d00826b1bc7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the map fullpath in a text file (.maps)  <a href="service__internal__ms_8c.html#a73b1b341bc88a5f4c814d00826b1bc7d">More...</a><br /></td></tr>
 <tr class="separator:a73b1b341bc88a5f4c814d00826b1bc7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,8 +155,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae199f402b52698ffd14d90f5fc9eb472"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae199f402b52698ffd14d90f5fc9eb472">&#9670;&nbsp;</a></span>getPublishedId()</h2>
+<a id="ab0880d9fca316d9dbc1be857a9b2b07e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0880d9fca316d9dbc1be857a9b2b07e">&#9670;&nbsp;</a></span>getPublishedId()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +165,7 @@ Functions</h2></td></tr>
           <td class="memname">int getPublishedId </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>elem</em></td><td>)</td>
+          <td class="paramname"><em>pmsElem</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -182,8 +182,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad8296e66954b6058beb929bdc6415045"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8296e66954b6058beb929bdc6415045">&#9670;&nbsp;</a></span>outputMapfile()</h2>
+<a id="aff2ee1349cbedad7b9710f7f00cc32ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff2ee1349cbedad7b9710f7f00cc32ca">&#9670;&nbsp;</a></span>outputMapfile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +198,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>outputs</em>&#160;</td>
+          <td class="paramname"><em>pmsOutputs</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -212,7 +212,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conf</td><td>the conf maps containing the main.cfg settings </td></tr>
-    <tr><td class="paramname">outputs</td><td>a specific output maps </td></tr>
+    <tr><td class="paramname">pmsOutputs</td><td>a specific output maps </td></tr>
   </table>
   </dd>
 </dl>
@@ -268,8 +268,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa6e270e423418db2f29500ca117412db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6e270e423418db2f29500ca117412db">&#9670;&nbsp;</a></span>setMapSize()</h2>
+<a id="a57a385dd9e10c28a8169207056e4797b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57a385dd9e10c28a8169207056e4797b">&#9670;&nbsp;</a></span>setMapSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,31 +278,31 @@ Functions</h2></td></tr>
           <td class="memname">void setMapSize </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>output</em>, </td>
+          <td class="paramname"><em>pmsOutput</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>minx</em>, </td>
+          <td class="paramname"><em>dMinx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>miny</em>, </td>
+          <td class="paramname"><em>dMiny</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>maxx</em>, </td>
+          <td class="paramname"><em>dMaxx</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>maxy</em>&#160;</td>
+          <td class="paramname"><em>dMaxy</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -316,7 +316,7 @@ Functions</h2></td></tr>
 <p>Restriction to an image having a size of 640x480 (width * height)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">output</td><td></td></tr>
+    <tr><td class="paramname">pmsOutput</td><td></td></tr>
     <tr><td class="paramname">minx</td><td>the lower left x coordinate </td></tr>
     <tr><td class="paramname">miny</td><td>the lower left y coordinate </td></tr>
     <tr><td class="paramname">maxx</td><td>the upper right x coordinate </td></tr>
@@ -327,8 +327,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3084597e7a3e3ed80dac83ef908294fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3084597e7a3e3ed80dac83ef908294fe">&#9670;&nbsp;</a></span>setMsExtent()</h2>
+<a id="a1ccd318919000a7999ce8824e31e20e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ccd318919000a7999ce8824e31e20e0">&#9670;&nbsp;</a></span>setMsExtent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +337,7 @@ Functions</h2></td></tr>
           <td class="memname">void setMsExtent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>output</em>, </td>
+          <td class="paramname"><em>pmsOutput</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -386,7 +386,7 @@ Functions</h2></td></tr>
 <p>Set the MAPFILE extent, the the ows_extent for the layer, add wms_extent and wfs_extent to the output maps and call setMapSize. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">output</td><td>the specific output </td></tr>
+    <tr><td class="paramname">pmsOutput</td><td>the specific output </td></tr>
     <tr><td class="paramname">m</td><td>the mapObj </td></tr>
     <tr><td class="paramname">myLayer</td><td>the layerObj </td></tr>
     <tr><td class="paramname">minX</td><td>the lower left x coordinate </td></tr>
@@ -396,12 +396,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__internal__ms_8c.html#aa6e270e423418db2f29500ca117412db" title="Add width and height keys to an output maps containing the maximum width and height for displaying th...">setMapSize</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service__internal__ms_8c.html#a57a385dd9e10c28a8169207056e4797b" title="Add width and height keys to an output maps containing the maximum width and height for displaying th...">setMapSize</a> </dd></dl>
 
 </div>
 </div>
-<a id="affbc5942c996c2ea0c6ea48dd14bdd5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affbc5942c996c2ea0c6ea48dd14bdd5d">&#9670;&nbsp;</a></span>setReferenceUrl()</h2>
+<a id="a1d3abfd249b6436ac7f641c2a8d6c9c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d3abfd249b6436ac7f641c2a8d6c9c8">&#9670;&nbsp;</a></span>setReferenceUrl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -409,14 +409,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void setReferenceUrl </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"><em>ppmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>tmpI</em>&#160;</td>
+          <td class="paramname"><em>pmsTmp</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -429,7 +429,7 @@ Functions</h2></td></tr>
 <p>Add a Reference key to an output containing the WMFS/WFS/WCS request for accessing service result. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">m</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">ppmsConf</td><td>the conf maps containing the main.cfg settings </td></tr>
     <tr><td class="paramname">tmpI</td><td>the specific output maps to add the Reference key </td></tr>
   </table>
   </dd>
@@ -437,8 +437,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a287f2055cd6244f9d8fe64b1eebca4ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a287f2055cd6244f9d8fe64b1eebca4ab">&#9670;&nbsp;</a></span>setSrsInformations()</h2>
+<a id="aabf960e84237ca3eac46cb5a4a10267e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabf960e84237ca3eac46cb5a4a10267e">&#9670;&nbsp;</a></span>setSrsInformations()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -447,7 +447,7 @@ Functions</h2></td></tr>
           <td class="memname">void setSrsInformations </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>output</em>, </td>
+          <td class="paramname"><em>pmsOutput</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -478,7 +478,7 @@ Functions</h2></td></tr>
 <p>Set projection for a layer in a MAPFILE using Authority Code and Name if available or fallback to proj4 definition if available or fallback to default EPSG:4326. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">output</td><td>the output maps </td></tr>
+    <tr><td class="paramname">pmsOutput</td><td>the output maps </td></tr>
     <tr><td class="paramname">m</td><td>the opened mapObj </td></tr>
     <tr><td class="paramname">myLayer</td><td>the layerObj </td></tr>
     <tr><td class="paramname">pszProjection</td><td>a char* containing the SRS definition in WKT format </td></tr>
@@ -488,8 +488,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ace80e7fae9690e7cd13657c2be7f2a21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace80e7fae9690e7cd13657c2be7f2a21">&#9670;&nbsp;</a></span>tryGdal()</h2>
+<a id="a4941e5bc0bef8fb9d758897a6738f56e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4941e5bc0bef8fb9d758897a6738f56e">&#9670;&nbsp;</a></span>tryGdal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -504,7 +504,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>output</em>, </td>
+          <td class="paramname"><em>pmsOutput</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -524,7 +524,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conf</td><td>the conf maps containing the main.cfg settings </td></tr>
-    <tr><td class="paramname">output</td><td>the specific output maps </td></tr>
+    <tr><td class="paramname">pmsOutput</td><td>the specific output maps </td></tr>
     <tr><td class="paramname">m</td><td>the mapObj </td></tr>
   </table>
   </dd>
@@ -545,8 +545,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abe8ef9017239515901f2679b178fcc54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe8ef9017239515901f2679b178fcc54">&#9670;&nbsp;</a></span>tryOgr()</h2>
+<a id="acf7de03a59b483421fbc88d31ce9d25d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7de03a59b483421fbc88d31ce9d25d">&#9670;&nbsp;</a></span>tryOgr()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,7 +561,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>output</em>, </td>
+          <td class="paramname"><em>pmsOutput</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -581,7 +581,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conf</td><td>the conf maps containing the main.cfg settings </td></tr>
-    <tr><td class="paramname">output</td><td>the specific output maps </td></tr>
+    <tr><td class="paramname">pmsOutput</td><td>the specific output maps </td></tr>
     <tr><td class="paramname">m</td><td>the mapObj </td></tr>
   </table>
   </dd>
@@ -606,7 +606,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2025 20:13:15 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 15 2025 16:04:12 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

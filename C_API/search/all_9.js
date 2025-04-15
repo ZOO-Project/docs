@@ -19,7 +19,7 @@ var searchData=
   ['init_5famqp_306',['init_amqp',['../service__internal__amqp_8c.html#a5fcaf84b3af98aa9173e03ac369c6536',1,'init_amqp(maps *conf):&#160;service_internal_amqp.c'],['../service__internal__amqp_8h.html#a6aef33be46a0b2cfb3a788f5b8ee17e6',1,'init_amqp(maps *):&#160;service_internal_amqp.c']]],
   ['init_5fconfirmation_307',['init_confirmation',['../service__internal__amqp_8c.html#a8677160287906713bb45f907da9a1bb3',1,'init_confirmation():&#160;service_internal_amqp.c'],['../service__internal__amqp_8h.html#a8677160287906713bb45f907da9a1bb3',1,'init_confirmation():&#160;service_internal_amqp.c']]],
   ['init_5fconsumer_308',['init_consumer',['../service__internal__amqp_8c.html#abf0bb880c00f506a80f038f489a12ef9',1,'init_consumer():&#160;service_internal_amqp.c'],['../service__internal__amqp_8h.html#abf0bb880c00f506a80f038f489a12ef9',1,'init_consumer():&#160;service_internal_amqp.c']]],
-  ['init_5fsql_309',['init_sql',['../sqlapi_8c.html#a1fe3b67fd53eff66cf9c58ad5171ba5a',1,'sqlapi.c']]],
+  ['init_5fsql_309',['init_sql',['../sqlapi_8c.html#a27c13fc6881e6152b618e22c31b0ba7b',1,'sqlapi.c']]],
   ['init_5fzoo_310',['init_zoo',['../service__internal__python_8c.html#aa30c6cd0a3eddb8c0d99885cdc3647d5',1,'init_zoo():&#160;service_internal_python.c'],['../service__internal__r_8c.html#af63fe1639bfdb26fa6fc8241bda44831',1,'init_zoo(SEXP conf, SEXP outputs):&#160;service_internal_r.c']]],
   ['initallenvironment_311',['initAllEnvironment',['../zoo__service__loader_8c.html#a2a6f8e38b32b41c4c0686d9133d533a9',1,'zoo_service_loader.c']]],
   ['input_312',['input',['../service__callback_8c.html#a77039733f7e5f4744d68845c62d668b6',1,'job_handlers_params']]],

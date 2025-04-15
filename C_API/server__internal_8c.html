@@ -146,9 +146,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acef4d9c538378098b3edbaaa57ada3c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__internal_8c.html#acef4d9c538378098b3edbaaa57ada3c7">isRunning</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, char *pid)</td></tr>
 <tr class="memdesc:acef4d9c538378098b3edbaaa57ada3c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a service is running.  <a href="server__internal_8c.html#acef4d9c538378098b3edbaaa57ada3c7">More...</a><br /></td></tr>
 <tr class="separator:acef4d9c538378098b3edbaaa57ada3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d63d55b9e48cae04148f5412d45cc5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__internal_8c.html#a8d63d55b9e48cae04148f5412d45cc5e">runGetStatus</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf, char *pid, char *req)</td></tr>
-<tr class="memdesc:a8d63d55b9e48cae04148f5412d45cc5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run GetStatus requests.  <a href="server__internal_8c.html#a8d63d55b9e48cae04148f5412d45cc5e">More...</a><br /></td></tr>
-<tr class="separator:a8d63d55b9e48cae04148f5412d45cc5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15889b779339416240e477bea109c7ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__internal_8c.html#a15889b779339416240e477bea109c7ef">runGetStatus</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **ppmsConf, char *pid, char *req)</td></tr>
+<tr class="memdesc:a15889b779339416240e477bea109c7ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run GetStatus requests.  <a href="server__internal_8c.html#a15889b779339416240e477bea109c7ef">More...</a><br /></td></tr>
+<tr class="separator:a15889b779339416240e477bea109c7ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a54ad06988b1bb6439ebbe301151597"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__internal_8c.html#a9a54ad06988b1bb6439ebbe301151597">removeSubdirectory</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *pmsConf, char *acDirectoryName)</td></tr>
 <tr class="memdesc:a9a54ad06988b1bb6439ebbe301151597"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a directory and its content.  <a href="server__internal_8c.html#a9a54ad06988b1bb6439ebbe301151597">More...</a><br /></td></tr>
 <tr class="separator:a9a54ad06988b1bb6439ebbe301151597"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1058,8 +1058,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8d63d55b9e48cae04148f5412d45cc5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d63d55b9e48cae04148f5412d45cc5e">&#9670;&nbsp;</a></span>runGetStatus()</h2>
+<a id="a15889b779339416240e477bea109c7ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15889b779339416240e477bea109c7ef">&#9670;&nbsp;</a></span>runGetStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1067,8 +1067,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void runGetStatus </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"><em>ppmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1265,7 +1265,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2025 20:13:15 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 15 2025 16:04:12 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -130,25 +130,25 @@ Functions</h2></td></tr>
           <td class="memname">int appendMapsToMaps </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramname"><em>ppmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>mo</em>, </td>
+          <td class="paramname"><em>pmsOutput</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>mi</em>, </td>
+          <td class="paramname"><em>pmsInput</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structelements">elements</a> *&#160;</td>
-          <td class="paramname"><em>elem</em>&#160;</td>
+          <td class="paramname"><em>peElem</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -161,10 +161,10 @@ Functions</h2></td></tr>
 <p>Create (or append to) an array valued maps value = "["",""]". </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">m</td><td>the conf maps containing the main.cfg settings </td></tr>
-    <tr><td class="paramname">mo</td><td>the map to update </td></tr>
-    <tr><td class="paramname">mi</td><td>the map to append </td></tr>
-    <tr><td class="paramname">elem</td><td>the elements containing default definitions </td></tr>
+    <tr><td class="paramname">ppmsConf</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">pmsOutput</td><td>the map to update </td></tr>
+    <tr><td class="paramname">pmsInput</td><td>the map to append </td></tr>
+    <tr><td class="paramname">peElem</td><td>the elements containing default definitions </td></tr>
   </table>
   </dd>
 </dl>
@@ -240,7 +240,7 @@ Functions</h2></td></tr>
           <td class="memname">void ensureDecodedBase64 </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
-          <td class="paramname"><em>in</em></td><td>)</td>
+          <td class="paramname"><em>ppmsInput</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -249,7 +249,7 @@ Functions</h2></td></tr>
 <p>Make sure that each value encoded in base64 in a maps is decoded. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>the maps containing the values </td></tr>
+    <tr><td class="paramname">ppmsInput</td><td>the maps containing the values </td></tr>
   </table>
   </dd>
 </dl>
@@ -273,7 +273,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>search</em>&#160;</td>
+          <td class="paramname"><em>pccSearch</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -287,7 +287,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">doc</td><td>the XML Document </td></tr>
-    <tr><td class="paramname">search</td><td>the XPath expression </td></tr>
+    <tr><td class="paramname">pccSearch</td><td>the XPath expression </td></tr>
   </table>
   </dd>
 </dl>
@@ -881,7 +881,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 14 2025 20:13:15 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 15 2025 16:04:12 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Creating and Updating Pages in Hugo &mdash; ZOO-Project 2.0.0 documentation</title>
+  <title>Contribute to the Website &mdash; ZOO-Project 2.0.0 documentation</title>
   
   <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet" type="text/css">
   
@@ -40,7 +40,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="ZOO-Project 2.0.0 documentation" href="../index.html"/>
         <link rel="up" title="Contributor Guide" href="index.html"/>
-        <link rel="prev" title="List of contributors" href="contributors.html"/> 
+        <link rel="next" title="List of contributors" href="contributors.html"/>
+        <link rel="prev" title="Contribute translation" href="translate.html"/> 
 
   <script src="../_static/jquery.js"></script>
   
@@ -169,8 +170,8 @@
 <li class="toctree-l2"><a class="reference internal" href="dev.html">Committer guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="release.html">Release Procedure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="translate.html">Contribute translation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Contribute to the Website</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contributors.html">List of contributors</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Creating and Updating Pages in Hugo</a></li>
 </ul>
 </li>
 </ul>
@@ -199,7 +200,7 @@
       
           <li><a href="index.html">Contributor Guide</a> &#8725; &#160;</li>
       
-    <li>Creating and Updating Pages in Hugo</li>
+    <li>Contribute to the Website</li>
       <li class="wy-breadcrumbs-aside">
        $Date$
       </li>
@@ -208,9 +209,40 @@
 </div>
           <div role="main" class="document">
             
-  <section id="creating-and-updating-pages-in-hugo">
-<span id="contribute-hugo"></span><h1>Creating and Updating Pages in Hugo<a class="headerlink" href="#creating-and-updating-pages-in-hugo" title="Permalink to this heading">¶</a></h1>
-<p>This guide provides instructions for contributors on how to create and update pages using the Hugo framework.</p>
+  <section id="contribute-to-the-website">
+<span id="contribute-hugo"></span><h1>Contribute to the Website<a class="headerlink" href="#contribute-to-the-website" title="Permalink to this heading">¶</a></h1>
+<p>This guide provides step-by-step instructions for contributing to the ZOO-Project website using the Hugo static site generator.</p>
+<section id="repository-location">
+<h2>Repository Location<a class="headerlink" href="#repository-location" title="Permalink to this heading">¶</a></h2>
+<p>The source code for the website is hosted on GitHub:</p>
+<p><a class="reference external" href="https://github.com/ZOO-Project/website">https://github.com/ZOO-Project/website</a></p>
+<p>If you’re new to the project, this is where all the website content is managed. You will need to clone this repository and set it up locally before making any changes.</p>
+</section>
+<section id="cloning-the-repository">
+<h2>Cloning the Repository<a class="headerlink" href="#cloning-the-repository" title="Permalink to this heading">¶</a></h2>
+<p>To get started, clone the official repository and navigate into the project folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ZOO-Project/website.git
+<span class="nb">cd</span><span class="w"> </span>website
+</pre></div>
+</div>
+</section>
+<section id="installing-hugo">
+<h2>Installing Hugo<a class="headerlink" href="#installing-hugo" title="Permalink to this heading">¶</a></h2>
+<p>The website uses Hugo, a fast static site generator written in Go. You must install Hugo on your system.</p>
+<p>Install Hugo by following instructions here: <a class="reference external" href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
+<p>To check if Hugo was installed successfully, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hugo<span class="w"> </span>version
+</pre></div>
+</div>
+</section>
+<section id="running-the-website-locally">
+<h2>Running the Website Locally<a class="headerlink" href="#running-the-website-locally" title="Permalink to this heading">¶</a></h2>
+<p>To preview the website locally before committing changes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hugo<span class="w"> </span>server
+</pre></div>
+</div>
+<p>Then open your browser at <cite>http://localhost:8080/</cite> to see the live site.</p>
+</section>
 <section id="creating-a-new-page">
 <h2>Creating a New Page<a class="headerlink" href="#creating-a-new-page" title="Permalink to this heading">¶</a></h2>
 <p>To create a new page in the documentation:</p>
@@ -251,7 +283,7 @@
 </pre></div>
 </div>
 </li>
-<li><p>Once satisfied with the updates, commit the changes:</p>
+<li><p>When you’re satisfied, commit and push your changes:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>content/docs/updated-page.md
 git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Updated documentation&quot;</span>
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
@@ -274,7 +306,11 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 </pre></div>
 </div>
 </li>
-<li><p>Save the changes and test the menu update.</p></li>
+<li><p>Save the file and test the navigation link locally using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hugo<span class="w"> </span>server
+</pre></div>
+</div>
+</li>
 </ol>
 </section>
 </section>
@@ -285,8 +321,10 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="contributors.html" class="btn btn-neutral float-right" title="List of contributors">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="contributors.html" class="btn btn-neutral" title="List of contributors"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="translate.html" class="btn btn-neutral" title="Contribute translation"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

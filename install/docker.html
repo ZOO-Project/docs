@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ZOO-API &mdash; ZOO-Project 2.0.0 documentation</title>
+  <title>Installation using Docker &mdash; ZOO-Project 2.0.0 documentation</title>
   
   <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet" type="text/css">
   
@@ -39,8 +39,9 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="ZOO-Project 2.0.0 documentation" href="../index.html"/>
-        <link rel="next" title="What is ZOO-API ?" href="what.html"/>
-        <link rel="prev" title="Available ZOO-Services" href="../services/zoo-services.html"/> 
+        <link rel="up" title="ZOO-Project installation" href="index.html"/>
+        <link rel="next" title="ZOO-Kernel" href="../kernel/index.html"/>
+        <link rel="prev" title="Installation on Windows ™" href="windows.html"/> 
 
   <script src="../_static/jquery.js"></script>
   
@@ -117,15 +118,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source">Open Source</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../install/index.html">ZOO-Project installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../install/prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/download.html">Download</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/installation.html">Installation on Unix/Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/debian.html">Installation on Debian / Ubuntu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/opensuse.html">Install on OpenSUSE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/centos.html">Installation on CentOS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/windows.html">Installation on Windows ™</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/docker.html">Installation using Docker</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">ZOO-Project installation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation on Unix/Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debian.html">Installation on Debian / Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensuse.html">Install on OpenSUSE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="centos.html">Installation on CentOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Installation on Windows ™</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation using Docker</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../kernel/index.html">ZOO-Kernel</a><ul>
@@ -149,11 +150,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../services/zoo-services.html">Available ZOO-Services</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ZOO-API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="what.html">What is ZOO-API ?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="howto.html">Using ZOO-API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classes.html">ZOO-API Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">ZOO-API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/what.html">What is ZOO-API ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/howto.html">Using ZOO-API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/classes.html">ZOO-API Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/examples.html">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../client/index.html">ZOO-Client</a><ul>
@@ -198,7 +199,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html"> Documentation</a> &#8725; &#160;</li>
       
-    <li>ZOO-API</li>
+          <li><a href="index.html">ZOO-Project installation</a> &#8725; &#160;</li>
+      
+    <li>Installation using Docker</li>
       <li class="wy-breadcrumbs-aside">
        $Date$
       </li>
@@ -207,35 +210,71 @@
 </div>
           <div role="main" class="document">
             
-  <section id="zoo-api">
-<span id="api-index"></span><h1>ZOO-API<a class="headerlink" href="#zoo-api" title="Permalink to this heading">¶</a></h1>
-<p>This section provides information on <strong>ZOO-API</strong>, the <a class="reference external" href="http://zoo-project.org">ZOO-Project</a> server-side JavaScript API.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="what.html">What is ZOO-API ?</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="what.html#server-side-javascript-wps">Server-side JavaScript WPS</a></li>
+  <section id="installation-using-docker">
+<span id="install-ondocker"></span><h1>Installation using Docker<a class="headerlink" href="#installation-using-docker" title="Permalink to this heading">¶</a></h1>
+<p>This guide provides step-by-step instructions to install and run the ZOO-Project using Docker. It utilizes the official ZOO-Project Docker images and configurations.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Docker</strong>: Ensure Docker is installed on your system. You can download it from <a class="reference external" href="https://www.docker.com/get-started">Docker’s official website</a>.</p></li>
+<li><p><strong>Docker Compose</strong>: Required for orchestrating multi-container Docker applications. Installation instructions are available at <a class="reference external" href="https://docs.docker.com/compose/install/">Docker Compose Installation</a>.</p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="howto.html">Using ZOO-API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="howto.html#prerequisites">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="howto.html#download">Download</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="classes.html">ZOO-API Classes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="zoo.html">ZOO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zoo-format-wps.html">ZOO.Format.WPS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zoo-process.html">ZOO.Process</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zoo-request.html">ZOO.Request</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#zoo-process-example">ZOO.Process example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#zoo-updatestatus-example">ZOO.UpdateStatus example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#asynchronous-zoo-process-example">Asynchronous ZOO.Process example</a></li>
-</ul>
-</li>
-</ul>
+</section>
+<section id="installation-steps">
+<h2>Installation Steps<a class="headerlink" href="#installation-steps" title="Permalink to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>Clone the ZOO-Project Repository</strong></p>
+<p>Open a terminal and execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ZOO-Project/ZOO-Project.git
+<span class="nb">cd</span><span class="w"> </span>ZOO-Project
+</pre></div>
 </div>
+</li>
+<li><p><strong>Start the Docker Containers</strong></p>
+<p>Launch the containers in detached mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+</pre></div>
+</div>
+<p>This command builds and starts the ZOO-Project services as defined in the <cite>docker-compose.yml</cite> file.</p>
+</li>
+</ol>
+</section>
+<section id="accessing-the-zoo-project-services">
+<h2>Accessing the ZOO-Project Services<a class="headerlink" href="#accessing-the-zoo-project-services" title="Permalink to this heading">¶</a></h2>
+<p>Once the containers are running, you can access the ZOO-Project services:</p>
+<ul>
+<li><p><strong>ZOO-Kernel WPS Endpoint</strong>:</p>
+<p>Access the Web Processing Service (WPS) endpoint at:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>http://localhost/cgi-bin/zoo_loader.cgi
+</pre></div>
+</div>
+</li>
+<li><p><strong>ZOO-Project Demo Application</strong>:</p>
+<p>Explore the demo application at:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>http://localhost/zoows-2024/
+</pre></div>
+</div>
+<p>This demo showcases various capabilities and services provided by the ZOO-Project.</p>
+</li>
+</ul>
+</section>
+<section id="stopping-the-services">
+<h2>Stopping the Services<a class="headerlink" href="#stopping-the-services" title="Permalink to this heading">¶</a></h2>
+<p>To stop the running containers, execute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>down
+</pre></div>
+</div>
+<p>This command stops and removes the containers defined in the <cite>docker-compose.yml</cite> file.</p>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Port Conflicts</strong>: If port 80 is already in use, modify the <cite>docker-compose.yml</cite> file to map the container’s port to an available host port.</p></li>
+<li><p><strong>Data Persistence</strong>: To persist data across container restarts, ensure volumes are correctly mapped to host directories.</p></li>
+<li><p><strong>Logs and Debugging</strong>: Use <cite>docker-compose logs</cite> to view logs from the containers for debugging purposes.</p></li>
+</ul>
+<p>For more detailed information and advanced configurations, refer to the official ZOO-Project documentation and Docker resources.</p>
+</section>
 </section>
 
 
@@ -244,10 +283,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="what.html" class="btn btn-neutral float-right" title="What is ZOO-API ?">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../kernel/index.html" class="btn btn-neutral float-right" title="ZOO-Kernel">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../services/zoo-services.html" class="btn btn-neutral" title="Available ZOO-Services"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="windows.html" class="btn btn-neutral" title="Installation on Windows ™"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

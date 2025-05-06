@@ -226,7 +226,7 @@ Variables</h2></td></tr>
           <td class="memname">int createNextLinks </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -245,7 +245,7 @@ Variables</h2></td></tr>
 <p>Create the next links. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
     <tr><td class="paramname">result</td><td>an integer (&gt;0 for adding the /result link) </td></tr>
     <tr><td class="paramname">obj</td><td>the JSON object pointer to add the links to </td></tr>
   </table>
@@ -265,7 +265,7 @@ Variables</h2></td></tr>
           <td class="memname">json_object* createStatus </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -284,7 +284,7 @@ Variables</h2></td></tr>
 <p>Create the json object for job status. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the conf maps containing the main.cfg settings </td></tr>
     <tr><td class="paramname">status</td><td>integer </td></tr>
   </table>
   </dd>
@@ -303,7 +303,7 @@ Variables</h2></td></tr>
           <td class="memname">int createStatusFile </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -322,7 +322,7 @@ Variables</h2></td></tr>
 <p>Create the status file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
     <tr><td class="paramname">status</td><td>an integer (SERVICE_ACCEPTED,SERVICE_STARTED...) </td></tr>
   </table>
   </dd>
@@ -341,7 +341,7 @@ Variables</h2></td></tr>
           <td class="memname">char* getResultPath </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -360,7 +360,7 @@ Variables</h2></td></tr>
 <p>Get the result path. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the conf maps containing the main.cfg settings </td></tr>
     <tr><td class="paramname">jobId</td><td>the job identifier </td></tr>
   </table>
   </dd>
@@ -391,7 +391,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">json_object *&#160;</td>
-          <td class="paramname"><em>res</em>, </td>
+          <td class="paramname"><em>pjoRes</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -412,8 +412,8 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">pmsConf</td><td>the conf maps containing the main.cfg settings </td></tr>
     <tr><td class="paramname">pmSessId</td><td>the map pointer to the session id </td></tr>
-    <tr><td class="paramname">res</td><td>the object to store metadata informations </td></tr>
-    <tr><td class="paramname">status</td><td>integer of the current execution status </td></tr>
+    <tr><td class="paramname">pjoRes</td><td>the object to store metadata informations </td></tr>
+    <tr><td class="paramname">iStatus</td><td>integer of the current execution status </td></tr>
   </table>
   </dd>
 </dl>
@@ -431,7 +431,7 @@ Variables</h2></td></tr>
           <td class="memname">int json_getStatusFile </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em></td><td>)</td>
+          <td class="paramname"><em>pmsConf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -440,7 +440,7 @@ Variables</h2></td></tr>
 <p>Create the status file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
   </table>
   </dd>
 </dl>
@@ -458,7 +458,7 @@ Variables</h2></td></tr>
           <td class="memname">char* json_getStatusFilePath </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em></td><td>)</td>
+          <td class="paramname"><em>pmsConf</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -467,7 +467,7 @@ Variables</h2></td></tr>
 <p>Get the status file path. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
   </table>
   </dd>
 </dl>
@@ -485,7 +485,7 @@ Variables</h2></td></tr>
           <td class="memname">json_object* json_readFile </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -504,7 +504,7 @@ Variables</h2></td></tr>
 <p>Read a json file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the conf maps containing the main.cfg settings @praam filePath the file path to read </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the conf maps containing the main.cfg settings @praam filePath the file path to read </td></tr>
   </table>
   </dd>
 </dl>
@@ -669,25 +669,25 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">json_object *&#160;</td>
-          <td class="paramname"><em>res1</em>, </td>
+          <td class="paramname"><em>pjoRes1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">json_object *&#160;</td>
-          <td class="paramname"><em>res3</em>, </td>
+          <td class="paramname"><em>pjoRes3</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>apcValue</em>, </td>
+          <td class="paramname"><em>pcValue</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
+          <td class="paramname"><em>lLen</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -702,10 +702,10 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">conf</td><td>maps pointer to the main configuration maps </td></tr>
     <tr><td class="paramname">resu</td><td>maps pointer to the output </td></tr>
-    <tr><td class="paramname">res1</td><td>json_object pointer to which the value field should be added </td></tr>
-    <tr><td class="paramname">res3</td><td>json_object pointer to the format object associated with res1 </td></tr>
-    <tr><td class="paramname">accValue</td><td>char pointer to the value to be allocated </td></tr>
-    <tr><td class="paramname">len</td><td>length of apcValue </td></tr>
+    <tr><td class="paramname">pjoRes1</td><td>json_object pointer to which the value field should be added </td></tr>
+    <tr><td class="paramname">pjoRes3</td><td>json_object pointer to the format object associated with pjoRes1 </td></tr>
+    <tr><td class="paramname">pcValue</td><td>char pointer to the value to be allocated </td></tr>
+    <tr><td class="paramname">lLen</td><td>length of pcValue </td></tr>
   </table>
   </dd>
 </dl>
@@ -722,7 +722,7 @@ Variables</h2></td></tr>
           <td class="memname">void parseJRequest </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -734,13 +734,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">json_object *&#160;</td>
-          <td class="paramname"><em>req</em>, </td>
+          <td class="paramname"><em>pjoRequestBody</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmap">map</a> *&#160;</td>
-          <td class="paramname"><em>request_inputs</em>, </td>
+          <td class="paramname"><em>pmRequestInputs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -765,9 +765,10 @@ Variables</h2></td></tr>
 <p>Parse Json Request. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
     <tr><td class="paramname">s</td><td>the current service metadata </td></tr>
-    <tr><td class="paramname">req</td><td>the JSON object of the request body </td></tr>
+    <tr><td class="paramname">pjoRequestBody</td><td>the JSON object of the request body </td></tr>
+    <tr><td class="paramname">pmRequestInputs</td><td>the produced maps </td></tr>
     <tr><td class="paramname">inputs</td><td>the produced maps </td></tr>
     <tr><td class="paramname">outputs</td><td>the produced maps </td></tr>
   </table>
@@ -786,7 +787,7 @@ Variables</h2></td></tr>
           <td class="memname">json_object* parseJson </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -805,7 +806,7 @@ Variables</h2></td></tr>
 <p>Parse a json string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the conf maps containing the main.cfg settings </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the conf maps containing the main.cfg settings </td></tr>
     <tr><td class="paramname">myString</td><td>the string containing the json content </td></tr>
   </table>
   </dd>
@@ -841,7 +842,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Print an OWS ExceptionReport Document and HTTP headers (when required) depending on the code. </p>
-<p>Set hasPrinted value to true in the [lenv] section. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="service__json_8c.html#a7e078fe8d5680f4288ae018f91654782" title="Produce an exception JSON object.">createExceptionJ</a></dd></dl>
+<p>Set hasPrinted value to true in the [lenv] section. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="service__json_8c.html#a484c47daf56e61c9e46770ef3c01ab4c" title="Produce an exception JSON object.">createExceptionJ</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
@@ -881,7 +882,7 @@ Variables</h2></td></tr>
 <p>Print the filtered jobs list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">ppmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
   </table>
   </dd>
 </dl>
@@ -906,7 +907,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -937,8 +938,8 @@ Variables</h2></td></tr>
 <p>Add all the capabilities properties to a json_object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ref</td><td>the registry pointer </td></tr>
-    <tr><td class="paramname">m</td><td>the main configuration maps pointer </td></tr>
+    <tr><td class="paramname">reg</td><td>the registry pointer </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the main configuration maps pointer </td></tr>
     <tr><td class="paramname">doc0</td><td>the void (json_object) pointer to add the property to </td></tr>
     <tr><td class="paramname">nc0</td><td>the void (json_object) pointer to add the property to </td></tr>
     <tr><td class="paramname">serv</td><td>the service pointer to extract the metadata from </td></tr>
@@ -1041,7 +1042,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>res</em>&#160;</td>
+          <td class="paramname"><em>iRes</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1057,7 +1058,7 @@ Variables</h2></td></tr>
     <tr><td class="paramname">ppmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
     <tr><td class="paramname">s</td><td>service pointer to metadata </td></tr>
     <tr><td class="paramname">result</td><td>outputs of the service </td></tr>
-    <tr><td class="paramname">res</td><td>the status of execution SERVICE_FAILED/SERVICE_SUCCEEDED </td></tr>
+    <tr><td class="paramname">iRes</td><td>the status of execution SERVICE_FAILED/SERVICE_SUCCEEDED </td></tr>
   </table>
   </dd>
 </dl>
@@ -1093,13 +1094,13 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">json_object *&#160;</td>
-          <td class="paramname"><em>schema</em>, </td>
+          <td class="paramname"><em>pjoSchema</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>field</em>&#160;</td>
+          <td class="paramname"><em>pccFieldName</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1115,8 +1116,8 @@ Variables</h2></td></tr>
     <tr><td class="paramname">pmConf</td><td>the main configuration maps pointer </td></tr>
     <tr><td class="paramname">pmType</td><td>the dataType map pointer </td></tr>
     <tr><td class="paramname">pmContent</td><td>the iotype content map pointer </td></tr>
-    <tr><td class="paramname">schema</td><td>the json_object pointer to add the value </td></tr>
-    <tr><td class="paramname">field</td><td>the field name string </td></tr>
+    <tr><td class="paramname">pjoSchema</td><td>the json_object pointer to add the value </td></tr>
+    <tr><td class="paramname">pccFieldName</td><td>the field name string </td></tr>
   </table>
   </dd>
 </dl>
@@ -1133,13 +1134,13 @@ Variables</h2></td></tr>
           <td class="memname">void produceApi </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
-          <td class="paramname"><em>conf</em>, </td>
+          <td class="paramname"><em>pmsConf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">json_object *&#160;</td>
-          <td class="paramname"><em>res</em>&#160;</td>
+          <td class="paramname"><em>pjoRes</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1152,8 +1153,8 @@ Variables</h2></td></tr>
 <p>Produce the JSON object for /api. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conf</td><td>the maps containing the settings of the main.cfg file </td></tr>
-    <tr><td class="paramname">res</td><td>the JSON object to populate </td></tr>
+    <tr><td class="paramname">pmsConf</td><td>the maps containing the settings of the main.cfg file </td></tr>
+    <tr><td class="paramname">pjoRes</td><td>the JSON object to populate </td></tr>
   </table>
   </dd>
 </dl>
@@ -1567,7 +1568,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun May 4 2025 09:17:35 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue May 6 2025 13:19:53 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

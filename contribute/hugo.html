@@ -212,24 +212,26 @@
             
   <section id="contribute-to-the-website">
 <span id="contribute-hugo"></span><h1>Contribute to the Website<a class="headerlink" href="#contribute-to-the-website" title="Permalink to this heading">¶</a></h1>
-<p>This guide provides step-by-step instructions for contributing to the ZOO-Project website using the Hugo static site generator.</p>
-<section id="repository-location">
-<h2>Repository Location<a class="headerlink" href="#repository-location" title="Permalink to this heading">¶</a></h2>
-<p>The source code for the website is hosted on GitHub:</p>
-<p><a class="reference external" href="https://github.com/ZOO-Project/website">https://github.com/ZOO-Project/website</a></p>
-<p>If you’re new to the project, this is where all the website content is managed. You will need to clone this repository and set it up locally before making any changes.</p>
-</section>
-<section id="cloning-the-repository">
-<h2>Cloning the Repository<a class="headerlink" href="#cloning-the-repository" title="Permalink to this heading">¶</a></h2>
-<p>To get started, clone the official repository and navigate into the project folder:</p>
+<p>This guide provides step-by-step instructions on how to run the ZOO-Project using the Hugo framework, including installation and implementation within the Hugo project structure.
+<a class="reference external" href="https://gohugo.io">Hugo</a> is a fast and flexible static site generator written in Go, designed to build websites quickly and efficiently.</p>
+<section id="clone-the-repository">
+<h2>Clone the Repository<a class="headerlink" href="#clone-the-repository" title="Permalink to this heading">¶</a></h2>
+<p>Execute the following commands in the terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ZOO-Project/website.git
 <span class="nb">cd</span><span class="w"> </span>website
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changes made to the “Examples” page in the ZOO-Project/website repository
+(<a class="reference external" href="https://github.com/ZOO-Project/website">https://github.com/ZOO-Project/website</a>)
+must also be reflected in the examples repository
+(<a class="reference external" href="https://github.com/ZOO-Project/examples">https://github.com/ZOO-Project/examples</a>)
+to ensure consistency between both sources.</p>
+</div>
 </section>
 <section id="installing-hugo">
 <h2>Installing Hugo<a class="headerlink" href="#installing-hugo" title="Permalink to this heading">¶</a></h2>
-<p>The website uses Hugo, a fast static site generator written in Go. You must install Hugo on your system.</p>
 <p>Install Hugo by following instructions here: <a class="reference external" href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
 <p>To check if Hugo was installed successfully, run:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hugo<span class="w"> </span>version
@@ -238,15 +240,13 @@
 </section>
 <section id="running-the-website-locally">
 <h2>Running the Website Locally<a class="headerlink" href="#running-the-website-locally" title="Permalink to this heading">¶</a></h2>
-<p>To preview the website locally before committing changes:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hugo<span class="w"> </span>server
 </pre></div>
 </div>
-<p>Then open your browser at <cite>http://localhost:8080/</cite> to see the live site.</p>
+<p>Visit <cite>http://localhost:8080/</cite> to preview the site.</p>
 </section>
 <section id="creating-a-new-page">
 <h2>Creating a New Page<a class="headerlink" href="#creating-a-new-page" title="Permalink to this heading">¶</a></h2>
-<p>To create a new page in the documentation:</p>
 <ol class="arabic">
 <li><p>Navigate to the <cite>content</cite> directory of the Hugo project.</p></li>
 <li><p>Identify the appropriate section where the new page should be added.</p></li>
@@ -255,39 +255,18 @@
 </pre></div>
 </div>
 </li>
-<li><p>Open the newly created file in a text editor and add relevant content following Hugo’s Markdown syntax.</p></li>
-<li><p>Ensure the front matter (YAML, TOML, or JSON format) contains necessary metadata, e.g.:</p>
+<li><p>Edit the file and include front matter like:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;New</span><span class="nv"> </span><span class="s">Page</span><span class="nv"> </span><span class="s">Title&quot;</span>
-<span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2025-03-11</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;A</span><span class="nv"> </span><span class="s">brief</span><span class="nv"> </span><span class="s">description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">page.&quot;</span>
-<span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="l l-Scalar l-Scalar-Plain">title = &quot;New Page Title&quot;</span>
+<span class="l l-Scalar l-Scalar-Plain">date = 2025-03-11</span>
+<span class="l l-Scalar l-Scalar-Plain">description = &quot;A brief description of the new page.&quot;</span>
+<span class="l l-Scalar l-Scalar-Plain">draft = false</span>
 <span class="nn">---</span>
 </pre></div>
 </div>
 </li>
-<li><p>Save the file and preview changes using:</p>
+<li><p>Preview with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hugo<span class="w"> </span>server<span class="w"> </span>--buildDrafts
-</pre></div>
-</div>
-</li>
-</ol>
-</section>
-<section id="updating-an-existing-page">
-<h2>Updating an Existing Page<a class="headerlink" href="#updating-an-existing-page" title="Permalink to this heading">¶</a></h2>
-<p>To modify an existing page:</p>
-<ol class="arabic">
-<li><p>Locate the page inside the <cite>content</cite> directory.</p></li>
-<li><p>Open the file and make necessary changes.</p></li>
-<li><p>Save the file and verify the updates using:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hugo<span class="w"> </span>server
-</pre></div>
-</div>
-</li>
-<li><p>When you’re satisfied, commit and push your changes:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>content/docs/updated-page.md
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Updated documentation&quot;</span>
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
 </pre></div>
 </div>
 </li>
@@ -297,7 +276,7 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <h2>Adding Navigation Links<a class="headerlink" href="#adding-navigation-links" title="Permalink to this heading">¶</a></h2>
 <p>To include the new page in the navigation menu:</p>
 <ol class="arabic">
-<li><p>Edit the <cite>config.toml</cite> (or <cite>config.yaml</cite>/<cite>config.json</cite>) file.</p></li>
+<li><p>Edit the <cite>config.toml</cite> (or <cite>hugo.toml</cite>) file.</p></li>
 <li><p>Add a reference under <cite>[menu]</cite>:</p>
 <div class="highlight-toml notranslate"><div class="highlight"><pre><span></span><span class="k">[[menu.main]]</span>
 <span class="n">identifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;new-page&quot;</span>
@@ -307,8 +286,38 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 </pre></div>
 </div>
 </li>
-<li><p>Save the file and test the navigation link locally using:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hugo<span class="w"> </span>server
+</ol>
+</section>
+<section id="steps-to-use-custom-layouts">
+<h2>Steps to Use Custom Layouts<a class="headerlink" href="#steps-to-use-custom-layouts" title="Permalink to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>Create a layout file (e.g., new-page.html) in themes/&lt;your-theme&gt;/layouts/</p></li>
+<li><p>Edit the Markdown File:</p>
+<ul class="simple">
+<li><p>In your .md file (e.g., new-page.md), specify the custom layout in the front matter</p></li>
+</ul>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="l l-Scalar l-Scalar-Plain">title = &quot;My Custom Page&quot;</span>
+<span class="l l-Scalar l-Scalar-Plain">layout = &quot;new-page&quot;</span>
+<span class="nn">---</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="add-custom-css-js">
+<h2>Add Custom CSS/JS<a class="headerlink" href="#add-custom-css-js" title="Permalink to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>Add files in themes/&lt;your-theme&gt;/static/</p></li>
+<li><p>Reference them in:</p>
+<ul class="simple">
+<li><p><cite>themes/&lt;theme_name&gt;/layouts/partials/head.html</cite></p></li>
+<li><p><cite>themes/&lt;theme_name&gt;/layouts/_default/baseof.html</cite></p></li>
+</ul>
+</li>
+<li><p>Save the changes and test them with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>hugo<span class="w"> </span>--minify
+hugo<span class="w"> </span>server
 </pre></div>
 </div>
 </li>

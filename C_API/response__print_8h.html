@@ -129,6 +129,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a02e9193d2c223b5d30065049f829f571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8h.html#a02e9193d2c223b5d30065049f829f571">printHeaders</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **)</td></tr>
 <tr class="memdesc:a02e9193d2c223b5d30065049f829f571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the HTTP headers based on a map.  <a href="response__print_8h.html#a02e9193d2c223b5d30065049f829f571">More...</a><br /></td></tr>
 <tr class="separator:a02e9193d2c223b5d30065049f829f571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca7495303d88ef06392ff3f64eabacf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8h.html#a4ca7495303d88ef06392ff3f64eabacf">printAssociatedLinks</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **)</td></tr>
+<tr class="memdesc:a4ca7495303d88ef06392ff3f64eabacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce the Links header based on the links stored in the headers_links section of the main configuration.  <a href="response__print_8h.html#a4ca7495303d88ef06392ff3f64eabacf">More...</a><br /></td></tr>
+<tr class="separator:a4ca7495303d88ef06392ff3f64eabacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fddf2f2bb3632da59e6c64ab5f32492"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8h.html#a6fddf2f2bb3632da59e6c64ab5f32492">printSessionHeaders</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **)</td></tr>
 <tr class="memdesc:a6fddf2f2bb3632da59e6c64ab5f32492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the Set-Cookie header if necessary (conf["lenv"]["cookie"]) and save the session file.  <a href="response__print_8h.html#a6fddf2f2bb3632da59e6c64ab5f32492">More...</a><br /></td></tr>
 <tr class="separator:a6fddf2f2bb3632da59e6c64ab5f32492"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -906,6 +909,33 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a4ca7495303d88ef06392ff3f64eabacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca7495303d88ef06392ff3f64eabacf">&#9670;&nbsp;</a></span>printAssociatedLinks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printAssociatedLinks </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"><em>ppmsConf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Produce the Links header based on the links stored in the headers_links section of the main configuration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ppmsConf</td><td>the main configuration map </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
@@ -2544,7 +2574,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 4 2025 09:52:37 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 11 2025 16:14:03 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

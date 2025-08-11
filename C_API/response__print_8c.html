@@ -90,6 +90,12 @@ Functions</h2></td></tr>
 <tr class="memitem:af2ad449d11910faaacc40f6006a0b7be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#af2ad449d11910faaacc40f6006a0b7be">printHeaders</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **ppmsConf)</td></tr>
 <tr class="memdesc:af2ad449d11910faaacc40f6006a0b7be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the HTTP headers based on a map.  <a href="response__print_8c.html#af2ad449d11910faaacc40f6006a0b7be">More...</a><br /></td></tr>
 <tr class="separator:af2ad449d11910faaacc40f6006a0b7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1c4296d69d92c66d8cc084751f67142"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#aa1c4296d69d92c66d8cc084751f67142">printLinkInfo</a> (const char *pccUrl, const char *pccRel, const char *pccTitle, const char *pccType, const char *pccFormat)</td></tr>
+<tr class="memdesc:aa1c4296d69d92c66d8cc084751f67142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print link information.  <a href="response__print_8c.html#aa1c4296d69d92c66d8cc084751f67142">More...</a><br /></td></tr>
+<tr class="separator:aa1c4296d69d92c66d8cc084751f67142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39dd4f64ed651e13143eb2b6ba2bb323"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#a39dd4f64ed651e13143eb2b6ba2bb323">printAssociatedLinks</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **ppmsConf)</td></tr>
+<tr class="memdesc:a39dd4f64ed651e13143eb2b6ba2bb323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce the Links header based on the links stored in the headers_links section of the main configuration.  <a href="response__print_8c.html#a39dd4f64ed651e13143eb2b6ba2bb323">More...</a><br /></td></tr>
+<tr class="separator:a39dd4f64ed651e13143eb2b6ba2bb323"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ff78ab081c58387ac2a50f1f23ef3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8c.html#a08ff78ab081c58387ac2a50f1f23ef3d">printSessionHeaders</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **ppmsConf)</td></tr>
 <tr class="memdesc:a08ff78ab081c58387ac2a50f1f23ef3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the Set-Cookie header if necessary (conf["lenv"]["cookie"]) and save the session file.  <a href="response__print_8c.html#a08ff78ab081c58387ac2a50f1f23ef3d">More...</a><br /></td></tr>
 <tr class="separator:a08ff78ab081c58387ac2a50f1f23ef3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -990,6 +996,33 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a39dd4f64ed651e13143eb2b6ba2bb323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39dd4f64ed651e13143eb2b6ba2bb323">&#9670;&nbsp;</a></span>printAssociatedLinks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printAssociatedLinks </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> **&#160;</td>
+          <td class="paramname"><em>ppmsConf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Produce the Links header based on the links stored in the headers_links section of the main configuration. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ppmsConf</td><td>the main configuration map </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a id="afeafb536cd14c868c2ef098abe5d7e31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afeafb536cd14c868c2ef098abe5d7e31">&#9670;&nbsp;</a></span>printBoundingBox()</h2>
 
@@ -1577,6 +1610,64 @@ Functions</h2></td></tr>
     <tr><td class="paramname">e</td><td>the output elements </td></tr>
     <tr><td class="paramname">m</td><td>the conf maps containing the main.cfg settings </td></tr>
     <tr><td class="paramname">type</td><td>the type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa1c4296d69d92c66d8cc084751f67142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1c4296d69d92c66d8cc084751f67142">&#9670;&nbsp;</a></span>printLinkInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printLinkInfo </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccRel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccTitle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print link information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pccUrl</td><td>the URL of the link </td></tr>
+    <tr><td class="paramname">pccRel</td><td>the rel attribute </td></tr>
+    <tr><td class="paramname">pccTitle</td><td>the title attribute </td></tr>
+    <tr><td class="paramname">pccType</td><td>the type attribute </td></tr>
+    <tr><td class="paramname">pccFormat</td><td>the format attribute </td></tr>
   </table>
   </dd>
 </dl>
@@ -2282,7 +2373,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 4 2025 09:52:37 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 11 2025 16:14:03 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

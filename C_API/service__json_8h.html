@@ -163,6 +163,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4e812a992501bca5e613ef2be0677ec8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#a4e812a992501bca5e613ef2be0677ec8">outputSingleJsonComplexRes</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *, json_object *, json_object *, char *, long)</td></tr>
 <tr class="memdesc:a4e812a992501bca5e613ef2be0677ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append required field to Json objects for a complex output.  <a href="service__json_8h.html#a4e812a992501bca5e613ef2be0677ec8">More...</a><br /></td></tr>
 <tr class="separator:a4e812a992501bca5e613ef2be0677ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aec84c902b22ba6d749b14c01d1cf4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#a7aec84c902b22ba6d749b14c01d1cf4f">outputSingleJsonLiteralData</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *, json_object *, const char *, char *)</td></tr>
+<tr class="memdesc:a7aec84c902b22ba6d749b14c01d1cf4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append required literal data output.  <a href="service__json_8h.html#a7aec84c902b22ba6d749b14c01d1cf4f">More...</a><br /></td></tr>
+<tr class="separator:a7aec84c902b22ba6d749b14c01d1cf4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9e6f8c71836b1df8fa53af14a457957"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__json_8h.html#ab9e6f8c71836b1df8fa53af14a457957">jsonIsFalse</a> (json_bool)</td></tr>
 <tr class="memdesc:ab9e6f8c71836b1df8fa53af14a457957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trivial verification, check if a json_bool is equal to FALSE.  <a href="service__json_8h.html#ab9e6f8c71836b1df8fa53af14a457957">More...</a><br /></td></tr>
 <tr class="separator:ab9e6f8c71836b1df8fa53af14a457957"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -706,6 +709,64 @@ Variables</h2></td></tr>
     <tr><td class="paramname">pjoRes3</td><td>json_object pointer to the format object associated with pjoRes1 </td></tr>
     <tr><td class="paramname">pcValue</td><td>char pointer to the value to be allocated </td></tr>
     <tr><td class="paramname">lLen</td><td>length of pcValue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7aec84c902b22ba6d749b14c01d1cf4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aec84c902b22ba6d749b14c01d1cf4f">&#9670;&nbsp;</a></span>outputSingleJsonLiteralData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void outputSingleJsonLiteralData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">json_object *&#160;</td>
+          <td class="paramname"><em>pjoRes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccFieldName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append required literal data output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsConf</td><td>maps pointer to the main configuration maps </td></tr>
+    <tr><td class="paramname">pmsResult</td><td>maps pointer to the output </td></tr>
+    <tr><td class="paramname">pjoRes</td><td>json_object pointer to which the field should be added </td></tr>
+    <tr><td class="paramname">pccFieldName</td><td>the field name to be added </td></tr>
+    <tr><td class="paramname">pcValue</td><td>char pointer to the value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1568,7 +1629,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 3 2025 08:09:22 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 22 2025 16:35:49 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

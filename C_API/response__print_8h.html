@@ -215,6 +215,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a7e7e48d27b78f36be8d90784c6034122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8h.html#a7e7e48d27b78f36be8d90784c6034122">addMetadata</a> (<a class="el" href="service_8h.html#structmap">map</a> *, xmlDocPtr, xmlNodePtr, xmlNsPtr, xmlNsPtr, int)</td></tr>
 <tr class="memdesc:a7e7e48d27b78f36be8d90784c6034122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a Metadata node to any existing node.  <a href="response__print_8h.html#a7e7e48d27b78f36be8d90784c6034122">More...</a><br /></td></tr>
 <tr class="separator:a7e7e48d27b78f36be8d90784c6034122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8995a462dc53b7ec07c1dc529f4d1e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8h.html#ae8995a462dc53b7ec07c1dc529f4d1e4">prepareLinksHeader</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, const char *)</td></tr>
+<tr class="memdesc:ae8995a462dc53b7ec07c1dc529f4d1e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare the Links header based on the profile of the endpoint.  <a href="response__print_8h.html#ae8995a462dc53b7ec07c1dc529f4d1e4">More...</a><br /></td></tr>
+<tr class="separator:ae8995a462dc53b7ec07c1dc529f4d1e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c84e2e0601ca46797ca452069d51377"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="response__print_8h.html#a0c84e2e0601ca46797ca452069d51377">produceFileUrl</a> (<a class="el" href="service_8h.html#structservice">service</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *, <a class="el" href="service_8h.html#structmaps">maps</a> *, const char *, int)</td></tr>
 <tr class="memdesc:a0c84e2e0601ca46797ca452069d51377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produce a copy file and the corresponding url in case it is required Please, free the returned ressource while used.  <a href="response__print_8h.html#a0c84e2e0601ca46797ca452069d51377">More...</a><br /></td></tr>
 <tr class="separator:a0c84e2e0601ca46797ca452069d51377"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -860,6 +863,43 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a map containing all the bounding box keys </dd></dl>
+
+</div>
+</div>
+<a id="ae8995a462dc53b7ec07c1dc529f4d1e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8995a462dc53b7ec07c1dc529f4d1e4">&#9670;&nbsp;</a></span>prepareLinksHeader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void prepareLinksHeader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="service_8h.html#structmaps">maps</a> *&#160;</td>
+          <td class="paramname"><em>pmsConfig</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccEndPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepare the Links header based on the profile of the endpoint. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pmsaConfig</td><td>the main configuration map </td></tr>
+    <tr><td class="paramname">pccEndPoint</td><td>the endpoint to check </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2574,7 +2614,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Sep 3 2025 08:09:22 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 22 2025 16:35:48 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

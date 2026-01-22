@@ -113,8 +113,11 @@
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-is-zoo-project">What is ZOO-Project ?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#zoo-project-components">ZOO-Project components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#open-source">Open Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-use-zoo-project">Why Use ZOO-Project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#zoo-project-components">ZOO-Project Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#open-source-and-community">Open Source and Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-contribute">How to Contribute</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="install/index.html">ZOO-Project installation</a><ul>
@@ -209,30 +212,65 @@
             
   <section id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h1>
-<p>This is an introduction to  the <a class="reference external" href="http://zoo-project.org">ZOO-Project</a> open source software documentation.</p>
+<p>Welcome to the official documentation of the <a class="reference external" href="http://zoo-project.org">ZOO-Project</a>, a powerful open source platform for creating and executing <strong>OGC-compliant Web Processing Services (WPS)</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This documentation is currently under review. Some content may be outdated, including support for certain platforms like Windows which is no longer maintained. Pages with obsolete material will be marked accordingly.</p>
+</div>
 <section id="what-is-zoo-project">
 <h2>What is ZOO-Project ?<a class="headerlink" href="#what-is-zoo-project" title="Permalink to this heading">¶</a></h2>
-<p><a class="reference external" href="http://zoo-project.org">ZOO-Project</a>  is a WPS (Web Processing Service) implementation written in C, Python and JavaScript. It is an open source platform which implements the <a class="reference external" href="http://www.opengeospatial.org/standards/wps/">WPS 1.0.0</a>, <a class="reference external" href="http://www.opengeospatial.org/standards/wps/">WPS 2.0.0</a> and <a class="reference external" href="https://docs.ogc.org/is/18-062r2/18-062r2.html">OGC API - Processes - Part 1: Core</a> standards edited by the <a class="reference external" href="http://www.opengeospatial.org/">Open Geospatial Consortium</a> (OGC).</p>
-<p><a class="reference external" href="http://zoo-project.org">ZOO-Project</a> provides a developer-friendly framework for creating and chaining WPS compliant Web Services. Its main goal is to provide generic and standard-compliant methods for using existing open source librairies and algorithms as WPS. It also offers efficient tools for creating new innovative web services and applications.</p>
-<p><a class="reference external" href="http://zoo-project.org">ZOO-Project</a> is able to process geospatial or non geospatial data online. Its core processing engine (aka <a class="reference internal" href="kernel/index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a>) lets you execute a number of existing <a class="reference internal" href="services/zoo-services.html#services-available"><span class="std std-ref">ZOO-Services</span></a> based on reliable software and libraries. It also gives you the ability to create your own WPS Services from new or existing source code, which can be written in seven different programming languages. That lets you compose or turn code as WPS Services simply, with straightforward configuration and standard coding methods.</p>
-<p><a class="reference external" href="http://zoo-project.org">ZOO-Project</a> is very flexible with data input and output so you can process almost any kind of data stored locally or accessed from remote servers and databases. ZOO-Project excels in data processing and integrates new or existing spatial data infrastructures, as it is able to communicate with map servers and can integrate webmapping clients.</p>
-</section>
-<section id="zoo-project-components">
-<h2>ZOO-Project components<a class="headerlink" href="#zoo-project-components" title="Permalink to this heading">¶</a></h2>
-<p>The <a class="reference external" href="http://zoo-project.org">ZOO-Project</a> platform is made up of the following components:</p>
+<p><a class="reference external" href="http://zoo-project.org">ZOO-Project</a> is an open source implementation of the <strong>OGC WPS standards</strong>:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="kernel/index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a>: A  WPS compliant implementation written in C offering a powerful WPS server able to manage and chain WPS services. by loading dynamic libraries and code written in different languages.</p></li>
-<li><p><a class="reference internal" href="services/index.html#services-index"><span class="std std-ref">ZOO-Services</span></a>: A growing collection of ready to use Web Processing Services built on top of reliable open source libraries such as GDAL, GRASS GIS, OrfeoToolbox, CGAL and SAGA GIS.</p></li>
-<li><p><a class="reference internal" href="api/index.html#api-index"><span class="std std-ref">ZOO-API</span></a>: A server-side JavaScript API for creating, chaining and orchestrating the available WPS Services.</p></li>
-<li><p><a class="reference internal" href="client/index.html#client-index"><span class="std std-ref">ZOO-Client</span></a>: A client side JavaScript API for interacting with WPS servers and executing standard requests from web applications.</p></li>
+<li><p><a class="reference external" href="http://www.opengeospatial.org/standards/wps">WPS 1.0.0</a></p></li>
+<li><p><a class="reference external" href="http://www.opengeospatial.org/standards/wps">WPS 2.0.0</a></p></li>
+<li><p><a class="reference external" href="https://docs.ogc.org/is/18-062r2/18-062r2.html">OGC API - Processes - Part 1: Core</a></p></li>
+</ul>
+<p>It provides developers with tools to <strong>wrap existing algorithms and libraries into WPS-compliant services</strong>, allowing them to be called over the web. These services can process <strong>geospatial and non-geospatial data</strong> in a flexible and scalable manner.</p>
+</section>
+<section id="key-features">
+<h2>Key Features:<a class="headerlink" href="#key-features" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Create services using <strong>C, Python, JavaScript, and more</strong> (up to 7 languages)</p></li>
+<li><p>Integrate with major geospatial libraries: GDAL, GRASS GIS, OTB, CGAL, etc.</p></li>
+<li><p>Process local or remote data</p></li>
+<li><p>Build complex workflows by <strong>chaining services</strong></p></li>
+<li><p>Deploy services via a standards-based web API</p></li>
 </ul>
 </section>
-<section id="open-source">
-<h2>Open Source<a class="headerlink" href="#open-source" title="Permalink to this heading">¶</a></h2>
-<p><a class="reference external" href="http://zoo-project.org">ZOO-Project</a>  is open source and released under the terms of the <a class="reference external" href="http://opensource.org/licenses/MITlicense">MIT/X-11</a>  <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/blob/main/zoo-project/LICENSE">license</a> . ZOO-Project activities are directed by the Project Steering Committee (PSC) and the software itself is being developed, maintained and documented by an international community of users and developers (aka <a class="reference external" href="http://zoo-project.org/new/ZOO-Project/ZOO%20Tribe">ZOO-Tribe</a>). ZOO-Project API and services used external software tools that are available under their respective OSI (<a class="reference external" href="https://opensource.org/licenses/">https://opensource.org/licenses/</a>) certified open source licenses.</p>
-<p>Please refer to the ZOO-Project <a class="reference internal" href="contribute/index.html#contribute-index"><span class="std std-ref">Contributor Guide</span></a> if you want to participate and contribute. It is easy to <a class="reference internal" href="contribute/index.html#contribute-index"><span class="std std-ref">get involved</span></a>  on source code, documentation or translation. Everybody is welcome to join the <a class="reference external" href="http://zoo-project.org/new/ZOO-Project/ZOO%20Tribe/">ZOO-Tribe</a>.</p>
-<p><a class="reference external" href="http://zoo-project.org">ZOO-Project</a>  is an official project of the Open Source Geospatial Foundation (<a class="reference external" href="http://osgeo.org">OSGeo</a>).</p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/project/OSGeo_project.svg"><img alt="OSGeo incubation" height="69px" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/project/OSGeo_project.svg" width="168px" /></a>
+<section id="why-use-zoo-project">
+<h2>Why Use ZOO-Project?<a class="headerlink" href="#why-use-zoo-project" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>It’s modular, extensible, and highly interoperable</p></li>
+<li><p>Easily integrates with <strong>web mapping clients</strong> and map servers</p></li>
+<li><p>Lets you reuse your code with minimal changes and serve it as a web service</p></li>
+</ul>
+</section>
+<section id="zoo-project-components">
+<h2>ZOO-Project Components<a class="headerlink" href="#zoo-project-components" title="Permalink to this heading">¶</a></h2>
+<p>The platform consists of the following main components:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="kernel/index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a> — The WPS-compliant core engine written in C. Manages service execution and chaining.</p></li>
+<li><p><a class="reference internal" href="services/index.html#services-index"><span class="std std-ref">ZOO-Services</span></a>: — A growing suite of ready-to-use services built on robust open-source libraries (GDAL, GRASS, etc.).</p></li>
+<li><p><a class="reference internal" href="api/index.html#api-index"><span class="std std-ref">ZOO-API</span></a>: — A JavaScript server-side API to manage workflows and service orchestration.</p></li>
+<li><p><a class="reference internal" href="client/index.html#client-index"><span class="std std-ref">ZOO-Client</span></a>: — A JavaScript client-side library for sending WPS requests from web apps.</p></li>
+</ul>
+</section>
+<section id="open-source-and-community">
+<h2>Open Source and Community<a class="headerlink" href="#open-source-and-community" title="Permalink to this heading">¶</a></h2>
+<p>ZOO-Project is released under the <a class="reference external" href="http://opensource.org/licenses/MITlicense">MIT/X-11 license</a> and maintained by a vibrant international community called the <a class="reference external" href="http://zoo-project.org/about/tribe/">ZOO-Tribe</a>.</p>
+<p>It is an official project of the <a class="reference external" href="http://osgeo.org">Open Source Geospatial Foundation (OSGeo)</a>, reflecting its commitment to open standards and collaboration.</p>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/project/OSGeo_project.svg"><img alt="OSGeo incubation" height="92px" src="https://raw.githubusercontent.com/OSGeo/osgeo/master/incubation/project/OSGeo_project.svg" width="225px" /></a>
+</section>
+<section id="how-to-contribute">
+<h2>How to Contribute<a class="headerlink" href="#how-to-contribute" title="Permalink to this heading">¶</a></h2>
+<p>Want to get involved? You can contribute to:</p>
+<ul class="simple">
+<li><p>Source code</p></li>
+<li><p>Documentation</p></li>
+<li><p>Translations</p></li>
+</ul>
+<p>Check out the <a class="reference internal" href="contribute/index.html#contribute-index"><span class="std std-ref">Contributor Guide</span></a> page to learn more. Everyone is welcome!</p>
+<p>—</p>
 </section>
 </section>
 

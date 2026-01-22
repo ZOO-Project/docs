@@ -114,8 +114,11 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#what-is-zoo-project">What is ZOO-Project ?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#zoo-project-components">ZOO-Project components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source">Open Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#key-features">Key Features:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#why-use-zoo-project">Why Use ZOO-Project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#zoo-project-components">ZOO-Project Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source-and-community">Open Source and Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#how-to-contribute">How to Contribute</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">ZOO-Project installation</a><ul class="current">
@@ -215,39 +218,40 @@
 <p>Use the following instructions to install <a class="reference external" href="http://zoo-project.org">ZOO-Project</a> on CentOS distributions.</p>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">¶</a></h2>
-<p>First you should add the <a class="reference external" href="http://elgis.argeo.org">ELGIS Repository</a> then install the
-dependencies by using <cite>yum</cite> commands.</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">rpm</span><span class="w"> </span><span class="o">-</span><span class="n">Uvh</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">elgis</span><span class="o">.</span><span class="n">argeo</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repos</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="n">elgis</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">6</span><span class="n">_0</span><span class="o">.</span><span class="n">noarch</span><span class="o">.</span><span class="n">rpm</span>
-<span class="n">rpm</span><span class="w"> </span><span class="o">-</span><span class="n">Uvh</span><span class="w"> </span>\
-<span class="w">  </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">fedoraproject</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">epel</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="n">x86_64</span><span class="o">/</span><span class="n">epel</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mf">8.</span><span class="n">noarch</span><span class="o">.</span><span class="n">rpm</span>
-<span class="n">wget</span>\
-<span class="w">  </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">proj</span><span class="o">.</span><span class="n">badc</span><span class="o">.</span><span class="n">rl</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">uk</span><span class="o">/</span><span class="n">cedaservices</span><span class="o">/</span><span class="n">raw</span><span class="o">-</span><span class="n">attachment</span><span class="o">/</span><span class="n">ticket</span><span class="o">/</span><span class="mi">670</span><span class="o">/</span><span class="n">armadillo</span><span class="o">-</span><span class="mf">3.800</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="mf">1.</span><span class="n">el6</span><span class="o">.</span><span class="n">x86_64</span><span class="o">.</span><span class="n">rpm</span>
-<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">armadillo</span><span class="o">-</span><span class="mf">3.800</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="mf">1.</span><span class="n">el6</span><span class="o">.</span><span class="n">x86_64</span><span class="o">.</span><span class="n">rpm</span>
-<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">hdf5</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mi">6</span>
-<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">gcc</span><span class="o">-</span><span class="n">c</span><span class="o">++</span><span class="w"> </span><span class="n">zlib</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">libxml2</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">bison</span><span class="w"> </span><span class="n">openssl</span><span class="w"> </span>\
-<span class="w">  </span><span class="n">python</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">subversion</span><span class="w"> </span><span class="n">libxslt</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">libcurl</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span>\
-<span class="w">  </span><span class="n">gdal</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">proj</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">libuuid</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">openssl</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">fcgi</span><span class="o">-</span><span class="n">devel</span>
-<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">java</span><span class="o">-</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">openjdk</span><span class="o">-</span><span class="n">devel</span>
+<p>First, enable the EPEL repository and install the necessary dependencies using <cite>yum</cite>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>epel-release
+<span class="w"> </span>sudo<span class="w"> </span>yum<span class="w"> </span>groupinstall<span class="w"> </span><span class="s2">&quot;Development Tools&quot;</span>
+<span class="w"> </span>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>gcc-c++<span class="w"> </span>zlib-devel<span class="w"> </span>libxml2-devel<span class="w"> </span>bison<span class="w"> </span>openssl<span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>python3-devel<span class="w"> </span>subversion<span class="w"> </span>libxslt-devel<span class="w"> </span>libcurl-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>gdal-devel<span class="w"> </span>proj-devel<span class="w"> </span>libuuid-devel<span class="w"> </span>openssl-devel<span class="w"> </span>fcgi-devel<span class="w"> </span><span class="se">\</span>
+<span class="w">     </span>java-11-openjdk-devel
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The ELGIS repository is deprecated and no longer maintained.</p></li>
+<li><p>Ensure that <cite>python3-devel</cite> is installed, as Python 2 has reached end-of-life.</p></li>
+</ul>
 </div>
 </section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
-<p>Now refer to general instructions from <a class="reference internal" href="installation.html#install-installation"><span class="std std-ref">Installation on Unix/Linux</span></a> to
+<p>Refer to general instructions from <a class="reference internal" href="installation.html#install-installation"><span class="std std-ref">Installation on Unix/Linux</span></a> to
 setup your ZOO-Kernel and the ZOO-Services of your choice.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In case you use the Java support, please, make sure to use the
 correct version of both java and javac using the following
 commands:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>update-alternatives --config java
-update-alternatives --config javac
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>alternatives<span class="w"> </span>--config<span class="w"> </span>java
+sudo<span class="w"> </span>alternatives<span class="w"> </span>--config<span class="w"> </span>javac
 </pre></div>
 </div>
 <p>Also, make sure to add the following to your <cite>main.cfg</cite> file before
 trying to execute any Java service:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="k">[javax]</span>
-<span class="na">ss</span><span class="o">=</span><span class="s">2m</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>javax<span class="o">]</span>
+<span class="nv">ss</span><span class="o">=</span>2m
 </pre></div>
 </div>
 </div>

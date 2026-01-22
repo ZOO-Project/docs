@@ -114,8 +114,11 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#what-is-zoo-project">What is ZOO-Project ?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#zoo-project-components">ZOO-Project components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source">Open Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#key-features">Key Features:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#why-use-zoo-project">Why Use ZOO-Project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#zoo-project-components">ZOO-Project Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source-and-community">Open Source and Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#how-to-contribute">How to Contribute</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">ZOO-Project installation</a><ul class="current">
@@ -212,41 +215,61 @@
             
   <section id="install-on-opensuse">
 <span id="install-opensuse"></span><h1>Install on OpenSUSE<a class="headerlink" href="#install-on-opensuse" title="Permalink to this heading">¶</a></h1>
-<p><a class="reference internal" href="../kernel/index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a> is maintained as a package in <a class="reference external" href="https://build.opensuse.org/package/show?package=zoo-kernel&amp;project=Application%3AGeo">OpenSUSE Build Service (OBS)</a>. RPM are thus provided for all versions of OpenSUSE Linux (11.2, 11.3, 11.4, Factory).</p>
+<p>ZOO-Project’s <a class="reference internal" href="../kernel/index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a> can be installed on recent OpenSUSE distributions either via pre-built packages from the OpenSUSE Build Service (OBS) or by compiling from source.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These instructions are updated for OpenSUSE Leap 15.4+ or Tumbleweed. Older instructions for 11.4 releases are obsolete.</p>
+</div>
 <section id="stable-release">
 <h2>Stable release<a class="headerlink" href="#stable-release" title="Permalink to this heading">¶</a></h2>
-<p>Use the following instructions to install ZOO-Project latetst release on OpenSUSE distribution.</p>
-<section id="one-click-installer">
-<h3>One-click installer<a class="headerlink" href="#one-click-installer" title="Permalink to this heading">¶</a></h3>
-<p>A one-click installer is available <a class="reference external" href="http://software.opensuse.org/search?q=zoo-kernel&amp;baseproject=openSUSE%3A11.4&amp;lang=en&amp;exclude_debug=true">here</a>.
-For openSUSE 11.4, follow this direct <a class="reference external" href="http://software.opensuse.org/ymp/Application:Geo/openSUSE_11.4/zoo-kernel.ymp?base=openSUSE%3A11.4&amp;query=zoo-kernel">link</a>.</p>
+<p>To install the latest stable version of ZOO-Kernel on OpenSUSE:</p>
+<section id="via-yast-software-manager">
+<h3>Via YaST Software Manager<a class="headerlink" href="#via-yast-software-manager" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic">
+<li><p>Open YaST.</p></li>
+<li><p>Navigate to <em>Software &gt; Software Repositories</em> and add the following repository:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Repository Name: <cite>Application:Geo</cite></p></li>
+<li><p>URL: <cite>http://download.opensuse.org/repositories/Application:/Geo/openSUSE_Leap_15.4/</cite> (replace version if needed)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Refresh repositories and search for <cite>zoo-kernel</cite> in the Software Management tool.</p></li>
+</ol>
 </section>
-<section id="yast-software-manager">
-<h3>Yast software manager<a class="headerlink" href="#yast-software-manager" title="Permalink to this heading">¶</a></h3>
-<p>Add the <a class="reference external" href="http://download.opensuse.org/repositories/Application:/Geo/">Application:Geo</a> repository to the software repositories and then ZOO-Kernel can then be found in Software Management using the provided search tool.</p>
-</section>
-<section id="command-line-as-root-for-opensuse-11-4">
-<h3>Command line (as root for openSUSE 11.4)<a class="headerlink" href="#command-line-as-root-for-opensuse-11-4" title="Permalink to this heading">¶</a></h3>
-<p>Install ZOO-Kernel package by yourself using the following command:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">zypper</span><span class="w"> </span><span class="n">ar</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">Application</span><span class="p">:</span><span class="o">/</span><span class="n">Geo</span><span class="o">/</span><span class="n">openSUSE_11</span><span class="o">.</span><span class="mi">4</span><span class="o">/</span>
-<span class="n">zypper</span><span class="w"> </span><span class="n">refresh</span>
-<span class="n">zypper</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">zoo</span><span class="o">-</span><span class="n">kernel</span>
+<section id="via-command-line">
+<h3>Via Command Line<a class="headerlink" href="#via-command-line" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zypper<span class="w"> </span>ar<span class="w"> </span>http://download.opensuse.org/repositories/Application:/Geo/openSUSE_Leap_15.4/<span class="w"> </span>Application:Geo
+zypper<span class="w"> </span>refresh
+zypper<span class="w"> </span>install<span class="w"> </span>zoo-kernel
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can check the latest available versions here: <a class="reference external" href="https://software.opensuse.org/package/zoo-kernel">https://software.opensuse.org/package/zoo-kernel</a></p>
 </div>
 <section id="developement-version">
 <h4>Developement version<a class="headerlink" href="#developement-version" title="Permalink to this heading">¶</a></h4>
-<p>The latest development version of ZOO-Kernel can be found in OBS under the project <a class="reference external" href="https://build.opensuse.org/project/show?project=home%3Atzotsos">home:tzotsos</a>. ZOO-Kernel packages are maintained and tested there before being released to the Application:Geo repository. Installation methods are identical as for the stable version. Make sure to use <a class="reference external" href="http://download.opensuse.org/repositories/home:/tzotsos/">this</a> repository instead.</p>
+<p>For the most recent development version of ZOO-Kernel, use the testing OBS repository maintained by developers:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Development versions may be unstable and should only be used for testing purposes.</p>
+</div>
 </section>
 <section id="id1">
-<h4>Command line (as root for openSUSE 11.4)<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h4>
+<h4>Via Command Line<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h4>
 <p>Install latest ZOO-Kernel trunk version with the following command:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">zypper</span><span class="w"> </span><span class="n">ar</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">opensuse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">home</span><span class="p">:</span><span class="o">/</span><span class="n">tzotsos</span><span class="o">/</span><span class="n">openSUSE_11</span><span class="o">.</span><span class="mi">4</span><span class="o">/</span>
-<span class="n">zypper</span><span class="w"> </span><span class="n">refresh</span>
-<span class="n">zypper</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">zoo</span><span class="o">-</span><span class="n">kernel</span>
-<span class="n">zypper</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">zoo</span><span class="o">-</span><span class="n">kernel</span><span class="o">-</span><span class="n">grass</span><span class="o">-</span><span class="n">bridge</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zypper<span class="w"> </span>ar<span class="w"> </span>http://download.opensuse.org/repositories/home:/tzotsos/openSUSE_Leap_15.4/<span class="w"> </span>ZOO-Dev
+zypper<span class="w"> </span>refresh
+zypper<span class="w"> </span>install<span class="w"> </span>zoo-kernel
+zypper<span class="w"> </span>install<span class="w"> </span>zoo-kernel-grass-bridge
 </pre></div>
 </div>
-<p>Note that there is the option of adding the zoo-wps-grass-bridge package. This option will automatically install grass7 (svn trunk).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <cite>zoo-kernel-grass-bridge</cite> package requires GRASS GIS (GRASS7) and enables integration between ZOO and GRASS.</p>
+</div>
 </section>
 </section>
 </section>

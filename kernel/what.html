@@ -114,8 +114,11 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#what-is-zoo-project">What is ZOO-Project ?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#zoo-project-components">ZOO-Project components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source">Open Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#key-features">Key Features:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#why-use-zoo-project">Why Use ZOO-Project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#zoo-project-components">ZOO-Project Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source-and-community">Open Source and Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#how-to-contribute">How to Contribute</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../install/index.html">ZOO-Project installation</a><ul>
@@ -212,57 +215,41 @@
             
   <section id="what-is-zoo-kernel">
 <h1>What is ZOO-Kernel ?<a class="headerlink" href="#what-is-zoo-kernel" title="Permalink to this heading">¶</a></h1>
-<p>ZOO-Kernel is the heart of the <a class="reference external" href="http://zoo-project.org">ZOO-Project</a> WPS platform. It is a WPS compliant implementation written in C language which provides a powerful and extensible WPS server.</p>
-<p>ZOO-Kernel is an extensible WPS server that makes your system more
-powerful. It provides a full-featured processing engine which runs on
-Linux, Mac OSX ™ and Windows ™ operating
-systems. ZOO-Kernel is a CGI program which works on common web servers
-(namely <a class="reference external" href="http://httpd.apache.org/">Apache</a> or <a class="reference external" href="http://www.iis.net/">IIS</a> ™). It can be seamlessly integrated to
-new or existing web platforms.</p>
-<p>ZOO-Kernel lets you process geospatial or non geospatial data using
-well formed WPS requests. The WPS server is able to manage and chain
-WPS Services (see ZOO-Services for examples) by loading dynamic
-libraries and source code written in different programming languages.</p>
+<p><strong>ZOO-Kernel</strong> is the core of the <a class="reference external" href="http://zoo-project.org">ZOO-Project</a> WPS platform. It is a WPS-compliant implementation written in C, providing a robust and extensible WPS (Web Processing Service) server.</p>
+<p>ZOO-Kernel enhances your system’s capabilities by offering a full-featured processing engine that operates across Linux, macOS ™, and Windows ™. It functions as a CGI program compatible with standard web servers like <a class="reference external" href="http://httpd.apache.org/">Apache</a> and <a class="reference external" href="http://www.iis.net/">IIS</a> ™, and can be seamlessly integrated into both new and existing web platforms.</p>
+<p>ZOO-Kernel allows the processing of geospatial and non-geospatial data using well-formed WPS requests. It supports chaining and execution of WPS services (see ZOO-Services for examples) using dynamic libraries and source code in various programming languages.</p>
 <section id="first-class-wps-server">
 <h2>First class WPS server<a class="headerlink" href="#first-class-wps-server" title="Permalink to this heading">¶</a></h2>
 <section id="simple">
 <h3>Simple<a class="headerlink" href="#simple" title="Permalink to this heading">¶</a></h3>
-<p>The ZOO-Kernel rely on simple principles and tends to ease the
-implementation of new services by sharing similar data structures for
-every supported programming languages. The ZOO-Kernel is responsible
-to parse the requests it receives and return the corresponding WPS
-response.</p>
-<p>In case of an <em>Execute</em> request, the ZOO-Kernel stores informations in
-a basic KVP data structure for the programming language used to
-implement the service, dynamically load the Service Provider defined
-in the zcfg file and run a specific function corresponding to the
-service, passing three arguments. Once the function return, ZOO-Kernel
-knows if the service run succeessfuly or failed by checking the
-returned value. In the case it succeeded, the ZOO-Kernel then parse
-the third arguments containing the result and produce the output in
-the desired format.</p>
+<p>ZOO-Kernel is based on straightforward principles and aims to simplify the creation of new services. It does this by using a unified data structure across all supported programming languages.</p>
+<dl class="simple">
+<dt>ZOO-Kernel handles incoming WPS requests by parsing them and producing appropriate WPS responses. For Execute requests, it:</dt><dd><ol class="arabic simple">
+<li><p>Stores request information in a basic key-value pair (KVP) structure.</p></li>
+<li><p>Dynamically loads the appropriate Service Provider defined in the <cite>.zcfg</cite> file.</p></li>
+<li><p>Calls the corresponding function of the service, passing <strong>three arguments</strong>.</p></li>
+</ol>
+</dd>
+</dl>
+<p>After the function executes, ZOO-Kernel checks the return value to determine if the service ran successfully. If successful, it parses the third argument (containing the result) and generates the response in the required format.</p>
 </section>
 <section id="compliant">
 <h3>Compliant<a class="headerlink" href="#compliant" title="Permalink to this heading">¶</a></h3>
-<p>ZOO-Kernel implements and complies with the <a class="reference external" href="http://www.opengeospatial.org/standards/wps/">WPS 1.0.0</a> and the <a class="reference external" href="http://www.opengeospatial.org/standards/wps/">WPS 2.0.0</a> standards edited by
-the <a class="reference external" href="http://www.opengeospatial.org/">Open Geospatial Consortium</a>. It
-is able to perform the WPS operations defined in the OpenGIS ®
-specification, such as:</p>
+<p>ZOO-Kernel complies with both the <a class="reference external" href="http://www.opengeospatial.org/standards/wps/">WPS 1.0.0</a> and <a class="reference external" href="http://www.opengeospatial.org/standards/wps/">WPS 2.0.0</a> standards from the <a class="reference external" href="http://www.opengeospatial.org/">Open Geospatial Consortium</a>.</p>
+<p>It supports the following standard WPS operations:</p>
 <ul class="simple">
-<li><p><strong>GetCapablities</strong>: Returns service-level metadata information.It
+<li><p><strong>GetCapablities</strong> - Returns service-level metadata information.It
 provides the list of available processing services.</p></li>
-<li><p><strong>DescribeProcess</strong>: Returns a description of a process, including
-its supported input and output.</p></li>
-<li><p><strong>Execute</strong>:  Launches computation and returns the output produced
-by a particular process.</p></li>
-<li><p><strong>GetStatus</strong>:  only available in WPS 2.0.0, it lets the client fetch
+<li><p><strong>DescribeProcess</strong> - Provides a detailed description of a process, including input/output definitions.</p></li>
+<li><p><strong>Execute</strong> -  Runs a process and returns its output.</p></li>
+<li><p><strong>GetStatus</strong> (WPS 2.0.0 only) - It lets the client fetch
 the ongoing status of a running service.</p></li>
-<li><p><strong>GetResult</strong>: only available in WPS 2.0.0, it lets the client fetch
+<li><p><strong>GetResult</strong> (WPS 2.0.0 only) -It lets the client fetch
 the final result of a running service.</p></li>
-<li><p><strong>Dismiss</strong>: only available in WPS 2.0.0, it lets the client ask
+<li><p><strong>Dismiss</strong> (WPS 2.0.0 only) - It lets the client ask
 the server to stop a running service and remove any file it created.</p></li>
 </ul>
-<p>ZOO-Kernel compliancy and performances can be tested using the
+<p>ZOO-Kernel’s compliance and performances can be tested using the
 following tools:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/WPS-Benchmarking/cptesting">cptesting</a></p></li>
@@ -272,10 +259,8 @@ following tools:</p>
 </section>
 <section id="polyglot">
 <h3>Polyglot<a class="headerlink" href="#polyglot" title="Permalink to this heading">¶</a></h3>
-<p>ZOO-Kernel is a <strong>polyglot</strong>. The software is written in a valid form
-of multiple programming languages, which performs the same operations
-independent of the programming language used to compile or interpret
-it. The supported programming languages are listed bellow:</p>
+<p>ZOO-Kernel is <strong>polyglot</strong>, meaning it supports service implementation in multiple programming languages.
+Developers can write services in the language they are most comfortable with. Below is the list of supported languages, service types, data structures, and return conventions:</p>
 <table class="docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><strong>Language</strong></p></td>

@@ -114,8 +114,11 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#what-is-zoo-project">What is ZOO-Project ?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#zoo-project-components">ZOO-Project components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source">Open Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#key-features">Key Features:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#why-use-zoo-project">Why Use ZOO-Project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#zoo-project-components">ZOO-Project Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source-and-community">Open Source and Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#how-to-contribute">How to Contribute</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">ZOO-Project installation</a><ul class="current">
@@ -218,101 +221,110 @@
 <section id="using-debian">
 <h3>Using Debian<a class="headerlink" href="#using-debian" title="Permalink to this heading">¶</a></h3>
 <p>The following command should install all the required dependancies on Debian. See the <a class="reference internal" href="prerequisites.html#install-prereq"><span class="std std-ref">Prerequisites</span></a> section for additional information.</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>apt-get install flex bison libfcgi-dev libxml2 libxml2-dev curl openssl autoconf apache2 python-software-properties subversion python-dev libgdal1-dev build-essential libmozjs185-dev libxslt1-dev
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>flex<span class="w"> </span>bison<span class="w"> </span>libfcgi-dev<span class="w"> </span>libxml2<span class="w"> </span>libxml2-dev<span class="w"> </span>curl<span class="w"> </span>openssl<span class="w"> </span>autoconf<span class="w"> </span>apache2<span class="w"> </span>python-software-properties<span class="w"> </span>subversion<span class="w"> </span>python-dev<span class="w"> </span>libgdal1-dev<span class="w"> </span>build-essential<span class="w"> </span>libmozjs185-dev<span class="w"> </span>libxslt1-dev
 </pre></div>
 </div>
 </section>
 <section id="using-ubuntu">
 <h3>Using Ubuntu<a class="headerlink" href="#using-ubuntu" title="Permalink to this heading">¶</a></h3>
 <p>On Ubuntu, use the following command first to install the required dependancies :</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>sudo apt-get install flex bison libfcgi-dev libxml2 libxml2-dev curl openssl autoconf apache2 python-software-properties subversion libmozjs185-dev python-dev build-essential libxslt1-dev
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>flex<span class="w"> </span>bison<span class="w"> </span>libfcgi-dev<span class="w"> </span>libxml2<span class="w"> </span>libxml2-dev<span class="w"> </span>curl<span class="w"> </span>openssl<span class="w"> </span>autoconf<span class="w"> </span>apache2<span class="w"> </span>python-software-properties<span class="w"> </span>subversion<span class="w"> </span>libmozjs185-dev<span class="w"> </span>python-dev<span class="w"> </span>build-essential<span class="w"> </span>libxslt1-dev
 </pre></div>
 </div>
-<p>Then add the <em>UbuntuGIS</em> repository in order to get the latest versions of libraries</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>sudo add-apt-repository ppa:ubuntugis/ppa
-sudo apt-get update
+<p>Then add the <em>UbuntuGIS</em> repository to get the latest versions of geographic libraries:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:ubuntugis/ppa
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 </pre></div>
 </div>
-<p>Install the geographic library as follow:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>sudo apt-get install libgdal1-dev
+<p>Install the GDAL library:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libgdal1-dev
 </pre></div>
 </div>
 </section>
 </section>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
-<p><a class="reference internal" href="download.html#install-download"><span class="std std-ref">Download</span></a> ZOO-Project latest version from git using the following command:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/ZOO-Project/ZOO-Project.git zoo-project
+<p><a class="reference internal" href="download.html#install-download"><span class="std std-ref">Download</span></a> Download the latest version of ZOO-Project from Git:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ZOO-Project/ZOO-Project.git<span class="w"> </span>zoo-project
 </pre></div>
 </div>
-<p>Install the <em>cgic</em> library from packages using the following command:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cd zoo-project/thirds/cgic206/
+<p>Build and install the <cite>cgic</cite> library:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>zoo-project/thirds/cgic206/
 make
 </pre></div>
 </div>
-<p>Head to the <a class="reference internal" href="../kernel/index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a> directory</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cd ../../zoo-project/zoo-kernel/
+<p>Navigate to the ZOO-Kernel <a class="reference internal" href="../kernel/index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a> directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>../../zoo-project/zoo-kernel/
 </pre></div>
 </div>
-<p>Create a configure file as follow:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>autoconf
+<p>Generate the configure script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>autoconf
 </pre></div>
 </div>
-<p>Run configure with the desired options, for example with the following command:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>./configure --with-js --with-python
+<p>Run the configure script with the desired options:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./configure<span class="w"> </span>--with-js<span class="w"> </span>--with-python
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Refer to the <a class="reference internal" href="installation.html#install-installation"><span class="std std-ref">Installation on Unix/Linux</span></a> section for the full list of available options</p>
+<p>Refer to the <a class="reference internal" href="installation.html#install-installation"><span class="std std-ref">Installation on Unix/Linux</span></a> section for a complete list of available options</p>
 </div>
-<p>Compile ZOO-Kernel as follow:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>make
+<p>Compile ZOO-Kernel:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make
 </pre></div>
 </div>
-<p>Install the <code class="docutils literal notranslate"><span class="pre">libzoo_service.so.1.5</span></code> by using the following command:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>sudo make install
+<p>Install the compiled library:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>make<span class="w"> </span>install
 </pre></div>
 </div>
-<p>Copy the necessary files to the <cite>cgi-bin</cite> directory (as administrator
-user):</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span><span class="w"> </span><span class="n">main</span><span class="o">.</span><span class="n">cfg</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span>
-<span class="n">cp</span><span class="w"> </span><span class="n">zoo_loader</span><span class="o">.</span><span class="n">cgi</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="n">bin</span>
+</section>
+<section id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this heading">¶</a></h2>
+<p>Copy necessary files to the <cite>cgi-bin</cite> directory (requires administrative privileges):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>cp<span class="w"> </span>main.cfg<span class="w"> </span>/usr/lib/cgi-bin
+sudo<span class="w"> </span>cp<span class="w"> </span>zoo_loader.cgi<span class="w"> </span>/usr/lib/cgi-bin
 </pre></div>
 </div>
-<p>Install ZOO ServiceProviders, for example the basic Python service (as administrator user)</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cp ../zoo-services/hello-py/cgi-env/*.zcfg /usr/lib/cgi-bin
-cp ../zoo-services/hello-py/cgi-env/*.py /usr/lib/cgi-bin/
+<p>Install example ZOO ServiceProviders (basic Python services):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>cp<span class="w"> </span>../zoo-services/hello-py/cgi-env/*.zcfg<span class="w"> </span>/usr/lib/cgi-bin
+sudo<span class="w"> </span>cp<span class="w"> </span>../zoo-services/hello-py/cgi-env/*.py<span class="w"> </span>/usr/lib/cgi-bin/
 </pre></div>
 </div>
-<p>Edit the <em>main.cfg</em> file as follow (example configuration):</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>nano /usr/lib/cgi-bin/main.cfg
-- serverAddress = http://127.0.0.1
+<p>Edit the <cite>main.cfg</cite> file for configuration:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>nano<span class="w"> </span>/usr/lib/cgi-bin/main.cfg
 </pre></div>
 </div>
-<p>Test the ZOO-Kernel installation with the following requests:</p>
+<p>Example modification:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">serverAddress</span> <span class="o">=</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">127.0.0.1</span>
+</pre></div>
+</div>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">¶</a></h2>
+<p>Test the ZOO-Kernel installation by accessing the following URLs in your browser:</p>
+<p><strong>GetCapabilities</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://127.0.0.1/cgi-bin/zoo_loader.cgi?ServiceProvider=&amp;metapath=&amp;Service=WPS&amp;Request=GetCapabilities&amp;Version=1.0.0
 </pre></div>
 </div>
+<p><strong>DescribeProcess</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://127.0.0.1/cgi-bin/zoo_loader.cgi?ServiceProvider=&amp;metapath=&amp;Service=WPS&amp;Request=DescribeProcess&amp;Version=1.0.0&amp;Identifier=HelloPy
 </pre></div>
 </div>
+<p><strong>Execute</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://127.0.0.1/cgi-bin/zoo_loader.cgi?ServiceProvider=&amp;metapath=&amp;Service=WPS&amp;Request=Execute&amp;Version=1.0.0&amp;Identifier=HelloPy&amp;DataInputs=a=myname
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Such request should return well formed XML documents (OWS documents responses).</p>
+<p>These requests should return valid XML documents (OWS-compliant responses).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The URLs provided here suppose that you have previously setup a web
-server and defined cgi-bin as a location where you can run cgi
-application.</p>
+<p>Ensure a web server is properly configured to run CGI scripts under the <cite>/usr/lib/cgi-bin</cite> path.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If ZOO-Kernel returns an error please check the <a class="reference internal" href="../kernel/configuration.html#kernel-config"><span class="std std-ref">ZOO-Kernel configuration</span></a> and beware of the <a class="reference internal" href="prerequisites.html#install-prereq"><span class="std std-ref">Prerequisites</span></a>.</p>
+<p>If ZOO-Kernel returns an error, review the <a class="reference internal" href="../kernel/configuration.html#kernel-config"><span class="std std-ref">ZOO-Kernel configuration</span></a> section and verify all <a class="reference internal" href="prerequisites.html#install-prereq"><span class="std std-ref">Prerequisites</span></a> dependencies are correctly installed.</p>
 </div>
 </section>
 </section>

@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Optional and Required Build Features &mdash; ZOO-Project 2.0.0 documentation</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet" type="text/css">
+  
+  
+
+  
+
+  
+  
+    
+      <link rel="search" type="application/opensearchdescription+xml" title="Search within ZOO-Project 2.0.0 documentation" href="../_static/opensearch.xml"/>
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="ZOO-Project 2.0.0 documentation" href="../index.html"/> 
+
+  <script src="../_static/jquery.js"></script>
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'2.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/sphinx_highlight.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+	  <a class="shrink" href="http://zoo-project.org"><img src="/docs/_static/zoo-sun-logo.png" class="img-responsive sun" style="display: inline;"> ZOO</a>
+        
+
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#what-is-zoo-project">What is ZOO-Project ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#key-features">Key Features:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#why-use-zoo-project">Why Use ZOO-Project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#zoo-project-components">ZOO-Project Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source-and-community">Open Source and Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#how-to-contribute">How to Contribute</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">ZOO-Project installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation on Unix/Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debian.html">Installation on Debian / Ubuntu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="opensuse.html">Install on OpenSUSE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="centos.html">Installation on CentOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows.html">Installation on Windows ™</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docker.html">Installation using Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../kernel/index.html">ZOO-Kernel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../kernel/what.html">What is ZOO-Kernel ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kernel/configuration.html">ZOO-Kernel configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kernel/mapserver.html">Optional MapServer support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kernel/orfeotoolbox.html">Optional Orfeo Toolbox support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kernel/sagagis.html">Optional SAGA GIS support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kernel/hpc.html">Optional HPC support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../kernel/dru.html">Optional DRU support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../services/index.html">ZOO-Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../services/what.html">What are ZOO-Services ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../services/zcfg-reference.html">ZOO-Service configuration file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../services/process-profiles.html">Process profiles registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../services/howtos.html">Create your own ZOO-Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../services/translation.html">Translation Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../services/status.html">ZOO Status Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../services/debug.html">Debugging ZOO Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../services/zoo-services.html">Available ZOO-Services</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">ZOO-API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/what.html">What is ZOO-API ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/howto.html">Using ZOO-API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/classes.html">ZOO-API Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/examples.html">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../client/index.html">ZOO-Client</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../client/what.html">What is ZOO-Client ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../client/howto.html">Using ZOO-Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../client/example.html">Example application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">Contributor Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/howto.html">How to contribute ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/service_providers.html">Service Providers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/code.html">Contribute code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/doc.html">Contribute documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/dev.html">Committer guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/release.html">Release Procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/translate.html">Contribute translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/hugo.html">Contribute to the Website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/contributors.html">List of contributors</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">ZOO-Project</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html"> Documentation</a> &#8725; &#160;</li>
+      
+    <li>Optional and Required Build Features</li>
+      <li class="wy-breadcrumbs-aside">
+       $Date$
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <section id="optional-and-required-build-features">
+<h1>Optional and Required Build Features<a class="headerlink" href="#optional-and-required-build-features" title="Permalink to this heading">¶</a></h1>
+<p>This section provides instructions on enabling optional and required components during the build process using the <cite>./configure</cite> script.</p>
+<section id="yaml-support-optional">
+<h2>YAML Support (Optional)<a class="headerlink" href="#yaml-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>If <code class="docutils literal notranslate"><span class="pre">yaml.h</span></code> file is not found in your <code class="docutils literal notranslate"><span class="pre">/usr/include</span></code> directory and
+<code class="docutils literal notranslate"><span class="pre">libyaml.so</span></code> is not found in <code class="docutils literal notranslate"><span class="pre">/usr/lib</span></code>, a <code class="docutils literal notranslate"><span class="pre">--with-yaml</span></code> option
+can be used to specify its location. For instance, if the header file
+lies in <code class="docutils literal notranslate"><span class="pre">/usr/local/include</span></code> and the shared library is located in
+<code class="docutils literal notranslate"><span class="pre">/usr/local/lib</span></code>, you may use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-yaml=/usr/local
+</pre></div>
+</div>
+</section>
+<section id="fastcgi-support-required">
+<h2>FastCGI Support (Required)<a class="headerlink" href="#fastcgi-support-required" title="Permalink to this heading">¶</a></h2>
+<p>If your FastCGI library is not available in the default search path, a
+<code class="docutils literal notranslate"><span class="pre">--with-fastcgi</span></code> option can be used to specify its location. For
+instance, if <code class="docutils literal notranslate"><span class="pre">libfcgi.so</span></code> lies in <code class="docutils literal notranslate"><span class="pre">/usr/local/lib</span></code> which is not in
+your <code class="docutils literal notranslate"><span class="pre">LD_SEARCH_PATH</span></code>, you may use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-fastcgi=/usr/local
+</pre></div>
+</div>
+</section>
+<section id="gdal-support-required">
+<h2>GDAL Support (Required)<a class="headerlink" href="#gdal-support-required" title="Permalink to this heading">¶</a></h2>
+<p>If gdal-config program is not found in your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, a
+<code class="docutils literal notranslate"><span class="pre">--with-gdal-config</span></code> option can be used to specify its location. For
+instance, if <code class="docutils literal notranslate"><span class="pre">gdal-config</span></code> lies in <code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code> which is not in
+your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, you may use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-gdal-config=/usr/local/bin/gdal-config
+</pre></div>
+</div>
+</section>
+<section id="geos-support-optional">
+<h2>GEOS Support (Optional)<a class="headerlink" href="#geos-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>If <code class="docutils literal notranslate"><span class="pre">geos-config</span></code> program is not found in your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, a
+<code class="docutils literal notranslate"><span class="pre">--with-geosconfig</span></code> option can be used to specify its location. For
+instance, if <code class="docutils literal notranslate"><span class="pre">geos-config</span></code> lies in <code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code> which is not in
+your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, you may use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-geosconfig=/usr/local/bin/geos-config
+</pre></div>
+</div>
+</section>
+<section id="cgal-support-optional">
+<h2>CGAL Support (Optional)<a class="headerlink" href="#cgal-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>If <code class="docutils literal notranslate"><span class="pre">CGAL/Delaunay_triangulation_2.h</span></code> program is not found in your
+<code class="docutils literal notranslate"><span class="pre">/usr/include</span></code> directory, a <code class="docutils literal notranslate"><span class="pre">--with-cgal</span></code> option can be used to
+specify its location. For instance, if the file lies in
+<code class="docutils literal notranslate"><span class="pre">/usr/local/include</span></code> which is not in your PATH, you may use the
+following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-cgal=/usr/local
+</pre></div>
+</div>
+</section>
+<section id="mapserver-support-optional">
+<h2>MapServer Support (Optional)<a class="headerlink" href="#mapserver-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>In order to activate the WMS, WFS and WCS output support using
+MapServer, the <code class="docutils literal notranslate"><span class="pre">--with-mapserver</span></code> option must be used. The path to
+<code class="docutils literal notranslate"><span class="pre">mapserver-config</span></code> which is located in the source code of MapServer
+must also be set, using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-mapserver=/path/to/your/mapserver_config/
+</pre></div>
+</div>
+<p>Read more about the <a class="reference internal" href="../kernel/mapserver.html#kernel-mapserver"><span class="std std-ref">Optional MapServer support</span></a>.</p>
+</section>
+<section id="xml2-support-required">
+<h2>XML2 Support (Required)<a class="headerlink" href="#xml2-support-required" title="Permalink to this heading">¶</a></h2>
+<p>If xml2-config program is not found in PATH, a <em>–with-xml2config</em> option can be used  to specify its location. For instance, if xml2-config is installed in <code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code> which is not in PATH, you may use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-xml2config=/usr/local/bin/xml2-config
+</pre></div>
+</div>
+</section>
+<section id="ogc-api-processing-support-optional">
+<h2>OGC API - Processing Support (Optional)<a class="headerlink" href="#ogc-api-processing-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>In case you want to activate the support for <a class="reference external" href="https://github.com/opengeospatial/wps-rest-binding">OGC API - Processing</a>, you
+can do so by using the <em>–with-json</em>: You will then need to coy the
+<code class="docutils literal notranslate"><span class="pre">oas.cfg</span></code> file in the same directory as your <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code>. For
+instance, one may use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-json=/usr/
+</pre></div>
+</div>
+</section>
+<section id="python-support-optional">
+<h2>Python Support (Optional)<a class="headerlink" href="#python-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">--with-python=yes</span></code> option is required to activate the <a class="reference internal" href="../kernel/index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a> Python support, using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-python=yes
+</pre></div>
+</div>
+<p>This assumes that python-config is found in your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>. If not,
+then you can specify the Python installation directory using the
+following command (with Python installed in the <code class="docutils literal notranslate"><span class="pre">/usr/local</span></code>
+directory):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-python=/usr/local
+</pre></div>
+</div>
+<section id="python-version">
+<h3>Python Version<a class="headerlink" href="#python-version" title="Permalink to this heading">¶</a></h3>
+<p>If multiple Python versions are available and you want to use a
+specific one, then you can use the <code class="docutils literal notranslate"><span class="pre">--with-pyvers</span></code> option as shown
+bellow:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-pyvers=2.7
+</pre></div>
+</div>
+</section>
+</section>
+<section id="javascript-support-optional">
+<span id="js-support"></span><h2>JavaScript Support (Optional)<a class="headerlink" href="#javascript-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>In order to activate the JavaScript support for ZOO-Kernel,
+the <code class="docutils literal notranslate"><span class="pre">--with-js=yes</span></code> configure option must be specified. If you are using
+a “Debian-like” GNU/Linux distribution then  dpkg will be used to
+detect if the required packages are installed and you don’t have to
+specify anything here. The following command is only needed (assuming
+that js_api.h and libmozjs.so are found in default directories):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-js=yes
+</pre></div>
+</div>
+<p>If you want to use a custom installation of <a class="reference external" href="https://developer.mozilla.org/en/SpiderMonkey">SpiderMonkey</a> , or if you are not
+using a Debian packaging  system, then you’ll have to specify the
+directory where it is installed. For  instance, if SpiderMonkey is in
+<code class="docutils literal notranslate"><span class="pre">/usr/local/</span></code>, then the following command must be used:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-js=/usr/local
+</pre></div>
+</div>
+</section>
+<section id="php-support-optional">
+<h2>PHP Support (Optional)<a class="headerlink" href="#php-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">--with-php=yes</span></code> option is required to activate the
+<a class="reference internal" href="../kernel/index.html#kernel-index"><span class="std std-ref">ZOO-Kernel</span></a> PHP support`, using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-php=yes
+</pre></div>
+</div>
+<p>This assumes that <code class="docutils literal notranslate"><span class="pre">php-config</span></code> can be found in the <code class="docutils literal notranslate"><span class="pre">&lt;PATH&gt;/bin</span></code>
+directory . So, supposing the your <code class="docutils literal notranslate"><span class="pre">php-config</span></code> can be found in
+<code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code>, then use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-php=/usr/local
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>ZOO-Kernel optional PHP support requires a local PHP Embedded installation. Read more <a class="reference external" href="http://zoo-project.org/trac/wiki/ZooKernel/Embed/PHP">here</a>.</p>
+</div>
+</section>
+<section id="java-support-optional">
+<h2>Java Support (Optional)<a class="headerlink" href="#java-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>In order to activate the Java support for ZOO-Kernel, the
+<cite>–with-java</cite> configure option must be specified and sets the
+installation path of your Java SDK. For instance,  if Java SDK is
+installed in the <code class="docutils literal notranslate"><span class="pre">/usr/lib/jvm/java-6-sun-1.6.0.22/</span></code> directory,
+then the following command can be used:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-java=/usr/lib/jvm/java-6-sun-1.6.0.22/
+</pre></div>
+</div>
+<p>This assumes that the <code class="docutils literal notranslate"><span class="pre">include/linux</span></code> and <code class="docutils literal notranslate"><span class="pre">jre/lib/i386/client/</span></code>
+subdirectories exist in <code class="docutils literal notranslate"><span class="pre">/usr/lib/jvm/java-6-sun-1.6.0.22/</span></code>, and
+that the <code class="docutils literal notranslate"><span class="pre">include/linux</span></code> directory contains the <code class="docutils literal notranslate"><span class="pre">jni.h</span></code> headers file
+and that the <code class="docutils literal notranslate"><span class="pre">jre/lib/i386/client/</span></code> directory contains the <code class="docutils literal notranslate"><span class="pre">libjvm.so</span></code>
+file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use the <cite>–with-java-rpath</cite> option to produce a binary
+aware of the libjvm location.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>With Mac OS X you only have to set <em>macos</em> as the value for the
+<code class="docutils literal notranslate"><span class="pre">--with-java</span></code> option to activate Java support. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-java=macos
+</pre></div>
+</div>
+</div>
+</section>
+<section id="perl-support-optional">
+<h2>Perl Support (Optional)<a class="headerlink" href="#perl-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">--with-perl=yes</span></code> option can be used for activating the
+ZOO-Kernel Perl support, as follow:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-perl=yes
+</pre></div>
+</div>
+<p>This assumes that perl is found in your PATH. For instance, if Perl is
+installed in <code class="docutils literal notranslate"><span class="pre">/usr/local</span></code> and <code class="docutils literal notranslate"><span class="pre">/usr/local/bin</span></code> is not found in
+your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, then the following command can be used (this assumes
+that <code class="docutils literal notranslate"><span class="pre">/usr/local/bin/perl</span></code> exists):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-perl=/usr/local
+</pre></div>
+</div>
+</section>
+<section id="orfeo-toolbox-support-optional">
+<h2>Orfeo Toolbox Support (Optional)<a class="headerlink" href="#orfeo-toolbox-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>In order to activate the optional Orfeo Toolbox support, the
+<code class="docutils literal notranslate"><span class="pre">--with-otb</span></code> option must be used, using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-otb=/path/to/your/otb/
+</pre></div>
+</div>
+<p>Read more about the <a class="reference internal" href="../kernel/orfeotoolbox.html#kernel-orfeotoolbox"><span class="std std-ref">Optional Orfeo Toolbox support</span></a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To build the Orfeo Toolbox support you will require ITK, the
+default version of ITK is 4.5, in case you use another version,
+please make sure to use the <code class="docutils literal notranslate"><span class="pre">--with-itk-version</span></code> to specificy
+what is the version available on your system.</p>
+</div>
+</section>
+<section id="saga-gis-support-optional">
+<h2>SAGA GIS Support (Optional)<a class="headerlink" href="#saga-gis-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>In order to activate the optional SAGA GIS support, the <em>–with-saga</em> option must be used, using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-saga=/path/to/your/saga/
+</pre></div>
+</div>
+<p>Read more about the <a class="reference internal" href="../kernel/sagagis.html#kernel-sagagis"><span class="std std-ref">Optional SAGA GIS support</span></a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In case wx-config is not in your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> please, make sure to use
+the <code class="docutils literal notranslate"><span class="pre">--with-wx-config</span></code>  to specify its location.</p>
+</div>
+</section>
+<section id="translation-support-optional">
+<h2>Translation support (Optional)<a class="headerlink" href="#translation-support-optional" title="Permalink to this heading">¶</a></h2>
+<p>The ZOO-Kernel is able to translate the messages it produces in different
+natural languages. This requires that you download <a class="reference external" href="https://www.transifex.com/projects/p/zoo-kernel-internationalization/">the messages file</a>
+translated in your language, if any. Then, for this translation
+support to work, you have to generate manually the requested file on
+your system. For instance for the French translation, you may use the
+following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">msgfmt</span> <span class="n">messagespo_fr_FR</span><span class="o">.</span><span class="n">utf8</span><span class="o">.</span><span class="n">po</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">locale</span><span class="o">/</span><span class="n">fr</span><span class="o">/</span><span class="n">LC_MESSAGES</span><span class="o">/</span><span class="n">zoo</span><span class="o">-</span><span class="n">kernel</span><span class="o">.</span><span class="n">mo</span>
+</pre></div>
+</div>
+<p>The ZOO-Kernel is also able to handle translation of
+ZOO-Services. Please, refer to <a class="reference internal" href="../services/translation.html#service-translation"><span class="std std-ref">this document</span></a> for more details on the procedure to add new
+ZOO-Service translation files.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The location of the final <code class="docutils literal notranslate"><span class="pre">.mo</span></code> file may vary depending on your
+system setup.</p>
+</div>
+</section>
+<section id="logs-on-console-optional">
+<h2>Logs on console  (Optional)<a class="headerlink" href="#logs-on-console-optional" title="Permalink to this heading">¶</a></h2>
+<p>If needed (typically in case of Docker deployment), it is possible to force the logs
+to be written on the console (stderr) :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./configure --with-log-console=yes
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Logging all services executions on the console can be tricky to troubleshoot in case
+of parallel executions. A good solution is to log the job id in the code of the service
+depending the language chosen.</p>
+</div>
+</section>
+</section>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+  <div class="pfoot">
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2009-2024, ZOO-Project team. This work is released under a Creative Commons Attribution-ShareAlike 4.0 International Public License.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> inspired by <a href="https://readthedocs.org">Read the Docs</a>.
+</div>
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+ 
+
+</body>
+</html>

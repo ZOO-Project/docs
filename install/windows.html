@@ -114,8 +114,11 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#what-is-zoo-project">What is ZOO-Project ?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#zoo-project-components">ZOO-Project components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source">Open Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#key-features">Key Features:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#why-use-zoo-project">Why Use ZOO-Project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#zoo-project-components">ZOO-Project Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#open-source-and-community">Open Source and Community</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro.html#how-to-contribute">How to Contribute</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">ZOO-Project installation</a><ul class="current">
@@ -222,41 +225,36 @@ make sure to refer to license informations.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>When using the ZOO-Project Windows-Binaries, you can decide if you
-want the Java support activated or not (which is the case per
-default). Indeed, once your installation has been done, you will
-have both a <cite>zoo_loader.cgi</cite> and <cite>zoo_loader_java.cgi</cite> which
-correspond respectively to the ZOO-Kernel without and with Java
-support activated. So, in case you want to use the Java support,
-simply rename the <cite>zoo_loader_jave.cgi</cite> file located in
-<cite>c:\inetpub\cgi-bin</cite> to <cite>zoo_loader.cgi</cite> and make sure the
-<cite>jvm.dll</cite> can be found.</p>
+<p>The Windows binaries include both <cite>zoo_loader.cgi</cite> and <cite>zoo_loader_java.cgi</cite>.
+The former runs without Java support, while the latter includes Java support.
+To enable Java support, rename <cite>zoo_loader_java.cgi</cite> to <cite>zoo_loader.cgi</cite> in
+<cite>C:\inetpub\cgi-bin</cite> and ensure that <cite>jvm.dll</cite> is accessible via your system’s PATH.</p>
 </div>
 <section id="using-the-installer">
 <h3>Using the installer<a class="headerlink" href="#using-the-installer" title="Permalink to this heading">¶</a></h3>
-<p>Prior to run the ZOO-Project-Installer, please make sure you have IIS
-and <a class="reference external" href="https://www.python.org/downloads/windows/">Python</a> setup on
-your machine. Then download the <a class="reference external" href="https://bintray.com/gfenoy/ZOO-Project/Windows-Binaries/view">ZOO-Project-Installer</a>
-corresponding to your platform. The first time you will run the
-installer binary, you may be prompted to authorize it to run. Once the
-installer has been run, simply access the following link:
-<a class="reference external" href="http://localhost/zoo-demo/">http://localhost/zoo-demo/</a> to access your local demo application.</p>
+<p>Before running the ZOO-Project Installer:</p>
+<ol class="arabic simple">
+<li><p>Ensure that IIS and <a class="reference external" href="https://www.python.org/downloads/windows/">Python</a> are installed on your system.</p></li>
+<li><p>Download the appropriate <a class="reference external" href="https://bintray.com/gfenoy/ZOO-Project/Windows-Binaries/view">ZOO-Project Installer</a> for your platform.</p></li>
+<li><p>Run the installer. You may be prompted to authorize its execution.</p></li>
+<li><p>After installation, access the demo application at: <a class="reference external" href="http://localhost/zoo-demo/">http://localhost/zoo-demo/</a></p></li>
+</ol>
 </section>
-<section id="install-by-hand">
-<h3>Install by hand<a class="headerlink" href="#install-by-hand" title="Permalink to this heading">¶</a></h3>
-<p>Prior to run the ZOO-Project-Installer, please make sure you have IIS
-and <a class="reference external" href="https://www.python.org/downloads/windows/">Python</a> setup on
-your machine. Then download the <a class="reference external" href="https://bintray.com/gfenoy/ZOO-Project/Windows-Binaries/view">ZOO-Project</a>
-archive corresponding to your platform. Uncompress it, then move
-<cite>cgi-bin</cite>, <cite>data</cite> and <cite>tmp</cite> from uncompressed folder to <cite>c:\inetpub</cite>,
-also move <cite>wwwroot\zoo-demo</cite> and <cite>wwwroot\tmp</cite> to
-<cite>c:\inetpub\wwwroot</cite>. To finish the installation, run the folllowing
-command as administrator to allow the <cite>zoo_loader.cgi</cite> to run from
+<section id="manual-installation">
+<h3>Manual Installation<a class="headerlink" href="#manual-installation" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Ensure that IIS and <a class="reference external" href="https://www.python.org/downloads/windows/">Python</a> are installed.</p></li>
+<li><p>Download the appropriate <a class="reference external" href="https://bintray.com/gfenoy/ZOO-Project/Windows-Binaries/view">ZOO-Project archive</a> for your platform.</p></li>
+<li><p>Extract the archive and move the following directories:
+- <cite>cgi-bin</cite>, <cite>data</cite>, and <cite>tmp</cite> to <cite>C:\inetpub</cite>
+- <cite>wwwroot\zoo-demo</cite> and <cite>wwwroot\tmp</cite> to <cite>C:\inetpub\wwwroot</cite></p></li>
+</ol>
+<p>4. To finish the installation, run the folllowing command as administrator to allow the <cite>zoo_loader.cgi</cite> to run from
 <a class="reference external" href="http://localhost/cgi-bin/zoo_loader.cgi">http://localhost/cgi-bin/zoo_loader.cgi</a>:</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">C</span><span class="p">:</span>\<span class="n">Windows</span>\<span class="n">System32</span>\<span class="n">inetsrv</span>
 <span class="n">appcmd</span><span class="o">.</span><span class="n">exe</span> <span class="n">add</span> <span class="n">vdirs</span> <span class="o">/</span><span class="n">app</span><span class="o">.</span><span class="n">name</span><span class="p">:</span><span class="s2">&quot;Default Web Site/&quot;</span> <span class="o">/</span><span class="n">path</span><span class="p">:</span><span class="o">/</span><span class="n">cgi</span><span class="o">-</span><span class="nb">bin</span> <span class="o">/</span><span class="n">physicalPath</span><span class="p">:</span><span class="n">c</span><span class="p">:</span>\<span class="n">inetpub</span>\<span class="n">cgi</span><span class="o">-</span><span class="nb">bin</span>
-<span class="n">appcmd</span> <span class="nb">set</span> <span class="n">config</span> <span class="o">/</span><span class="n">section</span><span class="p">:</span><span class="n">handlers</span> <span class="o">/+</span><span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;CGI-exe1&#39;</span><span class="p">,</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;*.cgi&#39;</span><span class="p">,</span><span class="n">verb</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="n">modules</span><span class="o">=</span><span class="s1">&#39;CgiModule&#39;</span><span class="p">]</span>
+<span class="n">appcmd</span><span class="o">.</span><span class="n">exe</span> <span class="nb">set</span> <span class="n">config</span> <span class="o">/</span><span class="n">section</span><span class="p">:</span><span class="n">handlers</span> <span class="o">/+</span><span class="p">[</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;CGI-exe1&#39;</span><span class="p">,</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;*.cgi&#39;</span><span class="p">,</span><span class="n">verb</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="n">modules</span><span class="o">=</span><span class="s1">&#39;CgiModule&#39;</span><span class="p">]</span>
 <span class="n">appcmd</span><span class="o">.</span><span class="n">exe</span> <span class="nb">set</span> <span class="n">config</span> <span class="o">/</span><span class="n">section</span><span class="p">:</span><span class="n">isapiCgiRestriction</span> <span class="o">/+</span><span class="p">[</span><span class="n">path</span><span class="o">=</span><span class="s1">&#39;c:\inetpub\cgi-bin\zoo_loader.cgi&#39;</span><span class="p">,</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;ZOO-Project&#39;</span><span class="p">,</span><span class="n">allowed</span><span class="o">=</span><span class="s1">&#39;True&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -272,12 +270,11 @@ command as administrator to allow the <cite>zoo_loader.cgi</cite> to run from
 <p>The following steps are for use with the Microsoft Visual Studio
 compiler (and tested with MSVC 2010).</p>
 <ol class="arabic">
-<li><p>Make sure the gnuwin32 tools <code class="docutils literal notranslate"><span class="pre">bison.exe</span></code>  and <code class="docutils literal notranslate"><span class="pre">flex.exe</span></code> are found
-in your path.  You can download the GNUwin32 tools <a class="reference external" href="http://www.zoo-project.org/dl/tool-win32.zip">here</a>.</p></li>
-<li><p>Modify the <code class="docutils literal notranslate"><span class="pre">nmake.opt</span></code> file to point to your local libraries. Note
-that you can also use definition directly in the command line if
-you prefer. See <a class="reference internal" href="#win-configure-options"><span class="std std-ref">Build options</span></a> for details about this
-options.</p></li>
+<li><p>Ensure <cite>bison.exe</cite> and <cite>flex.exe</cite> from GNUwin32 are in your system’s PATH.
+Download them from: <a class="reference external" href="http://www.zoo-project.org/dl/tool-win32.zip">GNUwin32 tools</a>.</p></li>
+<li><p>Modify the <cite>nmake.opt</cite> file to point to your local libraries.
+Alternatively, define the necessary environment variables directly in the command line.
+Refer to <a class="reference internal" href="#win-configure-options"><span class="std std-ref">Build options</span></a> for details.</p></li>
 <li><p>Execute:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nmake</span> <span class="o">/</span><span class="n">f</span> <span class="n">makefile</span><span class="o">.</span><span class="n">vc</span>
 </pre></div>
@@ -295,7 +292,7 @@ another command:</p>
 <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> into your cgi-bin directory.</p></li>
 <li><p>Using the command prompt, test the ZOO-Kernel by executing the
 following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">:</span>\<span class="n">ms4w</span>\<span class="n">Apache</span>\<span class="n">cgi</span><span class="o">-</span><span class="nb">bin</span><span class="o">&gt;</span> <span class="n">zoo_loader</span><span class="o">.</span><span class="n">cgi</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">:</span>\<span class="n">ms4w</span>\<span class="n">Apache</span>\<span class="n">cgi</span><span class="o">-</span><span class="nb">bin</span>\<span class="n">zoo_loader</span><span class="o">.</span><span class="n">cgi</span>
 </pre></div>
 </div>
 <p>which should display a message such as:</p>
@@ -311,8 +308,7 @@ Status: 200 OK
 </pre></div>
 </div>
 </li>
-<li><p>Edit the <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> file so that it contains values describing
-your WPS service.  An example of such a file running on Windows is:</p>
+<li><p>Edit <cite>main.cfg</cite> to configure your WPS service. Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">main</span><span class="p">]</span>
 <span class="n">encoding</span> <span class="o">=</span> <span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
 <span class="n">version</span> <span class="o">=</span> <span class="mf">1.0.0</span>
@@ -346,7 +342,7 @@ your WPS service.  An example of such a file running on Windows is:</p>
 </div>
 </li>
 <li><p>Open a web browser window, and execute a GetCapababilites request on your WPS service: <a class="reference external" href="http://localhost/cgi-bin/zoo_loader.cgi?request=GetCapabilities&amp;service=WPS">http://localhost/cgi-bin/zoo_loader.cgi?request=GetCapabilities&amp;service=WPS</a></p>
-<p>The response should be displayed in your browser, such as:</p>
+<p>You should see a response similar to:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">wps</span><span class="p">:</span><span class="n">Capabilities</span> <span class="n">xsi</span><span class="p">:</span><span class="n">schemaLocation</span><span class="o">=</span><span class="s2">&quot;http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsGetCapabilities_response.xsd&quot;</span> <span class="n">service</span><span class="o">=</span><span class="s2">&quot;WPS&quot;</span> <span class="n">xml</span><span class="p">:</span><span class="n">lang</span><span class="o">=</span><span class="s2">&quot;en-US&quot;</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.0.0&quot;</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">ows</span><span class="p">:</span><span class="n">ServiceIdentification</span><span class="o">&gt;</span>
   <span class="o">&lt;</span><span class="n">ows</span><span class="p">:</span><span class="n">Title</span><span class="o">&gt;</span><span class="n">The</span> <span class="n">Zoo</span> <span class="n">WPS</span> <span class="n">Development</span> <span class="n">Server</span><span class="o">&lt;/</span><span class="n">ows</span><span class="p">:</span><span class="n">Title</span><span class="o">&gt;</span>
@@ -420,7 +416,7 @@ sub-directory <code class="docutils literal notranslate"><span class="pre">inclu
 <p>So for instance, in case you build the libXML2 library in
 <code class="docutils literal notranslate"><span class="pre">\buildkit\srcs\fcgi-2.4.1</span></code>, you may define the following before
 running <code class="docutils literal notranslate"><span class="pre">nmake</span> <span class="pre">/f</span> <span class="pre">makefile.vc</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">FCGI_DIR</span><span class="o">=</span>\<span class="n">buildkit</span>\<span class="n">srcs</span>\<span class="n">fcgi</span><span class="o">-</span><span class="mf">2.41.1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="n">FCGI_DIR</span><span class="o">=</span>\<span class="n">buildkit</span>\<span class="n">srcs</span>\<span class="n">fcgi</span><span class="o">-</span><span class="mf">2.4.1</span>
 </pre></div>
 </div>
 </section>
@@ -531,7 +527,7 @@ running <code class="docutils literal notranslate"><span class="pre">nmake</span
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To learn how to setup the corresponding database, please refer to
-<a class="reference internal" href="installation.html#zoo-create-db-backend"><span class="std std-ref">this section</span></a>.</p>
+<span class="xref std std-ref">this section</span>.</p>
 </div>
 </section>
 </section>

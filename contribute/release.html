@@ -261,6 +261,13 @@ zoo-project.org/dl.</p></li>
 <ul class="simple">
 <li><p>Double check that the pages from <a class="reference external" href="http://zoo-project.org/">the ZOO-Project.org web site</a> match the current version.</p></li>
 <li><p>Double check that the latest build file matches the current revisions number.</p></li>
+<li><p>Update the <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/blob/main/CITATION.cff">CITATION.cff</a> file to reflect the new release:</p>
+<ul>
+<li><p>Update the <code class="docutils literal notranslate"><span class="pre">version</span></code> field with the new version number (e.g., “1.9.1”)</p></li>
+<li><p>Update the <code class="docutils literal notranslate"><span class="pre">date-released</span></code> field with the release date (format: YYYY-MM-DD)</p></li>
+<li><p>Review and update the <code class="docutils literal notranslate"><span class="pre">authors</span></code> list if there are new contributors to acknowledge</p></li>
+</ul>
+</li>
 <li><p>If this is a new major release create a branch and a tag.</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
@@ -308,10 +315,24 @@ rm $(find ./zoo-project-$VERSION/zoo-project/zoo-services -name &quot;*zo&quot;)
 rm -rf ./zoo-project-$VERSION/docs
 tar -cvjf ./zoo-project-$VERSION.tar.bz2 ./zoo-project-$VERSION
 zip -r ./zoo-project-$VERSION.zip ./zoo-project-$VERSION
-scp -P 1046 ./zoo-project-$VERSION.{zip,tar.bz2} zoo-project.org:/var/www/localhost/htdocs/dl/
 </pre></div>
 </div>
+<ul>
+<li><p>Create a GitHub release using the tag created previously:</p>
 <ul class="simple">
+<li><p>Go to the <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/releases">ZOO-Project releases page</a></p></li>
+<li><p>Click on “Draft a new release”</p></li>
+<li><p>Select the tag created previously (e.g., rel-1.9.1)</p></li>
+<li><p>Set the release title to “ZOO-Project X.Y.Z”</p></li>
+<li><p>Include the release notes as the description</p></li>
+<li><p>Upload the archives (<code class="docutils literal notranslate"><span class="pre">zoo-project-$VERSION.tar.bz2</span></code> and <code class="docutils literal notranslate"><span class="pre">zoo-project-$VERSION.zip</span></code>) as release assets</p></li>
+<li><p>Publish the release</p></li>
+</ul>
+<p>Once published, the archives will be automatically available on the GitHub release page.
+The publication of the release will automatically trigger the creation of a DOI in Zenodo,
+which will be associated with this specific version of the ZOO-Project. The DOI will be
+visible on the Zenodo page and should be updated in the <a class="reference external" href="https://github.com/ZOO-Project/ZOO-Project/blob/main/CITATION.cff">CITATION.cff</a> file for future releases.</p>
+</li>
 <li><p>Update the <a class="reference external" href="https://zoo-project.org/resources/download/">Downloads page</a> to add the latest release (by editing <a class="reference external" href="https://github.com/ZOO-Project/website/blob/main/themes/zoo-project/layouts/resources/download.html">this file</a>).</p></li>
 </ul>
 </section>

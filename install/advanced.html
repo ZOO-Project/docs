@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ZOO-API Classes &mdash; ZOO-Project 2.1.0 documentation</title>
+  <title>Advanced Installation &mdash; ZOO-Project 2.1.0 documentation</title>
   
   <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet" type="text/css">
   
@@ -39,9 +39,9 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="ZOO-Project 2.1.0 documentation" href="../index.html"/>
-        <link rel="up" title="ZOO-API" href="index.html"/>
-        <link rel="next" title="ZOO" href="zoo.html"/>
-        <link rel="prev" title="Using ZOO-API" href="howto.html"/> 
+        <link rel="up" title="Installation Guide" href="index.html"/>
+        <link rel="next" title="Prerequisites" href="prerequisites.html"/>
+        <link rel="prev" title="Installation Guide" href="index.html"/> 
 
   <script src="../_static/jquery.js"></script>
   
@@ -121,10 +121,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#how-to-contribute">How to Contribute</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../install/index.html">Installation Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../install/index.html#quick-start-recommended">Quick Start (Recommended)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/index.html#configuration">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../install/index.html#additional-installation-methods">Additional Installation Methods</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#quick-start-recommended">Quick Start (Recommended)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#configuration">Configuration</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#additional-installation-methods">Additional Installation Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../kernel/index.html">ZOO-Kernel</a><ul>
@@ -148,11 +148,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../services/zoo-services.html">Available ZOO-Services</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">ZOO-API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="what.html">What is ZOO-API ?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="howto.html">Using ZOO-API</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">ZOO-API Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">ZOO-API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/what.html">What is ZOO-API ?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/howto.html">Using ZOO-API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/classes.html">ZOO-API Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/examples.html">Examples</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../client/index.html">ZOO-Client</a><ul>
@@ -197,9 +197,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html"> Documentation</a> &#8725; &#160;</li>
       
-          <li><a href="index.html">ZOO-API</a> &#8725; &#160;</li>
+          <li><a href="index.html">Installation Guide</a> &#8725; &#160;</li>
       
-    <li>ZOO-API Classes</li>
+    <li>Advanced Installation</li>
       <li class="wy-breadcrumbs-aside">
        $Date$
       </li>
@@ -208,28 +208,27 @@
 </div>
           <div role="main" class="document">
             
-  <section id="zoo-api-classes">
-<span id="api-classes"></span><h1>ZOO-API Classes<a class="headerlink" href="#zoo-api-classes" title="Permalink to this heading">¶</a></h1>
-<p>The following classes are available in the ZOO API:</p>
+  <section id="advanced-installation">
+<h1>Advanced Installation<a class="headerlink" href="#advanced-installation" title="Permalink to this heading">¶</a></h1>
+<p>This section is intended for advanced users who require:</p>
+<ul class="simple">
+<li><p>Manual installation</p></li>
+<li><p>Custom builds</p></li>
+<li><p>Non-Docker environments</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Most users should use the Docker-based installation.</p>
+</div>
+<p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="zoo.html">ZOO</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="zoo.html#constants">Constants</a></li>
-<li class="toctree-l2"><a class="reference internal" href="zoo.html#functions">Functions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="zoo-format-wps.html">ZOO.Format.WPS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="zoo-format-wps.html#functions-and-properties">Functions and Properties</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="zoo-process.html">ZOO.Process</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="zoo-process.html#properties-and-functions">Properties and Functions</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="zoo-request.html">ZOO.Request</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="zoo-request.html#functions">Functions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debian.html">Installation on Debian / Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="centos.html">Installation on CentOS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opensuse.html">Install on OpenSUSE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows.html">Installation on Windows ™</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optional_features.html">Optional and Required Build Features</a></li>
 </ul>
 </div>
 </section>
@@ -240,10 +239,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="zoo.html" class="btn btn-neutral float-right" title="ZOO">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="prerequisites.html" class="btn btn-neutral float-right" title="Prerequisites">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="howto.html" class="btn btn-neutral" title="Using ZOO-API"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Installation Guide"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

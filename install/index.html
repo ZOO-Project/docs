@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ZOO-Project installation &mdash; ZOO-Project 2.1.0 documentation</title>
+  <title>Installation Guide &mdash; ZOO-Project 2.1.0 documentation</title>
   
   <link href="https://fonts.googleapis.com/css?family=Days+One" rel="stylesheet" type="text/css">
   
@@ -39,7 +39,7 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="ZOO-Project 2.1.0 documentation" href="../index.html"/>
-        <link rel="next" title="Prerequisites" href="prerequisites.html"/>
+        <link rel="next" title="Advanced Installation" href="advanced.html"/>
         <link rel="prev" title="Introduction" href="../intro.html"/> 
 
   <script src="../_static/jquery.js"></script>
@@ -120,15 +120,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../intro.html#how-to-contribute">How to Contribute</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ZOO-Project installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="download.html">Download</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation on Unix/Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="debian.html">Installation on Debian / Ubuntu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="opensuse.html">Install on OpenSUSE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="centos.html">Installation on CentOS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="windows.html">Installation on Windows ™</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docker.html">Installation using Docker</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quick-start-recommended">Quick Start (Recommended)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-installation-methods">Additional Installation Methods</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../kernel/index.html">ZOO-Kernel</a><ul>
@@ -201,7 +196,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html"> Documentation</a> &#8725; &#160;</li>
       
-    <li>ZOO-Project installation</li>
+    <li>Installation Guide</li>
       <li class="wy-breadcrumbs-aside">
        $Date$
       </li>
@@ -210,60 +205,76 @@
 </div>
           <div role="main" class="document">
             
-  <section id="zoo-project-installation">
-<span id="install"></span><h1>ZOO-Project installation<a class="headerlink" href="#zoo-project-installation" title="Permalink to this heading">¶</a></h1>
-<p>The following sections will help you to install the <a class="reference external" href="http://zoo-project.org">ZOO-Project</a> Open WPS Platform on various
-operating systems.</p>
+  <section id="installation-guide">
+<h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this heading">¶</a></h1>
+<p>This section explains how to install and run ZOO-Project.</p>
+<p>For most users, the recommended way to start is with Docker,
+as it provides a consistent environment across platforms.</p>
+<section id="quick-start-recommended">
+<h2>Quick Start (Recommended)<a class="headerlink" href="#quick-start-recommended" title="Permalink to this heading">¶</a></h2>
+<section id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h3>
+<p>Before starting, ensure the following tools are installed:</p>
+<ul class="simple">
+<li><p>Docker</p></li>
+<li><p>Docker Compose</p></li>
+</ul>
+</section>
+<section id="start-zoo-project">
+<h3>Start ZOO-Project<a class="headerlink" href="#start-zoo-project" title="Permalink to this heading">¶</a></h3>
+<p>Run the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ZOO-Project/ZOO-Project.git
+<span class="nb">cd</span><span class="w"> </span>ZOO-Project
+mkdir<span class="w"> </span>-p<span class="w"> </span>docker/tmp
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure the <code class="docutils literal notranslate"><span class="pre">docker/</span></code> directory is writable by the container user
+if your system uses restricted file permissions.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Docker image used by default is defined in the <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file.
+You can modify the image tag to use a different version or flavor of ZOO-Project
+(for example, a specific release or a custom build).</p>
+<p>Available image tags can be found on Docker Hub:
+<a class="reference external" href="https://hub.docker.com/r/zooproject/zoo-project/tags">https://hub.docker.com/r/zooproject/zoo-project/tags</a></p>
+</div>
+</section>
+<section id="verify-installation">
+<h3>Verify Installation<a class="headerlink" href="#verify-installation" title="Permalink to this heading">¶</a></h3>
+<p>After startup, verify that the service is available:</p>
+<ul class="simple">
+<li><p>Main interface:
+<a class="reference external" href="http://localhost/">http://localhost/</a></p></li>
+<li><p>OGC API endpoint:
+<a class="reference external" href="http://localhost/ogc-api/">http://localhost/ogc-api/</a></p></li>
+<li><p>WPS GetCapabilities:
+<a class="reference external" href="http://localhost/cgi-bin/zoo_loader.cgi?Request=GetCapabilities&amp;Service=WPS">http://localhost/cgi-bin/zoo_loader.cgi?Request=GetCapabilities&amp;Service=WPS</a></p></li>
+</ul>
+</section>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
+<p>The default Docker setup uses the following files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker/main.cfg</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker/oas.cfg</span></code></p></li>
+</ul>
+<p>These files can be adjusted to customize your local deployment.</p>
+</section>
+<section id="additional-installation-methods">
+<h2>Additional Installation Methods<a class="headerlink" href="#additional-installation-methods" title="Permalink to this heading">¶</a></h2>
+<p>For manual installation or custom deployments, see:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="prerequisites.html#mandatory">Mandatory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prerequisites.html#optional">Optional</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="download.html">Download</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="download.html#zoo-project-releases-archives">ZOO-Project releases archives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="download.html#zoo-project-github">ZOO-Project GitHub</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation on Unix/Linux</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#build-the-cgic-library">Build the cgic Library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#install-the-zoo-kernel">Install the ZOO-Kernel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#install-zoo-services">Install ZOO-Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#testing-your-installation">Testing your installation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="debian.html">Installation on Debian / Ubuntu</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="debian.html#prerequisites">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="debian.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="debian.html#deployment">Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="debian.html#testing">Testing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="opensuse.html">Install on OpenSUSE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="opensuse.html#stable-release">Stable release</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="centos.html">Installation on CentOS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="centos.html#prerequisites">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="centos.html#installation">Installation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="windows.html">Installation on Windows ™</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="windows.html#install-zoo-project-binaries">Install ZOO-Project binaries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="windows.html#compile-zoo-project-from-source">Compile ZOO-Project from source</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="docker.html">Installation using Docker</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="docker.html#prerequisites">Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docker.html#installation-steps">Installation Steps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docker.html#accessing-the-zoo-project-services">Accessing the ZOO-Project Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docker.html#stopping-the-services">Stopping the Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="docker.html#troubleshooting">Troubleshooting</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="advanced.html">Advanced Installation</a></li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -272,7 +283,7 @@ operating systems.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="prerequisites.html" class="btn btn-neutral float-right" title="Prerequisites">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="advanced.html" class="btn btn-neutral float-right" title="Advanced Installation">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../intro.html" class="btn btn-neutral" title="Introduction"><span class="fa fa-arrow-circle-left"></span> Previous</a>

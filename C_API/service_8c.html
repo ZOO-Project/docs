@@ -73,6 +73,12 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a824d9ef61c582fa4a38f3756527329b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a824d9ef61c582fa4a38f3756527329b8">__ZOO_LOG_MSG</a> (const char *pccFile, const char *pccFunc, int iLine, const char *pccFmt, va_list vlApOrig)</td></tr>
+<tr class="memdesc:a824d9ef61c582fa4a38f3756527329b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a message with a printf-style format and variadic arguments.  <a href="service_8c.html#a824d9ef61c582fa4a38f3756527329b8">More...</a><br /></td></tr>
+<tr class="separator:a824d9ef61c582fa4a38f3756527329b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cdb7fa681b3384eed85efea834e4e79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a1cdb7fa681b3384eed85efea834e4e79">_ZOO_LOG_MSG</a> (int level, const char *pccFile, const char *pccFunc, int iLine, const char *pccFmt,...)</td></tr>
+<tr class="memdesc:a1cdb7fa681b3384eed85efea834e4e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke the log message function after setting the log level.  <a href="service_8c.html#a1cdb7fa681b3384eed85efea834e4e79">More...</a><br /></td></tr>
+<tr class="separator:a1cdb7fa681b3384eed85efea834e4e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35a3793d01aef657e2582ff6108429b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a35a3793d01aef657e2582ff6108429b0">_dumpMap</a> (<a class="el" href="service_8h.html#structmap">map</a> *pmMap)</td></tr>
 <tr class="memdesc:a35a3793d01aef657e2582ff6108429b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a map on stderr.  <a href="service_8c.html#a35a3793d01aef657e2582ff6108429b0">More...</a><br /></td></tr>
 <tr class="separator:a35a3793d01aef657e2582ff6108429b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -309,6 +315,57 @@ Functions</h2></td></tr>
 <tr class="separator:ac0fc5078b8cb590dfe9a6c40668af7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a824d9ef61c582fa4a38f3756527329b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a824d9ef61c582fa4a38f3756527329b8">&#9670;&nbsp;</a></span>__ZOO_LOG_MSG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __ZOO_LOG_MSG </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccFunc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccFmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">va_list&#160;</td>
+          <td class="paramname"><em>vlApOrig</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Log a message with a printf-style format and variadic arguments. </p>
+<p>@pccFile the source file name @pccFunc the function name @iLine the line number @pccFmt printf-style format string @vlApOrig variadic arguments list</p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if malloc fails. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service_8h.html#a866efcd4e07e48eec8d78ac18228cb98" title="The _ZOO_DEBUG macro print a message with date time, process id (UNIX pid), file name,...">_ZOO_DEBUG</a> </dd></dl>
+
+</div>
+</div>
 <a id="a35a3793d01aef657e2582ff6108429b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35a3793d01aef657e2582ff6108429b0">&#9670;&nbsp;</a></span>_dumpMap()</h2>
 
@@ -420,6 +477,62 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a1cdb7fa681b3384eed85efea834e4e79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cdb7fa681b3384eed85efea834e4e79">&#9670;&nbsp;</a></span>_ZOO_LOG_MSG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int _ZOO_LOG_MSG </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccFunc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>iLine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccFmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invoke the log message function after setting the log level. </p>
+<p>@level the log level @pccFile the source file name @pccFunc the function name @iLine the line number @pccFmt printf-style format string ... corresponding variadic arguments </p><dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if malloc fails. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service_8c.html#a824d9ef61c582fa4a38f3756527329b8" title="Log a message with a printf-style format and variadic arguments.">__ZOO_LOG_MSG</a> </dd></dl>
 
 </div>
 </div>
@@ -3172,7 +3285,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 16 2026 08:47:25 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 22 2026 17:40:27 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

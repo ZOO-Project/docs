@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['default_5fservice_5furl_1778',['DEFAULT_SERVICE_URL',['../response__print_8h.html#ae3c72843e3ede9c87f0206b215b63578',1,'DEFAULT_SERVICE_URL():&#160;response_print.h'],['../service__internal_8h.html#ae3c72843e3ede9c87f0206b215b63578',1,'DEFAULT_SERVICE_URL():&#160;service_internal.h']]]
+  ['check_5finet_5fhandle_1800',['CHECK_INET_HANDLE',['../ulinet_8h.html#a31851c14fb07bb7d042c36d39c2d2eaf',1,'ulinet.h']]],
+  ['class_1801',['CLASS',['../service__internal__ms_8c.html#aeb04f2e0012cb07d68538599161c9693',1,'service_internal_ms.c']]]
 ];

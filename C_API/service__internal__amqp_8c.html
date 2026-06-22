@@ -75,15 +75,22 @@ $(function() {
 <code>#include &lt;amqp_framing.h&gt;</code><br />
 <code>#include &quot;json.h&quot;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab7a3994b97e17fc72ef2ddfc24f81f7d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#ab7a3994b97e17fc72ef2ddfc24f81f7d">log_amqp_error</a> (const char *pccContext, amqp_rpc_reply_t reply)</td></tr>
+<tr class="memdesc:ab7a3994b97e17fc72ef2ddfc24f81f7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log AMQP error.  <a href="service__internal__amqp_8c.html#ab7a3994b97e17fc72ef2ddfc24f81f7d">More...</a><br /></td></tr>
+<tr class="separator:ab7a3994b97e17fc72ef2ddfc24f81f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a14102fbe29b72f1d4c2873fd60e0a0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a8a14102fbe29b72f1d4c2873fd60e0a0">set_string_value</a> (char **ppcTarget, const char *pccValue, const char *pccName)</td></tr>
+<tr class="memdesc:a8a14102fbe29b72f1d4c2873fd60e0a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a string value for a configuration parameter.  <a href="service__internal__amqp_8c.html#a8a14102fbe29b72f1d4c2873fd60e0a0">More...</a><br /></td></tr>
+<tr class="separator:a8a14102fbe29b72f1d4c2873fd60e0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fcaf84b3af98aa9173e03ac369c6536"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a5fcaf84b3af98aa9173e03ac369c6536">init_amqp</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *conf)</td></tr>
 <tr class="memdesc:a5fcaf84b3af98aa9173e03ac369c6536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize amqp parameters:  <a href="service__internal__amqp_8c.html#a5fcaf84b3af98aa9173e03ac369c6536">More...</a><br /></td></tr>
 <tr class="separator:a5fcaf84b3af98aa9173e03ac369c6536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf0bb880c00f506a80f038f489a12ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#abf0bb880c00f506a80f038f489a12ef9">init_consumer</a> ()</td></tr>
-<tr class="memdesc:abf0bb880c00f506a80f038f489a12ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a consumer.  <a href="service__internal__amqp_8c.html#abf0bb880c00f506a80f038f489a12ef9">More...</a><br /></td></tr>
-<tr class="separator:abf0bb880c00f506a80f038f489a12ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afae399245aa295541f332bed76e97686"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#afae399245aa295541f332bed76e97686">init_consumer</a> ()</td></tr>
+<tr class="memdesc:afae399245aa295541f332bed76e97686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a consumer.  <a href="service__internal__amqp_8c.html#afae399245aa295541f332bed76e97686">More...</a><br /></td></tr>
+<tr class="separator:afae399245aa295541f332bed76e97686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae17bcf276f0fce3f31ec100b5120ef09"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#ae17bcf276f0fce3f31ec100b5120ef09">consumer_amqp</a> (char **msg)</td></tr>
 <tr class="memdesc:ae17bcf276f0fce3f31ec100b5120ef09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consume a message.  <a href="service__internal__amqp_8c.html#ae17bcf276f0fce3f31ec100b5120ef09">More...</a><br /></td></tr>
 <tr class="separator:ae17bcf276f0fce3f31ec100b5120ef09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -93,12 +100,15 @@ Functions</h2></td></tr>
 <tr class="memitem:abf233f4823b8c8f72131865bfd986e26"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#abf233f4823b8c8f72131865bfd986e26">bind_amqp</a> ()</td></tr>
 <tr class="memdesc:abf233f4823b8c8f72131865bfd986e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind AMQP.  <a href="service__internal__amqp_8c.html#abf233f4823b8c8f72131865bfd986e26">More...</a><br /></td></tr>
 <tr class="separator:abf233f4823b8c8f72131865bfd986e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8677160287906713bb45f907da9a1bb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a8677160287906713bb45f907da9a1bb3">init_confirmation</a> ()</td></tr>
-<tr class="memdesc:a8677160287906713bb45f907da9a1bb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize confirmation.  <a href="service__internal__amqp_8c.html#a8677160287906713bb45f907da9a1bb3">More...</a><br /></td></tr>
-<tr class="separator:a8677160287906713bb45f907da9a1bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce89b6d9098861e2fcf14bb46b65f6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a7ce89b6d9098861e2fcf14bb46b65f6e">init_confirmation</a> ()</td></tr>
+<tr class="memdesc:a7ce89b6d9098861e2fcf14bb46b65f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize confirmation.  <a href="service__internal__amqp_8c.html#a7ce89b6d9098861e2fcf14bb46b65f6e">More...</a><br /></td></tr>
+<tr class="separator:a7ce89b6d9098861e2fcf14bb46b65f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedd58542fbaf29259f9ae56c8ec77868"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#aedd58542fbaf29259f9ae56c8ec77868">bind_queue</a> ()</td></tr>
 <tr class="memdesc:aedd58542fbaf29259f9ae56c8ec77868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind AMQP queue.  <a href="service__internal__amqp_8c.html#aedd58542fbaf29259f9ae56c8ec77868">More...</a><br /></td></tr>
 <tr class="separator:aedd58542fbaf29259f9ae56c8ec77868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47faa34ef5d8f14355af8c482574881"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#aa47faa34ef5d8f14355af8c482574881">wait_frame_checked</a> (const char *pccContext, amqp_frame_t *frame)</td></tr>
+<tr class="memdesc:aa47faa34ef5d8f14355af8c482574881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a frame and check for errors.  <a href="service__internal__amqp_8c.html#aa47faa34ef5d8f14355af8c482574881">More...</a><br /></td></tr>
+<tr class="separator:aa47faa34ef5d8f14355af8c482574881"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad82ef61a047ca541390086dd1d3e5bf8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#ad82ef61a047ca541390086dd1d3e5bf8">send_msg</a> (const char *msg, const char *content_type)</td></tr>
 <tr class="memdesc:ad82ef61a047ca541390086dd1d3e5bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message.  <a href="service__internal__amqp_8c.html#ad82ef61a047ca541390086dd1d3e5bf8">More...</a><br /></td></tr>
 <tr class="separator:ad82ef61a047ca541390086dd1d3e5bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,31 +121,31 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a4bc13e1595fdc04fa3b2ed3651c3ef87"><td class="memItemLeft" align="right" valign="top">amqp_connection_state_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a4bc13e1595fdc04fa3b2ed3651c3ef87">conn</a></td></tr>
+<tr class="memitem:a4bc13e1595fdc04fa3b2ed3651c3ef87"><td class="memItemLeft" align="right" valign="top">amqp_connection_state_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a4bc13e1595fdc04fa3b2ed3651c3ef87">conn</a> = NULL</td></tr>
 <tr class="memdesc:a4bc13e1595fdc04fa3b2ed3651c3ef87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Author : David Saggiorato.  <a href="service__internal__amqp_8c.html#a4bc13e1595fdc04fa3b2ed3651c3ef87">More...</a><br /></td></tr>
 <tr class="separator:a4bc13e1595fdc04fa3b2ed3651c3ef87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4a3dce70f9ac094561192583a043afd"><td class="memItemLeft" align="right" valign="top">amqp_socket_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#af4a3dce70f9ac094561192583a043afd">_socket</a> = NULL</td></tr>
 <tr class="memdesc:af4a3dce70f9ac094561192583a043afd"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMQP socket.  <a href="service__internal__amqp_8c.html#af4a3dce70f9ac094561192583a043afd">More...</a><br /></td></tr>
 <tr class="separator:af4a3dce70f9ac094561192583a043afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad227b542c24b1004ffbd5c55cfb95140"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#ad227b542c24b1004ffbd5c55cfb95140">amqp_exchange</a></td></tr>
+<tr class="memitem:ad227b542c24b1004ffbd5c55cfb95140"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#ad227b542c24b1004ffbd5c55cfb95140">amqp_exchange</a> = NULL</td></tr>
 <tr class="memdesc:ad227b542c24b1004ffbd5c55cfb95140"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMQP exchange.  <a href="service__internal__amqp_8c.html#ad227b542c24b1004ffbd5c55cfb95140">More...</a><br /></td></tr>
 <tr class="separator:ad227b542c24b1004ffbd5c55cfb95140"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a179133d7fd8783e68dc72884c6b23cbc"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a179133d7fd8783e68dc72884c6b23cbc">amqp_routingkey</a></td></tr>
+<tr class="memitem:a179133d7fd8783e68dc72884c6b23cbc"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a179133d7fd8783e68dc72884c6b23cbc">amqp_routingkey</a> = NULL</td></tr>
 <tr class="memdesc:a179133d7fd8783e68dc72884c6b23cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMQP routing key.  <a href="service__internal__amqp_8c.html#a179133d7fd8783e68dc72884c6b23cbc">More...</a><br /></td></tr>
 <tr class="separator:a179133d7fd8783e68dc72884c6b23cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c8c2431638da22bcd72696eec175be2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a7c8c2431638da22bcd72696eec175be2">amqp_hostname</a></td></tr>
+<tr class="memitem:a7c8c2431638da22bcd72696eec175be2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a7c8c2431638da22bcd72696eec175be2">amqp_hostname</a> = NULL</td></tr>
 <tr class="memdesc:a7c8c2431638da22bcd72696eec175be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMQP hostname.  <a href="service__internal__amqp_8c.html#a7c8c2431638da22bcd72696eec175be2">More...</a><br /></td></tr>
 <tr class="separator:a7c8c2431638da22bcd72696eec175be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae705e4564c1d1162affdc25fb12da82a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#ae705e4564c1d1162affdc25fb12da82a">amqp_port</a></td></tr>
+<tr class="memitem:ae705e4564c1d1162affdc25fb12da82a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#ae705e4564c1d1162affdc25fb12da82a">amqp_port</a> = 0</td></tr>
 <tr class="memdesc:ae705e4564c1d1162affdc25fb12da82a"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMQP port.  <a href="service__internal__amqp_8c.html#ae705e4564c1d1162affdc25fb12da82a">More...</a><br /></td></tr>
 <tr class="separator:ae705e4564c1d1162affdc25fb12da82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3855262ebcbffff975c7821ed67dcea7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a3855262ebcbffff975c7821ed67dcea7">amqp_user</a></td></tr>
+<tr class="memitem:a3855262ebcbffff975c7821ed67dcea7"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a3855262ebcbffff975c7821ed67dcea7">amqp_user</a> = NULL</td></tr>
 <tr class="memdesc:a3855262ebcbffff975c7821ed67dcea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMQP user name.  <a href="service__internal__amqp_8c.html#a3855262ebcbffff975c7821ed67dcea7">More...</a><br /></td></tr>
 <tr class="separator:a3855262ebcbffff975c7821ed67dcea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63136518f7f5fd7418649a034d02c0f1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a63136518f7f5fd7418649a034d02c0f1">amqp_passwd</a></td></tr>
+<tr class="memitem:a63136518f7f5fd7418649a034d02c0f1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a63136518f7f5fd7418649a034d02c0f1">amqp_passwd</a> = NULL</td></tr>
 <tr class="memdesc:a63136518f7f5fd7418649a034d02c0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">AMQP password.  <a href="service__internal__amqp_8c.html#a63136518f7f5fd7418649a034d02c0f1">More...</a><br /></td></tr>
 <tr class="separator:a63136518f7f5fd7418649a034d02c0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ebc7ca00f0e132a939eaa9b40e221e2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a7ebc7ca00f0e132a939eaa9b40e221e2">amqp_queue</a></td></tr>
+<tr class="memitem:a7ebc7ca00f0e132a939eaa9b40e221e2"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#a7ebc7ca00f0e132a939eaa9b40e221e2">amqp_queue</a> = NULL</td></tr>
 <tr class="memdesc:a7ebc7ca00f0e132a939eaa9b40e221e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue's name.  <a href="service__internal__amqp_8c.html#a7ebc7ca00f0e132a939eaa9b40e221e2">More...</a><br /></td></tr>
 <tr class="separator:a7ebc7ca00f0e132a939eaa9b40e221e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa825074311d239a72fca2f9e5d4d063b"><td class="memItemLeft" align="right" valign="top">amqp_bytes_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service__internal__amqp_8c.html#aa825074311d239a72fca2f9e5d4d063b">amqp_queuename</a></td></tr>
@@ -262,7 +272,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialize amqp parameters: </p>
-<p>Author : David Saggiorato.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conf</td><td>the main configuration maps </td></tr>
@@ -288,14 +297,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8677160287906713bb45f907da9a1bb3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8677160287906713bb45f907da9a1bb3">&#9670;&nbsp;</a></span>init_confirmation()</h2>
+<a id="a7ce89b6d9098861e2fcf14bb46b65f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce89b6d9098861e2fcf14bb46b65f6e">&#9670;&nbsp;</a></span>init_confirmation()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void init_confirmation </td>
+          <td class="memname">int init_confirmation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -307,14 +316,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="abf0bb880c00f506a80f038f489a12ef9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf0bb880c00f506a80f038f489a12ef9">&#9670;&nbsp;</a></span>init_consumer()</h2>
+<a id="afae399245aa295541f332bed76e97686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afae399245aa295541f332bed76e97686">&#9670;&nbsp;</a></span>init_consumer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void init_consumer </td>
+          <td class="memname">int init_consumer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -323,6 +332,52 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialize a consumer. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ab7a3994b97e17fc72ef2ddfc24f81f7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7a3994b97e17fc72ef2ddfc24f81f7d">&#9670;&nbsp;</a></span>log_amqp_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void log_amqp_error </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">amqp_rpc_reply_t&#160;</td>
+          <td class="paramname"><em>reply</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Log AMQP error. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>the context of the error </td></tr>
+    <tr><td class="paramname">reply</td><td>the AMQP reply </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -414,6 +469,97 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a8a14102fbe29b72f1d4c2873fd60e0a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a14102fbe29b72f1d4c2873fd60e0a0">&#9670;&nbsp;</a></span>set_string_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int set_string_value </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>ppcTarget</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a string value for a configuration parameter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ppcTarget</td><td>Pointer to the target string pointer. </td></tr>
+    <tr><td class="paramname">pccValue</td><td>The value to set. </td></tr>
+    <tr><td class="paramname">pccName</td><td>The name of the configuration parameter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, 2 on error. </dd></dl>
+
+</div>
+</div>
+<a id="aa47faa34ef5d8f14355af8c482574881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa47faa34ef5d8f14355af8c482574881">&#9670;&nbsp;</a></span>wait_frame_checked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wait_frame_checked </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">amqp_frame_t *&#160;</td>
+          <td class="paramname"><em>frame</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wait for a frame and check for errors. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pccContext</td><td>Contextual information for logging </td></tr>
+    <tr><td class="paramname">frame</td><td>Pointer to the frame structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in case of success, negative value otherwise </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="af4a3dce70f9ac094561192583a043afd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4a3dce70f9ac094561192583a043afd">&#9670;&nbsp;</a></span>_socket</h2>
@@ -438,7 +584,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* amqp_exchange</td>
+          <td class="memname">char* amqp_exchange = NULL</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -454,7 +600,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* amqp_hostname</td>
+          <td class="memname">char* amqp_hostname = NULL</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -470,7 +616,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* amqp_passwd</td>
+          <td class="memname">char* amqp_passwd = NULL</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -486,7 +632,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int amqp_port</td>
+          <td class="memname">int amqp_port = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -502,7 +648,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* amqp_queue</td>
+          <td class="memname">char* amqp_queue = NULL</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -534,7 +680,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* amqp_routingkey</td>
+          <td class="memname">char* amqp_routingkey = NULL</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -550,7 +696,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* amqp_user</td>
+          <td class="memname">char* amqp_user = NULL</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -566,7 +712,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">amqp_connection_state_t conn</td>
+          <td class="memname">amqp_connection_state_t conn = NULL</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -582,7 +728,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 16 2026 08:47:25 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jun 22 2026 17:40:27 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

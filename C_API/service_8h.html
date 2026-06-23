@@ -597,10 +597,10 @@ Variables</h2></td></tr>
 <tr class="memitem:a2d05a0699452690df7d037b8dcba47e4"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a2d05a0699452690df7d037b8dcba47e4">pccLogLevel</a> [8]</td></tr>
 <tr class="memdesc:a2d05a0699452690df7d037b8dcba47e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The global log level names.  <a href="service_8h.html#a2d05a0699452690df7d037b8dcba47e4">More...</a><br /></td></tr>
 <tr class="separator:a2d05a0699452690df7d037b8dcba47e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd88d08269c5843712d53bc797984125"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#abd88d08269c5843712d53bc797984125">iZooLogLevel</a> =1</td></tr>
+<tr class="memitem:abd88d08269c5843712d53bc797984125"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#abd88d08269c5843712d53bc797984125">iZooLogLevel</a></td></tr>
 <tr class="memdesc:abd88d08269c5843712d53bc797984125"><td class="mdescLeft">&#160;</td><td class="mdescRight">The log level is used to define the severity of messages that will be logged.  <a href="service_8h.html#abd88d08269c5843712d53bc797984125">More...</a><br /></td></tr>
 <tr class="separator:abd88d08269c5843712d53bc797984125"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3180e0b7ab563c6c8bd9ad4f4ebd265b"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a3180e0b7ab563c6c8bd9ad4f4ebd265b">iMinZooLogLevel</a> =0</td></tr>
+<tr class="memitem:a3180e0b7ab563c6c8bd9ad4f4ebd265b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a3180e0b7ab563c6c8bd9ad4f4ebd265b">iMinZooLogLevel</a></td></tr>
 <tr class="memdesc:a3180e0b7ab563c6c8bd9ad4f4ebd265b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The minimal global log level is used to filter messages based on their severity.  <a href="service_8h.html#a3180e0b7ab563c6c8bd9ad4f4ebd265b">More...</a><br /></td></tr>
 <tr class="separator:a3180e0b7ab563c6c8bd9ad4f4ebd265b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d35d1543bb7e2fe022c54eda2842b8b"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a3d35d1543bb7e2fe022c54eda2842b8b">ZOO_STATUS</a> []</td></tr>
@@ -5140,25 +5140,17 @@ the next registry pointer </td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int iMinZooLogLevel =0</td>
+          <td class="memname">int iMinZooLogLevel</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>The minimal global log level is used to filter messages based on their severity. </p>
 <p>Messages with a severity level lower than or equal to this value will be ignored.</p>
 <p>Per default, the minimal log level is set to 0 (TRACE), which means that all messages will be logged, except those with a severity level equal to TRACE.</p>
-<p>At runtime, the minimal log level can be changed by settting the ZOO_DEBUG_LEVEL environment variable to one of the pccLogLevel values. If the environment variable is set to ALL, then all messages will be logged. If the environment variable is set to OFF, then no messages will be logged. </p>
+<p>At runtime, the minimal log level can be changed by setting the ZOO_DEBUG_LEVEL environment variable to one of the pccLogLevel values or ALL. If the environment variable is set to ALL, then all messages will be logged. If the environment variable is set to OFF, then no messages will be logged. </p>
 
 </div>
 </div>
@@ -5167,19 +5159,11 @@ the next registry pointer </td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int iZooLogLevel =1</td>
+          <td class="memname">int iZooLogLevel</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>The log level is used to define the severity of messages that will be logged. </p>
@@ -5515,10 +5499,10 @@ the next registry pointer </td></tr>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aservice_8h_html_a3180e0b7ab563c6c8bd9ad4f4ebd265b"><div class="ttname"><a href="service_8h.html#a3180e0b7ab563c6c8bd9ad4f4ebd265b">iMinZooLogLevel</a></div><div class="ttdeci">static int iMinZooLogLevel</div><div class="ttdoc">The minimal global log level is used to filter messages based on their severity.</div><div class="ttdef"><b>Definition:</b> service.h:293</div></div>
+<div class="ttc" id="aservice_8h_html_a3180e0b7ab563c6c8bd9ad4f4ebd265b"><div class="ttname"><a href="service_8h.html#a3180e0b7ab563c6c8bd9ad4f4ebd265b">iMinZooLogLevel</a></div><div class="ttdeci">int iMinZooLogLevel</div><div class="ttdoc">The minimal global log level is used to filter messages based on their severity.</div><div class="ttdef"><b>Definition:</b> service.c:35</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 23 2026 06:47:34 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 23 2026 10:26:37 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

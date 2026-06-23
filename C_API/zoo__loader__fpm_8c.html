@@ -99,6 +99,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a76ac1c5ebf6d7df8de121f96b2b50d7a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__loader__fpm_8c.html#a76ac1c5ebf6d7df8de121f96b2b50d7a">runAsyncRequest</a> (<a class="el" href="service_8h.html#structmaps">maps</a> **, <a class="el" href="service_8h.html#structmap">map</a> **, <a class="el" href="service_8h.html#structmap">map</a> **, json_object *)</td></tr>
 <tr class="memdesc:a76ac1c5ebf6d7df8de121f96b2b50d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specific includes.  <a href="zoo__loader__fpm_8c.html#a76ac1c5ebf6d7df8de121f96b2b50d7a">More...</a><br /></td></tr>
 <tr class="separator:a76ac1c5ebf6d7df8de121f96b2b50d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1a84438c59fee0531af09711855b15f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__loader__fpm_8c.html#ac1a84438c59fee0531af09711855b15f">setMinZooLogLevel</a> (char *)</td></tr>
+<tr class="memdesc:ac1a84438c59fee0531af09711855b15f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum log level for ZOO-Kernel.  <a href="zoo__loader__fpm_8c.html#ac1a84438c59fee0531af09711855b15f">More...</a><br /></td></tr>
+<tr class="separator:ac1a84438c59fee0531af09711855b15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e98fa4e4d81e3bf7cd70ee6fd94ade6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__loader__fpm_8c.html#a7e98fa4e4d81e3bf7cd70ee6fd94ade6">cgiInit</a> ()</td></tr>
 <tr class="separator:a7e98fa4e4d81e3bf7cd70ee6fd94ade6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b3034c68cf16c43b52f2f7411ed5916"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zoo__loader__fpm_8c.html#a8b3034c68cf16c43b52f2f7411ed5916">cgiMain</a> ()</td></tr>
@@ -220,10 +223,37 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac1a84438c59fee0531af09711855b15f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1a84438c59fee0531af09711855b15f">&#9670;&nbsp;</a></span>setMinZooLogLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setMinZooLogLevel </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcLevel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the minimum log level for ZOO-Kernel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pcLevel</td><td>the debug level to set (TRACE, DEBUG, INFO, SUCCESS, WARNING, ERROR, CRITICAL, OFF, any other values is equivalent to using ALL).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service_8c.html#a3180e0b7ab563c6c8bd9ad4f4ebd265b" title="The minimal global log level is used to filter messages based on their severity.">iMinZooLogLevel</a> </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 23 2026 10:26:37 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 23 2026 12:10:14 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

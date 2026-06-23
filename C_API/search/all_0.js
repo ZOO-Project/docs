@@ -42,6 +42,6 @@ var searchData=
   ['_5fulinet_39',['_ULINET',['../ulinet_8c.html#a4b23c8f7aa3ccb11709e6311d585c3c8',1,'ulinet.c']]],
   ['_5fupdatestatus_40',['_updateStatus',['../service__internal_8c.html#a2daa9962fa8066dd8c40219bd16bd806',1,'_updateStatus(maps *conf):&#160;service_internal.c'],['../service__internal_8h.html#a6128e7a2ed472778409b228c70aa1112',1,'_updateStatus(maps *):&#160;service_internal.c']]],
   ['_5fzoo_5fdebug_41',['_ZOO_DEBUG',['../service_8h.html#a866efcd4e07e48eec8d78ac18228cb98',1,'service.h']]],
-  ['_5fzoo_5flog_5fmsg_42',['_ZOO_LOG_MSG',['../service_8c.html#a1cdb7fa681b3384eed85efea834e4e79',1,'_ZOO_LOG_MSG(int level, const char *pccFile, const char *pccFunc, int iLine, const char *pccFmt,...):&#160;service.c'],['../service_8h.html#a72c85b7c9b9f56d6f5bfa406d4afb4d5',1,'_ZOO_LOG_MSG(int level, const char *, const char *, int, const char *,...) __attribute__((format(printf:&#160;service.h']]],
+  ['_5fzoo_5flog_5fmsg_42',['_ZOO_LOG_MSG',['../service_8c.html#a1cdb7fa681b3384eed85efea834e4e79',1,'_ZOO_LOG_MSG(int level, const char *pccFile, const char *pccFunc, int iLine, const char *pccFmt,...):&#160;service.c'],['../service_8h.html#a67d47e81d8c207048688a04bc002856d',1,'_ZOO_LOG_MSG(int, const char *, const char *, int, const char *,...) __attribute__((format(printf:&#160;service.h']]],
   ['_5fzoo_5fsaga_43',['_ZOO_SAGA',['../service__internal__saga_8c.html#aa00b27c9afa3c36ba684739fda2046af',1,'service_internal_saga.c']]]
 ];

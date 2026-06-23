@@ -74,6 +74,9 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a2e59a19dc2bdd3401666ccb1dc2fbef7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a2e59a19dc2bdd3401666ccb1dc2fbef7">setMinZooLogLevel</a> (char *pcLevel)</td></tr>
+<tr class="memdesc:a2e59a19dc2bdd3401666ccb1dc2fbef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum log level for ZOO-Kernel.  <a href="service_8c.html#a2e59a19dc2bdd3401666ccb1dc2fbef7">More...</a><br /></td></tr>
+<tr class="separator:a2e59a19dc2bdd3401666ccb1dc2fbef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a824d9ef61c582fa4a38f3756527329b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a824d9ef61c582fa4a38f3756527329b8">__ZOO_LOG_MSG</a> (const char *pccFile, const char *pccFunc, int iLine, const char *pccFmt, va_list vlApOrig)</td></tr>
 <tr class="memdesc:a824d9ef61c582fa4a38f3756527329b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log a message with a printf-style format and variadic arguments.  <a href="service_8c.html#a824d9ef61c582fa4a38f3756527329b8">More...</a><br /></td></tr>
 <tr class="separator:a824d9ef61c582fa4a38f3756527329b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3173,6 +3176,33 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a2e59a19dc2bdd3401666ccb1dc2fbef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e59a19dc2bdd3401666ccb1dc2fbef7">&#9670;&nbsp;</a></span>setMinZooLogLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setMinZooLogLevel </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pcLevel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the minimum log level for ZOO-Kernel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pcLevel</td><td>the debug level to set (TRACE, DEBUG, INFO, SUCCESS, WARNING, ERROR, CRITICAL, OFF, any other values is equivalent to using ALL).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="service_8c.html#a3180e0b7ab563c6c8bd9ad4f4ebd265b" title="The minimal global log level is used to filter messages based on their severity.">iMinZooLogLevel</a> </dd></dl>
+
+</div>
+</div>
 <a id="af08119f80a638d910fff114d1b9d7476"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af08119f80a638d910fff114d1b9d7476">&#9670;&nbsp;</a></span>setServiceName()</h2>
 
@@ -3331,7 +3361,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 23 2026 10:26:37 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jun 23 2026 12:10:13 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

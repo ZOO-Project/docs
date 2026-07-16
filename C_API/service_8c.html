@@ -74,6 +74,9 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a5b65a38d76c28756ef56e84f9e1b6c59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a5b65a38d76c28756ef56e84f9e1b6c59">isValidUuid</a> (const char *pccUuid)</td></tr>
+<tr class="memdesc:a5b65a38d76c28756ef56e84f9e1b6c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if a string is a valid UUID in the standard format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx (36 characters, including hyphens)  <a href="service_8c.html#a5b65a38d76c28756ef56e84f9e1b6c59">More...</a><br /></td></tr>
+<tr class="separator:a5b65a38d76c28756ef56e84f9e1b6c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e59a19dc2bdd3401666ccb1dc2fbef7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8c.html#a2e59a19dc2bdd3401666ccb1dc2fbef7">setMinZooLogLevel</a> (char *pcLevel)</td></tr>
 <tr class="memdesc:a2e59a19dc2bdd3401666ccb1dc2fbef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum log level for ZOO-Kernel.  <a href="service_8c.html#a2e59a19dc2bdd3401666ccb1dc2fbef7">More...</a><br /></td></tr>
 <tr class="separator:a2e59a19dc2bdd3401666ccb1dc2fbef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2765,6 +2768,33 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a5b65a38d76c28756ef56e84f9e1b6c59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b65a38d76c28756ef56e84f9e1b6c59">&#9670;&nbsp;</a></span>isValidUuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int isValidUuid </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccUuid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verify if a string is a valid UUID in the standard format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx (36 characters, including hyphens) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pccUuid</td><td>the string to validate (must be non-NULL and null-terminated) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if the format is valid, 0 otherwise </dd></dl>
+
+</div>
+</div>
 <a id="a689d9f94832b9f1134f93c6089cb3ef2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a689d9f94832b9f1134f93c6089cb3ef2">&#9670;&nbsp;</a></span>loadMapBinaries()</h2>
 
@@ -3361,7 +3391,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 2 2026 13:17:36 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 16 2026 11:55:15 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

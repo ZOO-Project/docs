@@ -59,6 +59,7 @@ var searchData=
   ['isprotectedhost_350',['isProtectedHost',['../ulinet_8c.html#aa3caec94919dfda93a4f7ce34a34419e',1,'isProtectedHost(const char *protectedHosts, const char *url):&#160;ulinet.c'],['../ulinet_8h.html#a34bc1c858e47f68db2be0dedb0edb526',1,'isProtectedHost(const char *, const char *):&#160;ulinet.c']]],
   ['isrunning_351',['isRunning',['../server__internal_8c.html#acef4d9c538378098b3edbaaa57ada3c7',1,'isRunning(maps *conf, char *pid):&#160;server_internal.c'],['../server__internal_8h.html#ab4a980839cfbad94b1a143b922a2b994',1,'isRunning(maps *, char *):&#160;server_internal.c']]],
   ['isvalidlang_352',['isValidLang',['../server__internal_8c.html#a2924b9aeb670f6de311d9e4d92db93eb',1,'isValidLang(maps *conf, const char *str):&#160;server_internal.c'],['../server__internal_8h.html#a82ada3a0a3e6c14f8c000c3650a49aed',1,'isValidLang(maps *, const char *):&#160;server_internal.c']]],
-  ['itknewmacro_353',['itkNewMacro',['../classMyCommand.html#a96179b2a2cf523e64e1447a13b0c583c',1,'MyCommand']]],
-  ['izoologlevel_354',['iZooLogLevel',['../service_8c.html#abd88d08269c5843712d53bc797984125',1,'iZooLogLevel():&#160;service.c'],['../service_8h.html#abd88d08269c5843712d53bc797984125',1,'iZooLogLevel():&#160;service.c']]]
+  ['isvaliduuid_353',['isValidUuid',['../service_8c.html#a5b65a38d76c28756ef56e84f9e1b6c59',1,'isValidUuid(const char *pccUuid):&#160;service.c'],['../service_8h.html#a988f82a62fc81197117daed247cbeaae',1,'isValidUuid(const char *):&#160;service.c']]],
+  ['itknewmacro_354',['itkNewMacro',['../classMyCommand.html#a96179b2a2cf523e64e1447a13b0c583c',1,'MyCommand']]],
+  ['izoologlevel_355',['iZooLogLevel',['../service_8c.html#abd88d08269c5843712d53bc797984125',1,'iZooLogLevel():&#160;service.c'],['../service_8h.html#abd88d08269c5843712d53bc797984125',1,'iZooLogLevel():&#160;service.c']]]
 ];

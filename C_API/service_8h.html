@@ -587,6 +587,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9d563ad4b580880bb00864d35ddb72c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a9d563ad4b580880bb00864d35ddb72c5">hasvalue</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *source, const char *node, const char *key, <a class="el" href="service_8h.html#structmap">map</a> **kvp)</td></tr>
 <tr class="memdesc:a9d563ad4b580880bb00864d35ddb72c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify that a particular map value exists in a maps data structure, and obtain that value.  <a href="service_8h.html#a9d563ad4b580880bb00864d35ddb72c5">More...</a><br /></td></tr>
 <tr class="separator:a9d563ad4b580880bb00864d35ddb72c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a988f82a62fc81197117daed247cbeaae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#a988f82a62fc81197117daed247cbeaae">isValidUuid</a> (const char *)</td></tr>
+<tr class="memdesc:a988f82a62fc81197117daed247cbeaae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if a string is a valid UUID in the standard format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx (36 characters, including hyphens)  <a href="service_8h.html#a988f82a62fc81197117daed247cbeaae">More...</a><br /></td></tr>
+<tr class="separator:a988f82a62fc81197117daed247cbeaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf5944bdece3b9581d92c384a590143f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#abf5944bdece3b9581d92c384a590143f">allocateMapValue</a> (<a class="el" href="service_8h.html#structmap">map</a> *node, size_t num_bytes)</td></tr>
 <tr class="separator:abf5944bdece3b9581d92c384a590143f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaecee60bdcb4cf22a4cc1ecace6c256d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="service_8h.html#aaecee60bdcb4cf22a4cc1ecace6c256d">getValueFromMaps</a> (<a class="el" href="service_8h.html#structmaps">maps</a> *, const char *)</td></tr>
@@ -4686,6 +4689,33 @@ the next registry pointer </td></tr>
 
 </div>
 </div>
+<a id="a988f82a62fc81197117daed247cbeaae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a988f82a62fc81197117daed247cbeaae">&#9670;&nbsp;</a></span>isValidUuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="service_8h.html#a25a4c8be42fe6068166c381a32d15663">ZOO_DLL_EXPORT</a> int isValidUuid </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pccUuid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verify if a string is a valid UUID in the standard format: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx (36 characters, including hyphens) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pccUuid</td><td>the string to validate (must be non-NULL and null-terminated) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if the format is valid, 0 otherwise </dd></dl>
+
+</div>
+</div>
 <a id="a2102d107535d4a0c9102cd304e7c531f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2102d107535d4a0c9102cd304e7c531f">&#9670;&nbsp;</a></span>loadMapBinaries()</h2>
 
@@ -5532,7 +5562,7 @@ the next registry pointer </td></tr>
 <div class="ttc" id="aservice_8h_html_a3180e0b7ab563c6c8bd9ad4f4ebd265b"><div class="ttname"><a href="service_8h.html#a3180e0b7ab563c6c8bd9ad4f4ebd265b">iMinZooLogLevel</a></div><div class="ttdeci">int iMinZooLogLevel</div><div class="ttdoc">The minimal global log level is used to filter messages based on their severity.</div><div class="ttdef"><b>Definition:</b> service.c:35</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 2 2026 13:17:36 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 16 2026 11:55:15 for ZOO-Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
